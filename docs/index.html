@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#e46652">
+
+    <title>Ember.js - ガイドとチュートリアル</title>
+    <meta property="st:title" content="ガイドとチュートリアル" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="images/favicon.png" rel="icon" type="image/png" />
+    <!--[if lte IE 7 ]><link href="stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
+    <link href="stylesheets/application.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+    <!-- This TypeKit account is managed by @wifelette. Contact her with any issues. -->
+    <script src="https://use.typekit.net/stz3kpn.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    
+  </head>
+
+  <body class="guides index">
+
+    <!--[if lt IE 9]>
+      <script src="javascripts/common-old-ie.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script src="javascripts/common-modern.js"></script>
+    <!--<![endif]-->
+
+    <header class="header">
+  <nav role="navigation" aria-label="main">
+    <ul class="header-nav container">
+      <li class="header-logo">
+        <a href="http://emberjs.com/"><span class="visually-hidden">Ember homepage</span></a>
+      </li>
+      <li>
+        <a href="http://emberjs.com/learn">Learn</a>
+      </li>
+      <li class="active" aria-label="You are here">
+        <a href="/">Guides</a>
+      </li>
+      <li>
+        <a href="http://emberjs.com/api">API</a>
+      </li>
+      <li>
+        <a href="http://emberjs.com/community">Community</a>
+      </li>
+      <li>
+        <a href="http://emberjs.com/blog">Blog</a>
+      </li>
+      <li>
+        <a href="http://emberjs.com/builds">Builds</a>
+      </li>
+
+      <li class="header-search">
+        <form>
+          <input type="text" id="search-input" class="search-input" placeholder="Search the guides"/>
+        </form>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+    
+
+    <main class="container">
+
+      <aside class="sidebar">
+  <label for="version-select" class="visually-hidden">Guides version</label>
+  <select class="version-select" id="version-select" style="width: 100%"></select>
+
+  <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
+  <label for="toc-toggle">Table of Contents <span class="visually-hidden">toggle</span></label>
+
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="tutorial/acceptance-test/">作成するアプリについて</a></li><li class='toc-level-1 '><a href="tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">The Object Model</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="object-model/">Objects in Ember</a></li><li class='toc-level-1 '><a href="object-model/classes-and-instances/">Classes and Instances</a></li><li class='toc-level-1 '><a href="object-model/reopening-classes-and-instances/">Reopening Classes and Instances</a></li><li class='toc-level-1 '><a href="object-model/computed-properties/">Computed Properties</a></li><li class='toc-level-1 '><a href="object-model/computed-properties-and-aggregate-data/">Computed Properties and Aggregate Data</a></li><li class='toc-level-1 '><a href="object-model/observers/">Observers</a></li><li class='toc-level-1 '><a href="object-model/bindings/">Bindings</a></li><li class='toc-level-1 '><a href="object-model/enumerables/">Enumerables</a></li></ol></li><li class='toc-level-0 '><a href="#">Routing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="routing/">Introduction</a></li><li class='toc-level-1 '><a href="routing/defining-your-routes/">Defining Your Routes</a></li><li class='toc-level-1 '><a href="routing/specifying-a-routes-model/">Specifying a Route's Model</a></li><li class='toc-level-1 '><a href="routing/rendering-a-template/">Rendering a Template</a></li><li class='toc-level-1 '><a href="routing/redirection/">Redirecting</a></li><li class='toc-level-1 '><a href="routing/preventing-and-retrying-transitions/">Preventing and Retrying Transitions</a></li><li class='toc-level-1 '><a href="routing/loading-and-error-substates/">Loading / Error Substates</a></li><li class='toc-level-1 '><a href="routing/query-params/">Query Parameters</a></li><li class='toc-level-1 '><a href="routing/asynchronous-routing/">Asynchronous Routing</a></li></ol></li><li class='toc-level-0 '><a href="#">Templates</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="templates/handlebars-basics/">Handlebars Basics</a></li><li class='toc-level-1 '><a href="templates/built-in-helpers/">Built-in Helpers</a></li><li class='toc-level-1 '><a href="templates/conditionals/">Conditionals</a></li><li class='toc-level-1 '><a href="templates/displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="templates/displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="templates/binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="templates/links/">Links</a></li><li class='toc-level-1 '><a href="templates/actions/">Actions</a></li><li class='toc-level-1 '><a href="templates/input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="templates/development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="models/">Introduction</a></li><li class='toc-level-1 '><a href="models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="applications/services/">Services</a></li><li class='toc-level-1 '><a href="applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="testing/">Introduction</a></li><li class='toc-level-1 '><a href="testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+
+  <a class="back-to-top" href="#">&#11014; Back to Top</a>
+</aside>
+
+
+      <article class="chapter">
+        <h1>
+          ガイドとチュートリアル
+          <a href="https://github.com/emberjs/guides/edit/master/source/index.md"
+             target="_blank" class="edit-page icon-pencil">Edit Page</a>
+        </h1>
+        <hr>
+
+        <!--
+Welcome to the Ember.js Guides! This documentation will take you from
+total beginner to Ember expert.
+-->
+
+<p>Ember.jsのガイドへようこそ！このドキュメントはあなたを全くの初心者からEmberのエキスパートへと導くでしょう。</p>
+
+<!--
+## What is Ember?
+-->
+
+<h2 id="toc_what-is-ember" class="anchorable-toc">Emberとは</h2>
+
+<!--
+Ember is a JavaScript front-end framework designed to help you build websites with rich and complex user interactions.
+It does so by providing developers both with many features that are essential to manage complexity in modern web applications,
+as well as an integrated development toolkit that enables rapid iteration.
+-->
+
+<p>Emberは機能が豊富でいろいろな操作ができるウェブサイトを作るために設計されたJavaScriptのフロントエンドフレームワークです。
+そのため、モダンなWebアプリケーション内の複雑なものをうまく扱うために必要な多くの機能はもちろん、迅速なイテレーションを可能にする統合された開発ツールキットの両方を開発者に提供します。</p>
+
+<!--
+Some of these features that you'll learn about in the guides are:
+-->
+
+<p>それらの機能のうち、あなたがこのガイドで学ぶのは、</p>
+
+<!--
+* [Ember CLI](./configuring-ember/configuring-ember-cli/) - A robust development toolkit to create, develop, and build Ember applications. When you see an `$ ember <command>` instruction throughout the guides, that's Ember CLI!
+* [Routing](./routing) - The central part of an Ember application. Enables developers to drive the application state from the URL.
+* [Templating engine](./templates/handlebars-basics/) - Use Handlebars syntax to write your application's templates
+* [Data layer](./models/) - Ember Data provides a consistent way to communicate with external APIs and manage application state
+* [Ember Inspector](./ember-inspector/) - A browser extension, or bookmarklet, to inspect your application live. It's also useful for spotting Ember applications in the wild, try to install it and open up the [NASA website](https://www.nasa.gov/)!
+-->
+
+<ul>
+<li><a href="./configuring-ember/configuring-ember-cli/">Ember CLI</a> - Emberアプリケーションの作成、開発、ビルドのための強力な開発ツールキット。このガイドを通して目にする<code>$ ember &lt;command&gt;</code> という指示はEmber CLIを使っています。</li>
+<li><a href="./routing">ルーティング</a> - Emberアプリケーションの中心部。開発者がURLからアプリケーションの状態を扱えるようにします。</li>
+<li><a href="./models">データレイヤー</a> - Ember DATAは外部のAPIと通信しデータを永続化しアプリケーションの状態を管理する機能を提供します。</li>
+<li><a href="./ember-inspector">Emberインスペクター</a> - 動作中のアプリケーションを調査するためのブラウザエクステンション、またはブックマークレット。野に放たれたEmberアプリケーションを見つけるのにも使えます。インストールして<a href="https://www.nasa.gov/">NASAのウェブサイト</a>を見てみましょう！</li>
+</ul>
+
+<!--
+## Organization
+-->
+
+<h2 id="toc_what-is-ember" class="anchorable-toc">ガイドの構成</h2>
+
+<!--
+On the left side of each Guides page is a table of contents,
+organized into sections that can be expanded to show the topics
+they cover. Both the sections and the topics within each section are
+ordered from basic to advanced concepts.
+-->
+
+<p>各ページの左側にあるものは、区分と項目から成る目次です。部を開くとその中にある項目が展開され、項目をクリックしてページを開くことができます。
+区分と項目は、基礎的なものから高度なものの順に並んでいます。</p>
+
+<!--
+The Guides are intended to contain practical explanations of how to
+build Ember apps, focusing on the most widely-used features of Ember.js.
+For comprehensive documentation of every Ember feature and API, see the
+[Ember.js API documentation](http://emberjs.com/api/).
+-->
+
+<p>本ガイドは、Emberアプリを作り方の実用的な説明が含まれるよう意図されています。
+Ember.jsのよく使われる機能を焦点にしています。
+各Emberの機能とAPIについては、包括的な<a href="http://emberjs.com/api/">Ember.js API ドキュメント</a>(英語)を参照してください。</p>
+
+<!--
+The Guides begin with an explanation of how to get started with Ember,
+followed by a tutorial on how to build your first Ember app.
+If you're brand new to Ember,
+we recommend you start off by following along with these first two sections of the Guides.
+-->
+
+<p>本ガイドは、Emberの始め方から始まり、その次にチュートリアルで実際にアプリを作ります。
+Emberは初めてという方は、<a href="./getting-started/quick-start">はじめに</a>と<a href="./tutorial/ember-cli">チュートリアル</a>から始めることをお勧めします。</p>
+
+<!--
+## Assumptions
+-->
+
+<h2 id="toc_what-is-ember" class="anchorable-toc">対象の読者レベル</h2>
+
+<!--
+While we try to make the Guides as beginner-friendly as we can,
+we must establish a baseline so that the guides can keep focused on Ember.js functionality.
+We will try to link to appropriate documentation whenever a concept is introduced.
+-->
+
+<p>本ガイドはなるべく初心者向けに作っていますが、内容をEmber.jsの機能に絞るために、基準を設けなければなりません。</p>
+
+<p>あるコンセプトや概念が登場した時はなるべく適切なドキュメントにリンクするようにしています。</p>
+
+<!--
+To make the most out of the guides, you should have a working knowledge of:
+-->
+
+<p>本ガイドを最大限活用するには、以下の実用的な知識が必要です。</p>
+
+<!--
+* **HTML, CSS, JavaScript** - the building blocks of web pages. You can find documentation of each of these technologies at the [Mozilla Developer Network][mdn].
+* **Promises** - the native way to deal with asynchrony in your JavaScript code. See the relevant [Mozilla Developer Network][promises] section.
+* **ES2015 modules** - you will better understand [Ember CLI's][ember-cli] project structure and import paths if you are comfortable with [JavaScript Modules][js-modules].
+* **ES2015 syntax** - Ember CLI comes with Babel.js by default so you can
+take advantage of newer language features such as arrow functions, template
+strings, destructuring, and more. You can check the
+[Babel.js documentation][babeljs] or read [Understanding ECMAScript 6][es6]
+online.
+-->
+
+<ul>
+<li><strong>HTML、CSS、JavaScript</strong> - Webページを作のに必要なもの。<a href="https://developer.mozilla.org/ja/">MDN ウェブドキュメント</a>にドキュメントがあります。</li>
+<li><strong>Promises</strong> - JavaScriptで非同期処理を行う方法。 <a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">MDN ウェブドキュメントのPromise</a>を参照。</li>
+<li><strong>ES2015 modules</strong>  <a href="http://jsmodules.io/">JavaScript Modules</a>に慣れていれば、Ember CLIのプロジェクトのディレクトリ構成とインポートのパスを理解しやすいでしょう。</li>
+<li><strong>ES2015の構文</strong> Ember CLIはBabel.jsがデフォルトで入っており、アロー関数やテンプレート文字列などの新しい言語機能を活用できます。<a href="https://babeljs.io/docs/learn-es2015/">Babel.js ドキュメント</a>(英語)や<a href="https://leanpub.com/understandinges6/read">Understanding ECMAScript 6</a>(英語)をオンラインで確認できます。</li>
+</ul>
+
+<!--
+## A Note on Mobile Performance
+-->
+
+<h2 id="toc_a-note-on-mobile-performance" class="anchorable-toc">モバイルのパフォーマンスについて</h2>
+
+<!--
+Ember will do a lot to help you write fast apps, but it can't prevent you from
+writing a slow one. This is especially true on mobile devices. To deliver a great
+experience, it's important to measure performance early and often, and with a diverse
+set of devices.
+-->
+
+<p>Emberは、あなたが速く動作するアプリを書けるようにたくさんの手助けをしてくれますが、あなたが遅いアプリを書くことは防げません。特にモバイル端末においては。
+ユーザ良い体験を提供するには、計測に使うのに相応しいデバイスで早い段階からよくパフォーマンスの計測することが重要です。</p>
+
+<!--
+Make sure you are testing performance on real devices. Simulated mobile
+environments on a desktop computer give an optimistic-at-best representation of
+what your real world performance will be like. The more operating systems and
+hardware configurations you test, the more confident you can be.
+-->
+
+<p>パフォーマンスのテストは本物のデバイス上で行いましょう。
+デスクトップコンピュータでシミュレートされたモバイル環境では、実世界のパフォーマンスがどのようになるかをか最高に楽観的に表現します。</p>
+
+<!--
+Due to their limited network connectivity and CPU power, great performance on
+mobile devices rarely comes for free. You should integrate performance testing
+into your development workflow from the beginning. This will help you avoid
+making costly architectural mistakes that are much harder to fix if you only
+notice them once your app is nearly complete.
+-->
+
+<p>限られたネットワーク接続やCPUパワーにより、モバイル端末で良いパフォーマンスを出すのは容易ではありません。
+開発フローに最初からパフォーマンステストを取り入れるべきです。
+そうすることで、アプリの完成間近になって気がつくと修正するのに高く費用のかかるアーキテチャーの間違いを避けれるでしょう。</p>
+
+<!--
+In short:
+-->
+
+<p>まとめると、</p>
+
+<!--
+1. Always test on real, representative mobile devices.
+2. Measure performance from the beginning, and keep testing as your app
+   develops.
+-->
+
+<ol>
+<li>常に代表的な本物のモバイル端末でテストする</li>
+<li>最初からパフォーマンス計測し、開発と共にテストも継続する</li>
+</ol>
+
+<!--
+These tips will help you identify problems early so they can be addressed systematically, rather than
+in a last-minute scramble.
+-->
+
+<p>これらの秘訣は、リリース直前に混乱するのではなく、問題を早く発見しきちんと取り組む助けになります。</p>
+
+<!--
+## Reporting a problem
+-->
+
+<h2 id="toc_what-is-ember" class="anchorable-toc">問題の報告</h2>
+
+<p>(訳注: この内容は英語のドキュメント内容を訳したものです。日本語訳のドキュメントの問題報告方法は現在準備中です。)</p>
+
+<!--
+Typos, missing words, and code samples with errors are all considered
+documentation bugs. If you spot one of them, or want to otherwise improve
+the existing guides, we are happy to help you help us!
+-->
+
+<p>誤字脱字やサンプルコードにエラーがあるものはドキュメントのバグだと捉えています。
+もし見つけたり、既存のガイドを改善したい場合は是非ご協力ください。</p>
+
+<!--
+Some of the more common ways to report a problem with the guides are:
+-->
+
+<p>ガイドに関する問題の報告方法は以下になります。</p>
+
+<!--
+* Using the pencil icon on the top-right of each guide page
+* Opening an issue or pull request to [the GitHub repository][gh-guides]
+-->
+
+<ul>
+<li>各ページの右上にある鉛筆マーク使う</li>
+<li>GitHubのレポジトリ上でissueかプルリクエストを作成する</li>
+</ul>
+
+<!--
+Clicking the pencil icon will bring you to GitHub's editor for that
+guide so you can edit right away, using the Markdown markup language.
+This is the fastest way to correct a typo, a missing word, or an error in
+a code sample.
+-->
+
+<p>鉛筆マークをクリックすると、GitHubに飛びそのページのソースであるマークダウンファイルの編集画面が開きますので、そこですぐに変更することができます。
+サンプルコードのエラーや誤字脱字を修正するに一番速いやり方です。</p>
+
+<!--
+If you wish to make a more significant contribution be sure to check our
+[issue tracker][gh-guides-issues] to see if your issue is already being
+addressed. If you don't find an active issue, open a new one.
+-->
+
+<p>もしもっと大きく貢献されたければ、<a href="https://github.com/emberjs/guides/issues">GitHubでissue</a>を確認し、同じものがないか確認してください。アクティブなものがない場合は、新しいissueを作成してください。</p>
+
+<!--
+If you have any questions about styling or the contributing process, you
+can check out our [contributing guide][gh-guides-contributing]. If your
+question persists, reach us at `#-team-learning` on the [Slack
+group][slackin].
+-->
+
+<p>貢献のプロセスやスタイルについて何か質問がありましたら、<a href="https://github.com/emberjs/guides/blob/master/CONTRIBUTING.md">コントリビューションガイド</a>(英語)を確認してください。確認しても質問がある場合は、<a href="https://ember-community-slackin.herokuapp.com/">Slackグループ</a>の<code>#-team-learning</code>をで呼びかけてください。</p>
+
+<!--
+Good luck!
+-->
+
+<p>グッドラック👍</p>
+
+
+
+        
+      <footer>
+         <a class="next-guide" href="getting-started/quick-start/">We've finished covering ガイドとチュートリアル. Next up: はじめに - クイックスタート</a>
+      </footer>
+      
+      </article>
+    </main>
+
+    <div class="footer">
+  <div class="container">
+    <div class="footer-info">
+      Copyright 2017
+      <a href="http://tilde.io">Tilde Inc.</a>
+      <br>
+      <a href="http://emberjs.com/team">Core Team</a> |
+      <a href="http://emberjs.com/sponsors">Sponsors</a>
+      <br>
+      <a href="http://emberjs.com/security">Security</a> |
+      <a href="http://emberjs.com/legal">Legal</a> |
+      <a href="http://emberjs.com/logos">Logos</a>
+      <br>
+      <a href="http://emberjs.com/guidelines">Community Guidelines</a>
+    </div>
+
+    <div class="footer-statement">
+      Ember.js is free, open source and always will be.
+    </div>
+
+    <div class="footer-social">
+      <a href="http://twitter.com/emberjs"
+        title="Twitter">
+        <i class="icon-twitter"></i>
+      </a>
+      <a href="https://github.com/emberjs/ember.js"
+        title="GitHub">
+        <i class="icon-github"></i>
+      </a>
+      <a href="https://plus.google.com/communities/106387049790387471205"
+        title="Google+">
+        <i class="icon-gplus"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+    
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
