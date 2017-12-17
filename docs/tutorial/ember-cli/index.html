@@ -88,22 +88,50 @@
         </h1>
         <hr>
 
-        <p>Welcome to the Ember Tutorial!
+        <!--
+Welcome to the Ember Tutorial!
 This tutorial is meant to introduce basic Ember concepts while creating a professional looking application.
-If you get stuck at any point during the tutorial, feel free to download <a href="https://github.com/ember-learn/super-rentals">https://github.com/ember-learn/super-rentals</a> for a working example of the completed app.</p>
+If you get stuck at any point during the tutorial, feel free to download [https://github.com/ember-learn/super-rentals](https://github.com/ember-learn/super-rentals) for a working example of the completed app.
+-->
 
-<p>You can install the latest version of <code>ember-cli</code> by following the <a href="../../getting-started/quick-start/#toc_install-ember">Quick Start</a> guide &quot;Installing Ember&quot; section.</p>
+<p>Emberチュートリアルへようこそ！
+このチュートリアルでは、プロレベルのアプリケーションを作成しながらEmberの基本的なコンセプトを紹介していきます。
+もしチュートリアルを進めていく中で行き詰まったら、いつでも<a href="https://github.com/ember-learn/super-rentals">https://github.com/ember-learn/super-rentals</a>から完成済みの動くサンプルをダウンロードしてみてください。</p>
 
-<p>Ember CLI, Ember&#39;s command line interface, provides a standard project
+<!--
+You can install the latest version of `ember-cli` by following the [Quick Start](../../getting-started/quick-start/#toc_install-ember) guide "Installing Ember" section.
+-->
+
+<p>最新の<code>ember-cli</code>のインストールの仕方は、<a href="../../getting-started/quick-start/#toc_install-ember">クイックスタート</a>のEmberのインストールの項に記載されてます。</p>
+
+<!--
+Ember CLI, Ember's command line interface, provides a standard project
 structure, a set of development tools, and an addon system.
 This allows Ember developers to focus on building apps rather
 than building the support structures that make them run.
-From your command line, a quick <code>ember --help</code> shows
+From your command line, a quick `ember --help` shows
 the commands Ember CLI provides. For more information on a specific command,
-type <code>ember help &lt;command-name&gt;</code>.</p>
-<h2 class='anchorable-toc' id='toc_creating-a-new-app'>Creating a New App</h2>
-<p>To create a new project using Ember CLI, use the <code>new</code> command. In preparation
-for the tutorial in the next section, you can make an app called <code>super-rentals</code>.</p>
+type `ember help <command-name>`.
+-->
+
+<p>Ember CLI(Emberのコマンドラインインターフェース)は、標準化されたプロジェクト構造や開発用ツール群やアドオン機能を提供します。
+それにより開発者は、構造やビルドよりも、アプリの開発に集中できます。
+コマンドラインで<code>ember --help</code>を入力すれば、Ember CLIが提供する機能を見ることができます。
+さらに各コマンドの詳細を知りたければ、<code>ember help &lt;command-name&gt;</code>と入力してください。</p>
+
+<!--
+## Creating a New App
+-->
+
+<h2 id="toc_creating-a-new-app" class="anchorable-toc">アプリを作成する</h2>
+
+<!--
+To create a new project using Ember CLI, use the `new` command. In preparation
+for the tutorial in the next section, you can make an app called `super-rentals`.
+-->
+
+<p>Ember CLIで新しいプロジェクトを作る時は<code>new</code>コマンドを使います。
+次のセクションの準備で、<code>super-rentals</code>というアプリを作ってみましょう。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -111,17 +139,32 @@ for the tutorial in the next section, you can make an app called <code>super-ren
 </pre></td>
 </tr></table>
 </div></div>
-<p>A new project will be created inside your current directory. You can now go to
-your <code>super-rentals</code> project directory and start working on it.</p>
+<!--
+A new project will be created inside your current directory. You can now go to
+your `super-rentals` project directory and start working on it.
+-->
+
+<p>プロジェクトはカレントディレクトリ内に作成された新しいディレクトリ内にあります。
+<code>super-rentals</code>に移動して開発を始めましょう。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
   <td class="code"><pre>cd super-rentals
 </pre></td>
 </tr></table>
-</div></div><h2 class='anchorable-toc' id='toc_directory-structure'>Directory Structure</h2>
-<p>The <code>new</code> command generates a project structure with the following files and
-directories:</p>
+</div></div>
+<!--
+## Directory Structure
+-->
+
+<h2 id="toc_directory-structure" class="anchorable-toc">ディレクトリ構成</h2>
+
+<!--
+The `new` command generates a project structure with the following files and
+directories:
+-->
+
+<p><code>new</code>コマンドは以下のディレクトリとファイル構成を持つプロジェクトを作成します。</p>
 <div class="highlight text "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -153,34 +196,76 @@ testem.js
 </pre></td>
 </tr></table>
 </div></div>
-<p>Let&#39;s take a look at the folders and files Ember CLI generates.</p>
+<!--
+Let's take a look at the folders and files Ember CLI generates.
+-->
 
-<p><strong>app</strong>: This is where folders and files for models, components, routes,
+<p>Ember CLIが作成したフォルダとファイルを見ていきましょう。</p>
+
+<!--
+**app**: This is where folders and files for models, components, routes,
 templates and styles are stored. The majority of your coding on an Ember
-project happens in this folder.</p>
+project happens in this folder.
+-->
 
-<p><strong>config</strong>: The config directory contains the <code>environment.js</code> where you can
-configure settings for your app.</p>
+<p><strong>app</strong>: モデル、コンポーネント、ルート、テンプレート、CSSのフォルダとファイルを置くところです。Emberアプリのコーディングは、ほとんどがこのフォルダでやることになります。</p>
 
-<p><strong>node_modules / package.json</strong>: This directory and file are from npm.
+<!--
+**config**: The config directory contains the `environment.js` where you can
+configure settings for your app.
+-->
+
+<p><strong>config</strong>: configディレクトリはアプリケーションの設定ができる<code>environment.js</code>があります。</p>
+
+<!--
+**node_modules / package.json**: This directory and file are from npm.
 npm is the package manager for Node.js. Ember is built with Node and uses a
-variety of Node.js modules for operation. The <code>package.json</code> file maintains the
+variety of Node.js modules for operation. The `package.json` file maintains the
 list of current npm dependencies for the app.  Any Ember CLI
-addons you install will also show up here. Packages listed in <code>package.json</code>
-are installed in the node_modules directory.</p>
+addons you install will also show up here. Packages listed in `package.json`
+are installed in the node_modules directory.
+-->
 
-<p><strong>public</strong>: This directory contains assets such as images and fonts.</p>
+<p><strong>node_modules / package.json</strong>: npmに関連するものです。npmはNode.jsのパッケージマネージャです。EmberはNodeで作られており、Nodeのあらゆる機能を使っています。<code>package.json</code>はアプリの依存関係を管理したリストです。Ember CLIアドオンをインストールすると<code>package.json</code>に追加され、<code>node_modules</code>配下にインストールされます。</p>
 
-<p><strong>vendor</strong>: This directory is where front-end dependencies (such as JavaScript
-or CSS) that are not managed by Bower go.</p>
+<!--
+**public**: This directory contains assets such as images and fonts.
+-->
 
-<p><strong>tests / testem.js</strong>: Automated tests for our app go in the <code>tests</code> folder,
-and Ember CLI&#39;s test runner <strong>testem</strong> is configured in <code>testem.js</code>.</p>
+<p><strong>public</strong>: 画像やフォントなどを置くディレクトリです。</p>
 
-<p><strong>ember-cli-build.js</strong>: This file describes how Ember CLI should build our app.</p>
-<h2 class='anchorable-toc' id='toc_es6-modules'>ES6 Modules</h2>
-<p>If you take a look at <code>app/router.js</code>, you&#39;ll notice some syntax that may be
-unfamiliar to you.</p>
+<!--
+**vendor**: This directory is where front-end dependencies (such as JavaScript
+or CSS) that are not managed by Bower go.
+-->
+
+<p><strong>vendor</strong>: Bowerによって管理さていないフロントエンドの依存関係(JavaScriptやCSSなど)を置くディレクトリです。</p>
+
+<!--
+**tests / testem.js**: Automated tests for our app go in the `tests` folder,
+and Ember CLI's test runner **testem** is configured in `testem.js`.
+-->
+
+<p><strong>tests / testem.js</strong>: アプリの自動テストは<code>tests</code>フォルダに起きます。Ember CLIのテストランナーの<strong>testem</strong>は<code>testem.js</code>で設定されています。</p>
+
+<!--
+**ember-cli-build.js**: This file describes how Ember CLI should build our app.
+-->
+
+<p><strong>ember-cli-build.js</strong>: このファイルにはEmber CLIがどのようにアプリをビルドするかを記述します。</p>
+
+<!--
+## ES6 Modules
+-->
+
+<h2 id="toc_es6-modules" class="anchorable-toc">ES6モジュール</h2>
+
+<!--
+If you take a look at `app/router.js`, you'll notice some syntax that may be
+unfamiliar to you.
+-->
+
+<p><code>app/router.js</code>を見ると、馴染みのない構文に気がつくかもしれません。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -216,18 +301,35 @@ Router.map(<span class="keyword">function</span>() {
 </pre></td>
 </tr></table>
 </div></div>
-<p>Ember CLI uses ECMAScript 2015 (ES2015 for short or previously known as ES6) modules to organize application
+<!--
+Ember CLI uses ECMAScript 2015 (ES2015 for short or previously known as ES6) modules to organize application
 code.
-For example, the line <code>import EmberRouter from &#39;@ember/routing/router&#39;;</code> gives us access to
-Ember&#39;s Router class as the variable <code>EmberRouter</code>. And the <code>import config from
-&#39;./config/environment&#39;;</code> line gives us access to our app&#39;s configuration data
-as the variable <code>config</code>. <code>const</code> is a way to declare a read-only variable to make
+For example, the line `import EmberRouter from '@ember/routing/router';` gives us access to
+Ember's Router class as the variable `EmberRouter`. And the `import config from
+'./config/environment';` line gives us access to our app's configuration data
+as the variable `config`. `const` is a way to declare a read-only variable to make
 sure it is not accidentally reassigned elsewhere. At the end of the file,
-<code>export default Router;</code> makes the <code>Router</code> variable defined in this file available 
-to other parts of the app.</p>
-<h2 class='anchorable-toc' id='toc_the-development-server'>The Development Server</h2>
-<p>Once we have a new project in place, we can confirm everything is working by
-starting the Ember development server:</p>
+`export default Router;` makes the `Router` variable defined in this file available 
+to other parts of the app.
+-->
+
+<p>Ember CLIはアプリ内のコードを組織するのに、ECMAScript 2015(ES2015、ES6)モジュールを使用しています。
+例えば、<code>import EmberRouter from &#39;@ember/routing/router&#39;;</code>の行は、EmberのRouterクラスをEmberRouterとしてアクセスできるようします。そして、<code>import config from &#39;./config/environment&#39;;</code>の行は、configという変数でアプリの設定データにアクセスできるようにしています。
+<code>const</code>はリードオンリーな変数を宣言し、他のところで思いがけない再代入がないことを明確にしています。
+ファイルの最後部の<code>export default Router;</code>は、このファイル内で定義されている<code>Router</code>変数を、アプリの他の部分から利用できるようにしています。</p>
+
+<!--
+## The Development Server
+-->
+
+<h2 id="toc_the-development-server" class="anchorable-toc">開発サーバ</h2>
+
+<!--
+Once we have a new project in place, we can confirm everything is working by
+starting the Ember development server:
+-->
+
+<p>新しいプロジェクトが設置されましたので、全部きちんと動くか、開発サーバを起動して確かめましょう。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -243,16 +345,31 @@ starting the Ember development server:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>If we navigate to <a href="http://localhost:4200"><code>http://localhost:4200</code></a>, we&#39;ll see the default welcome screen.
-When we edit the <code>app/templates/application.hbs</code> file, we&#39;ll replace that content with our own.</p>
+<!--
+If we navigate to [`http://localhost:4200`](http://localhost:4200), we'll see the default welcome screen.
+When we edit the `app/templates/application.hbs` file, we'll replace that content with our own.
+-->
+
+<p><a href="http://localhost:4200"><code>http://localhost:4200</code></a>にアクセスすると、デフォルトのウェルカムページが見れるはずです。
+<code>app/templates/application.hbs</code>ファイルを変更すると、変更した内容に変わるはずです。</p>
 
 <p><img src="../../images/ember-cli/default-welcome-page.png" alt="default welcome screen"></p>
 
-<p>The first thing we want to do in our new project is to remove the welcome screen.
-We do this by simply opening up the application template file located at <code>app/templates/application.hbs</code>.</p>
+<!--
+The first thing we want to do in our new project is to remove the welcome screen.
+We do this by simply opening up the application template file located at `app/templates/application.hbs`.
+-->
 
-<p>Once open, remove the component labeled <code>{{welcome-page}}</code>.
-The application should now be a completely blank canvas to build our application on.</p>
+<p>まず初めに、このウェルカムページを消しましょう。
+<code>app/templates/application.hbs</code>にあるアプリケーションテンプレートを開いてください。</p>
+
+<!--
+Once open, remove the component labeled `{{welcome-page}}`.
+The application should now be a completely blank canvas to build our application on.
+-->
+
+<p>開いたら、<code>{{welcome-page}}</code>を消します。
+ブラウザに完全に空白なページが表示されているか確認してください。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
