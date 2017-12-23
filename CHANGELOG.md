@@ -2,8 +2,12 @@
 
 ## 2017.12.23
 
+Small improvements.
+
+- Tutorial "Routes and Templates" was done. 🎉
 - Header and footer
 - Fragment identifier in header links were changed (use Japanese)
+- Some minor wording
 
 ## 2017.12.17
 
