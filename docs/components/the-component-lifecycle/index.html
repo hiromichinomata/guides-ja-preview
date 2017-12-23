@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
@@ -15,7 +15,7 @@
     <script src="https://use.typekit.net/stz3kpn.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - ブログ" />
     
   </head>
 
@@ -32,30 +32,30 @@
   <nav role="navigation" aria-label="main">
     <ul class="header-nav container">
       <li class="header-logo">
-        <a href="http://emberjs.com/"><span class="visually-hidden">Ember homepage</span></a>
+        <a href="http://emberjs.com/"><span class="visually-hidden">Emberホームページ</span></a>
       </li>
       <li>
-        <a href="http://emberjs.com/learn">Learn</a>
+        <a href="http://emberjs.com/learn">参考</a>
       </li>
       <li class="active" aria-label="You are here">
-        <a href="/">Guides</a>
+        <a href="/">ガイド</a>
       </li>
       <li>
         <a href="http://emberjs.com/api">API</a>
       </li>
       <li>
-        <a href="http://emberjs.com/community">Community</a>
+        <a href="http://emberjs.com/community">コミュニティ</a>
       </li>
       <li>
-        <a href="http://emberjs.com/blog">Blog</a>
+        <a href="http://emberjs.com/blog">ブログ</a>
       </li>
       <li>
-        <a href="http://emberjs.com/builds">Builds</a>
+        <a href="http://emberjs.com/builds">リリース</a>
       </li>
 
       <li class="header-search">
         <form>
-          <input type="text" id="search-input" class="search-input" placeholder="Search the guides"/>
+          <input type="text" id="search-input" class="search-input" placeholder="ガイド内検索"/>
         </form>
       </li>
     </ul>
@@ -68,15 +68,12 @@
     <main class="container">
 
       <aside class="sidebar">
-  <label for="version-select" class="visually-hidden">Guides version</label>
-  <select class="version-select" id="version-select" style="width: 100%"></select>
-
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
-  <label for="toc-toggle">Table of Contents <span class="visually-hidden">toggle</span></label>
+  <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
   <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">The Object Model</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Objects in Ember</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">Classes and Instances</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">Reopening Classes and Instances</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">Computed Properties</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">Computed Properties and Aggregate Data</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">Observers</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">Bindings</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">Enumerables</a></li></ol></li><li class='toc-level-0 '><a href="#">Routing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">Introduction</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">Defining Your Routes</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">Specifying a Route's Model</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">Rendering a Template</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">Redirecting</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">Preventing and Retrying Transitions</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">Loading / Error Substates</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">Query Parameters</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">Asynchronous Routing</a></li></ol></li><li class='toc-level-0 '><a href="#">Templates</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebars Basics</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">Built-in Helpers</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">Conditionals</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../../templates/links/">Links</a></li><li class='toc-level-1 '><a href="../../templates/actions/">Actions</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 selected'><a href="#">Components</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../defining-a-component/">Defining a Component</a></li><li class='toc-level-1 selected'><a href="./">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
-  <a class="back-to-top" href="#">&#11014; Back to Top</a>
+  <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
 
 
@@ -84,7 +81,7 @@
         <h1>
           The Component Lifecycle
           <a href="https://github.com/emberjs/guides/edit/master/source/components/the-component-lifecycle.md"
-             target="_blank" class="edit-page icon-pencil">Edit Page</a>
+             target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
@@ -94,9 +91,9 @@ This allows for direct DOM manipulation, listening and responding to browser eve
 <p>As components are rendered, re-rendered and finally removed, Ember provides <em>lifecycle hooks</em> that allow you to run code at specific times in a component&#39;s life.</p>
 
 <p>To get the most use out of a component, it is important to understand these lifecycle methods.</p>
-<h2 class='anchorable-toc' id='toc_order-of-lifecycle-hooks-called'>Order of Lifecycle Hooks Called</h2>
+<h2 id="toc_Order-of-Lifecycle-Hooks-Called" class="anchorable-toc">Order of Lifecycle Hooks Called</h2>
 <p>Listed below are the component lifecycle hooks in order of execution according to render scenario.</p>
-<h3 class='anchorable-toc' id='toc_on-initial-render'>On Initial Render</h3>
+<h3 id="toc_On-Initial-Render" class="anchorable-toc">On Initial Render</h3>
 <ol>
 <li><code>init</code></li>
 <li><a href="#toc_formatting-component-attributes-with-code-didreceiveattrs-code"><code>didReceiveAttrs</code></a></li>
@@ -104,7 +101,7 @@ This allows for direct DOM manipulation, listening and responding to browser eve
 <li><a href="#toc_integrating-with-third-party-libraries-with-code-didinsertelement-code"><code>didInsertElement</code></a></li>
 <li><a href="#toc_making-updates-to-the-rendered-dom-with-code-didrender-code"><code>didRender</code></a></li>
 </ol>
-<h3 class='anchorable-toc' id='toc_on-re-render'>On Re-Render</h3>
+<h3 id="toc_On-Re-Render" class="anchorable-toc">On Re-Render</h3>
 <ol>
 <li><a href="#toc_resetting-presentation-state-on-attribute-change-with-code-didupdateattrs-code"><code>didUpdateAttrs</code></a></li>
 <li><a href="#toc_formatting-component-attributes-with-code-didreceiveattrs-code"><code>didReceiveAttrs</code></a></li>
@@ -113,15 +110,15 @@ This allows for direct DOM manipulation, listening and responding to browser eve
 <li><code>didUpdate</code></li>
 <li><a href="#toc_making-updates-to-the-rendered-dom-with-code-didrender-code"><code>didRender</code></a></li>
 </ol>
-<h3 class='anchorable-toc' id='toc_on-component-destroy'>On Component Destroy</h3>
+<h3 id="toc_On-Component-Destroy" class="anchorable-toc">On Component Destroy</h3>
 <ol>
 <li><a href="#toc_detaching-and-tearing-down-component-elements-with-code-willdestroyelement-code"><code>willDestroyElement</code></a></li>
 <li><code>willClearRender</code></li>
 <li><code>didDestroyElement</code></li>
 </ol>
-<h2 class='anchorable-toc' id='toc_lifecycle-hook-examples'>Lifecycle Hook Examples</h2>
+<h2 id="toc_Lifecycle-Hook-Examples" class="anchorable-toc">Lifecycle Hook Examples</h2>
 <p>Below are some samples of ways to use lifecycle hooks within your components.</p>
-<h3 class='anchorable-toc' id='toc_resetting-presentation-state-on-attribute-change-with-code-didupdateattrs-code'>Resetting Presentation State on Attribute Change with <code>didUpdateAttrs</code></h3>
+<h3 id="toc_Resetting-Presentation-State-on-Attribute-Change-with-<code>didUpdateAttrs</code>" class="anchorable-toc">Resetting Presentation State on Attribute Change with <code>didUpdateAttrs</code></h3>
 <p><code>didUpdateAttrs</code> runs when the attributes of a component have changed, but not when the component is re-rendered, via <code>component.rerender</code>,
 <code>component.set</code>, or changes in models or services used by the template.</p>
 
@@ -212,7 +209,7 @@ you can use <code>didUpdateAttrs</code> to clear any error state that was built 
 });
 </pre></td>
 </tr></table>
-</div></div><h3 class='anchorable-toc' id='toc_formatting-component-attributes-with-code-didreceiveattrs-code'>Formatting Component Attributes with <code>didReceiveAttrs</code></h3>
+</div></div><h3 id="toc_Formatting-Component-Attributes-with-<code>didReceiveAttrs</code>" class="anchorable-toc">Formatting Component Attributes with <code>didReceiveAttrs</code></h3>
 <p><code>didReceiveAttrs</code> runs after <code>init</code>, and it also runs on subsequent re-renders, which is useful for logic that is the same on all renders.
 It does not run when the re-render has been initiated internally.</p>
 
@@ -257,7 +254,7 @@ you can leverage <code>didReceiveAttrs</code> to ensure the incoming config is a
 });
 </pre></td>
 </tr></table>
-</div></div><h3 class='anchorable-toc' id='toc_integrating-with-third-party-libraries-with-code-didinsertelement-code'>Integrating with Third-Party Libraries with <code>didInsertElement</code></h3>
+</div></div><h3 id="toc_Integrating-with-Third-Party-Libraries-with-<code>didInsertElement</code>" class="anchorable-toc">Integrating with Third-Party Libraries with <code>didInsertElement</code></h3>
 <p>Suppose you want to integrate your favorite date picker library into an Ember project.
 Typically, 3rd party JS/jQuery libraries require a DOM element to bind to.
 So, where is the best place to initialize and attach the library?</p>
@@ -409,7 +406,7 @@ is not allowed.</li>
 <li>While <a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/didInsertElement?anchor=didInsertElement"><code>didInsertElement()</code></a> is technically an event that can be listened for using <code>on()</code>, it is encouraged to override the default method itself,
 particularly when order of execution is important.</li>
 </ul>
-<h3 class='anchorable-toc' id='toc_making-updates-to-the-rendered-dom-with-code-didrender-code'>Making Updates to the Rendered DOM with <code>didRender</code></h3>
+<h3 id="toc_Making-Updates-to-the-Rendered-DOM-with-<code>didRender</code>" class="anchorable-toc">Making Updates to the Rendered DOM with <code>didRender</code></h3>
 <p>The <code>didRender</code> hook is called during both render and re-render after the template has rendered and the DOM updated.
 You can leverage this hook to perform post-processing on the DOM of a component after it&#39;s been updated.</p>
 
@@ -501,7 +498,7 @@ Additionally, it takes an object representing which item is selected and will se
 });
 </pre></td>
 </tr></table>
-</div></div><h3 class='anchorable-toc' id='toc_detaching-and-tearing-down-component-elements-with-code-willdestroyelement-code'>Detaching and Tearing Down Component Elements with <code>willDestroyElement</code></h3>
+</div></div><h3 id="toc_Detaching-and-Tearing-Down-Component-Elements-with-<code>willDestroyElement</code>" class="anchorable-toc">Detaching and Tearing Down Component Elements with <code>willDestroyElement</code></h3>
 <p>When a component detects that it is time to remove itself from the DOM, Ember will trigger the <a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/willDestroyElement?anchor=willDestroyElement"><code>willDestroyElement()</code></a> method,
 allowing for any teardown logic to be performed.</p>
 
@@ -570,14 +567,14 @@ For instance, the user may navigate to a different route, or a conditional Handl
       Copyright 2017
       <a href="http://tilde.io">Tilde Inc.</a>
       <br>
-      <a href="http://emberjs.com/team">Core Team</a> |
-      <a href="http://emberjs.com/sponsors">Sponsors</a>
+      <a href="http://emberjs.com/team">コアチーム</a> |
+      <a href="http://emberjs.com/sponsors">スポンサー</a>
       <br>
-      <a href="http://emberjs.com/security">Security</a> |
-      <a href="http://emberjs.com/legal">Legal</a> |
-      <a href="http://emberjs.com/logos">Logos</a>
+      <a href="http://emberjs.com/security">セキュリティ</a> |
+      <a href="http://emberjs.com/legal">法関連</a> |
+      <a href="http://emberjs.com/logos">ロゴ</a>
       <br>
-      <a href="http://emberjs.com/guidelines">Community Guidelines</a>
+      <a href="http://emberjs.com/guidelines">コミュニティガイドライン</a>
     </div>
 
     <div class="footer-statement">

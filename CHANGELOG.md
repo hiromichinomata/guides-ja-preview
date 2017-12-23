@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2017.12.23
+
+- Header and footer
+- Fragment identifier in header links were changed (use Japanese)
+
 ## 2017.12.17
 
 - 🎉🎉🎉 GitHub Page Preview Open! 🎉🎉🎉
