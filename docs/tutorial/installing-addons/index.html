@@ -85,25 +85,65 @@
         </h1>
         <hr>
 
-        <p>Ember has a rich ecosystem of addons that can be easily added to projects.
-Addons provide a wide range of functionality to projects, often saving time and letting you focus on your project.</p>
+        <!--
+Ember has a rich ecosystem of addons that can be easily added to projects.
+Addons provide a wide range of functionality to projects, often saving time and letting you focus on your project.
+-->
 
-<p>To browse addons, visit the <a href="https://emberobserver.com/">Ember Observer</a> website.  It catalogs and categorizes Ember addons that have been published to NPM and assigns them a score based on a variety of criteria.</p>
+<p>Emberには、プロジェクトに簡単に追加できる豊富なエコシステムがあります。
+アドオンは、プロジェクトに幅広い機能を提供し、時間を節約し、プロジェクトに集中することができます。</p>
 
-<p>For Super Rentals, we&#39;ll take advantage of two addons: <a href="https://github.com/toddjordan/ember-cli-tutorial-style">ember-cli-tutorial-style</a> and <a href="http://www.ember-cli-mirage.com/">ember-cli-mirage</a>.</p>
-<h3 id="toc_ember-cli-tutorial-style" class="anchorable-toc">ember-cli-tutorial-style</h3>
-<p>Instead of having you copy/paste in CSS to style Super Rentals, we&#39;ve created an addon called <a href="https://github.com/ember-learn/ember-cli-tutorial-style">ember-cli-tutorial-style</a> that instantly adds CSS to the tutorial.
-The addon works by generating a file called <code>ember-tutorial.css</code> and putting that file in the super-rentals <code>vendor</code> directory.</p>
+<!--
+To browse addons, visit the [Ember Observer](https://emberobserver.com/) website.  It catalogs and categorizes Ember addons that have been published to NPM and assigns them a score based on a variety of criteria.
+-->
 
-<p>The <a href="../../addons-and-dependencies/managing-dependencies/#toc_other-assets"><code>vendor</code> directory</a> in Ember is a special directory where you can include content that gets compiled into your application.
-When Ember CLI builds our app from our source code, it copies <code>ember-tutorial.css</code> into a file called <code>vendor.css</code>.</p>
+<p>アドオンを参照するには、<a href="https://emberobserver.com/">Ember Observer</a>を参照してください。 NPMに公開されているEmberアドオンをカタログ化しカテゴリー毎に分け、さまざまな基準に基づいてスコアを割り当てます。</p>
 
-<p>As Ember CLI runs, it takes the <code>ember-tutorial</code> CSS file and puts it in a file called <code>vendor.css</code>.
-The <code>vendor.css</code> file is referenced in <code>app/index.html</code>, making the styles available at runtime.</p>
+<!--
+For Super Rentals, we'll take advantage of two addons: [ember-cli-tutorial-style](https://github.com/toddjordan/ember-cli-tutorial-style) and [ember-cli-mirage](http://www.ember-cli-mirage.com/).
+-->
 
-<p>We can make additional style tweaks to <code>vendor/ember-tutorial.css</code>, and the changes will take effect whenever we restart the app.</p>
+<p>Super Rentalsでは、<a href="https://github.com/toddjordan/ember-cli-tutorial-style">ember-cli-tutorial-style</a>と<a href="http://www.ember-cli-mirage.com/">ember-cli-mirage</a>の2つのアドオンを使います。</p>
 
-<p>Run the following command to install the addon:</p>
+<!--
+### ember-cli-tutorial-style
+-->
+<h3 id="toc_ember-cli-tutorial-styleアドオン" class="anchorable-toc">ember-cli-tutorial-styleアドオン</h3>
+<!--
+Instead of having you copy/paste in CSS to style Super Rentals, we've created an addon called [ember-cli-tutorial-style](https://github.com/ember-learn/ember-cli-tutorial-style) that instantly adds CSS to the tutorial.
+The addon works by generating a file called `ember-tutorial.css` and putting that file in the super-rentals `vendor` directory.
+-->
+
+<p>チュートリアルの読者のために、Super RentalsのスタイルにCSSでコピー/ペーストさせるのではなく、即座にCSSをチュートリアルに追加する[ember-cli-tutorial-style]というアドオンが用意しています。
+このアドオンは、<code>ember-tutorial.css</code>というファイルを生成し、そのファイルをプロジェクトのvendorディレクトリに入れて動作します。</p>
+
+<!--
+The [`vendor` directory](../../addons-and-dependencies/managing-dependencies/#toc_other-assets) in Ember is a special directory where you can include content that gets compiled into your application.
+When Ember CLI builds our app from our source code, it copies `ember-tutorial.css` into a file called `vendor.css`.
+-->
+
+<p>Emberの<a href="../../addons-and-dependencies/managing-dependencies/#toc_other-assets"><code>vendor</code>ディレクトリ</a>は、アプリケーションにコンパイルされるコンテンツを含めることができる特別なディレクトリです。
+Ember CLIがソースコードからアプリケーションをビルドすると、 <code>ember-tutorial.css</code>を<code>vendor.css</code>というファイルにコピーします。</p>
+
+<!--
+As Ember CLI runs, it takes the `ember-tutorial` CSS file and puts it in a file called `vendor.css`.
+The `vendor.css` file is referenced in `app/index.html`, making the styles available at runtime.
+-->
+
+<p>Ember CLIが実行されると、 <code>ember-tutorial</code>CSSファイルが<code>vendor.css</code>というファイルに置かれます。
+<code>vendor.css</code>ファイルは<code>app/index.html</code>で参照され、実行時にスタイルを利用可能にします。</p>
+
+<!--
+We can make additional style tweaks to `vendor/ember-tutorial.css`, and the changes will take effect whenever we restart the app.
+-->
+
+<p><code>vendor/ember-tutorial.css</code>は手を加えることができます。変更を反映するにはアプリケーションの再起動が必要です。</p>
+
+<!--
+Run the following command to install the addon:
+-->
+
+<p>次のコマンドを実行してアドオンをインストールします:</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -111,7 +151,11 @@ The <code>vendor.css</code> file is referenced in <code>app/index.html</code>, m
 </pre></td>
 </tr></table>
 </div></div>
-<p>Here is the output:</p>
+<!--
+Here is the output:
+-->
+
+<p>出力は以下のようになります。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -127,18 +171,37 @@ Installed addon package.
 </pre></td>
 </tr></table>
 </div></div>
-<p>Since Ember addons are npm packages, <code>ember install</code> installs them in the <code>node_modules</code> directory, and makes an entry
-in <code>package.json</code>. Be sure to restart your server after the addon has installed successfully. Restarting the server will
-incorporate the new CSS and refreshing the browser window will give you this:</p>
+<!--
+Since Ember addons are npm packages, `ember install` installs them in the `node_modules` directory, and makes an entry
+in `package.json`. Be sure to restart your server after the addon has installed successfully. Restarting the server will
+incorporate the new CSS and refreshing the browser window will give you this:
+-->
+
+<p>Emberアドオンはnpmパッケージなので、 <code>ember install</code>はアドオンを<code>node_modules</code>ディレクトリにインストールし、 <code>package.json</code>にエントリを作成します。 アドオンが正常にインストールされたら、必ずサーバーを再起動してください。 サーバーを再起動すると新しいCSSが組み込まれ、ブラウザウィンドウを更新すると次のようになります。</p>
 
 <p><img src="../../images/installing-addons/styled-super-rentals-basic.png" alt="super rentals styled homepage"></p>
-<h3 id="toc_ember-cli-mirage" class="anchorable-toc">ember-cli-mirage</h3>
-<p><a href="http://www.ember-cli-mirage.com/">Mirage</a> is a client HTTP stubbing library often used for Ember acceptance testing.
-For the case of this tutorial, we&#39;ll use mirage as our source of data rather than a traditional backend server.
-Mirage will allow us to create fake data to work with while developing our app and mimic an API.
-The data and endpoints we setup here will come into play later in the tutorial, when we use Ember Data to make server requests.</p>
 
-<p>Install the Mirage addon as follows:</p>
+<!--
+### ember-cli-mirage
+-->
+<h3 id="toc_ember-cli-mirageアドオン" class="anchorable-toc">ember-cli-mirageアドオン</h3>
+<!--
+[Mirage](http://www.ember-cli-mirage.com/) is a client HTTP stubbing library often used for Ember acceptance testing.
+For the case of this tutorial, we'll use mirage as our source of data rather than a traditional backend server.
+Mirage will allow us to create fake data to work with while developing our app and mimic an API.
+The data and endpoints we setup here will come into play later in the tutorial, when we use Ember Data to make server requests.
+-->
+
+<p><a href="http://www.ember-cli-mirage.com/">Mirage</a>(ミラージュ)は、Emberの受け入れテストによく使用されるクライアントのHTTPスタブライブラリです。
+このチュートリアルでは、伝統的なバックエンドサーバーではなく、データソースとしてMirageを使用します。
+Mirageで、開発用に偽のデータとAPIを作成できます。
+ここで設定するデータとエンドポイントは、このチュートリアルの後半の「Ember Dataを使用してサーバーリクエストを行う」で説明されています。</p>
+
+<!--
+Install the Mirage addon as follows:
+-->
+
+<p>以下のコマンドを実行してMirageをインストールします。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -146,9 +209,15 @@ The data and endpoints we setup here will come into play later in the tutorial, 
 </pre></td>
 </tr></table>
 </div></div>
-<p>Our primary focus with mirage will be in the <code>config.js</code> file, which is where we can define our API endpoints and our data.
-We will be following the <a href="http://jsonapi.org/">JSON-API specification</a> which requires our data to be formatted a certain way.
-Let&#39;s configure Mirage to send back our rentals that we had defined above by updating <code>mirage/config.js</code>:</p>
+<!--
+Our primary focus with mirage will be in the `config.js` file, which is where we can define our API endpoints and our data.
+We will be following the [JSON-API specification](http://jsonapi.org/) which requires our data to be formatted a certain way.
+Let's configure Mirage to send back our rentals that we had defined above by updating `mirage/config.js`:
+-->
+
+<p>Mirageでまず着目すべき点は、APIエンドポイントとデータを定義できる<code>config.js</code>ファイルです。
+JSONデータの形式は<a href="http://jsonapi.org/">JSON-API</a>の仕様に合わせています。
+<code>mirage/config.js</code>を更新して、上記で定義したレンタルを返送するようにMirageを設定しましょう：</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -293,17 +362,33 @@ Let&#39;s configure Mirage to send back our rentals that we had defined above by
 <span class="highlight-line removed">}</span></pre></td>
 </tr></table>
 </div></div>
-<p>Mirage works by overriding the JavaScript code that makes network requests and instead returns the JSON you specify.
+<!--
+Mirage works by overriding the JavaScript code that makes network requests and instead returns the JSON you specify.
 We should note that this means you will not see any network requests in your development tools but will instead see the JSON logged in your console.
-Our update to <code>mirage/config.js</code> configures Mirage so that whenever Ember Data makes a GET request to <code>/api/rentals</code>, Mirage will return this JavaScript object as JSON and no network request is actually made.
-We also specified a <code>namespace</code> of <code>/api</code> in our mirage configuration.
-Without this change, navigation to <code>/rentals</code> in our application would conflict with Mirage.</p>
+Our update to `mirage/config.js` configures Mirage so that whenever Ember Data makes a GET request to `/api/rentals`, Mirage will return this JavaScript object as JSON and no network request is actually made.
+We also specified a `namespace` of `/api` in our mirage configuration.
+Without this change, navigation to `/rentals` in our application would conflict with Mirage.
+-->
 
-<p>In order for this to work, we need our application to default to making requests to the namespace of <code>/api</code>.
+<p>Mirageは、ネットワークリクエストを作成するJavaScriptコードをオーバーライドし、代わりに指定したJSONを返します。
+これは、開発ツールでネットワークリクエストが表示されず、代わりにコンソールにJSONがログ表示されることに注意してください。
+上記の<code>mirage/config.js</code>の変更で、Ember Dataが<code>api/rentals</code>にGETリクエストを行うたびに、ハードコードしたJavaScriptオブジェクトをJSONとして返し、実際にネットワークリクエストは行われないようにMirageを設定しています。
+Mirageの設定で<code>/api</code>の<code>namespace</code>を指定しています。
+この変更がなければ、アプリケーションの <code>/rentals</code>へのナビゲーションはMirageと競合します。</p>
+
+<!--
+In order for this to work, we need our application to default to making requests to the namespace of `/api`.
 To do this, we want to generate an application adapter.
-An <a href="../../models/customizing-adapters">Adapter</a> is an object that <a href="../../models">Ember Data</a> uses to determine how we communicate with our backend.
+An [Adapter](../../models/customizing-adapters) is an object that [Ember Data](../../models) uses to determine how we communicate with our backend.
 We will cover Ember Data in more detail later in this tutorial.
-For now, let&#39;s generate an adapter for our application:</p>
+For now, let's generate an adapter for our application:
+-->
+
+<p>上記の変更を動作させるためには、デフォルトで<code>/api</code>という名前空間へのリクエストを行うよう、アプリケーションの設定が必要です。
+これを行うには、アプリケーションアダプターを生成する必要があります。
+[アダプター]（../../models/customizing-adaptapters）は、[Ember Data]（../../models）がバックエンドと通信する方法を決定するために使用します。
+Ember Dataについては、このチュートリアルの後半で詳しく説明します。
+今はアプリケーション用のアダプタを生成しましょう。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -311,7 +396,11 @@ For now, let&#39;s generate an adapter for our application:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>This adapter will extend the <a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONAPIAdapter"><code>JSONAPIAdapter</code></a> base class from Ember Data:</p>
+<!--
+This adapter will extend the [`JSONAPIAdapter`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONAPIAdapter) base class from Ember Data:
+-->
+
+<p>アプリケーションアダプターはEmber Dataから<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONAPIAdapter"><code>JSONAPIAdapter</code></a>基底クラスを拡張しています。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -332,9 +421,17 @@ For now, let&#39;s generate an adapter for our application:</p>
 });</pre></td>
 </tr></table>
 </div></div>
-<p>If you were running <code>ember serve</code> in another shell, restart the server to include Mirage in your build.</p>
+<!--
+If you were running `ember serve` in another shell, restart the server to include Mirage in your build.
+-->
 
-<p>Note that at this point of the tutorial, the data is still provided by the <code>app/routes/rentals.js</code> file. We will make use of the mirage data we set up here in the upcoming section called <a href="../ember-data/">Using Ember Data</a>.</p>
+<p>もし<code>ember serve</code> を実行したら、Mirageを含めるように再起動してください。(Mirageの変更は再起動は不要ですが、アドオンインストール直後は再起動が必要です。)</p>
+
+<!--
+Note that at this point of the tutorial, the data is still provided by the `app/routes/rentals.js` file. We will make use of the mirage data we set up here in the upcoming section called [Using Ember Data](../ember-data/).
+-->
+
+<p>チュートリアルのこの時点では、データは <code>app/routes/rentals.js</code>ファイルによって提供されていることに注意してください。ここ先の<a href="../ember-data/">Ember Dataを使う</a>セクションで設定したMirageのデータを使用します。</p>
 
 
 

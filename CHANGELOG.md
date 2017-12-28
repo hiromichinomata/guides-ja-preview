@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2017.12.28
+
+The following sections were done. 🎉
+
+- Tutorial "The Model Hook"
+- Tutorial "Installing Addons"
+- Tutorial "Building a Simple Component"
+- Tutorial "Creating a Handlebars Helper"
+
 ## 2017.12.23
 
 Small improvements.

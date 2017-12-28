@@ -85,12 +85,23 @@
         </h1>
         <hr>
 
-        <p>So far, our app is directly showing the user data from our Ember Data models.
+        <!--
+So far, our app is directly showing the user data from our Ember Data models.
 As our app grows, we will want to manipulate data further before presenting it to our users.
 For this reason, Ember offers Handlebars template helpers to decorate the data in our templates.
-Let&#39;s use a handlebars helper to allow our users to quickly see if a property is &quot;Standalone&quot; or part of a &quot;Community&quot;.</p>
+Let's use a handlebars helper to allow our users to quickly see if a property is "Standalone" or part of a "Community".
+-->
 
-<p>To get started, let&#39;s generate a helper for <code>rental-property-type</code>:</p>
+<p>これまでのところ、私たちのアプリはEmber Dataモデルから直接データを表示しています。
+アプリを開発していると、ユーザーに表示する前にデータを操作したくなります。
+このため、Emberは、テンプレート内のデータを飾るためのHandlebarsテンプレートヘルパーを提供しています。
+ハンドルバーヘルパーを使用して、物件が戸建か集合住宅であるかをすぐに確認できるようにしましょう。</p>
+
+<!--
+To get started, let's generate a helper for `rental-property-type`:
+-->
+
+<p>始めに、 <code>rent-property-type</code>のヘルパーを生成しましょう：</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -98,7 +109,11 @@ Let&#39;s use a handlebars helper to allow our users to quickly see if a propert
 </pre></td>
 </tr></table>
 </div></div>
-<p>This will create two files, our helper and its related test:</p>
+<!--
+This will create two files, our helper and its related test:
+-->
+
+<p>これにより、ヘルパーとその関連テストの2つのファイルが作成されます。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -112,7 +127,11 @@ installing helper-test
 </pre></td>
 </tr></table>
 </div></div>
-<p>Our new helper starts out with some boilerplate code from the generator:</p>
+<!--
+Our new helper starts out with some boilerplate code from the generator:
+-->
+
+<p>作成されたヘルパーのファイルには定型コードが書かれています。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -138,7 +157,11 @@ installing helper-test
 </pre></td>
 </tr></table>
 </div></div>
-<p>Let&#39;s update our <code>rental-listing</code> component template to use our new helper and pass in <code>rental.category</code>:</p>
+<!--
+Let's update our `rental-listing` component template to use our new helper and pass in `rental.category`:
+-->
+
+<p><code>rental-listing</code>コンポーネントのテンプレートを更新して、作成したヘルパーを使用し、<code>rental.category</code>を渡しましょう：</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -191,10 +214,17 @@ installing helper-test
 <span class="tag">&lt;/article&gt;</span></pre></td>
 </tr></table>
 </div></div>
-<p>Ideally we&#39;ll see &quot;Type: Standalone - Estate&quot; for our first rental property.
-Instead, our default template helper is returning back our <code>rental.category</code> values.
-Let&#39;s update our helper to look if a property exists in an array of <code>communityPropertyTypes</code>,
-if so, we&#39;ll return either <code>&#39;Community&#39;</code> or <code>&#39;Standalone&#39;</code>:</p>
+<!--
+Ideally we'll see "Type: Standalone - Estate" for our first rental property.
+Instead, our default template helper is returning back our `rental.category` values.
+Let's update our helper to look if a property exists in an array of `communityPropertyTypes`,
+if so, we'll return either `'Community'` or `'Standalone'`:
+-->
+
+<p>理想的には、最初の賃貸物件には&quot;Type: Standalone - Estate&quot;が表示されるはずなのですが、
+代わりに、デフォルトのテンプレートヘルパーが <code>rental.category</code>の値を返しています。
+ <code>communityPropertyTypes</code>プロパティが配列に存在するかどうかを調べるためにヘルパーを更新しましょう。
+存在する場合は<code>Community</code>を、そうでない場合は<code>Standalone</code>を返します：</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -247,12 +277,29 @@ if so, we&#39;ll return either <code>&#39;Community&#39;</code> or <code>&#39;St
 <span class="reserved">export</span> <span class="keyword">default</span> helper(rentalPropertyType);</pre></td>
 </tr></table>
 </div></div>
-<p>Each <a href="https://guides.emberjs.com/v2.12.0/templates/writing-helpers/#toc_helper-arguments">argument</a> in the helper will be added to an array and passed to our helper. For example, <code>{{my-helper &quot;foo&quot; &quot;bar&quot;}}</code> would result in <code>myHelper([&quot;foo&quot;, &quot;bar&quot;])</code>. Using array <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">ES2015 destructuring</a> assignment, we can name expected parameters within the array. In the example above, the first argument in the template will be assigned to <code>propertyType</code>. This provides a flexible, expressive interface for your helpers, including optional arguments and default values.</p>
+<!--
+Each [argument](https://guides.emberjs.com/v2.12.0/templates/writing-helpers/#toc_helper-arguments) in the helper will be added to an array and passed to our helper. For example, `{{my-helper "foo" "bar"}}` would result in `myHelper(["foo", "bar"])`. Using array [ES2015 destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) assignment, we can name expected parameters within the array. In the example above, the first argument in the template will be assigned to `propertyType`. This provides a flexible, expressive interface for your helpers, including optional arguments and default values.
+-->
 
-<p>Now in our browser we should see that the first rental property is listed as &quot;Standalone&quot;,
-while the other two are listed as &quot;Community&quot;.</p>
-<h3 id="toc_Integration-Test" class="anchorable-toc">Integration Test</h3>
-<p>Update the content of the integration test to the following to fix it:</p>
+<p>ヘルパーの各<a href="https://guides.emberjs.com/v2.12.0/templates/writing-helpers/#toc_helper-arguments">引数</a>は配列に追加され、ヘルパーに渡されます。 たとえば、 <code>{{my-helper &quot;foo&quot; &quot;bar&quot;}}</code>は <code>myHelper([&quot;foo&quot;、&quot;bar&quot;])</code>となります。 <a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">ES2015分割代入</a>使用して、配列内に予期されるパラメータの名前を付けることができます。 上記の例では、テンプレートの最初の引数は<code>propertyType</code>に割り当てられます。 これにより、オプションの引数やデフォルト値など、柔軟で表現力豊かなヘルパーインタフェースが提供されます。</p>
+
+<!--
+Now in our browser we should see that the first rental property is listed as "Standalone",
+while the other two are listed as "Community".
+-->
+
+<p>ブラウザで、最初の賃貸物件が戸建て(Standalone)としてリストされていることがわかります。
+他の2つは集合住宅(Community)としてリストされています。</p>
+
+<!--
+### Integration Test
+-->
+<h3 id="toc_統合テスト" class="anchorable-toc">統合テスト</h3>
+<!--
+Update the content of the integration test to the following to fix it:
+-->
+
+<p>統合テストの内容を次のように更新して修正してください。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
