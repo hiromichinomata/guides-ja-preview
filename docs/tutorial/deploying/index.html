@@ -85,11 +85,25 @@
         </h1>
         <hr>
 
-        <p>To deploy an Ember application simply transfer the output from <code>ember build</code> to a web server.
-This can be done with standard Unix file transfer tools such as <code>rsync</code> or <code>scp</code>.
-There are also services that will let you deploy easily.</p>
-<h2 id="toc_Deploying-with-scp" class="anchorable-toc">Deploying with scp</h2>
-<p>You can deploy your application to any web server by copying the output from <code>ember build</code> to any web server:</p>
+        <!--
+To deploy an Ember application simply transfer the output from `ember build` to a web server.
+This can be done with standard Unix file transfer tools such as `rsync` or `scp`.
+There are also services that will let you deploy easily.
+-->
+
+<p>Emberアプリケーションをデプロイは、<code>ember build</code>の出力したものをWebサーバーに転送するだけです。
+これは、<code>rsync</code>や<code>scp</code>のような標準のUnixファイル転送ツールで行うことができます。
+また、簡単にデプロイできるサービスもあります。</p>
+
+<!--
+## Deploying with scp
+-->
+<h2 id="toc_scpによるデプロイ" class="anchorable-toc">scpによるデプロイ</h2>
+<!--
+You can deploy your application to any web server by copying the output from `ember build` to any web server:
+-->
+
+<p><code>ember build</code>の出力を任意のWebサーバーにコピーすることによって、任意のWebサーバーにアプリケーションをデプロイできます。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -98,11 +112,24 @@ There are also services that will let you deploy easily.</p>
 scp -r dist/* myserver.com:/var/www/public/
 </pre></td>
 </tr></table>
-</div></div><h2 id="toc_Deploying-to-surge.sh" class="anchorable-toc">Deploying to surge.sh</h2>
-<p><a href="http://surge.sh/">Surge.sh</a> allows you to publish any folder to the web for free.
-To deploy an Ember application you can simply deploy the folder produced by <code>ember build</code>.</p>
+</div></div>
+<!--
+## Deploying to surge.sh
+-->
+<h2 id="toc_surge.shにデプロイする" class="anchorable-toc">surge.shにデプロイする</h2>
+<!--
+[Surge.sh](http://surge.sh/) allows you to publish any folder to the web for free.
+To deploy an Ember application you can simply deploy the folder produced by `ember build`. 
+-->
 
-<p>You will need to have the surge cli tool installed:</p>
+<p><a href="http://surge.sh/">Surge.sh</a>では、任意のフォルダを無料でWebに公開することができます。
+Emberアプリケーションをデプロイするには、単に<code>ember build</code>によって生成されたフォルダをデプロイするだけです。</p>
+
+<!--
+You will need to have the surge cli tool installed:
+-->
+
+<p>Surge CLIツールをインストールする必要があります:</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -110,8 +137,13 @@ To deploy an Ember application you can simply deploy the folder produced by <cod
 </pre></td>
 </tr></table>
 </div></div>
-<p>Then you can use the <code>surge</code> command to deploy your application.
-Note you will also need to rename index.html to 200.html to enable Ember&#39;s client-side routing.</p>
+<!--
+Then you can use the `surge` command to deploy your application.
+Note you will also need to rename index.html to 200.html to enable Ember's client-side routing.
+-->
+
+<p>次に、<code>surge</code>コマンドを使ってアプリケーションをデプロイすることができます。
+Emberのクライアント側ルーティングを有効にするには、index.htmlの名前を200.htmlに変更する必要があります。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -123,12 +155,21 @@ surge dist funny-name.surge.sh
 </pre></td>
 </tr></table>
 </div></div>
-<p>We chose funny-name.surge.sh but you may use any unclaimed subdomain you like or 
+<!--
+We chose funny-name.surge.sh but you may use any unclaimed subdomain you like or 
 use a custom domain that you own and have pointed the DNS to one of surges servers.
-If the second argument is left blank surge will prompt you with a suggested subdomain.</p>
+If the second argument is left blank surge will prompt you with a suggested subdomain.
+-->
 
-<p>To deploy to the same URL after making changes, perform the same steps, reusing 
-the same domain as before.</p>
+<p>funny-name.surge.shを選択しましたが、まだ取得されていないサブドメインか、DNSをサージサーバに向けてカスタムドメインを使うこともできます。
+2番目の引数を空白にすると、サージはサブドメインの提案と入力を促します。</p>
+
+<!--
+To deploy to the same URL after making changes, perform the same steps, reusing 
+the same domain as before.
+-->
+
+<p>同じURLに再びデプロイするには、同じドメインを再利用して同じ手順を実行します。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -142,16 +183,41 @@ surge dist funny-name.surge.sh
 </pre></td>
 </tr></table>
 </div></div>
-<p>We use <code>--environment=development</code> here so that Mirage will continue to mock fake data.
-However, normally we would use <code>ember build --environment=production</code> which optimizes your application for production.</p>
-<h2 id="toc_Servers" class="anchorable-toc">Servers</h2><h3 id="toc_Apache" class="anchorable-toc">Apache</h3>
-<p>On an Apache server, the rewrite engine (mod-rewrite) must be enabled in order for Ember routing to work properly.
-If you upload your dist folder, going to your main URL works,
-but when you try to go to a route such as &#39;{main URL}/example&#39; and it returns 404,
-your server has not been configured for &quot;friendly&quot; URLs.</p>
+<!--
+We use `--environment=development` here so that Mirage will continue to mock fake data. -
+However, normally we would use `ember build --environment=production` which optimizes your application for production.
+-->
 
-<p>To fix this add a file called &#39;.htaccess&#39; to the root folder of your website.
-Add these lines:</p>
+<p>ここで <code>--environment = development</code>を使用して、Mirageは偽のデータを模倣し続けます。
+しかし、通常は、 <code>ember build --environment = production</code>を使ってアプリケーションを最適化して生産します。</p>
+
+<!--
+## Servers
+-->
+<h2 id="toc_サーバ" class="anchorable-toc">サーバ</h2>
+<!--
+### Apache
+-->
+<h3 id="toc_Apache" class="anchorable-toc">Apache</h3>
+<!--
+On an Apache server, the rewrite engine (mod-rewrite) must be enabled in order for Ember routing to work properly.
+If you upload your dist folder, going to your main URL works,
+but when you try to go to a route such as '{main URL}/example' and it returns 404,
+your server has not been configured for "friendly" URLs.
+-->
+
+<p>Apacheサーバーで、Emberルーティングが正常に動作するためには、mod-rewriteを有効にする必要があります。
+distフォルダをアップロードしてメインURLに行き、
+&#39;{main URL}/example&#39;などのルートに移動しようとすると404が返ってくる場合、
+サーバーの設定が必要です。</p>
+
+<!--
+To fix this add a file called '.htaccess' to the root folder of your website.
+Add these lines:
+-->
+
+<p>&#39;.htaccess&#39;というファイルをWebサイトのルートフォルダに追加します。
+次の行を追加します。</p>
 <div class="highlight text "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -171,8 +237,13 @@ RewriteRule (.*) index.html [L]
 </pre></td>
 </tr></table>
 </div></div>
-<p>Your server&#39;s configuration may be different so you may need different options.
-Please see the <a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html">Apache URL Rewriting Guide</a> for more information.</p>
+<!--
+Your server's configuration may be different so you may need different options.
+Please see the [Apache URL Rewriting Guide](http://httpd.apache.org/docs/2.0/misc/rewriteguide.html) for more information.
+-->
+
+<p>サーバーの設定は他のオプションが必要になる場合があります。
+詳細については、<a href="http://httpd.apache.org/docs/2.0/misc/rewriteguide.html">Apache URL Rewriting Guide</a>を参照してください。</p>
 
 
 

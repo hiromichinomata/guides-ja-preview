@@ -85,11 +85,19 @@
         </h1>
         <hr>
 
-        <p>As they search for a rental, users might also want to narrow their search to a specific city.
-While our <a href="../simple-component/">initial</a> rental listing component only displayed rental information, this new filter component will also allow the user to provide input in the form of filter criteria.</p>
+        <!--
+As they search for a rental, users might also want to narrow their search to a specific city.
+While our [initial](../simple-component/) rental listing component only displayed rental information, this new filter component will also allow the user to provide input in the form of filter criteria.
+-->
 
-<p>To begin, let&#39;s generate our new component.
-We&#39;ll call this component <code>list-filter</code>, since all we want our component to do is filter the list of rentals based on input.</p>
+<p>ユーザが物件を検索する際に、検索対象を特定の都市に絞りたくなるかもしれません。 <a href="../simple-component/">初めに作成した物件コンポーネント</a>では物件情報の表示のみでしたが、これから作成するfilterコンポーネントでは、検索対象を入力できるようにします。</p>
+
+<!--
+To begin, let's generate our new component.
+We'll call this component `list-filter`, since all we want our component to do is filter the list of rentals based on input.
+-->
+
+<p>それでは、コンポーネントを生成しましょう。 入力に基づいて物件一覧をフィルタするので、このコンポーネントを<code>list-filter</code>と命名します。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -97,21 +105,48 @@ We&#39;ll call this component <code>list-filter</code>, since all we want our co
 </pre></td>
 </tr></table>
 </div></div>
-<p>As before when we created the <a href="../simple-component"><code>rental-listing</code> component</a>, the &quot;generate component&quot; CLI command creates</p>
+<!--
+As before when we created the [`rental-listing` component](../simple-component), the "generate component" CLI command creates
+-->
+
+<p><a href="../simple-component"><code>rental-listing</code></a>コンポーネントを作成する前と同様、以下のものが生成されます。</p>
+
+<!--
+* a Handlebars template (`app/templates/components/list-filter.hbs`),
+* a JavaScript file (`app/components/list-filter.js`),
+* and a component integration test (`tests/integration/components/list-filter-test.js`).
+-->
 
 <ul>
-<li>a Handlebars template (<code>app/templates/components/list-filter.hbs</code>),</li>
-<li>a JavaScript file (<code>app/components/list-filter.js</code>),</li>
-<li>and a component integration test (<code>tests/integration/components/list-filter-test.js</code>).</li>
+<li>Handlebarsテンプレート (<code>app/templates/components/list-filter.hbs</code>),</li>
+<li>JavaScriptファイル (<code>app/components/list-filter.js</code>),</li>
+<li>コンポーネントの統合テストファイル (<code>tests/integration/components/list-filter-test.js</code>).</li>
 </ul>
-<h4 id="toc_Providing-Markup-to-a-Component" class="anchorable-toc">Providing Markup to a Component</h4>
-<p>In our <code>app/templates/rentals.hbs</code> template file, we&#39;ll add a reference to our new <code>list-filter</code> component.</p>
 
-<p>Notice that below we &quot;wrap&quot; our rentals markup inside the open and closing mentions of <code>list-filter</code> on lines 12 and 20.
-This is an example of the <a href="../../components/wrapping-content-in-a-component"><strong>block form</strong></a> of a component,
-which allows a Handlebars template to be rendered <em>inside</em> the component&#39;s template wherever the <code>{{yield}}</code> expression appears.</p>
+<!--
+#### Providing Markup to a Component
+-->
+<h4 id="toc_コンポーネントのマークアップ" class="anchorable-toc">コンポーネントのマークアップ</h4>
+<!--
+In our `app/templates/rentals.hbs` template file, we'll add a reference to our new `list-filter` component.
+-->
 
-<p>In this case we are passing, or &quot;yielding&quot;, our filter data to the inner markup as a variable called <code>rentals</code> (line 14).</p>
+<p><code>app/templates/rentals.hbs</code> テンプレートファイルに、作成した<code>list-filter</code>コンポーネントの参照を追加します。</p>
+
+<!--
+Notice that below we "wrap" our rentals markup inside the open and closing mentions of `list-filter` on lines 12 and 20.
+This is an example of the [**block form**](../../components/wrapping-content-in-a-component) of a component,
+which allows a Handlebars template to be rendered _inside_ the component's template wherever the `{{yield}}` expression appears.
+-->
+
+<p>以下のコードでは、12行目と20行目の<code>list-filter</code>の開きと閉じの中に物件を&quot;ラップ&quot;していることに注意してください。
+これはコンポーネントの<a href="../../components/wrapping-content-in-a-component"><strong>ブロック形式</strong></a>の例であり、Handlebarsテンプレートをコンポーネントのテンプレート内の<code>{{yield}}</code>式があるところに描画します。</p>
+
+<!--
+In this case we are passing, or "yielding", our filter data to the inner markup as a variable called `rentals` (line 14).
+-->
+
+<p>この場合、フィルタリングしたデータをブロック内のマークアップに<code>rentals</code>という変数として渡しています（14行目）。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -167,8 +202,16 @@ which allows a Handlebars template to be rendered <em>inside</em> the component&
 <span class="highlight-line removed">  <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">rental-listing</span> <span class="attribute-name">rental</span>=<span class="attribute-value">rentalUnit</span><span class="inline-delimiter">}}</span></span></span>
 <span class="highlight-line removed"><span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">each</span><span class="inline-delimiter">}}</span></span></span></pre></td>
 </tr></table>
-</div></div><h4 id="toc_Accepting-Input-to-a-Component" class="anchorable-toc">Accepting Input to a Component</h4>
-<p>We want the component to simply provide an input field and yield the results list to its block, so our template will be simple:</p>
+</div></div>
+<!--
+#### Accepting Input to a Component
+-->
+<h4 id="toc_コンポーネントへの入力の受け付ける" class="anchorable-toc">コンポーネントへの入力の受け付ける</h4>
+<!--
+We want the component to simply provide an input field and yield the results list to its block, so our template will be simple:
+-->
+
+<p>コンポーネントには入力フィールドの表示とresultsをブロックに渡す(yield)だけなので、テンプレートは以下のように単純にしておきます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -190,16 +233,32 @@ which allows a Handlebars template to be rendered <em>inside</em> the component&
 </pre></td>
 </tr></table>
 </div></div>
-<p>The template contains an <a href="../../templates/input-helpers"><code>{{input}}</code></a> helper that renders as a text field, in which the user can type a pattern to filter the list of cities used in a search.
-The <code>value</code> property of the <code>input</code> will be kept in sync with the <code>value</code> property in the component.</p>
+<!--
+The template contains an [`{{input}}`](../../templates/input-helpers) helper that renders as a text field, in which the user can type a pattern to filter the list of cities used in a search.
+The `value` property of the `input` will be kept in sync with the `value` property in the component.
+-->
 
-<p>Another way to say this is that the <code>value</code> property of <code>input</code> is <a href="../../object-model/bindings/"><strong>bound</strong></a> to the <code>value</code> property of the component.
+<p>テンプレートにはテキストフィールドとして描画される<a href="../../templates/input-helpers"><code>{{input}}</code></a>ヘルパーが含まれています。このヘルパーに都市を絞る条件が入力できます。 <code>input</code>の<code>value</code>属性は、コンポーネントの<code>value</code>属性と同期して保持されます。</p>
+
+<!--
+Another way to say this is that the `value` property of `input` is [**bound**](../../object-model/bindings/) to the `value` property of the component.
 If the property changes, either by the user typing in the input field, or by assigning a new value to it in our program,
-the new value of the property is present in both the rendered web page and in the code.</p>
+the new value of the property is present in both the rendered web page and in the code.
+-->
 
-<p>The <code>key-up</code> property will be bound to the <code>handleFilterEntry</code> action.</p>
+<p>または、<code>input</code>の<code>value</code>属性がコンポーネントの<code>value</code>属性に<a href="../../object-model/bindings/">バインド</a> されているとも言えます。 ユーザーが入力フィールドを入力するか、プログラムで新しい値を割り当てるなどして値が変更されると、value属性の変更された値はレンダリングされたWebページとコードの両方に反映されます。</p>
 
-<p>Here is what the component&#39;s JavaScript looks like:</p>
+<!--
+The `key-up` property will be bound to the `handleFilterEntry` action.
+-->
+
+<p><code>key-up</code>属性は、<code>handleFilterEntry</code>アクションにバインドされます。</p>
+
+<!--
+Here is what the component's JavaScript looks like:
+-->
+
+<p>コンポーネントのJavaScriptは次のようになります。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -250,24 +309,48 @@ the new value of the property is present in both the rendered web page and in th
 });
 </pre></td>
 </tr></table>
-</div></div><h4 id="toc_Filtering-Data-Based-on-Input" class="anchorable-toc">Filtering Data Based on Input</h4>
-<p>In the above example we use the <code>init</code> hook to seed our initial listings by calling the <code>filter</code> action with an empty value.
-Our <code>handleFilterEntry</code> action calls a function called <code>filter</code> based on the <code>value</code> attribute set by the input helper.</p>
+</div></div>
+<!--
+#### Filtering Data Based on Input
+-->
+<h4 id="toc_入力に基づくデータのフィルタリング" class="anchorable-toc">入力に基づくデータのフィルタリング</h4>
+<!--
+In the above example we use the `init` hook to seed our initial listings by calling the `filter` action with an empty value.
+Our `handleFilterEntry` action calls a function called `filter` based on the `value` attribute set by the input helper.
+-->
 
-<p>The <code>filter</code> function is passed in by the calling object. This is a pattern known as <a href="../../components/triggering-changes-with-actions/#toc_passing-the-action-to-the-component">closure actions</a>.</p>
+<p>上記の例では、<code>init</code>アクションを使用して、<code>filter</code>アクションを文字を渡して実行して初期値を生成しています。 <code>handleFilterEntry</code>アクションは、inputヘルパーのvalue属性を対象に<code>filter</code>という関数を実行しています。</p>
 
-<p>Notice the <code>then</code> function called on the result of calling the <code>filter</code> function.
-The code expects the <code>filter</code> function to return a promise.
-A <a href="https://www.emberjs.com/api/ember/2.16/classes/Promise">promise</a> is a JavaScript object that represents the result of an asynchronous function.
+<!--
+The `filter` function is passed in by the calling object. This is a pattern known as [closure actions](../../components/triggering-changes-with-actions/#toc_passing-the-action-to-the-component). 
+-->
+
+<p><code>filter</code>関数は呼び出し元のオブジェクトによって渡されます。 これは<a href="../../components/triggering-changes-with-actions/#toc_passing-the-action-to-the-component">クロージャーアクション</a>と呼ばれるパターンです。</p>
+
+<!--
+Notice the `then` function called on the result of calling the `filter` function.
+The code expects the `filter` function to return a promise.
+A [promise](https://www.emberjs.com/api/ember/2.16/classes/Promise) is a JavaScript object that represents the result of an asynchronous function.
 A promise may or may not be executed at the time you receive it.
-To account for this, it provides functions, like <code>then</code> that let you give it code it will run when it eventually does receive a result.</p>
+To account for this, it provides functions, like `then` that let you give it code it will run when it eventually does receive a result.
+-->
 
-<p>To implement the <code>filter</code> function to do the actual filter of rentals by city, we&#39;ll create a <code>rentals</code> controller.
-<a href="../../controllers/">Controllers</a> contain actions and properties available to the template of its corresponding route.
-In our case we want to generate a controller called <code>rentals</code>.
-Ember will know that a controller with the name of <code>rentals</code> will apply to the route with the same name.</p>
+<p><code>filter</code>関数の実行結果に対して、<code>then</code>関数が呼び出されたことに注目してください。 このコードでは、<code>filter</code>関数がPromiseを返すことを期待しています。 <a href="https://www.emberjs.com/api/ember/2.16/classes/Promise">Promise</a>は、非同期関数の結果を表すJavaScriptオブジェクトです。 Promiseは、Promiseを受け取った時点で実行される場合もあれば、実行されない場合もあります。 そのため、<code>then</code>関数のような、結果を受け取ったときに最終的に実行されるコードを渡せる関数があります。</p>
 
-<p>Generate a controller for the <code>rentals</code> route by running the following:</p>
+<!--
+To implement the `filter` function to do the actual filter of rentals by city, we'll create a `rentals` controller.
+[Controllers](../../controllers/) contain actions and properties available to the template of its corresponding route.
+In our case we want to generate a controller called `rentals`.
+Ember will know that a controller with the name of `rentals` will apply to the route with the same name.
+-->
+
+<p>都市別の物件のフィルタリングを実行する<code>filter</code>関数を実装するため、<code>rentals</code>コントローラを作成します。 [コントローラ]<a href="../../controllers/">Controllers</a>には、対応するルートのテンプレートで使用できるアクションとプロパティ(属性)が含まれています。 そのためこの場合は、<code>rentals</code>というコントローラーを作成することになります。 Emberでは、<code>rentals</code>という名前のコントローラーが同じ名前のルートに適用されます。</p>
+
+<!--
+Generate a controller for the `rentals` route by running the following:
+-->
+
+<p>次のコマンドを実行して、<code>rentals</code>ルート用のコントローラを生成します。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -275,7 +358,11 @@ Ember will know that a controller with the name of <code>rentals</code> will app
 </pre></td>
 </tr></table>
 </div></div>
-<p>Now, define your new controller like so:</p>
+<!--
+Now, define your new controller like so:
+-->
+
+<p>次に、作成されたコントローラを以下のように変更してください。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -313,12 +400,24 @@ Ember will know that a controller with the name of <code>rentals</code> will app
 </pre></td>
 </tr></table>
 </div></div>
-<p>When the user types in the text field in our component, the <code>filterByCity</code> action in the controller is called.
-This action takes in the <code>value</code> property, and filters the <code>rental</code> data for records in data store that match what the user has typed thus far.
-The result of the query is returned to the caller.</p>
-<h4 id="toc_Faking-Query-Results" class="anchorable-toc">Faking Query Results</h4>
-<p>For this action to work, we need to replace our Mirage <code>config.js</code> file with the following, so that it can respond to our queries.
-Instead of simply returning the list of rentals, our Mirage HTTP GET handler for <code>rentals</code> will return rentals matching the string provided in the URL query parameter called <code>city</code>.</p>
+<!--
+When the user types in the text field in our component, the `filterByCity` action in the controller is called.
+This action takes in the `value` property, and filters the `rental` data for records in data store that match what the user has typed thus far.
+The result of the query is returned to the caller.
+-->
+
+<p>ユーザーがコンポーネントのテキストフィールドに入力すると、コントローラーの<code>filterByCity</code>アクションが呼び出されます。 このアクションでは、<code>value</code>プロパティが使用され、ユーザーが入力した内容と一致する物件データがデータストア内から抽出されます。 クエリの結果は呼び出し元に返されます。</p>
+
+<!--
+#### Faking Query Results
+-->
+<h4 id="toc_検索結果の偽装" class="anchorable-toc">検索結果の偽装</h4>
+<!--
+For this action to work, we need to replace our Mirage `config.js` file with the following, so that it can respond to our queries.
+Instead of simply returning the list of rentals, our Mirage HTTP GET handler for `rentals` will return rentals matching the string provided in the URL query parameter called `city`. 
+-->
+
+<p>この動作を有効にするには、Mirageの<code>config.js</code>ファイルを次のように置き換えて、クエリに応答できるようにする必要があります。 単に全物件データを返す代わりに、Mirage HTTP GETハンドラの<code>rentals</code>で、<code>city</code>というURLクエリパラメータで指定された文字列と一致する物件を返すようにします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -434,17 +533,34 @@ Instead of simply returning the list of rentals, our Mirage HTTP GET handler for
 </pre></td>
 </tr></table>
 </div></div>
-<p>After updating our mirage configuration, we should see a simple filter on the home screen that will update the rental list as you type:</p>
+<!--
+After updating our mirage configuration, we should see a simple filter on the home screen that will update the rental list as you type:
+-->
+
+<p>Mirageの設定を更新した後、ホーム画面でテキストフィールドに入力すると物件一覧が絞られるようになっています。</p>
 
 <p><img src="../../images/autocomplete-component/styled-super-rentals-filter.png" alt="home screen with filter component"></p>
-<h4 id="toc_Handling-Results-Coming-Back-at-Different-Times" class="anchorable-toc">Handling Results Coming Back at Different Times</h4>
-<p>In our example, you might notice that if you type quickly that the results might get out of sync with the current filter text entered.
-This is because our data filtering function is <em>asynchronous</em>, meaning that the code in the function gets scheduled for later, while the code that calls the function continues to execute.
-Often code that may make network requests is set up to be asynchronous because the server may return its responses at varying times.</p>
 
-<p>Lets add some protective code to ensure our results do not get out of sync with our filter input.
-To do this we&#39;ll simply provide the filter text to the filter function, so that when the results come back we can compare the original filter value with the current filter value.
-We will update the results on screen only if the original filter value and the current filter value are the same.</p>
+<!--
+#### Handling Results Coming Back at Different Times
+-->
+<h4 id="toc_非同期処理と改善" class="anchorable-toc">非同期処理と改善</h4>
+<!--
+In our example, you might notice that if you type quickly that the results might get out of sync with the current filter text entered.
+This is because our data filtering function is _asynchronous_, meaning that the code in the function gets scheduled for later, while the code that calls the function continues to execute.
+Often code that may make network requests is set up to be asynchronous because the server may return its responses at varying times.
+-->
+
+<p>テキストフィールドに素早く検索条件を入力すると、入力と同時に結果が反映されていないことに気がつくかもしれません。
+これは、検索の機能が<em>非同期</em>であるためです。つまり、関数内のコードは後で実行されるようスケジュールされ、引き続きその関数を呼び出しているコードが実行されるためです。 多くの場合、ネットワークリクエストを行う可能性のあるコードは、サーバーの応答時間が様々なため、非同期処理されています。</p>
+
+<!--
+Lets add some protective code to ensure our results do not get out of sync with our filter input.
+To do this we'll simply provide the filter text to the filter function, so that when the results come back we can compare the original filter value with the current filter value.
+We will update the results on screen only if the original filter value and the current filter value are the same.
+-->
+
+<p>結果が検索条件との同期が壊れないように、それを防ぐコードを追加しましょう。それにはまず、filter関数に検索条件を一緒に渡します。これにより、結果を取得した時に元の条件と現在の条件を比較できます。元の条件と現在の条件が同じ場合にのみ、画面上の結果を更新します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -497,8 +613,12 @@ We will update the results on screen only if the original filter value and the c
 });</pre></td>
 </tr></table>
 </div></div>
-<p>In the <code>filterByCity</code> function in the rental controller above,
-we&#39;ve added a new property called <code>query</code> to the filter results instead of just returning an array of rentals as before.</p>
+<!--
+In the `filterByCity` function in the rental controller above,
+we've added a new property called `query` to the filter results instead of just returning an array of rentals as before.
+-->
+
+<p>上のrentalsコントローラの<code>filterByCity</code>関数では、以前と同様に物件の配列を返すのではなく、検索結果に<code>query</code>という新しいプロパティを追加しました。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -563,25 +683,51 @@ we&#39;ve added a new property called <code>query</code> to the filter results i
 });</pre></td>
 </tr></table>
 </div></div>
-<p>In our list filter component JavaScript, we use the <code>query</code> property to compare to the <code>value</code> property of the component.
-The <code>value</code> property represents the latest state of the input field.
-Therefore we now check that results match the input field, ensuring that results will stay in sync with the last thing the user has typed.</p>
+<!--
+In our list filter component JavaScript, we use the `query` property to compare to the `value` property of the component.
+The `value` property represents the latest state of the input field.
+Therefore we now check that results match the input field, ensuring that results will stay in sync with the last thing the user has typed.
+-->
 
-<p>While this approach will keep our results order consistent, there are other things to consider when dealing with multiple concurrent tasks,
-such as <a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Frunloop/methods/debounce?anchor=debounce">limiting the number of requests made to the server</a>.
+<p><code>list-filter</code>コンポーネントのJavaScriptでは、<code>query</code>プロパティを使用してコンポーネントの<code>value</code>プロパティと比較します。
+<code>value</code>プロパティは、入力フィールドの最新の状態を表します。 
+したがって、結果が入力フィールドに一致することを確認することで、結果がユーザーが最後に入力したものと同期した状態を保つようになります。</p>
+
+<!--
+While this approach will keep our results order consistent, there are other things to consider when dealing with multiple concurrent tasks,
+such as [limiting the number of requests made to the server](https://www.emberjs.com/api/ember/2.16/classes/@ember%2Frunloop/methods/debounce?anchor=debounce).
 To create effective and robust autocomplete behavior for your applications,
-we recommend considering the <a href="http://ember-concurrency.com/#/docs/introduction"><code>ember-concurrency</code></a> addon project.</p>
+we recommend considering the [`ember-concurrency`](http://ember-concurrency.com/#/docs/introduction) addon project.
+-->
 
-<p>You can now proceed on to implement the <a href="../service/">next feature</a>, or continue on to test our newly created filter component.</p>
-<h3 id="toc_An-Integration-Test" class="anchorable-toc">An Integration Test</h3>
-<p>Now that we&#39;ve created a new component for filtering a list,
+<p>この方法では、結果の順序を一致させることができますが、<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Frunloop/methods/debounce?anchor=debounce">サーバーへの要求数を制限する</a>など、複数の並行タスクを処理する場合は、他に考慮すべき事項があります。 アプリケーションの効果的で堅牢な補完動作を作成するには、<a href="http://ember-concurrency.com/#/docs/introduction"><code>ember-concurrency</code></a>アドオンプロジェクトを検討することをお勧めします。</p>
+
+<!--
+You can now proceed on to implement the [next feature](../service/), or continue on to test our newly created filter component.
+-->
+
+<p>ここで、<a href="../service/">次の機能</a>の実装に移るか、新しく作成したフィルタコンポーネントのテストの実装に進んでください。</p>
+
+<!--
+### An Integration Test
+-->
+<h3 id="toc_統合テスト" class="anchorable-toc">統合テスト</h3>
+<!--
+Now that we've created a new component for filtering a list,
 we want to create a test to verify it.
-Let&#39;s use a <a href="../../testing/testing-components">component integration test</a>
+Let's use a [component integration test](../../testing/testing-components)
 to verify our component behavior,
-similar to <a href="../simple-component/#toc_an-integration-test">how we tested our rental listing component earlier</a>.</p>
+similar to [how we tested our rental listing component earlier](../simple-component/#toc_an-integration-test).
+-->
 
-<p>Lets begin by opening the component integration test created when we generated our <code>list-filter</code> component, <code>tests/integration/components/list-filter-test.js</code>.
-Remove the default test, and create a new test that verifies that by default, the component will list all items.</p>
+<p>一覧をフィルタリングするための新しいコンポーネントを作成したので、それを検証するためのテストを作成します。 <a href="../simple-component/#toc_%E7%B5%B1%E5%90%88%E3%83%86%E3%82%B9%E3%83%88">rental-listingコンポーネントを以前にテストした</a>のと同様に、コンポーネントの動作を確認するために<a href="../../testing/testing-components">コンポーネント統合テスト</a>を使用しましょう。</p>
+
+<!--
+Lets begin by opening the component integration test created when we generated our `list-filter` component, `tests/integration/components/list-filter-test.js`.
+Remove the default test, and create a new test that verifies that by default, the component will list all items.
+-->
+
+<p>まず、<code>list-filter</code>コンポーネントを生成したときに作成されたコンポーネント統合テスト<code>tests/integration/components/list-filter-test.js</code>を開きます。 既存のテストを削除し、コンポーネントがデフォルトですべてのアイテムを一覧表示することを確認する新しいテストを作成します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -611,8 +757,12 @@ test(<span class="string"><span class="delimiter">'</span><span class="content">
 </pre></td>
 </tr></table>
 </div></div>
-<p>Our list-filter component takes a function as an argument, used to find the list of matching rentals based on the filter string provided by the user.
-We provide an action function by setting it to the local scope of our test by calling <code>this.on</code>.</p>
+<!--
+Our list-filter component takes a function as an argument, used to find the list of matching rentals based on the filter string provided by the user.
+We provide an action function by setting it to the local scope of our test by calling `this.on`.
+-->
+
+<p>list-filterコンポーネントは関数を引数でとり、ユーザーが入力する文字列に基づいて一致する物件を検索に使います。テストのローカルスコープに設定するために<code>this.on</code>を使ってアクション関数をセットします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -659,16 +809,36 @@ test(<span class="string"><span class="delimiter">'</span><span class="content">
 });</pre></td>
 </tr></table>
 </div></div>
-<p><code>this.on</code> will add the provided function to the test local scope as <code>filterByCity</code>, which we can use to provide to the component.</p>
+<!--
+`this.on` will add the provided function to the test local scope as `filterByCity`, which we can use to provide to the component.
+-->
 
-<p>Our <code>filterByCity</code> function is going to pretend to be the action function for our component, that does the actual filtering of the rental list.</p>
+<p><code>this.on</code>は、渡された関数を<code>filterByCity</code>としてテストのローカルスコープに追加しています。コンポーネントに渡すのに使用できます。</p>
 
-<p>We are not testing the actual filtering of rentals in this test, since it is focused on only the capability of the component.
-We will test the full logic of filtering in acceptance tests, described in the next section.</p>
+<!--
+Our `filterByCity` function is going to pretend to be the action function for our component, that does the actual filtering of the rental list.
+-->
 
-<p>Since our component is expecting the filter process to be asynchronous, we return promises from our filter, using <a href="https://www.emberjs.com/api/ember/2.16/modules/rsvp">Ember&#39;s RSVP library</a>.</p>
+<p>上記の<code>filterByCity</code>関数は、実際のコンポーネントのアクションに合わせ、物件検索しているかのように動作させています。</p>
 
-<p>Next, we&#39;ll add the call to render the component to show the cities we&#39;ve provided above.</p>
+<!--
+We are not testing the actual filtering of rentals in this test, since it is focused on only the capability of the component.
+We will test the full logic of filtering in acceptance tests, described in the next section. 
+-->
+
+<p>このテストでは、コンポーネントの機能のみに焦点を絞っているため、実際の物件のフィルタリングはテストしていません。 次のセクションで説明する受け入れテストでのフィルタリングの完全なロジックをテストします。</p>
+
+<!--
+Since our component is expecting the filter process to be asynchronous, we return promises from our filter, using [Ember's RSVP library](https://www.emberjs.com/api/ember/2.16/modules/rsvp).
+-->
+
+<p>コンポーネントはフィルタプロセスが非同期であることを期待しているので、<a href="https://www.emberjs.com/api/ember/2.16/modules/rsvp">EmberのRSVPライブラリ</a>を使用してPromiseを返します。</p>
+
+<!--
+Next, we'll add the call to render the component to show the cities we've provided above.
+-->
+
+<p>次に、コンポーネントをレンダリングする呼び出しを追加して、上に示した都市を表示します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -748,15 +918,27 @@ test(<span class="string"><span class="delimiter">'</span><span class="content">
 </span></span></pre></td>
 </tr></table>
 </div></div>
-<p>Finally we add a <code>wait</code> call at the end of our test to assert the results.</p>
+<!--
+Finally we add a `wait` call at the end of our test to assert the results.
+-->
 
-<p>Ember&#39;s <a href="../../testing/testing-components/#toc_waiting-on-asynchronous-behavior">wait helper</a>
+<p>最後に、テストの最後に<code>wait</code>を追加して結果をアサートします。</p>
+
+<!--
+Ember's [wait helper](../../testing/testing-components/#toc_waiting-on-asynchronous-behavior)
 waits for all asynchronous tasks to complete before running the given function callback.
-It returns a promise that we also return from the test.</p>
+It returns a promise that we also return from the test.
+-->
 
-<p>If you return a promise from a QUnit test, the test will wait to finish until that promise is resolved.
-In this case our test completes when the <code>wait</code> helper decides that processing is finished,
-and the function we provide that asserts the resulting state is completed.</p>
+<p>Emberの<a href="../../testing/testing-components/#toc_waiting-on-asynchronous-behavior">waitヘルパー</a>は、指定された関数コールバックを実行する前に、すべての非同期タスクが完了するのを待ちます。テストから復帰するPromiseを返します。</p>
+
+<!--
+If you return a promise from a QUnit test, the test will wait to finish until that promise is resolved.
+In this case our test completes when the `wait` helper decides that processing is finished,
+and the function we provide that asserts the resulting state is completed.
+-->
+
+<p>QUnitテストでPromiseを返すと、そのPromiseが解決されるまでテストは終了せず待機されます。 下記のコードでは、<code>wait</code>ヘルパーの処理の終了の判断と、結果の状態をアサートする関数が完了すると、テストが完了します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -842,12 +1024,25 @@ test(<span class="string"><span class="delimiter">'</span><span class="content">
 </span></span></pre></td>
 </tr></table>
 </div></div>
-<p>For our second test, we&#39;ll check that typing text in the filter will actually appropriately call the filter action and update the listings shown.</p>
+<!--
+For our second test, we'll check that typing text in the filter will actually appropriately call the filter action and update the listings shown.
+-->
 
-<p>We&#39;ll add some additional functionality to our <code>filterByCity</code> action to additionally return a single rental,
-represented by the variable <code>FILTERED_ITEMS</code> when any value is set.</p>
+<p>2件目のテストでは、入力したテキストが実際にフィルタアクションを適切に呼び出し、表示されている一覧が更新されていることを確認します。</p>
 
-<p>We force the action by generating a <code>keyUp</code> event on our input field, and then assert that only one item is rendered.</p>
+<!--
+We'll add some additional functionality to our `filterByCity` action to additionally return a single rental,
+represented by the variable `FILTERED_ITEMS` when any value is set.
+-->
+
+<p><code>filterByCity</code>アクションにいくつかの追加機能を追加して、値が設定されている時は物件を1件だけ含んだ
+<code>FILTERED_ITEMS</code>を常に返すようにします。</p>
+
+<!--
+We force the action by generating a `keyUp` event on our input field, and then assert that only one item is rendered.
+-->
+
+<p>入力フィールドで<code>keyUp</code>イベントを生成してアクションを強制的に実行し、次に1つのアイテムだけがレンダリングされることをアサートします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -927,13 +1122,29 @@ represented by the variable <code>FILTERED_ITEMS</code> when any value is set.</
 </pre></td>
 </tr></table>
 </div></div>
-<p>Now both integration test scenarios should pass.
-You can verify this by starting up our test suite by typing <code>ember t -s</code> at the command line.</p>
-<h3 id="toc_Acceptance-Tests" class="anchorable-toc">Acceptance Tests</h3>
-<p>Now that we&#39;ve tested that the <code>list-filter</code> component behaves as expected, let&#39;s test that the page itself also behaves properly with an acceptance test.
-We&#39;ll verify that a user visiting the rentals page can enter text into the search field and narrow the list of rentals by city.</p>
+<!--
+Now both integration test scenarios should pass.
+You can verify this by starting up our test suite by typing `ember t -s` at the command line.
+-->
 
-<p>Open our existing acceptance test, <code>tests/acceptance/list-rentals-test.js</code>, and implement the test labeled &quot;should filter the list of rentals by city&quot;.</p>
+<p>これで、２件の統合テストシナリオはパスするはずです。 確認するには、コマンドラインで<code>ember t -s</code>とタイプしてテストスイートを起動します。</p>
+
+<!--
+### Acceptance Tests
+-->
+<h3 id="toc_受け入れテスト" class="anchorable-toc">受け入れテスト</h3>
+<!--
+Now that we've tested that the `list-filter` component behaves as expected, let's test that the page itself also behaves properly with an acceptance test.
+We'll verify that a user visiting the rentals page can enter text into the search field and narrow the list of rentals by city.
+-->
+
+<p><code>list-filter</code>コンポーネントが期待どおりに動作することをテストしたので、ページ自体も受け入れテストで正しく動作することをテストしましょう。 物件一覧ページにアクセスしたユーザーが検索フィールドにテキストを入力し、都市別に物件一覧を絞り込むことができることを確認します。</p>
+
+<!--
+Open our existing acceptance test, `tests/acceptance/list-rentals-test.js`, and implement the test labeled "should filter the list of rentals by city".
+-->
+
+<p>既存の受け入れテスト、<code>tests/acceptance/list-rentals-test.js</code>を開き、&quot;should filter the list of rentals by city&quot;(都市別に物件一覧をフィルタリングする)というラベルのテストを実装します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -963,30 +1174,63 @@ We&#39;ll verify that a user visiting the rentals page can enter text into the s
 </pre></td>
 </tr></table>
 </div></div>
-<p>We introduce two new helpers into this test, <code>fillIn</code> and <code>keyEvent</code>.</p>
+<!--
+We introduce two new helpers into this test, `fillIn` and `keyEvent`.
+-->
+
+<p>このテストでは、<code>fillIn</code>と<code>keyEvent</code>の2つの新しいヘルパーを使います。</p>
+
+<!--
+* The [`fillIn`](http://emberjs.com/api/classes/Ember.Test.html#method_fillIn) helper "fills in" the given text into an input field matching the given selector.
+* The [`keyEvent`](http://emberjs.com/api/classes/Ember.Test.html#method_keyEvent) helper sends a key stroke event to the UI, simulating the user typing a key
+-->
 
 <ul>
-<li>The <a href="http://emberjs.com/api/classes/Ember.Test.html#method_fillIn"><code>fillIn</code></a> helper &quot;fills in&quot; the given text into an input field matching the given selector.</li>
-<li>The <a href="http://emberjs.com/api/classes/Ember.Test.html#method_keyEvent"><code>keyEvent</code></a> helper sends a key stroke event to the UI, simulating the user typing a key.</li>
+<li><a href="http://emberjs.com/api/classes/Ember.Test.html#method_fillIn"><code>fillIn</code></a>ヘルパーは、指定されたテキストを指定されたセレクタに一致する入力フィールドに入力します。</li>
+<li><a href="http://emberjs.com/api/classes/Ember.Test.html#method_keyEvent"><code>keyEvent</code></a>ヘルパーは、キーストロークイベントをUIに送り、ユーザーのキー入力をシミュレートします。</li>
 </ul>
 
-<p>In <code>app/components/list-filter.js</code>, we have as the top-level element rendered by the component a class called <code>list-filter</code>.
-We locate the search input within the component using the selector <code>.list-filter input</code>,
-since we know that there is only one input element located in the list-filter component.</p>
+<!--
+In `app/components/list-filter.js`, we have as the top-level element rendered by the component a class called `list-filter`.
+We locate the search input within the component using the selector `.list-filter input`,
+since we know that there is only one input element located in the list-filter component.
+-->
 
-<p>Our test fills out &quot;Seattle&quot; as the search criteria in the search field,
-and then sends a <code>keyup</code> event to the same field with a code of <code>69</code> (the <code>e</code> key) to simulate a user typing.</p>
+<p><code>app/components/list-filter.js</code>は、コンポーネント内のトップレベルの要素に<code>list-filter</code>というクラスを持っています。 <code>list-filter</code>コンポーネントにはinput要素が1つしかないことがわかっているので、<code>.list-filter input</code>をセレクタに使用してコンポーネント内の検索フィールドの場所を特定できます。</p>
 
-<p>The test locates the results of the search by finding elements with a class of <code>listing</code>,
-which we gave to our <code>rental-listing</code> component in the <a href="../simple-component">&quot;Building a Simple Component&quot;</a> section of the tutorial.</p>
+<!--
+Our test fills out "Seattle" as the search criteria in the search field,
+and then sends a `keyup` event to the same field with a code of `69` (the `e` key) to simulate a user typing.
+-->
 
-<p>Since our data is hard-coded in Mirage, we know that there is only one rental with a city name of &quot;Seattle&quot;,
-so we assert that the number of listings is one and that the location it displays is named, &quot;Seattle&quot;.</p>
+<p>このテストでは、検索フィールドの検索条件として、Seattle」(シアトル)を入力し、ユーザー入力をシミュレートするためにコード69（eキー）を使用して同じフィールドに<code>keyup</code>イベントを送信しています。</p>
 
-<p>The test verifies that after filling in the search input with &quot;Seattle&quot;, the rental list reduces from 3 to 1,
-and the item displayed shows &quot;Seattle&quot; as the location.</p>
+<!--
+The test locates the results of the search by finding elements with a class of `listing`,
+which we gave to our `rental-listing` component in the ["Building a Simple Component"](../simple-component) section of the tutorial.
+-->
 
-<p>You should be down to only 2 failing tests: One remaining acceptance test failure; and our ESLint test that fails on an unused assert for our unimplemented test.</p>
+<p>チュートリアルの<a href="../simple-component">コンポーネントの作成</a>セクションで<code>rental-listing</code>コンポーネントのクラスに<code>listing</code>を指定したので、それを要素を検索することで、検索結果の場所を特定しています。</p>
+
+<!--
+Since our data is hard-coded in Mirage, we know that there is only one rental with a city name of "Seattle",
+so we assert that the number of listings is one and that the location it displays is named, "Seattle".
+-->
+
+<p>データはMirageにハードコードしており、都市名が「Seattle(シアトル)」の物件は1件しかないことがわかっていますので、物件数は1件で、表示場所はSeattleであることをアサートしています。</p>
+
+<!--
+The test verifies that after filling in the search input with "Seattle", the rental list reduces from 3 to 1,
+and the item displayed shows "Seattle" as the location.
+-->
+
+<p>入力欄にSeattleを入力すると、物件数が3から1に減少し、表示された項目にの場所がSeattleであることを検証しています。</p>
+
+<!--
+You should be down to only 2 failing tests: One remaining acceptance test failure; and our ESLint test that fails on an unused assert for our unimplemented test.
+-->
+
+<p>これで失敗しているテストは2件に減っているはずです。実装されていない受け入れテストと未使用のassertで失敗しているESLintテストだけになりました。</p>
 
 <p><img src="../../images/autocomplete-component/passing-acceptance-tests.png" alt="passing acceptance tests"></p>
 

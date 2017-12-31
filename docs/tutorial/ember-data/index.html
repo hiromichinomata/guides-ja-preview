@@ -85,15 +85,31 @@
         </h1>
         <hr>
 
-        <p>Currently, our app is using hard-coded data for our rental listings, defined in the <code>rentals</code> route handler.
-As our application grows, we will want to persist our rental data on a server, and make it easier to do advanced operations on the data, such as querying.</p>
+        <!--
+Currently, our app is using hard-coded data for our rental listings, defined in the `rentals` route handler.
+As our application grows, we will want to persist our rental data on a server, and make it easier to do advanced operations on the data, such as querying.
+-->
 
-<p>Ember comes with a data management library called <a href="https://github.com/emberjs/data">Ember Data</a> to help deal with persistent application data.</p>
+<p>現在のところ、rentalsルートハンドラにハードコードされたデータを物件一覧に使用していますが、アプリケーション開発を続けていると、物件データをサーバー上に残し、検索などのデータの高度な操作を簡単にしたくなります。</p>
 
-<p>Ember Data requires you to define the structure of the data you wish to provide to your application by extending <a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model"><code>DS.Model</code></a>.</p>
+<!--
+Ember comes with a data management library called [Ember Data](https://github.com/emberjs/data) to help deal with persistent application data.
+-->
 
-<p>You can generate an Ember Data Model using Ember CLI.
-We&#39;ll call our model <code>rental</code> and generate it as follows:</p>
+<p>Emberには、永続的なアプリケーションデータを扱うための<a href="https://github.com/emberjs/data">Ember Data</a>というデータ管理ライブラリが付属しています。</p>
+
+<!--
+Ember Data requires you to define the structure of the data you wish to provide to your application by extending [`DS.Model`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model).
+-->
+
+<p>Ember Dataを使うには、<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model"><code>DS.Model</code></a>を拡張し、アプリケーションに提供したいデータの構造を定義する必要があります。</p>
+
+<!--
+You can generate an Ember Data Model using Ember CLI.
+We'll call our model `rental` and generate it as follows:
+-->
+
+<p>Ember CLIを使用してEmberデータモデルを生成できます。 モデルのレンタルを呼び出して、次のように生成します。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -101,7 +117,11 @@ We&#39;ll call our model <code>rental</code> and generate it as follows:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>This results in the creation of a model file and a test file:</p>
+<!--
+This results in the creation of a model file and a test file:
+-->
+
+<p>この結果、モデルのファイルとテストファイルが作成されます。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -115,7 +135,11 @@ installing model-test
 </pre></td>
 </tr></table>
 </div></div>
-<p>When we open the model file, we can see a blank class extending <a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model"><code>DS.Model</code></a>:</p>
+<!--
+When we open the model file, we can see a blank class extending [`DS.Model`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model):
+-->
+
+<p>モデルのファイルを開くと、DS.Modelを拡張した空のクラスが書かれています。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -137,10 +161,14 @@ installing model-test
 </pre></td>
 </tr></table>
 </div></div>
-<p>Let&#39;s define the structure of a rental object using the same attributes for our rental that we <a href="../model-hook/">previously used</a> in our hard-coded array of JavaScript objects -
-<em>title</em>, <em>owner</em>, <em>city</em>, <em>category</em>, <em>image</em>, <em>bedrooms</em> and <em>description</em>.
-Define attributes by giving them the result of the function <a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS/methods/attr?anchor=attr"><code>DS.attr()</code></a>.
-For more information on Ember Data Attributes, read the section called <a href="../../models/defining-models/#toc_defining-attributes">Defining Attributes</a> in the guides.</p>
+<!--
+Let's define the structure of a rental object using the same attributes for our rental that we [previously used](../model-hook/) in our hard-coded array of JavaScript objects -
+_title_, _owner_, _city_, _category_, _image_, _bedrooms_ and _description_.
+Define attributes by giving them the result of the function [`DS.attr()`](https://www.emberjs.com/api/ember-data/2.16/classes/DS/methods/attr?anchor=attr).
+For more information on Ember Data Attributes, read the section called [Defining Attributes](../../models/defining-models/#toc_defining-attributes) in the guides.
+-->
+
+<p><a href="../model-hook/">以前</a>ハードコードしたオブジェクトと同じ属性を持つモデルを定義しましょう。属性は<em>title</em>、<em>owner</em>、<em>city</em>、<em>category</em>、<em>image</em>、<em>bedrooms</em>、<em>description</em>です。 <a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS/methods/attr?anchor=attr"><code>DS.attr()</code></a>関数にその関数が返す型を渡して属性を定義します。(省略もできるため、下記のコードでは省略されています。) Emberのデータ属性の詳細については、ガイドの<a href="../../models/defining-models/#toc_defining-attributes">属性の定義</a>を参照してください。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -173,13 +201,25 @@ For more information on Ember Data Attributes, read the section called <a href="
 });</pre></td>
 </tr></table>
 </div></div>
-<p>We now have a model object that we can use for our Ember Data implementation.</p>
-<h3 id="toc_Updating-the-Model-Hook" class="anchorable-toc">Updating the Model Hook</h3>
-<p>To use our new Ember Data Model object, we need to update the <code>model</code> function we <a href="../model-hook/">previously defined</a> in our route handler.
-Delete the hard-coded JavaScript Array, and replace it with the following call to the <a href="../../models/#toc_the-store-and-a-single-source-of-truth">Ember Data Store service</a>.
-The <a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Store">store service</a> is injected into all routes and components in Ember.
+<!--
+We now have a model object that we can use for our Ember Data implementation.
+-->
+
+<p>これでEmber Dataで使えるモデルが用意できました。</p>
+
+<!--
+### Updating the Model Hook
+-->
+<h3 id="toc_モデルフックの変更" class="anchorable-toc">モデルフックの変更</h3>
+<!--
+To use our new Ember Data Model object, we need to update the `model` function we [previously defined](../model-hook/) in our route handler.
+Delete the hard-coded JavaScript Array, and replace it with the following call to the [Ember Data Store service](../../models/#toc_the-store-and-a-single-source-of-truth).
+The [store service](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Store) is injected into all routes and components in Ember.
 It is the main interface you use to interact with Ember Data.
-In this case, call the <a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Store/methods/findAll?anchor=findAll"><code>findAll</code></a> function on the store and provide it with the name of your newly created rental model class.</p>
+In this case, call the [`findAll`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Store/methods/findAll?anchor=findAll) function on the store and provide it with the name of your newly created rental model class.
+-->
+
+<p>作成したモデルを使用するには、<a href="../model-hook/">以前にルートハンドラで定義したmodel関数</a>を変更する必要があります。 ハードコードされたJavaScript配列を削除し、<a href="../../models/#toc_the-store-and-a-single-source-of-truth">Ember Data Storeサービス</a>を使うよう以下の書き換えてください。 Storeサービスは、Emberのすべてのルートとコンポーネントにインジェクト(注入)されています。 StoreはEmber Dataとやりとりするために使用するメインインターフェイスです。 今回は、Storeの<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Store/methods/findAll?anchor=findAll"><code>findAll</code></a>関数に作成したRentalモデルクラスの名前を指定して実行します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -260,16 +300,34 @@ In this case, call the <a href="https://www.emberjs.com/api/ember-data/2.16/clas
 });</pre></td>
 </tr></table>
 </div></div>
-<p>When we call <code>findAll</code>, Ember Data will attempt to fetch rentals from <code>/api/rentals</code>.
-If you recall, in the section titled <a href="../installing-addons/">Installing Addons</a> we set up an adapter to route data requests through <code>/api</code>.</p>
+<!--
+When we call `findAll`, Ember Data will attempt to fetch rentals from `/api/rentals`.
+If you recall, in the section titled [Installing Addons](../installing-addons/) we set up an adapter to route data requests through `/api`.
+-->
 
-<p>You can read more about Ember Data in the <a href="../../models/">Models section</a>.</p>
+<p>findAllを実行すると、Ember Dataは<code>/api/rentals</code>からの物件を取得しようとします。 <code>/api</code>が付くのは、<a href="../installing-addons/">アドオンのインストール</a> セクションで、リクエストが<code>/api</code>を介すようアダプタを設定したためです。</p>
 
-<p>Since we have already set up Ember Mirage in our development environment, Mirage will return the data we requested without actually making a network request.</p>
+<!--
+You can read more about Ember Data in the [Models section](../../models/).
+-->
 
-<p>When we deploy our app to a production server,
+<p>Ember Dataの詳細については、<a href="../../models/">モデル</a>セクションを参照してください。</p>
+
+<!--
+Since we have already set up Ember Mirage in our development environment, Mirage will return the data we requested without actually making a network request.
+-->
+
+<p>すでにEmber Mirageを開発環境にセットアップしたため、Mirageが要求されたデータを返します。ネットワークリクエストは実際には行われません。</p>
+
+<!--
+When we deploy our app to a production server,
 we will likely want to replace Mirage with a remote server for Ember Data to communicate with for storing and retrieving persisted data.
-A remote server will allow for data to be shared and updated across users.</p>
+A remote server will allow for data to be shared and updated across users.
+-->
+
+<p>アプリをプロダクションサーバーにデプロイする時など、
+Ember Dataが永続化されたデータの保存や検索の通信をするように、Mirageからリモートサーバに置き換えることもできます。
+リモートサーバーを使えば、ユーザー間でデータの共有や更新ができるようになります。</p>
 
 
 

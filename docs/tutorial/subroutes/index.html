@@ -85,33 +85,74 @@
         </h1>
         <hr>
 
-        <p>Up to this point, we&#39;ve generated four top level routes.</p>
+        <!--
+Up to this point, we've generated four top level routes.
+-->
+
+<p>これまでに、4つのトップレベルルートを作成しました。</p>
+
+<!--
+* An `about` route, that gives information on our application.
+* A `contact` route, with information on how to contact the company.
+* A `rentals` route, where we will allow users to browse rental properties.
+* The `index` route, which we've set up to redirect to the `rentals` route.
+-->
 
 <ul>
-<li>An <code>about</code> route, that gives information on our application.</li>
-<li>A <code>contact</code> route, with information on how to contact the company.</li>
-<li>A <code>rentals</code> route, where we will allow users to browse rental properties.</li>
-<li>The <code>index</code> route, which we&#39;ve set up to redirect to the <code>rentals</code> route.</li>
+<li><code>about</code>ルート: アプリケーションについての情報</li>
+<li><code>contact</code>ルート: お問い合わせ先に関する情報</li>
+<li><code>rentals</code>ルート: 賃貸物件を閲覧するページ</li>
+<li><code>index</code>ルート: <code>rentals</code>ルートにリダイレクト</li>
 </ul>
 
-<p>Our <code>rentals</code> route is going to serve multiple functions.
-From our <a href="../acceptance-test">acceptance tests</a>, we&#39;ve shown that we want our users to be able to browse and search rentals, as well as see detailed information for individual rentals.
-To satisfy that requirement, we are going to make use of Ember&#39;s <a href="../../routing/defining-your-routes/#toc_nested-routes">nested route capability</a>.</p>
+<!--
+Our `rentals` route is going to serve multiple functions.
+From our [acceptance tests](../acceptance-test), we've shown that we want our users to be able to browse and search rentals, as well as see detailed information for individual rentals.
+To satisfy that requirement, we are going to make use of Ember's [nested route capability](../../routing/defining-your-routes/#toc_nested-routes).
+-->
 
-<p>By the end of this section we want to have created the following new routes:</p>
+<p><code>rentals</code>ルートにさらに機能を追加します。
+<a href="../acceptance-test">受け入れテスト</a>から、ユーザーが物件を閲覧したり、検索したり、個々の物件の詳細情報を参照できることを定義しました。
+この要件を満たすために、Emberの<a href="../../routing/defining-your-routes/#toc_nested-routes">ルートのネスト(入れ子)機能</a>を利用します。</p>
+
+<!--
+By the end of this section we want to have created the following new routes:
+-->
+
+<p>このセクションの最後には、以下の新しいルートの作成が完了しているでしょう。</p>
+
+<!--
+* A `rentals/index` route that displays the rental page's general information, and also lists available rentals.
+The index nested route is shown by default when the user visits the `rentals` URL.
+* A `rentals/show` route that still displays the rental page's general information, while also showing detailed information about a selected rental.
+The `show` route will get substituted with the id of the rental being shown (for example `rentals/grand-old-mansion`).
+-->
 
 <ul>
-<li>A <code>rentals/index</code> route that displays the rental page&#39;s general information, and also lists available rentals.
-The index nested route is shown by default when the user visits the <code>rentals</code> URL.</li>
-<li>A <code>rentals/show</code> route that still displays the rental page&#39;s general information, while also showing detailed information about a selected rental.
-The <code>show</code> route will get substituted with the id of the rental being shown (for example <code>rentals/grand-old-mansion</code>).</li>
+<li><code>rentals/index</code>ルート: 物件ページの一般情報を表示し、利用可能な物件を一覧表示する。
+ユーザーが <code>rentals</code> URLにアクセスすると、ネストしたインデックスルートがデフォルトで表示されます。</li>
+<li><code>rentals/show</code>ルート: 物件ページの一般情報も表示しつつ、選択した物件に関する詳細情報を表示する。
+<code>show</code>ルートは、表示されている物件ID（例えば、<code>rentals/grand-old-mansion</code>(壮大な邸宅))に置き換えられます。</li>
 </ul>
-<h2 id="toc_The-Parent-Route" class="anchorable-toc">The Parent Route</h2>
-<p>Previously, in the <a href="../routes-and-templates">Routes and Templates tutorial</a>, we set up a <code>rentals</code> route.</p>
 
-<p>Opening the template for this route reveals an outlet underneath the route&#39;s general page information.
-At the bottom of the template, you&#39;ll notice an <code>{{outlet}}</code> helper.
-This is where the active nested route will be rendered.</p>
+<!--
+## The Parent Route
+-->
+<h2 id="toc_親ルート" class="anchorable-toc">親ルート</h2>
+<!--
+Previously, in the [Routes and Templates tutorial](../routes-and-templates), we set up a `rentals` route.
+-->
+
+<p>以前に、<a href="../routes-and-templates">ルートとテンプレート</a>チュートリアルで<code>rentals</code>ルートを設定していました。</p>
+
+<!--
+Opening the template for this route reveals an outlet underneath the route's general page information.
+At the bottom of the template, you'll notice an `{{outlet}}` helper.
+This is where the active nested route will be rendered.
+-->
+
+<p>このルートのテンプレートを開くと、一番下に<code>{{outlet}}</code>ヘルパーがあります。
+outletはネストしたアクティブなルートが描画される場所です。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -159,14 +200,33 @@ This is where the active nested route will be rendered.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Having a parent route means that any content on our parent route template will be present as we browse down through our child routes, allowing us to add things like common instructions, navigation, footers or sidebars.</p>
-<h2 id="toc_Generating-a-Nested-Index-Route" class="anchorable-toc">Generating a Nested Index Route</h2>
-<p>The first nested route to generate will be the index route.
+<!--
+Having a parent route means that any content on our parent route template will be present as we browse down through our child routes, allowing us to add things like common instructions, navigation, footers or sidebars.
+-->
+
+<p>親ルートを持っているということは、親ルートのテンプレートのコンテンツは、子ルートを閲覧する際に存在することを意味し、ナビゲーション、フッターまたはサイドバーの共通のものを追加することができます。</p>
+
+<!--
+## Generating a Nested Index Route
+-->
+<h2 id="toc_ネストしたインデックスルートの作成" class="anchorable-toc">ネストしたインデックスルートの作成</h2>
+<!--
+The first nested route to generate will be the index route.
 An index nested route works similarly to the base index route.
 It is the default route that renders when no route is provided.
-Therefore in our case, when we navigate to <code>/rentals</code>, Ember will attempt to load the rentals index route as a nested route.</p>
+Therefore in our case, when we navigate to `/rentals`, Ember will attempt to load the rentals index route as a nested route.
+-->
 
-<p>To create an index nested route, run the following command:</p>
+<p>最初に作成するネストしたルートはインデックスルートです。
+ネストしたインデックスルートは、ベースインデックスルートと同様に機能します。
+これは、ルートが提供されていないときに描画されるデフォルトのルートです。
+したがって、<code>/rentals</code>にナビゲートすると、Emberは<code>rentals/index</code>ルートをネストしたルートとしてロードしようとします。</p>
+
+<!--
+To create an index nested route, run the following command:
+-->
+
+<p>ネストしたインデックスルートを作成するには、次のコマンドを実行します。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -174,8 +234,12 @@ Therefore in our case, when we navigate to <code>/rentals</code>, Ember will att
 </pre></td>
 </tr></table>
 </div></div>
-<p>If you open up your Router (<code>app/router.js</code>) you may notice that the rentals line has changed.
-This extra <code>function() {}</code> is required because it needs a child route, the <code>this.route(&#39;index&#39;, { path: &#39;/&#39;});</code> is implied.</p>
+<!--
+If you open up your Router (`app/router.js`) you may notice that the rentals line has changed.
+This extra `function() {}` is required because it needs a child route, the `this.route('index', { path: '/'});` is implied.
+-->
+
+<p>ルーター(<code>app/router.js</code>)を開くと、rentalsの行が変更されていることが気がつくでしょう。この特別な<code>function() {}</code> は、子ルートが必要なので必須です。これは<code>this.route(&#39;index&#39;, { path: &#39;/&#39;});</code> 暗黙的に表しています。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -197,13 +261,26 @@ This extra <code>function() {}</code> is required because it needs a child route
 </pre></td>
 </tr></table>
 </div></div>
-<p>Much like how our application&#39;s <code>index</code> route doesn&#39;t appear in our Router, <code>index</code> routes on sub-routes won&#39;t explicitly appear in the Router either.
-Ember knows that the default action is to take the user to the <code>index</code> route.
-However, you can add the <code>index</code> route if you want to customize it.
-For example, you can modify the <code>index</code> route&#39;s path by specifying <code>this.route(&#39;index&#39;, { path: &#39;/custom-path&#39;})</code>.</p>
+<!--
+Much like how our application's `index` route doesn't appear in our Router, `index` routes on sub-routes won't explicitly appear in the Router either.
+Ember knows that the default action is to take the user to the `index` route.
+However, you can add the `index` route if you want to customize it.
+For example, you can modify the `index` route's path by specifying `this.route('index', { path: '/custom-path'})`.
+-->
 
-<p>In the section on <a href="../ember-data#toc_updating-the-model-hook">using Ember Data</a>, we added a call to fetch all rentals.
-Let&#39;s implement our newly generated <code>rentals/index</code> route by moving this <code>findAll</code> call from the parent <code>rentals</code> route to our new sub-route.</p>
+<p>アプリケーションの<code>index</code>ルートがルーターに書かれていないのと同じで、子ルートの<code>index</code>ルートもルーターに明示的に書くことはしません。
+Emberはデフォルトのアクションがユーザーを<code>index</code>ルートに連れて行くことを知っています。
+ただし、カスタマイズする場合は、<code>index</code>ルートを書きます。
+たとえば、<code>this.route(&#39;index&#39;, { path: &#39;/custom-path&#39;})</code>と指定することで、インデックスルートのパスを変更できます。</p>
+
+<!--
+In the section on [using Ember Data](../ember-data#toc_updating-the-model-hook), we added a call to fetch all rentals.
+Let's implement our newly generated `rentals/index` route by moving this `findAll` call from the parent `rentals` route to our new sub-route.
+-->
+
+<p><code>rentals/index</code>ルートを実装していきましょう。
+<a href="../ember-data#toc_%E3%83%A2%E3%83%87%E3%83%AB%E3%83%95%E3%83%83%E3%82%AF%E3%81%AE%E5%A4%89%E6%9B%B4">Ember Dataを使う</a>のセクションでは、すべての物件を取得するよう実装しました。
+その<code>findAll</code>を呼び出している部分を親ルート(rentals)から子ルート(<code>rentals/index</code>)に移します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -251,7 +328,11 @@ Let&#39;s implement our newly generated <code>rentals/index</code> route by movi
 });</pre></td>
 </tr></table>
 </div></div>
-<p>Now that we are returning all of our rentals to the nested route&#39;s model, we will also move the rental list markup from our main route template to our nested route index template.</p>
+<!--
+Now that we are returning all of our rentals to the nested route's model, we will also move the rental list markup from our main route template to our nested route index template.
+-->
+
+<p>すべての物件をネストしたルートのモデルに戻したので、物件一覧のマークアップもメインルートのテンプレートからネストしたインデックスルートのテンプレートに移します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -327,9 +408,17 @@ Let&#39;s implement our newly generated <code>rentals/index</code> route by movi
 <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">outlet</span><span class="inline-delimiter">}}</span></span></pre></td>
 </tr></table>
 </div></div>
-<p>Finally, we need to make our controller that has our filter action available to the new nested index route.</p>
+<!--
+Finally, we need to make our controller that has our filter action available to the new nested index route.
+-->
 
-<p>Start by running the following command to create an index controller for our nested route:</p>
+<p>最後に、ネストしたインデックスルートで検索機能を使えるよう、コントローラを作成する必要があります。</p>
+
+<!--
+Start by running the following command to create an index controller for our nested route: 
+-->
+
+<p>次のコマンドを実行して、ネストしたインデックスルートのコントローラを作成します。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -337,7 +426,11 @@ Let&#39;s implement our newly generated <code>rentals/index</code> route by movi
 </pre></td>
 </tr></table>
 </div></div>
-<p>Instead of copying the whole controller file over to <code>app/controllers/rentals/index.js</code> from <code>app/controllers/rentals.js</code>, we&#39;ll just take advantage of JavaScript&#39;s import/export feature to re-export the rentals controller as the rentals/index controller:</p>
+<!--
+Instead of copying the whole controller file over to `app/controllers/rentals/index.js` from `app/controllers/rentals.js`, we'll just take advantage of JavaScript's import/export feature to re-export the rentals controller as the rentals/index controller:
+-->
+
+<p>単に<code>app/controllers/rentals.js</code>から<code>app/controllers/rentals/index.js</code>にファイル全体をコピーするのではなく、JavaScriptのインポート/エクスポート機能を利用して、rentalsコントローラを再エクスポートし、rentals/indexコントローラで使うやり方でやってみましょう:</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -359,17 +452,36 @@ Let&#39;s implement our newly generated <code>rentals/index</code> route by movi
 <span class="highlight-line removed">});</span>
 <span class="highlight-line added"><span class="reserved">export</span> <span class="keyword">default</span> RentalsController;</span></pre></td>
 </tr></table>
-</div></div><h2 id="toc_Setting-up-Data-for-the-Nested-Detail-Route" class="anchorable-toc">Setting up Data for the Nested Detail Route</h2>
-<p>Next, we will want to create a sub-route that will list information for a specific rental.
+</div></div>
+<!--
+## Setting up Data for the Nested Detail Route
+-->
+<h2 id="toc_ネストしたshowルートの設定" class="anchorable-toc">ネストしたshowルートの設定</h2>
+<!--
+Next, we will want to create a sub-route that will list information for a specific rental.
 To do this, we will need to update a couple of files.
-To find a specific rental, we will want to use Ember Data&#39;s <code>findRecord</code> function <a href="../../models/finding-records/">(see &quot;Finding Records&quot; for more details)</a>.
-The <code>findRecord</code> function requires that we search by a unique key.</p>
+To find a specific rental, we will want to use Ember Data's `findRecord` function [(see "Finding Records" for more details)](../../models/finding-records/).
+The `findRecord` function requires that we search by a unique key. -->
 
-<p>While on the <code>show</code> route, we will also want to show additional information about our specific rental.</p>
+<p>次に、特定の物件の詳細情報を表示する子ルートを作成します。
+そのためには、いくつかのファイルの変更が必要です。
+特定の物件の情報を取得するには、Ember Dataの<code>findRecord</code>関数を使用します。<a href="../../models/finding-records/">(詳しくは、「レコードの検索」を参照)</a>
+<code>findRecord</code>関数は、ユニークなキーで検索する必要があります。</p>
 
-<p>In order to do this, we will need to modify the Mirage <code>config.js</code> file that we added
-back in the <a href="../installing-addons">Installing Addons section</a>. We will add a new route
-handler to return a specific rental:</p>
+<!--
+While on the `show` route, we will also want to show additional information about our specific rental.
+-->
+
+<p><code>show</code>ルートでは、物件の追加情報を表示するようにします。</p>
+
+<!--
+In order to do this, we will need to modify the Mirage `config.js` file that we added
+back in the [Installing Addons section](../installing-addons). We will add a new route
+handler to return a specific rental:
+-->
+
+<p>これを行うには、<a href="../installing-addons">アドオンのインストール</a>のセクションで追加したMirageの<code>config.js</code>ファイルを変更する必要があります。
+特定の物件を返すための新しいルートハンドラを追加します:</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -503,9 +615,18 @@ handler to return a specific rental:</p>
 
 }</pre></td>
 </tr></table>
-</div></div><h2 id="toc_Generating-a-Nested-Detail-Route" class="anchorable-toc">Generating a Nested Detail Route</h2>
-<p>Now that our API is ready to return individual rentals, we can generate our <code>show</code> sub-route.
-Much like generating our <code>rentals</code> route, we will use <code>ember g</code> to create a nested route.</p>
+</div></div>
+<!--
+## Generating a Nested Detail Route
+-->
+<h2 id="toc_ネストしたshowルートの作成" class="anchorable-toc">ネストしたshowルートの作成</h2>
+<!--
+Now that our API is ready to return individual rentals, we can generate our `show` sub-route.
+Much like generating our `rentals` route, we will use `ember g` to create a nested route.
+-->
+
+<p>APIが個々の物件を返す準備ができたので、子ルートの<code>show</code>ルートを作成しましょう。
+<code>rentals</code>ルートの時と同じように、<code>ember g</code>を使ってネストしたルートを作成します。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -513,7 +634,11 @@ Much like generating our <code>rentals</code> route, we will use <code>ember g</
 </pre></td>
 </tr></table>
 </div></div>
-<p>You will see output like this:</p>
+<!--
+You will see output like this:
+-->
+
+<p>次のような出力が表示されます。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -533,7 +658,11 @@ installing route-test
 </pre></td>
 </tr></table>
 </div></div>
-<p>Let&#39;s start by looking at the changes to our Router (<code>app/router.js</code>).</p>
+<!--
+Let's start by looking at the changes to our Router (`app/router.js`).
+-->
+
+<p>まず、ルータ(<code>app/router.js</code>)への変更を見てみましょう。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -558,13 +687,27 @@ installing route-test
 });</pre></td>
 </tr></table>
 </div></div>
-<p>Our new route is nested within our <code>rentals</code> route.
-This tells Ember that it is a sub-route and will be accessed through <code>localhost:4200/rentals/show</code>.</p>
+<!--
+Our new route is nested within our `rentals` route.
+This tells Ember that it is a sub-route and will be accessed through `localhost:4200/rentals/show`.
+-->
 
-<p>To tell the application which rental we want to access, we need to replace the <code>show</code> route path with the ID of the rental listing.
-We also want to simplify the URL so that it looks more like this: <code>localhost:4200/rentals/id-for-rental</code>.</p>
+<p>作成したルートは<code>rentals</code>ルート内に入れ子になっています。
+これはEmberに、それが子ルートであり、<code>localhost:4200/rentals/show</code>を通してアクセスされることを伝えています。</p>
 
-<p>To do that, we modify our route as follows:</p>
+<!--
+To tell the application which rental we want to access, we need to replace the `show` route path with the ID of the rental listing.
+We also want to simplify the URL so that it looks more like this: `localhost:4200/rentals/id-for-rental`.
+-->
+
+<p>アプリケーションにアクセスしたい物件を伝えるには、物件のIDで<code>show</code>ルートのパスを置き換える必要があります。 
+それと、URLは<code>localhost:4200/rentals/物件ID</code>のように簡略化させます。</p>
+
+<!--
+To do that, we modify our route as follows:
+-->
+
+<p>そのために、次のようにルートを修正します:</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -591,9 +734,21 @@ We also want to simplify the URL so that it looks more like this: <code>localhos
 });</pre></td>
 </tr></table>
 </div></div>
-<p>The <code>rental_id</code> will now be passed to the route.</p>
-<h2 id="toc_Finding-By-ID" class="anchorable-toc">Finding By ID</h2>
-<p>Next, we want to edit our <code>show</code> route to retrieve the requested rental:</p>
+<!--
+The `rental_id` will now be passed to the route.
+-->
+
+<p>これにより、<code>rental_id</code>がルートに渡されます。</p>
+
+<!--
+## Finding By ID
+-->
+<h2 id="toc_IDで検索" class="anchorable-toc">IDで検索</h2>
+<!--
+Next, we want to edit our `show` route to retrieve the requested rental:
+-->
+
+<p>次に、 <code>show</code>ルートを編集して、リクエストされた物件を取得します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -618,10 +773,23 @@ We also want to simplify the URL so that it looks more like this: <code>localhos
 });</pre></td>
 </tr></table>
 </div></div>
-<p>Since we added <code>:rental_id</code> to the <code>show</code> path in our router, <code>rental_id</code> is now available in our <code>model</code> hook.
-When we call <code>this.get(&#39;store&#39;).findRecord(&#39;rental&#39;, params.rental_id)</code>, Ember Data queries <code>/rentals/our-id</code> using a HTTP GET request (<a href="../../models/">learn more about that here</a>).</p>
-<h2 id="toc_Adding-the-Rental-To-Our-Template" class="anchorable-toc">Adding the Rental To Our Template</h2>
-<p>Next, we can update the template for our show route (<code>app/templates/rentals/show.hbs</code>) and list the information for our rental.</p>
+<!--
+Since we added `:rental_id` to the `show` path in our router, `rental_id` is now available in our `model` hook.
+When we call `this.get('store').findRecord('rental', params.rental_id)`, Ember Data queries `/rentals/our-id` using a HTTP GET request ([learn more about that here](../../models/)).
+-->
+
+<p>ルータで、<code>show</code>のパスに<code>:rental_id</code>を追加したので、<code>model</code>フックで<code>rental_id</code>を利用できるようになりました。
+<code>this.get(&#39;store&#39;).findRecord(&#39;rental&#39;, params.rental_id)</code>が呼ばれると、Ember DataはHTTP GETリクエスト<code>/rentals/物件ID</code>を発行します。(<a href="../../models/">詳細はこちら</a>)</p>
+
+<!--
+## Adding the Rental To Our Template
+-->
+<h2 id="toc_テンプレートに物件を追加する" class="anchorable-toc">テンプレートに物件を追加する</h2>
+<!--
+Next, we can update the template for our show route (`app/templates/rentals/show.hbs`) and list the information for our rental.
+-->
+
+<p>次に、<code>show</code>ルートのテンプレート(<code>app/templates/rentals/show.hbs</code>)を変更し、物件の詳細情報を表示します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -672,16 +840,35 @@ When we call <code>this.get(&#39;store&#39;).findRecord(&#39;rental&#39;, params
 <span class="highlight-line removed"><span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">outlet</span><span class="inline-delimiter">}}</span></span></span></pre></td>
 </tr></table>
 </div></div>
-<p>Now browse to <code>localhost:4200/rentals/grand-old-mansion</code> and you should see the information listed for that specific rental.</p>
+<!--
+Now browse to `localhost:4200/rentals/grand-old-mansion` and you should see the information listed for that specific rental.
+-->
+
+<p><code>localhost:4200/rentals/grand-old-mansion</code>を参照すると、1物件の情報が表示されます。</p>
 
 <p><img src="../../images/subroutes/subroutes-super-rentals-show.png" alt="Rental Page Nested Show Route"></p>
-<h2 id="toc_Linking-to-a-Specific-Rental" class="anchorable-toc">Linking to a Specific Rental</h2>
-<p>Now that we can load pages for individual rentals, we&#39;ll add a link (using the <code>link-to</code> helper) within our <code>rental-listing</code> component to navigate to individual pages.
-Here, the <code>link-to</code> helper takes the route name and the rental model object as arguments.
-When you pass an object as second argument into the <code>link-to</code> block helper, it will by default <a href="https://www.emberjs.com/api/ember/2.16/classes/Route/methods/beforeModel?anchor=serialize">serialize</a> the object to the ID of the model into the URL.
-Alternately, you may just pass <code>rental.id</code> for clarity.</p>
 
-<p>Clicking on the title will load the detail page for that rental.</p>
+<!--
+## Linking to a Specific Rental
+-->
+<h2 id="toc_物件詳細ページにリンクする" class="anchorable-toc">物件詳細ページにリンクする</h2>
+<!--
+Now that we can load pages for individual rentals, we'll add a link (using the `link-to` helper) within our `rental-listing` component to navigate to individual pages.
+Here, the `link-to` helper takes the route name and the rental model object as arguments.
+When you pass an object as second argument into the `link-to` block helper, it will by default [serialize](https://www.emberjs.com/api/ember/2.16/classes/Route/methods/beforeModel?anchor=serialize) the object to the ID of the model into the URL.
+Alternately, you may just pass `rental.id` for clarity.
+-->
+
+<p>個々の物件のページを読み込むことができるようになりましたので、<code>rental-listing</code>コンポーネント内にリンク( <code>link-to</code>ヘルパーを使用)を追加して個々のページに遷移できるようにします。
+<code>link-to</code>ヘルパーには、ルート名とRentalモデルのインスタンスを引数として渡します。
+<code>link-to</code>ヘルパーの2番目の引数にオブジェクトを渡すると、デフォルトでモデルのIDがURLに<a href="https://www.emberjs.com/api/ember/2.16/classes/Route/methods/beforeModel?anchor=serialize">シアライズ</a>されます。
+わかりやすくするために<code>rent.id</code>を渡すこともできます。</p>
+
+<!--
+Clicking on the title will load the detail page for that rental.
+-->
+
+<p>タイトルをクリックすると、その物件の詳細ページが読み込まれるようになります。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -738,12 +925,28 @@ Alternately, you may just pass <code>rental.id</code> for clarity.</p>
 </div></div>
 <p><img src="../../images/subroutes/subroutes-super-rentals-index.png" alt="Rental Page Nested Index Route"></p>
 
-<p>At this point you can do a <a href="../deploying/">deployment</a> and share your Super Rentals application to the world
+<!--
+At this point you can do a [deployment](../deploying/) and share your Super Rentals application to the world
 or you can use this as a base to explore other Ember features and addons.
-Regardless, we hope this has helped you get started with creating your own ambitious applications with Ember!</p>
-<h3 id="toc_Acceptance-Tests" class="anchorable-toc">Acceptance Tests</h3>
-<p>We want to verify that we can click on a specific rental and load a detailed view to the page.
-We&#39;ll click on the title and validate that an expanded description of the rental is shown.</p>
+Regardless, we hope this has helped you get started with creating your own ambitious applications with Ember!
+-->
+
+<p>お疲れ様でした！
+この時点であなたはEmberを使えるようになっているはずです。
+Super Rentalsを<a href="../deploying/">デプロイ</a>して、世界中に共有したり、これをベースとして他のEmberの機能やアドオンを探索したりできますね。
+これからEmberを使って野心的なアプリケーションの開発をする際、このチュートリアルがあなたの手助けになっていれば幸いです。</p>
+
+<!--
+### Acceptance Tests
+-->
+<h3 id="toc_受け入れテスト" class="anchorable-toc">受け入れテスト</h3>
+<!--
+We want to verify that we can click on a specific rental and load a detailed view to the page.
+We'll click on the title and validate that an expanded description of the rental is shown. 
+-->
+
+<p>特定の物件をクリックしてページの詳細ページを読み込むことができることを確認したいと思います。
+タイトルをクリックし、物件の詳細情報が表示されることを確認します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -772,7 +975,11 @@ We&#39;ll click on the title and validate that an expanded description of the re
 });</pre></td>
 </tr></table>
 </div></div>
-<p>At this point all our tests should pass, including the <a href="../acceptance-test">list of acceptance tests</a> we created as our beginning requirements.</p>
+<!--
+At this point all our tests should pass, including the [list of acceptance tests](../acceptance-test) we created as our beginning requirements.
+-->
+
+<p>この時点で、最初に要件定義した受け入れテストを含む、すべてのテストがパスしているはずです。</p>
 
 <p><img src="../../images/subroutes/all-acceptance-pass.png" alt="Acceptance Tests Pass"></p>
 
