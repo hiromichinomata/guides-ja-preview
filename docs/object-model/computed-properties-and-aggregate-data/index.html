@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - オブジェクトモデル: Computed Properties and Aggregate Data</title>
-    <meta property="st:title" content="オブジェクトモデル: Computed Properties and Aggregate Data" />
+    <title>Ember.js - オブジェクトモデル: 算出プロパティとデータ集計</title>
+    <meta property="st:title" content="オブジェクトモデル: 算出プロパティとデータ集計" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -71,7 +71,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 selected'><a href="#">オブジェクトモデル</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../computed-properties/">算出プロパティ</a></li><li class='toc-level-1 selected'><a href="./">Computed Properties and Aggregate Data</a></li><li class='toc-level-1 '><a href="../observers/">Observers</a></li><li class='toc-level-1 '><a href="../bindings/">Bindings</a></li><li class='toc-level-1 '><a href="../enumerables/">Enumerables</a></li></ol></li><li class='toc-level-0 '><a href="#">Routing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">Introduction</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">Defining Your Routes</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">Specifying a Route's Model</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">Rendering a Template</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">Redirecting</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">Preventing and Retrying Transitions</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">Loading / Error Substates</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">Query Parameters</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">Asynchronous Routing</a></li></ol></li><li class='toc-level-0 '><a href="#">Templates</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebars Basics</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">Built-in Helpers</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">Conditionals</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../../templates/links/">Links</a></li><li class='toc-level-1 '><a href="../../templates/actions/">Actions</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 selected'><a href="#">オブジェクトモデル</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../computed-properties/">算出プロパティ</a></li><li class='toc-level-1 selected'><a href="./">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../observers/">Observers</a></li><li class='toc-level-1 '><a href="../bindings/">Bindings</a></li><li class='toc-level-1 '><a href="../enumerables/">Enumerables</a></li></ol></li><li class='toc-level-0 '><a href="#">Routing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">Introduction</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">Defining Your Routes</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">Specifying a Route's Model</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">Rendering a Template</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">Redirecting</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">Preventing and Retrying Transitions</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">Loading / Error Substates</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">Query Parameters</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">Asynchronous Routing</a></li></ol></li><li class='toc-level-0 '><a href="#">Templates</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebars Basics</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">Built-in Helpers</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">Conditionals</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../../templates/links/">Links</a></li><li class='toc-level-1 '><a href="../../templates/actions/">Actions</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -79,17 +79,26 @@
 
       <article class="chapter">
         <h1>
-          Computed Properties and Aggregate Data
+          算出プロパティとデータ集計
           <a href="https://github.com/emberjs/guides/edit/master/source/object-model/computed-properties-and-aggregate-data.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>Sometimes you have a computed property whose value depends on the properties of
+        <!--
+Sometimes you have a computed property whose value depends on the properties of
 items in an array. For example, you may have an array of todo items, and want
-to calculate the incomplete todo&#39;s based on their <code>isDone</code> property.</p>
+to calculate the incomplete todo's based on their `isDone` property.
+-->
+
+<p>算出プロパティが、値が配列内のオブジェクトのプロパティに依存する時もあります。
+たとえば、ToDoの配列があり、その<code>isDone</code>プロパティに基づいて未完了のToDoを算出する場合です。</p>
 <h2 id="toc_<code>@each</code>" class="anchorable-toc"><code>@each</code></h2>
-<p>To facilitate this, Ember provides the <code>@each</code> key illustrated below:</p>
+<!--
+To facilitate this, Ember provides the `@each` key illustrated below:
+-->
+
+<p>これを容易にするため、Emberには以下に示す <code>@each</code>キーがあります。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -139,23 +148,52 @@ to calculate the incomplete todo&#39;s based on their <code>isDone</code> proper
 </pre></td>
 </tr></table>
 </div></div>
-<p>Here, the dependent key <code>todos.@each.isDone</code> instructs Ember.js to update bindings
-and fire observers when any of the following events occurs:</p>
+<!--
+Here, the dependent key `todos.@each.isDone` instructs Ember.js to update bindings
+and fire observers when any of the following events occurs:
+-->
+
+<p>上記のコードでは、依存キー<code>todos.@each.isDone</code>は、Ember.jsに次のイベントが発生したときにバインディングを更新しオブザーバーを起動するように指示してします。</p>
+
+<!--
+1. The `isDone` property of any of the objects in the `todos` array changes.
+2. An item is added to the `todos` array.
+3. An item is removed from the `todos` array.
+4. The `todos` property of the component is changed to a different array.
+-->
 
 <ol>
-<li>The <code>isDone</code> property of any of the objects in the <code>todos</code> array changes.</li>
-<li>An item is added to the <code>todos</code> array.</li>
-<li>An item is removed from the <code>todos</code> array.</li>
-<li>The <code>todos</code> property of the component is changed to a different array.</li>
+<li>todos配列のいずれかのオブジェクトのisDoneプロパティが変更された時</li>
+<li>アイテムがtodos配列に追加された時</li>
+<li>アイテムがtodos配列から削除された時</li>
+<li>コンポーネントのtodosプロパティが別の配列に変更された時</li>
 </ol>
-<h3 id="toc_Multiple-Dependent-Keys" class="anchorable-toc">Multiple Dependent Keys</h3>
-<p>It&#39;s important to note that the <code>@each</code> key can be dependent on more than one key.
-For example, if you are using <code>Ember.computed</code> to sort an array by multiple keys,
-you would declare the dependency with braces: <code>todos.@each.{priority,title}</code></p>
-<h3 id="toc_Computed-Property-Macros" class="anchorable-toc">Computed Property Macros</h3>
-<p>Ember also provides a computed property macro
-<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject%2Fcomputed/methods/alias?anchor=filterBy&amp;show=inherited%2Cprotected%2Cprivate%2Cdeprecated"><code>computed.filterBy</code></a>,
-which is a shorter way of expressing the above computed property:</p>
+
+<!--
+### Multiple Dependent Keys
+-->
+<h3 id="toc_複数の依存キー" class="anchorable-toc">複数の依存キー</h3>
+<!--
+It's important to note that the `@each` key can be dependent on more than one key.
+For example, if you are using `Ember.computed` to sort an array by multiple keys,
+you would declare the dependency with braces: `todos.@each.{priority,title}`
+-->
+
+<p><code>@each</code>キーが複数のキーに依存できることを知っておくことは大事です。
+たとえば、<code>Ember.computed</code>を使用して複数のキーで配列をソートする場合、中括弧を使用して依存関係を<code>todos.@each.{priority,title}</code>のように宣言できます。</p>
+
+<!--
+### Computed Property Macros
+-->
+<h3 id="toc_算出プロパティマクロ" class="anchorable-toc">算出プロパティマクロ</h3>
+<!--
+Ember also provides a computed property macro
+[`computed.filterBy`](https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject%2Fcomputed/methods/alias?anchor=filterBy&show=inherited%2Cprotected%2Cprivate%2Cdeprecated),
+which is a shorter way of expressing the above computed property:
+-->
+
+<p>また、Emberには算出プロパティマクロ<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject%2Fcomputed/methods/alias?anchor=filterBy&amp;show=inherited%2Cprotected%2Cprivate%2Cdeprecated"><code>computed.filterBy</code></a>があります。
+これにより、上記の算出プロパティをより短く表現できます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -201,7 +239,11 @@ which is a shorter way of expressing the above computed property:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>In both of the examples above, <code>incomplete</code> is an array containing the single incomplete todo:</p>
+<!--
+In both of the examples above, `incomplete` is an array containing the single incomplete todo:
+-->
+
+<p>上記ので例は、<code>incomplete</code>は1件の未完了のtodoを含む配列になります。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -217,8 +259,12 @@ todoListComponent.get(<span class="string"><span class="delimiter">'</span><span
 </pre></td>
 </tr></table>
 </div></div>
-<p>If we change the todo&#39;s <code>isDone</code> property, the <code>incomplete</code> property is updated
-automatically:</p>
+<!--
+If we change the todo's `isDone` property, the `incomplete` property is updated
+automatically:
+-->
+
+<p>todoの<code>isDone</code>プロパティを変更すると、<code>incomplete</code>プロパティが自動的に更新されます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -252,13 +298,29 @@ todoListComponent.get(<span class="string"><span class="delimiter">'</span><span
 </pre></td>
 </tr></table>
 </div></div>
-<p>Note that <code>@each</code> only works one level deep. You cannot use nested forms like
-<code>todos.@each.owner.name</code> or <code>todos.@each.owner.@each.name</code>.</p>
-<h2 id="toc_<code>[]</code>-vs-<code>@each</code>" class="anchorable-toc"><code>[]</code> vs <code>@each</code></h2>
-<p>Sometimes you don&#39;t care if properties of individual array items change. In this
-case use the <code>[]</code> key instead of <code>@each</code>. Computed properties dependent on an array
-using the <code>[]</code> key will only update if items are added to or removed from the array,
-or if the array property is set to a different array. For example:</p>
+<!--
+Note that `@each` only works one level deep. You cannot use nested forms like
+`todos.@each.owner.name` or `todos.@each.owner.@each.name`.
+-->
+
+<p><code>@each</code>は一階層までしか使えないことに注意してください。
+<code>todos.@each.owner.name</code>や<code>todos.@each.owner.@each.name</code>といったネストした形式は使用できません。</p>
+
+<!--
+## `[]` vs `@each`
+-->
+<h2 id="toc_<code>[]</code>と<code>@each</code>の違い" class="anchorable-toc"><code>[]</code>と<code>@each</code>の違い</h2>
+<!--
+Sometimes you don't care if properties of individual array items change. In this
+case use the `[]` key instead of `@each`. Computed properties dependent on an array
+using the `[]` key will only update if items are added to or removed from the array,
+or if the array property is set to a different array. For example:
+-->
+
+<p>配列内の各オブジェクトのプロパティの変更を気にしない場合もあります。
+この場合、<code>@each</code>の代わりに<code>[]</code>キーを使用してください。
+<code>[]</code>キーを使用して配列に依存する算出プロパティは、オブジェクトが配列に追加または配列から削除された場合、または配列が別の配列に変更された場合にのみ更新されます。
+例えば、</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -308,14 +370,45 @@ or if the array property is set to a different array. For example:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Here, <code>indexOfSelectedTodo</code> depends on <code>todos.[]</code>, so it will update if we add an item
-to <code>todos</code>, but won&#39;t update if the value of <code>isDone</code> on a <code>todo</code> changes.</p>
+<!--
+Here, `indexOfSelectedTodo` depends on `todos.[]`, so it will update if we add an item
+to `todos`, but won't update if the value of `isDone` on a `todo` changes.
+-->
 
-<p>Several of the <a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject%2Fcomputed">Ember.computed</a> macros
-utilize the <code>[]</code> key to implement common use-cases. For instance, to
+<p>上記のコードでは、<code>indexOfSelectedTodoはtodos</code>は<code>todo.[]</code>に依存するので、<code>todos</code>にオブジェクトを追加すると更新されますが、todoの<code>isDone</code>の値が変更された場合は更新されません。</p>
+
+<!--
+Several of the [Ember.computed](https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject%2Fcomputed) macros
+utilize the `[]` key to implement common use-cases. For instance, to
 create a computed property that mapped properties from an array, you could use
-<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject%2Fcomputed/methods/map?anchor=map">Ember.computed.map</a>
-or build the computed property yourself:</p>
+[Ember.computed.map](https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject%2Fcomputed/methods/map?anchor=map)
+or build the computed property yourself:
+-->
+
+<p><a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject%2Fcomputed">Ember.computed</a>マクロの中には、共通のユースケースを実装するために<code>[]</code>キーを使用しているものがあります。
+たとえば、配列からプロパティをマップした算出プロパティを作成するには、<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject%2Fcomputed/methods/map?anchor=map">Ember.computed.map</a>を使用するか、算出プロパティを自分で実装します。</p>
+
+<!--
+```javascript
+import EmberObject, { computed } from '@ember/object';
+
+const Hamster = EmberObject.extend({
+  excitingChores: computed('chores.[]', function() {
+    return this.get('chores').map(function(chore, index) {
+      return `CHORE ${index}: ${chore.toUpperCase()}!`;
+    });
+  })
+});
+
+const hamster = Hamster.create({
+  chores: ['clean', 'write more unit tests']
+});
+
+hamster.get('excitingChores'); // ['CHORE 1: CLEAN!', 'CHORE 2: WRITE MORE UNIT TESTS!']
+hamster.get('chores').pushObject('review code');
+hamster.get('excitingChores'); // ['CHORE 1: CLEAN!', 'CHORE 2: WRITE MORE UNIT TESTS!', 'CHORE 3: REVIEW CODE!']
+```
+-->
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -334,10 +427,12 @@ or build the computed property yourself:</p>
 15
 16
 17
+18
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> EmberObject, { computed } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
 
 const Hamster = EmberObject.extend({
+  <span class="comment">// 訳注: choreは普段から行う雑用のことです</span>
   <span class="key">excitingChores</span>: computed(<span class="string"><span class="delimiter">'</span><span class="content">chores.[]</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
     <span class="keyword">return</span> <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">chores</span><span class="delimiter">'</span></span>).map(<span class="keyword">function</span>(chore, index) {
       <span class="keyword">return</span> <span class="error">`</span>CHORE <span class="predefined">$</span>{index}: <span class="predefined">$</span>{chore.toUpperCase()}!<span class="error">`</span>;
@@ -355,7 +450,11 @@ hamster.get(<span class="string"><span class="delimiter">'</span><span class="co
 </pre></td>
 </tr></table>
 </div></div>
-<p>By comparison, using the computed macro abstracts some of this away:</p>
+<!--
+By comparison, using the computed macro abstracts some of this away:
+-->
+
+<p>比較として、以下は算出プロパティマクロを使用した例です。上記のコードの一部を抽象化できます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -377,10 +476,14 @@ const Hamster = EmberObject.extend({
 </pre></td>
 </tr></table>
 </div></div>
-<p>The computed macros expect you to use an array, so there is no need to use the
-<code>[]</code> key in these cases. However, building your own custom computed property
+<!--
+The computed macros expect you to use an array, so there is no need to use the
+`[]` key in these cases. However, building your own custom computed property
 requires you to tell Ember.js that it is watching for array changes, which is
-where the <code>[]</code> key comes in handy.</p>
+where the `[]` key comes in handy.
+-->
+
+<p>上記の算出プロパティマクロは配列を使うことを前提としているので、これらの場合は<code>[]</code>キーを使う必要はありません。しかし、独自のカスタム計算プロパティを実装するには、Ember.jsに便利な配列の変更を監視していることを伝える必要があります。その際、<code>[]</code>キーを使うと便利です。</p>
 
 
 
