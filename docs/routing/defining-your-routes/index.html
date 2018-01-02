@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - ルーティング: Defining Your Routes</title>
-    <meta property="st:title" content="ルーティング: Defining Your Routes" />
+    <title>Ember.js - ルーティング: ルートの定義</title>
+    <meta property="st:title" content="ルーティング: ルートの定義" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -71,7 +71,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 selected'><a href="#">ルーティング</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">はじめに</a></li><li class='toc-level-1 selected'><a href="./">Defining Your Routes</a></li><li class='toc-level-1 '><a href="../specifying-a-routes-model/">Specifying a Route's Model</a></li><li class='toc-level-1 '><a href="../rendering-a-template/">Rendering a Template</a></li><li class='toc-level-1 '><a href="../redirection/">Redirecting</a></li><li class='toc-level-1 '><a href="../preventing-and-retrying-transitions/">Preventing and Retrying Transitions</a></li><li class='toc-level-1 '><a href="../loading-and-error-substates/">Loading / Error Substates</a></li><li class='toc-level-1 '><a href="../query-params/">Query Parameters</a></li><li class='toc-level-1 '><a href="../asynchronous-routing/">Asynchronous Routing</a></li></ol></li><li class='toc-level-0 '><a href="#">Templates</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebars Basics</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">Built-in Helpers</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">Conditionals</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../../templates/links/">Links</a></li><li class='toc-level-1 '><a href="../../templates/actions/">Actions</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 selected'><a href="#">ルーティング</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">はじめに</a></li><li class='toc-level-1 selected'><a href="./">ルートの定義</a></li><li class='toc-level-1 '><a href="../specifying-a-routes-model/">Specifying a Route's Model</a></li><li class='toc-level-1 '><a href="../rendering-a-template/">Rendering a Template</a></li><li class='toc-level-1 '><a href="../redirection/">Redirecting</a></li><li class='toc-level-1 '><a href="../preventing-and-retrying-transitions/">Preventing and Retrying Transitions</a></li><li class='toc-level-1 '><a href="../loading-and-error-substates/">Loading / Error Substates</a></li><li class='toc-level-1 '><a href="../query-params/">Query Parameters</a></li><li class='toc-level-1 '><a href="../asynchronous-routing/">Asynchronous Routing</a></li></ol></li><li class='toc-level-0 '><a href="#">Templates</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebars Basics</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">Built-in Helpers</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">Conditionals</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../../templates/links/">Links</a></li><li class='toc-level-1 '><a href="../../templates/actions/">Actions</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -79,17 +79,26 @@
 
       <article class="chapter">
         <h1>
-          Defining Your Routes
+          ルートの定義
           <a href="https://github.com/emberjs/guides/edit/master/source/routing/defining-your-routes.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>When your application starts, the router matches the current URL to the <em>routes</em>
-that you&#39;ve defined. The routes, in turn, are responsible for displaying
-templates, loading data, and setting up application state.</p>
+        <!--
+When your application starts, the router matches the current URL to the _routes_
+that you've defined. The routes, in turn, are responsible for displaying
+templates, loading data, and setting up application state.
+-->
 
-<p>To define a route, run</p>
+<p>アプリケーションが起動すると、ルータは現在のURLを定義したルートに一致させます。
+ルートは、テンプレートの表示、データのロード、アプリケーション状態の設定を担当します。</p>
+
+<!--
+To define a route, run
+-->
+
+<p>ルートを定義するには、まず以下を実行してください。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -97,14 +106,29 @@ templates, loading data, and setting up application state.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>This creates a route file at <code>app/routes/route-name.js</code>, a template for the route at <code>app/templates/route-name.hbs</code>,
-and a unit test file at <code>tests/unit/routes/route-name-test.js</code>.
-It also adds the route to the router.</p>
-<h2 id="toc_Basic-Routes" class="anchorable-toc">Basic Routes</h2>
-<p>The <a href="https://www.emberjs.com/api/ember/2.16/classes/Router/methods/map?anchor=map"><code>map()</code></a> method
-of your Ember application&#39;s router can be invoked to define URL mappings. When
-calling <code>map()</code>, you should pass a function that will be invoked with the value
-<code>this</code> set to an object which you can use to create routes.</p>
+<!--
+This creates a route file at `app/routes/route-name.js`, a template for the route at `app/templates/route-name.hbs`,
+and a unit test file at `tests/unit/routes/route-name-test.js`.
+It also adds the route to the router.
+-->
+
+<p>これにより、ルートファイル<code>app/routes/route-name.js</code>と、ルートのテンプレート<code>app/templates/route-name.hbs</code>と、ユニットテストファイル(<code>tests/unit/routes/route-name-test.js</code>)が作成されます。
+また、ルータにルートを追加します。</p>
+
+<!--
+## Basic Routes
+-->
+<h2 id="toc_ルートの基本" class="anchorable-toc">ルートの基本</h2>
+<!--
+The [`map()`](https://www.emberjs.com/api/ember/2.16/classes/Router/methods/map?anchor=map) method
+of your Ember application's router can be invoked to define URL mappings. When
+calling `map()`, you should pass a function that will be invoked with the value
+`this` set to an object which you can use to create routes.
+-->
+
+<p>Emberアプリケーションのルータの
+The <a href="https://www.emberjs.com/api/ember/2.16/classes/Router/methods/map?anchor=map"><code>map()</code></a>メソッドを呼び出して、URLマッピングを定義することができます。
+<code>map()</code>を呼び出すときには、ルートを作成するのに使う<code>this</code>を使用した関数を渡します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -124,11 +148,21 @@ calling <code>map()</code>, you should pass a function that will be invoked with
 </pre></td>
 </tr></table>
 </div></div>
-<p>Now, when the user visits <code>/about</code>, Ember will render the <code>about</code>
-template. Visiting <code>/favs</code> will render the <code>favorites</code> template.</p>
+<!--
+Now, when the user visits `/about`, Ember will render the `about`
+template. Visiting `/favs` will render the `favorites` template.
+-->
 
-<p>You can leave off the path if it is the same as the route
-name. In this case, the following is equivalent to the above example:</p>
+<p>ユーザーが<code>/about</code>を訪れたとき、Emberは<code>about</code>テンプレートを描画します。
+訪問中の <code>/favs</code> は<code>favorites</code>テンプレートを描画します。</p>
+
+<!--
+You can leave off the path if it is the same as the route
+name. In this case, the following is equivalent to the above example:
+-->
+
+<p>パスがルート名と同じ場合は、パスは省略できます。
+この場合、以下は上記の例と同じです。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -148,8 +182,12 @@ name. In this case, the following is equivalent to the above example:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Inside your templates, you can use <a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/link-to?anchor=link-to"><code>{{link-to}}</code></a> to navigate between
-routes, using the name that you provided to the <code>route</code> method.</p>
+<!--
+Inside your templates, you can use [`{{link-to}}`](https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/link-to?anchor=link-to) to navigate between
+routes, using the name that you provided to the `route` method.
+-->
+
+<p>テンプレート内では、<a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/link-to?anchor=link-to"><code>{{link-to}}</code></a>を使用して、<code>route</code>メソッドに指定した名前を使用して各ルートにリンクできます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -167,10 +205,18 @@ routes, using the name that you provided to the <code>route</code> method.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The <code>{{link-to}}</code> helper will also add an <code>active</code> class to the link that
-points to the currently active route.</p>
+<!--
+The `{{link-to}}` helper will also add an `active` class to the link that
+points to the currently active route.
+-->
 
-<p>Multi-word route names are conventionally dasherized, such as:</p>
+<p><code>{{link-to}}</code>ヘルパーは、現在アクティブなルートにリンクしている場合、クラス属性に<code>active</code>を追加します。</p>
+
+<!--
+Multi-word route names are conventionally dasherized, such as:
+-->
+
+<p>複数の単語からなるのルート名は、規約上以下のようにダッシュを使って繋げます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -188,11 +234,19 @@ points to the currently active route.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The route defined above will by default use the <code>blog-post.js</code> route handler,
-the <code>blog-post.hbs</code> template, and be referred to as <code>blog-post</code> in any
-<code>{{link-to}}</code> helpers.</p>
+<!--
+The route defined above will by default use the `blog-post.js` route handler,
+the `blog-post.hbs` template, and be referred to as `blog-post` in any
+`{{link-to}}` helpers.
+-->
 
-<p>Multi-word route names that break this convention, such as:</p>
+<p>上記で定義されたルートは、デフォルトで<code>blog-post.js</code>ルートハンドラ、<code>blog-post.hbs</code>テンプレートを使用され、<code>{{link-to}}</code>ヘルパーには<code>blog-post</code>を渡します。</p>
+
+<!--
+Multi-word route names that break this convention, such as:
+-->
+
+<p>以下はアンダースコアで単語を連結して規則を破った例です。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -210,19 +264,43 @@ the <code>blog-post.hbs</code> template, and be referred to as <code>blog-post</
 </pre></td>
 </tr></table>
 </div></div>
-<p>will still by default use the <code>blog-post.js</code> route handler and the
-<code>blog-post.hbs</code> template, but will be referred to as <code>blog_post</code> in any
-<code>{{link-to}}</code> helpers.</p>
-<h2 id="toc_Nested-Routes" class="anchorable-toc">Nested Routes</h2>
-<p>Often you&#39;ll want to have a template that displays inside another template.
+<!--
+will still by default use the `blog-post.js` route handler and the
+`blog-post.hbs` template, but will be referred to as `blog_post` in any
+`{{link-to}}` helpers.
+-->
+
+<p>これはデフォルトで <code>blog-post.js</code>ルートハンドラーと<code>blog-post.hbs</code>テンプレートを使用しますが、<code>{{link-to}}</code>ヘルパーでは <code>blog_post</code>を渡さなければなりません。</p>
+
+<!--
+## Nested Routes
+-->
+<h2 id="toc_ネストしたルート" class="anchorable-toc">ネストしたルート</h2>
+<p><em>訳注: ネスト(nest)は入れ子という意味です。</em></p>
+
+<!--
+Often you'll want to have a template that displays inside another template.
 For example, in a blogging application, instead of going from a list of blog
 posts to creating a new post, you might want to have the post creation page
-display next to the list.</p>
+display next to the list.
+-->
 
-<p>In these cases, you can use nested routes to display one template inside
-of another.</p>
+<p>他のテンプレートの中にテンプレートを表示したい場合がよくあります。
+例えば、ブログアプリケーションで、記事一覧から新規投稿のページに進むのではなく、
+新規投稿のページを記事一覧の横に表示したいといったケースです。</p>
 
-<p>You can define nested routes by passing a callback to <code>this.route</code>:</p>
+<!--
+In these cases, you can use nested routes to display one template inside
+of another.
+-->
+
+<p>このような場合、ネストしたルートを使って、別のテンプレートの中にテンプレートを表示することができます。</p>
+
+<!--
+You can define nested routes by passing a callback to `this.route`:
+-->
+
+<p>コールバックを<code>this.route</code>に渡すことでネストしたルートを定義することができます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -244,7 +322,11 @@ of another.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Assuming you have already generated the <code>posts</code> route, to generate the above nested route you would run:</p>
+<!--
+Assuming you have already generated the `posts` route, to generate the above nested route you would run:
+-->
+
+<p>すでに<code>posts</code>ルートを生成していると仮定して、上記のネストしたルートを生成するには、次のように実行します。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -252,8 +334,12 @@ of another.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>And then add the <code>{{outlet}}</code> helper to your template where you want the nested
-template to display:</p>
+<!--
+And then add the `{{outlet}}` helper to your template where you want the nested
+template to display:
+-->
+
+<p>次に、テンプレート内でネストしたテンプレートを表示する所に<code>{{outlet}}</code>ヘルパーを追加します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -266,38 +352,79 @@ template to display:</p>
 3
 </pre></td>
   <td class="code"><pre><span class="tag">&lt;h1&gt;</span>Posts<span class="tag">&lt;/h1&gt;</span>
-<span class="comment">&lt;!-- Display posts and other content --&gt;</span>
+<span class="comment">&lt;!-- 記事と他のコンテンツを表示 --&gt;</span>
 <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">outlet</span><span class="inline-delimiter">}}</span></span>
 </pre></td>
 </tr></table>
 </div></div>
-<p>This router creates a route for <code>/posts</code> and for <code>/posts/new</code>. When a user
-visits <code>/posts</code>, they&#39;ll simply see the <code>posts.hbs</code> template. (Below, <a href="#toc_index-routes">index
-routes</a> explains an important addition to this.) When the
-user visits <code>posts/new</code>, they&#39;ll see the <code>posts/new.hbs</code> template rendered into
-the <code>{{outlet}}</code> of the <code>posts</code> template.</p>
+<!--
+This router creates a route for `/posts` and for `/posts/new`. When a user
+visits `/posts`, they'll simply see the `posts.hbs` template. (Below, [index
+routes](#toc_index-routes) explains an important addition to this.) When the
+user visits `posts/new`, they'll see the `posts/new.hbs` template rendered into
+the `{{outlet}}` of the `posts` template.
+-->
 
-<p>A nested route name includes the names of its ancestors.
+<p>ルータは、<code>/posts</code>と<code>/posts/new</code>ルートを作成します。
+ユーザーが<code>/posts</code>にアクセスすると、<code>posts.hbs</code>テンプレートが表示されます。
+（下記の<a href="#toc_%E3%82%A4%E3%83%B3%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9%E3%83%AB%E3%83%BC%E3%83%88">インデックスルート</a>では重要なことが説明されています）。
+ユーザーが<code>posts/new</code>にアクセスすると、<code>posts/new.hbs</code>テンプレートが<code>posts</code>テンプレートの<code>{{outlet}}</code>に表示されます。</p>
+
+<!--
+A nested route name includes the names of its ancestors.
 If you want to transition to a route (either
-via <code>transitionTo</code> or <code>{{#link-to}}</code>), make sure to use the full route
-name (<code>posts.new</code>, not <code>new</code>).</p>
-<h2 id="toc_The-application-route" class="anchorable-toc">The application route</h2>
-<p>The <code>application</code> route is entered when your app first boots up. Like other
-routes, it will load a template with the same name (<code>application</code> in
+via `transitionTo` or `{{#link-to}}`), make sure to use the full route
+name (`posts.new`, not `new`).
+-->
+
+<p>ネストしたルート名には、その祖先の名前が含まれます。
+ルートに遷移させる場合は(<code>transitionTo</code>または<code>{{#link-to}}</code>のいずれかで)、完全なルート名(この場合、<code>new</code>ではなく<code>posts.new</code>)を指定する必要があります。</p>
+
+<!--
+## The application route
+-->
+<h2 id="toc_アプリケーションルート" class="anchorable-toc">アプリケーションルート</h2>
+<!--
+The `application` route is entered when your app first boots up. Like other
+routes, it will load a template with the same name (`application` in
 this case) by default.
 You should put your header, footer, and any other decorative content
 here. All other routes will render
-their templates into the <code>application.hbs</code> template&#39;s <code>{{outlet}}</code>.</p>
+their templates into the `application.hbs` template's `{{outlet}}`.
+-->
 
-<p>This route is part of every application, so you don&#39;t need to
-specify it in your <code>app/router.js</code>.</p>
-<h2 id="toc_Index-Routes" class="anchorable-toc">Index Routes</h2>
-<p>At every level of nesting (including the top level), Ember
-automatically provides a route for the <code>/</code> path named <code>index</code>.
+<p>アプリケーションルートは、アプリが最初に起動したときに経由されます。
+他のルートと同様に、デフォルトで同じ名前(この場合は<code>application</code>)のテンプレートをロードします。
+<code>application</code>テンプレートには、ヘッダー、フッター、その他の装飾的な内容を入れてください。
+他のすべてのルートのテンプレートは<code>application.hbs</code>テンプレートの<code>{{outlet}}</code>に描画されます。</p>
+
+<!--
+This route is part of every application, so you don't need to
+specify it in your `app/router.js`.
+-->
+
+<p>このルートはアプリケーションの一部なので、<code>app/router.js</code>で指定する必要はありません。</p>
+
+<!--
+## Index Routes
+-->
+<h2 id="toc_インデックスルート" class="anchorable-toc">インデックスルート</h2>
+<!--
+At every level of nesting (including the top level), Ember
+automatically provides a route for the `/` path named `index`.
 To see when a new level of nesting occurs, check the router,
-whenever you see a <code>function</code>, that&#39;s a new level.</p>
+whenever you see a `function`, that's a new level.
+-->
 
-<p>For example, if you write a simple router like this:</p>
+<p>ネストしたすべての階層(トップ階層を含む)で、Emberは自動的に<code>/</code>をインデックスルートという名前で持ちます。
+新しい階層のネスティングが発生しているかを確認するには、ルーターをチェックしてます。
+<code>function</code>があるところは、新しい階層が作られています。</p>
+
+<!--
+For example, if you write a simple router like this:
+-->
+
+<p>たとえば、次のようなシンプルなルータを定義したとします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -315,7 +442,11 @@ whenever you see a <code>function</code>, that&#39;s a new level.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>It is the equivalent of:</p>
+<!--
+It is the equivalent of:
+-->
+
+<p>これは次のものと同じです。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -335,12 +466,21 @@ whenever you see a <code>function</code>, that&#39;s a new level.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The <code>index</code> template will be rendered into the <code>{{outlet}}</code> in the
-<code>application</code> template. If the user navigates to <code>/favorites</code>,
-Ember will replace the <code>index</code> template with the <code>favorites</code>
-template.</p>
+<!--
+The `index` template will be rendered into the `{{outlet}}` in the
+`application` template. If the user navigates to `/favorites`,
+Ember will replace the `index` template with the `favorites`
+template.
+-->
 
-<p>A nested router like this:</p>
+<p><code>index</code>テンプレートは、<code>application</code>テンプレートの<code>{{outlet}}</code>に描画されます。
+ユーザーが`<code>/favorites</code>にアクセスすると、Emberは<code>index</code>テンプレートを<code>favorites</code>テンプレートに置き換えます。</p>
+
+<!--
+A nested router like this:
+-->
+
+<p>次のようなネストしたルータは、</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -362,7 +502,11 @@ template.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Is the equivalent of:</p>
+<!--
+Is the equivalent of:
+-->
+
+<p>以下と同じです。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -388,27 +532,60 @@ template.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>If the user navigates to <code>/posts</code>, the current route will be
-<code>posts.index</code>, and the <code>posts/index</code> template
-will be rendered into the <code>{{outlet}}</code> in the <code>posts</code> template.</p>
+<!--
+If the user navigates to `/posts`, the current route will be
+`posts.index`, and the `posts/index` template
+will be rendered into the `{{outlet}}` in the `posts` template.
+-->
 
-<p>If the user then navigates to <code>/posts/favorites</code>, Ember will
-replace the <code>{{outlet}}</code> in the <code>posts</code> template with the
-<code>posts/favorites</code> template.</p>
-<h2 id="toc_Dynamic-Segments" class="anchorable-toc">Dynamic Segments</h2>
-<p>One of the responsibilities of a route is to load a model.</p>
+<p>ユーザーが<code>/posts</code>に移動すると、現在のルートは<code>posts.index</code>になり、<code>posts/index</code>テンプレートが<code>posts</code>テンプレートの<code>{{outlet}}</code>に描画されます。</p>
 
-<p>For example, if we have the route <code>this.route(&#39;posts&#39;);</code>, our
-route might load all of the blog posts for the app.</p>
+<!--
+If the user then navigates to `/posts/favorites`, Ember will
+replace the `{{outlet}}` in the `posts` template with the
+`posts/favorites` template.
+-->
 
-<p>Because <code>/posts</code> represents a fixed model, we don&#39;t need any
+<p>その後、ユーザーが<code>/posts/favorites</code>に移動すると、Emberは<code>posts</code>テンプレートの<code>{{outlet}}</code>を<code>posts/favorites</code>テンプレートに置き換えます。</p>
+
+<!--
+## Dynamic Segments
+-->
+<h2 id="toc_ダイナミックセグメント" class="anchorable-toc">ダイナミックセグメント</h2>
+<!--
+One of the responsibilities of a route is to load a model.
+-->
+
+<p>ルートの責任の1つは、モデルをロードすることです。</p>
+
+<!--
+For example, if we have the route `this.route('posts');`, our
+route might load all of the blog posts for the app.
+-->
+
+<p>たとえば、ルートが<code>this.route(&#39;posts&#39;);</code>の場合、ルートがアプリのすべてのブログ記事を読み込む可能性があります。</p>
+
+<!--
+Because `/posts` represents a fixed model, we don't need any
 additional information to know what to retrieve.  However, if we want a route
 to represent a single post, we would not want to have to hardcode every
-possible post into the router.</p>
+possible post into the router.
+-->
 
-<p>Enter <em>dynamic segments</em>.</p>
+<p><code>/posts</code>は決まったモデルを表しているので、何を取得するかを知るための追加情報は必要ありません。
+しかし、ルートで1件の記事を表示する場合、全ての記事のURLをルータにハードコードしたくはありません。</p>
 
-<p>A dynamic segment is a portion of a URL that starts with a <code>:</code> and is followed by an identifier.</p>
+<!--
+Enter _dynamic segments_.
+-->
+
+<p>ここでダイナミックセグメントの出番です。</p>
+
+<!--
+A dynamic segment is a portion of a URL that starts with a `:` and is followed by an identifier.
+-->
+
+<p>動的セグメントはURLの一部で、<code>:</code>で始め、その後に識別子を付けます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -428,12 +605,20 @@ possible post into the router.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>If the user navigates to <code>/post/5</code>, the route will then have the <code>post_id</code> of
-<code>5</code> to use to load the correct post.
-Ember follows the convention of <code>:model-name_id</code> for two reasons.
+<!--
+If the user navigates to `/post/5`, the route will then have the `post_id` of
+`5` to use to load the correct post.
+Ember follows the convention of `:model-name_id` for two reasons.
 The first reason is that Routes know how to fetch the right model by default, if you follow the convention.
-The second is that <code>params</code> is an object, and can only have one value associated with a key.
-To put it in code, the following will <em>not</em> work properly:</p>
+The second is that `params` is an object, and can only have one value associated with a key.
+To put it in code, the following will *not* work properly:
+-->
+
+<p>ユーザーが<code>/post/5</code>に移動すると、ルートの<code>:post_id</code>が5になり、該当記事を読み込むことができます。
+Emberは、2つの理由から、<code>:model-name_id</code>の規約に従います。
+第1の理由は、あなたが規約に従えば、ルートがデフォルトで適切なモデルをフェッチする方法を知っていることです。
+もう一つは、<code>params</code>はオブジェクトであり、キーと値は1対1です。
+キーが重複していると正しく動作しません。以下はその例です。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -455,7 +640,11 @@ To put it in code, the following will <em>not</em> work properly:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>But the following will:</p>
+<!--
+But the following will:
+-->
+
+<p>以下は適切に機能します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -477,11 +666,25 @@ To put it in code, the following will <em>not</em> work properly:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>In the next section, <a href="../specifying-a-routes-model">Specifying a Route&#39;s Model</a>, you will learn more about how to load a model.</p>
-<h2 id="toc_Wildcard-/-globbing-routes" class="anchorable-toc">Wildcard / globbing routes</h2>
-<p>You can define wildcard routes that will match multiple URL segments.
-This could be used, for example, if you&#39;d like a catch-all route which is useful when the user enters an incorrect URL not managed by your app.
-Wildcard routes begin with an asterisk.</p>
+<!--
+In the next section, [Specifying a Route's Model](../specifying-a-routes-model), you will learn more about how to load a model.
+-->
+
+<p>次のセクションの<a href="../specifying-a-routes-model">ルートのモデルの指定する</a>では、モデルをロードする方法の詳しく学びます。</p>
+
+<!--
+## Wildcard / globbing routes
+-->
+<h2 id="toc_ワイルドカード/globを使ったルート" class="anchorable-toc">ワイルドカード/globを使ったルート</h2>
+<!--
+You can define wildcard routes that will match multiple URL segments.
+This could be used, for example, if you'd like a catch-all route which is useful when the user enters an incorrect URL not managed by your app.
+Wildcard routes begin with an asterisk.
+-->
+
+<p>複数のURLセグメントに一致するワイルドカードルートを定義できます。
+例えば、ユーザーがアプリで管理していない間違ったURLを入力したときに便利なキャッチオールルートなどに使用できます。
+ワイルドカードルートはアスタリスクで始まります。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -498,7 +701,13 @@ Wildcard routes begin with an asterisk.</p>
 });
 </pre></td>
 </tr></table>
-</div></div><div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+</div></div>
+<!--
+```app/templates/not-found.hbs
+<p>Oops, the page you're looking for wasn't found</p>
+```
+-->
+<div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
       <td colspan="2">app/templates/not-found.hbs</td>
@@ -507,18 +716,33 @@ Wildcard routes begin with an asterisk.</p>
 <tr>
   <td class="line-numbers"><pre>1
 </pre></td>
-  <td class="code"><pre><span class="tag">&lt;p&gt;</span>Oops, the page you're looking for wasn't found<span class="tag">&lt;/p&gt;</span>
+  <td class="code"><pre><span class="tag">&lt;p&gt;</span>おっと、指定したURLが見つかりませんでした。<span class="tag">&lt;/p&gt;</span>
 </pre></td>
 </tr></table>
 </div></div>
-<p>In the above example we have successfully used a wildcard route to handle all routes not managed by our application
-so that when a user navigates to <code>/a/non-existent/path</code> they will be shown a message that says the page they&#39;re looking for wasn&#39;t found.</p>
-<h2 id="toc_Route-Handlers" class="anchorable-toc">Route Handlers</h2>
-<p>To have your route do something beyond render a template with the same name, you&#39;ll
+<!--
+In the above example we have successfully used a wildcard route to handle all routes not managed by our application
+so that when a user navigates to `/a/non-existent/path` they will be shown a message that says the page they're looking for wasn't found.
+-->
+
+<p>上記の例では、アプリケーションが管理していないすべてのルートを処理するためにワイルドカードルートをうまく使っています。
+そのため、ユーザーが/<code>/a/non-existent/path</code>に移動すると、探しているページが見つからなかったというメッセージが表示されます。</p>
+
+<!--
+## Route Handlers
+-->
+<h2 id="toc_ルートハンドラ" class="anchorable-toc">ルートハンドラ</h2>
+<!--
+To have your route do something beyond render a template with the same name, you'll
 need to create a route handler. The following guides will explore the different
 features of route handlers. For more information on routes, see the API documentation
-for <a href="https://www.emberjs.com/api/ember/2.16/classes/Router">the router</a> and for <a href="https://www.emberjs.com/api/ember/2.16/classes/Route">route
-handlers</a>.</p>
+for [the router](https://www.emberjs.com/api/ember/2.16/classes/Router) and for [route
+handlers](https://www.emberjs.com/api/ember/2.16/classes/Route).
+-->
+
+<p>ルートに同じ名前のテンプレートを描画する以外に何かをさせるには、ルートハンドラを作成する必要があります。
+次のガイドでは、ルートハンドラのさまざまな機能について説明します。
+ルートの詳細については、<a href="https://www.emberjs.com/api/ember/2.16/classes/Router">ルータ</a>および<a href="https://www.emberjs.com/api/ember/2.16/classes/Route">ルートハンドラ</a>のAPIドキュメントを参照してください。</p>
 
 
 

@@ -3,6 +3,7 @@
 ## 2018.01.03
 
 - [x] Routing - Introduction
+- [x] Routing - Defining Your Routes
 
 ## 2018.01.02
 
