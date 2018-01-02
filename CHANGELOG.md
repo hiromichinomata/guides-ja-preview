@@ -9,6 +9,7 @@
 - [x] The Object Model - Computed Properties
 - [x] The Object Model - Computed Properties and Aggregate Data
 - [x] The Object Model - Observers
+- [x] The Object Model - Bindings
 
 ## 2017.12.31
 
