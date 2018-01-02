@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - オブジェクトモデル: Classes and Instances</title>
-    <meta property="st:title" content="オブジェクトモデル: Classes and Instances" />
+    <title>Ember.js - オブジェクトモデル: クラスとインスタンス</title>
+    <meta property="st:title" content="オブジェクトモデル: クラスとインスタンス" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -71,7 +71,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 selected'><a href="#">オブジェクトモデル</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">Emberのオブジェクト</a></li><li class='toc-level-1 selected'><a href="./">Classes and Instances</a></li><li class='toc-level-1 '><a href="../reopening-classes-and-instances/">Reopening Classes and Instances</a></li><li class='toc-level-1 '><a href="../computed-properties/">Computed Properties</a></li><li class='toc-level-1 '><a href="../computed-properties-and-aggregate-data/">Computed Properties and Aggregate Data</a></li><li class='toc-level-1 '><a href="../observers/">Observers</a></li><li class='toc-level-1 '><a href="../bindings/">Bindings</a></li><li class='toc-level-1 '><a href="../enumerables/">Enumerables</a></li></ol></li><li class='toc-level-0 '><a href="#">Routing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">Introduction</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">Defining Your Routes</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">Specifying a Route's Model</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">Rendering a Template</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">Redirecting</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">Preventing and Retrying Transitions</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">Loading / Error Substates</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">Query Parameters</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">Asynchronous Routing</a></li></ol></li><li class='toc-level-0 '><a href="#">Templates</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebars Basics</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">Built-in Helpers</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">Conditionals</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../../templates/links/">Links</a></li><li class='toc-level-1 '><a href="../../templates/actions/">Actions</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 selected'><a href="#">オブジェクトモデル</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">Emberのオブジェクト</a></li><li class='toc-level-1 selected'><a href="./">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../reopening-classes-and-instances/">Reopening Classes and Instances</a></li><li class='toc-level-1 '><a href="../computed-properties/">Computed Properties</a></li><li class='toc-level-1 '><a href="../computed-properties-and-aggregate-data/">Computed Properties and Aggregate Data</a></li><li class='toc-level-1 '><a href="../observers/">Observers</a></li><li class='toc-level-1 '><a href="../bindings/">Bindings</a></li><li class='toc-level-1 '><a href="../enumerables/">Enumerables</a></li></ol></li><li class='toc-level-0 '><a href="#">Routing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">Introduction</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">Defining Your Routes</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">Specifying a Route's Model</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">Rendering a Template</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">Redirecting</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">Preventing and Retrying Transitions</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">Loading / Error Substates</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">Query Parameters</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">Asynchronous Routing</a></li></ol></li><li class='toc-level-0 '><a href="#">Templates</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebars Basics</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">Built-in Helpers</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">Conditionals</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../../templates/links/">Links</a></li><li class='toc-level-1 '><a href="../../templates/actions/">Actions</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -79,18 +79,31 @@
 
       <article class="chapter">
         <h1>
-          Classes and Instances
+          クラスとインスタンス
           <a href="https://github.com/emberjs/guides/edit/master/source/object-model/classes-and-instances.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>As you learn about Ember, you&#39;ll see code like <code>Component.extend()</code> and
-<code>DS.Model.extend()</code>. Here, you&#39;ll learn about this <code>extend()</code> method, as well
-as other major features of the Ember object model.</p>
-<h3 id="toc_Defining-Classes" class="anchorable-toc">Defining Classes</h3>
-<p>To define a new Ember <em>class</em>, call the <a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject/methods/extend?anchor=extend"><code>extend()</code></a> method on
-<a href="https://www.emberjs.com/api/ember/2.16/modules/@ember%2Fobject"><code>EmberObject</code></a>:</p>
+        <!--
+As you learn about Ember, you'll see code like `Component.extend()` and
+`DS.Model.extend()`. Here, you'll learn about this `extend()` method, as well
+as other major features of the Ember object model.
+-->
+
+<p>Emberについて学ぶ際、<code>Component.extend()</code>や<code>DS.Model.extend()</code>などのコードを目にするでしょう。
+ここでは、この<code>extend()</code>メソッド、およびEmberオブジェクトモデルのその他の主な機能について学美ます。</p>
+
+<!--
+### Defining Classes
+-->
+<h3 id="toc_クラスの定義" class="anchorable-toc">クラスの定義</h3>
+<!--
+To define a new Ember _class_, call the [`extend()`][1] method on
+[`EmberObject`][2]:
+-->
+
+<p>新しいEmberクラスを定義するには、<a href="https://www.emberjs.com/api/ember/2.16/modules/@ember%2Fobject"><code>EmberObject</code></a>の<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject/methods/extend?anchor=extend"><code>extend()</code></a>メソッドを呼び出します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -110,11 +123,19 @@ const Person = EmberObject.extend({
 </pre></td>
 </tr></table>
 </div></div>
-<p>This defines a new <code>Person</code> class with a <code>say()</code> method.</p>
+<!--
+This defines a new `Person` class with a `say()` method.
+-->
 
-<p>You can also create a <em>subclass</em> from any existing class by calling
-its <code>extend()</code> method. For example, you might want to create a subclass
-of Ember&#39;s built-in <a href="https://www.emberjs.com/api/ember/2.16/classes/Component"><code>Component</code></a> class:</p>
+<p>上記のコードは、<code>say()</code>メソッドを持つ<code>Person</code>クラスを定義しています。</p>
+
+<!--
+You can also create a _subclass_ from any existing class by calling
+its `extend()` method. For example, you might want to create a subclass
+of Ember's built-in [`Component`][3] class:
+-->
+
+<p>既存のクラスからサブクラスを作成するには、<code>extend()</code>メソッドを呼び出します。 たとえば、Emberのビルトインコンポーネントクラスのサブクラスを作成する場合、以下のようになります。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -137,10 +158,45 @@ of Ember&#39;s built-in <a href="https://www.emberjs.com/api/ember/2.16/classes/
 });
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_Overriding-Parent-Class-Methods" class="anchorable-toc">Overriding Parent Class Methods</h3>
-<p>When defining a subclass, you can override methods but still access the
-implementation of your parent class by calling the special <code>_super()</code>
-method:</p>
+</div></div>
+<!--
+### Overriding Parent Class Methods
+-->
+<h3 id="toc_親クラスのメソッドをオーバーライドする" class="anchorable-toc">親クラスのメソッドをオーバーライドする</h3>
+<!--
+When defining a subclass, you can override methods but still access the
+implementation of your parent class by calling the special `_super()`
+method:
+-->
+
+<p>サブクラスを定義する場合、メソッドをオーバーライドできますが、
+<code>_super()</code>を呼び出すことによって親クラスの同メソッドを実行できます。</p>
+
+<!--
+```javascript
+import EmberObject from '@ember/object';
+
+const Person = EmberObject.extend({
+  say(thing) {
+    alert(`${this.get('name')} says: ${thing}`);
+  }
+});
+
+const Soldier = Person.extend({
+  say(thing) {
+    // this will call the method in the parent class (Person#say), appending
+    // the string ', sir!' to the variable `thing` passed in
+    this._super(`${thing}, sir!`);
+  }
+});
+
+let yehuda = Soldier.create({
+  name: 'Yehuda Katz'
+});
+
+yehuda.say('Yes'); // alerts "Yehuda Katz says: Yes, sir!"
+```
+-->
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -168,33 +224,58 @@ method:</p>
 
 const Person = EmberObject.extend({
   say(thing) {
-    alert(<span class="error">`</span><span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">name</span><span class="delimiter">'</span></span>)} says: <span class="predefined">$</span>{thing}<span class="error">`</span>);
+    alert(<span class="error">`</span><span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">name</span><span class="delimiter">'</span></span>)}: <span class="predefined">$</span>{thing}<span class="error">`</span>);
   }
 });
 
 const Soldier = Person.extend({
   say(thing) {
-    <span class="comment">// this will call the method in the parent class (Person#say), appending</span>
-    <span class="comment">// the string ', sir!' to the variable `thing` passed in</span>
-    <span class="local-variable">this</span>._super(<span class="error">`</span><span class="predefined">$</span>{thing}, sir!<span class="error">`</span>);
+    <span class="comment">// 以下は親クラスのメソッド(Person#say)を実行します。</span>
+    <span class="comment">// 引数の`thing`に「、了解しました」を付け足しています。</span>
+    <span class="local-variable">this</span>._super(<span class="error">`</span><span class="predefined">$</span>{thing}<span class="error">、</span> <span class="error">了</span><span class="error">解</span><span class="error">し</span><span class="error">ま</span><span class="error">し</span><span class="error">た</span>!<span class="error">`</span>);
   }
 });
 
 let yehuda = Soldier.create({
-  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">Yehuda Katz</span><span class="delimiter">'</span></span>
+  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">矢吹田猫</span><span class="delimiter">'</span></span>
 });
 
-yehuda.say(<span class="string"><span class="delimiter">'</span><span class="content">Yes</span><span class="delimiter">'</span></span>); <span class="comment">// alerts &quot;Yehuda Katz says: Yes, sir!&quot;</span>
+yehuda.say(<span class="string"><span class="delimiter">'</span><span class="content">はい</span><span class="delimiter">'</span></span>); <span class="comment">// &quot;矢吹田猫: はい、了解しした！&quot;をアラート表示</span>
 </pre></td>
 </tr></table>
 </div></div>
-<p>In certain cases, you will want to pass arguments to <code>_super()</code> before or after overriding.</p>
+<!--
+In certain cases, you will want to pass arguments to `_super()` before or after overriding.
+-->
 
-<p>This allows the original method to continue operating as it normally would.</p>
+<p>場合によっては、オーバーライドの前または後に <code>_super()</code>に引数を渡したいと思うでしょう。</p>
 
-<p>One common example is when overriding the <a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONAPISerializer/methods/normalizeResponse?anchor=normalizeResponse"><code>normalizeResponse()</code></a> hook in one of Ember-Data&#39;s serializers.</p>
+<!--
+This allows the original method to continue operating as it normally would.
+-->
 
-<p>A handy shortcut for this is to use a &quot;spread operator&quot;, like <code>...arguments</code>:</p>
+<p>これにより、親クラスの実装を通常通りに作動させることができます。</p>
+
+<!--
+One common example is when overriding the [`normalizeResponse()`][4] hook in one of Ember-Data's serializers.
+-->
+
+<p>代表的な例に、Ember-Dataのシリアライザの<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONAPISerializer/methods/normalizeResponse?anchor=normalizeResponse"><code>normalizeResponse()</code></a>フックをオーバーライドがあります。</p>
+
+<!--
+A handy shortcut for this is to use a "spread operator", like `...arguments`:
+-->
+
+<p><code>...arguments</code>のように、スプレッド演算子を使うと便利です:</p>
+
+<!--
+```javascript
+normalizeResponse(store, primaryModelClass, payload, id, requestType)  {
+  // Customize my JSON payload for Ember-Data
+  return this._super(...arguments);
+}
+```
+-->
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -202,18 +283,31 @@ yehuda.say(<span class="string"><span class="delimiter">'</span><span class="con
 4
 </pre></td>
   <td class="code"><pre>normalizeResponse(store, primaryModelClass, payload, id, requestType)  {
-  <span class="comment">// Customize my JSON payload for Ember-Data</span>
+  <span class="comment">// Ember-Data様にJSONペイロードをカスタマイズ</span>
   <span class="keyword">return</span> <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
 }
 </pre></td>
 </tr></table>
 </div></div>
-<p>The above example returns the original arguments (after your customizations) back to the parent class, so it can continue with its normal operations.</p>
-<h3 id="toc_Creating-Instances" class="anchorable-toc">Creating Instances</h3>
-<p>Once you have defined a class, you can create new <em>instances</em> of that
-class by calling its <a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject/methods/create?anchor=create"><code>create()</code></a> method. Any methods, properties and
+<!--
+The above example returns the original arguments (after your customizations) back to the parent class, so it can continue with its normal operations.
+-->
+
+<p>上記の例では、カスタマイズ前の元の引数に戻して、それを親クラスに渡して、親クラスの通常の処理を実行しています。</p>
+
+<!--
+### Creating Instances
+-->
+<h3 id="toc_インスタンスの作成" class="anchorable-toc">インスタンスの作成</h3>
+<!--
+Once you have defined a class, you can create new _instances_ of that
+class by calling its [`create()`][5] method. Any methods, properties and
 computed properties you defined on the class will be available to
-instances:</p>
+instances:
+-->
+
+<p>クラスを定義したら、<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject/methods/create?anchor=create"><code>create()</code></a>メソッドを呼び出すことでそのクラスの新しいインスタンスを作成できます。
+クラスで定義したメソッド、プロパティ、および算出プロパティは、インスタンスで使用できるようになります。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -241,8 +335,13 @@ person.say(<span class="string"><span class="delimiter">'</span><span class="con
 </pre></td>
 </tr></table>
 </div></div>
-<p>When creating an instance, you can initialize the values of its properties
-by passing an optional hash to the <code>create()</code> method:</p>
+<!--
+When creating an instance, you can initialize the values of its properties
+by passing an optional hash to the `create()` method:
+-->
+
+<p>インスタンスを作成する際、プロパティを初期値を指定できます。
+<code>create()</code>メソッドにハッシュを渡します:</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -274,20 +373,40 @@ tom.helloWorld(); <span class="comment">// alerts &quot;Hi, my name is Tom Dale&
 </pre></td>
 </tr></table>
 </div></div>
-<p>Note that for performance reasons, while calling <code>create()</code> you cannot redefine an instance&#39;s
+<!--
+Note that for performance reasons, while calling `create()` you cannot redefine an instance's
 computed properties and should not redefine existing or define new methods. You should only set simple properties when calling
-<code>create()</code>. If you need to define or redefine methods or computed
-properties, create a new subclass and instantiate that.</p>
+`create()`. If you need to define or redefine methods or computed
+properties, create a new subclass and instantiate that.
+-->
 
-<p>By convention, properties or variables that hold classes are
+<p>パフォーマンス上の理由から、<code>create()</code> を呼び出す際にインスタンスの算出プロパティを再定義することはできず、既存のメソッドの再定義、新しいメソッドの定義もできません。
+<code>create()</code>を呼び出すときには、単純なプロパティのみを設定してください。
+メソッドや算出プロパティを定義または再定義する必要がある場合は、新しいサブクラスを作成してインスタンス化してください。</p>
+
+<!--
+By convention, properties or variables that hold classes are
 PascalCased, while instances are not. So, for example, the variable
-<code>Person</code> would point to a class, while <code>person</code> would point to an instance
-(usually of the <code>Person</code> class). You should stick to these naming
-conventions in your Ember applications.</p>
-<h3 id="toc_Initializing-Instances" class="anchorable-toc">Initializing Instances</h3>
-<p>When a new instance is created, its <a href="https://www.emberjs.com/api/ember/2.16/classes/EmberObject/methods/init?anchor=init"><code>init()</code></a> method is invoked
+`Person` would point to a class, while `person` would point to an instance
+(usually of the `Person` class). You should stick to these naming
+conventions in your Ember applications.
+-->
+
+<p>規約上、クラスを保持するプロパティまたは変数はアッパーキャメルケース(PascalCased)ですが、インスタンスはそうではありません。
+たとえば、変数<code>Person</code>はクラスを指し、<code>person</code>は(<code>Person</code>クラスの)インスタンスを指します。 Emberアプリケーションでは、これらの命名規則に従うべきです。</p>
+
+<!--
+### Initializing Instances
+-->
+<h3 id="toc_インスタンスの初期化" class="anchorable-toc">インスタンスの初期化</h3>
+<!--
+When a new instance is created, its [`init()`][6] method is invoked
 automatically. This is the ideal place to implement setup required on new
-instances:</p>
+instances:
+-->
+
+<p>新しいインスタンスが作成されると、<a href="https://www.emberjs.com/api/ember/2.16/classes/EmberObject/methods/init?anchor=init"><code>init()</code></a>メソッドが自動で呼び出されます。
+これは、インスタンスで必須なものをセットアップするのに理想的な場所です。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -319,12 +438,48 @@ Person.create({
 </pre></td>
 </tr></table>
 </div></div>
-<p>If you are subclassing a framework class, like <code>Ember.Component</code>, and you
-override the <code>init()</code> method, make sure you call <code>this._super(...arguments)</code>!
-If you don&#39;t, a parent class may not have an opportunity to do important
-setup work, and you&#39;ll see strange behavior in your application.</p>
+<!--
+If you are subclassing a framework class, like `Ember.Component`, and you
+override the `init()` method, make sure you call `this._super(...arguments)`!
+If you don't, a parent class may not have an opportunity to do important
+setup work, and you'll see strange behavior in your application.
+-->
 
-<p>Arrays and objects defined directly on any <code>Ember.Object</code> are shared across all instances of that class.</p>
+<p><code>Ember.Component</code>などのフレームワーククラスをサブクラス化し、<code>init()</code>メソッドをオーバーライドする場合は、<code>this._super(...arguments)</code>を<strong>必ず呼び出してください！</strong>
+そうしないと、親クラスで重要なセットアップ作業を行う機会がなくなり、アプリケーションで奇妙な動作が発生します。</p>
+
+<!--
+Arrays and objects defined directly on any `Ember.Object` are shared across all instances of that class.
+-->
+
+<p>Ember.Objectで直接定義された配列とオブジェクトは、そのクラスのすべてのインスタンスで共有されます。</p>
+
+<!--
+```js
+import EmberObject from '@ember/object';
+
+const Person = EmberObject.extend({
+  shoppingList: ['eggs', 'cheese']
+});
+
+Person.create({
+  name: 'Stefan Penner',
+  addItem() {
+    this.get('shoppingList').pushObject('bacon');
+  }
+});
+
+Person.create({
+  name: 'Robert Jackson',
+  addItem() {
+    this.get('shoppingList').pushObject('sausage');
+  }
+});
+
+// Stefan and Robert both trigger their addItem.
+// They both end up with: ['eggs', 'cheese', 'bacon', 'sausage']
+```
+-->
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -348,33 +503,69 @@ setup work, and you&#39;ll see strange behavior in your application.</p>
 <strong>20</strong>
 21
 22
+23
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
 
 const Person = EmberObject.extend({
-  <span class="key">shoppingList</span>: [<span class="string"><span class="delimiter">'</span><span class="content">eggs</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">cheese</span><span class="delimiter">'</span></span>]
+  <span class="key">shoppingList</span>: [<span class="string"><span class="delimiter">'</span><span class="content">卵</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">チーズ</span><span class="delimiter">'</span></span>]
 });
 
 Person.create({
-  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">Stefan Penner</span><span class="delimiter">'</span></span>,
+  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">ステファン  ペナー</span><span class="delimiter">'</span></span>,
   addItem() {
-    <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">shoppingList</span><span class="delimiter">'</span></span>).pushObject(<span class="string"><span class="delimiter">'</span><span class="content">bacon</span><span class="delimiter">'</span></span>);
+    <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">shoppingList</span><span class="delimiter">'</span></span>).pushObject(<span class="string"><span class="delimiter">'</span><span class="content">ベーコン</span><span class="delimiter">'</span></span>);
   }
 });
 
 Person.create({
-  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">Robert Jackson</span><span class="delimiter">'</span></span>,
+  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">ロバート ジャクソン</span><span class="delimiter">'</span></span>,
   addItem() {
-    <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">shoppingList</span><span class="delimiter">'</span></span>).pushObject(<span class="string"><span class="delimiter">'</span><span class="content">sausage</span><span class="delimiter">'</span></span>);
+    <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">shoppingList</span><span class="delimiter">'</span></span>).pushObject(<span class="string"><span class="delimiter">'</span><span class="content">ソーセージ</span><span class="delimiter">'</span></span>);
   }
 });
 
-<span class="comment">// Stefan and Robert both trigger their addItem.</span>
-<span class="comment">// They both end up with: ['eggs', 'cheese', 'bacon', 'sausage']</span>
+<span class="comment">// ステファンとロバートの両方がaddItemを実行すると、</span>
+<span class="comment">// 二人のshoppingListは: ['卵', 'チーズ', 'ベーコン', 'ソーセージ']</span>
+<span class="comment">// になります。</span>
 </pre></td>
 </tr></table>
 </div></div>
-<p>To avoid this behavior, it is encouraged to initialize those arrays and object properties during <code>init()</code>. Doing so ensures each instance will be unique.</p>
+<!--
+To avoid this behavior, it is encouraged to initialize those arrays and object properties during `init()`. Doing so ensures each instance will be unique.
+-->
+
+<p>この挙動を避けるためには、<code>init()</code>の中でこれらの配列とオブジェクトのプロパティを初期化することをお勧めします。
+これにより、各インスタンスが一意になります。</p>
+
+<!--
+```js
+import EmberObject from '@ember/object';
+
+const Person = EmberObject.extend({
+  init() {
+    this.set('shoppingList', ['eggs', 'cheese']);
+  }
+});
+
+Person.create({
+  name: 'Stefan Penner',
+  addItem() {
+    this.get('shoppingList').pushObject('bacon');
+  }
+});
+
+Person.create({
+  name: 'Robert Jackson',
+  addItem() {
+    this.get('shoppingList').pushObject('sausage');
+  }
+});
+
+// Stefan ['eggs', 'cheese', 'bacon']
+// Robert ['eggs', 'cheese', 'sausage']
+```
+-->
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -405,31 +596,40 @@ Person.create({
 
 const Person = EmberObject.extend({
   init() {
-    <span class="local-variable">this</span>.set(<span class="string"><span class="delimiter">'</span><span class="content">shoppingList</span><span class="delimiter">'</span></span>, [<span class="string"><span class="delimiter">'</span><span class="content">eggs</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">cheese</span><span class="delimiter">'</span></span>]);
+    <span class="local-variable">this</span>.set(<span class="string"><span class="delimiter">'</span><span class="content">shoppingList</span><span class="delimiter">'</span></span>, [<span class="string"><span class="delimiter">'</span><span class="content">卵</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">チーズ</span><span class="delimiter">'</span></span>]);
   }
 });
 
 Person.create({
-  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">Stefan Penner</span><span class="delimiter">'</span></span>,
+  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">ステファン ペナー</span><span class="delimiter">'</span></span>,
   addItem() {
-    <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">shoppingList</span><span class="delimiter">'</span></span>).pushObject(<span class="string"><span class="delimiter">'</span><span class="content">bacon</span><span class="delimiter">'</span></span>);
+    <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">shoppingList</span><span class="delimiter">'</span></span>).pushObject(<span class="string"><span class="delimiter">'</span><span class="content">ベーコン</span><span class="delimiter">'</span></span>);
   }
 });
 
 Person.create({
-  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">Robert Jackson</span><span class="delimiter">'</span></span>,
+  <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">ロバート ジャクソン</span><span class="delimiter">'</span></span>,
   addItem() {
-    <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">shoppingList</span><span class="delimiter">'</span></span>).pushObject(<span class="string"><span class="delimiter">'</span><span class="content">sausage</span><span class="delimiter">'</span></span>);
+    <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">shoppingList</span><span class="delimiter">'</span></span>).pushObject(<span class="string"><span class="delimiter">'</span><span class="content">ソーセージ</span><span class="delimiter">'</span></span>);
   }
 });
 
-<span class="comment">// Stefan ['eggs', 'cheese', 'bacon']</span>
-<span class="comment">// Robert ['eggs', 'cheese', 'sausage']</span>
+<span class="comment">// ステファン ['卵', 'チーズ', 'ベーコン']</span>
+<span class="comment">// ロバート ['卵', 'チーズ', 'ソーセージ']</span>
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_Accessing-Object-Properties" class="anchorable-toc">Accessing Object Properties</h3>
-<p>When accessing the properties of an object, use the <a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject/methods/get?anchor=get"><code>get()</code></a>
-and <a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject/methods/set?anchor=set"><code>set()</code></a> accessor methods:</p>
+</div></div>
+<!--
+### Accessing Object Properties
+-->
+<h3 id="toc_オブジェクトプロパティへのアクセス" class="anchorable-toc">オブジェクトプロパティへのアクセス</h3>
+<!--
+When accessing the properties of an object, use the [`get()`][7]
+and [`set()`][8] accessor methods:
+-->
+
+<p>オブジェクトのプロパティにアクセスするときは、<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject/methods/get?anchor=get"><code>get()</code></a>
+および<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject/methods/set?anchor=set"><code>set()</code></a>アクセサメソッドを使用します。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -457,8 +657,13 @@ person.get(<span class="string"><span class="delimiter">'</span><span class="con
 </pre></td>
 </tr></table>
 </div></div>
-<p>Make sure to use these accessor methods; otherwise, computed properties won&#39;t
-recalculate, observers won&#39;t fire, and templates won&#39;t update.</p>
+<!--
+Make sure to use these accessor methods; otherwise, computed properties won't
+recalculate, observers won't fire, and templates won't update.
+-->
+
+<p>これらのアクセサメソッドを必ず使用してください。
+そうしないと、算出プロパティは再計算されず、オブザーバは発動せず、テンプレートは更新されません。</p>
 
 
 

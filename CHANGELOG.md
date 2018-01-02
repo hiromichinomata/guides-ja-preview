@@ -4,6 +4,7 @@
 ## 2018.01.02
 
 - [x] The Object Model - Objects in Ember
+- [x] The Object Model - Classes and Instances
 
 
 ## 2017.12.31
