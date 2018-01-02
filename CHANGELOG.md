@@ -1,6 +1,12 @@
 # CHANGELOG
 
-## 2917.12.31
+
+## 2018.01.02
+
+- [x] The Object Model - Objects in Ember
+
+
+## 2017.12.31
 
 The following sections were done. 🎉
 All sections in Tutorial were done.
