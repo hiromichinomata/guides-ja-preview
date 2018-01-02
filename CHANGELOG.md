@@ -8,7 +8,7 @@
 - [x] The Object Model - Reopening Classes and Instances
 - [x] The Object Model - Computed Properties
 - [x] The Object Model - Computed Properties and Aggregate Data
-
+- [x] The Object Model - Observers
 
 ## 2017.12.31
 
