@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - オブジェクトモデル: Enumerables</title>
-    <meta property="st:title" content="オブジェクトモデル: Enumerables" />
+    <title>Ember.js - オブジェクトモデル: 列挙型</title>
+    <meta property="st:title" content="オブジェクトモデル: 列挙型" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -71,7 +71,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 selected'><a href="#">オブジェクトモデル</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../bindings/">バインディング</a></li><li class='toc-level-1 selected'><a href="./">Enumerables</a></li></ol></li><li class='toc-level-0 '><a href="#">Routing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">Introduction</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">Defining Your Routes</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">Specifying a Route's Model</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">Rendering a Template</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">Redirecting</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">Preventing and Retrying Transitions</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">Loading / Error Substates</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">Query Parameters</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">Asynchronous Routing</a></li></ol></li><li class='toc-level-0 '><a href="#">Templates</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebars Basics</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">Built-in Helpers</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">Conditionals</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../../templates/links/">Links</a></li><li class='toc-level-1 '><a href="../../templates/actions/">Actions</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 selected'><a href="#">オブジェクトモデル</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../bindings/">バインディング</a></li><li class='toc-level-1 selected'><a href="./">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">Routing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">Introduction</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">Defining Your Routes</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">Specifying a Route's Model</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">Rendering a Template</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">Redirecting</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">Preventing and Retrying Transitions</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">Loading / Error Substates</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">Query Parameters</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">Asynchronous Routing</a></li></ol></li><li class='toc-level-0 '><a href="#">Templates</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebars Basics</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">Built-in Helpers</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">Conditionals</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../../templates/links/">Links</a></li><li class='toc-level-1 '><a href="../../templates/actions/">Actions</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -79,37 +79,64 @@
 
       <article class="chapter">
         <h1>
-          Enumerables
+          列挙型
           <a href="https://github.com/emberjs/guides/edit/master/source/object-model/enumerables.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>In Ember.js, an enumerable is any object that contains a number of child
+        <!--
+In Ember.js, an enumerable is any object that contains a number of child
 objects, and which allows you to work with those children using the
-<a href="http://emberjs.com/api/classes/Ember.Enumerable.html">Ember.Enumerable</a> API. The most common
+[Ember.Enumerable](http://emberjs.com/api/classes/Ember.Enumerable.html) API. The most common
 enumerable in the majority of apps is the native JavaScript array, which
-Ember.js extends to conform to the enumerable interface.</p>
+Ember.js extends to conform to the enumerable interface.
+-->
 
-<p>By providing a standardized interface for dealing with enumerables,
+<p>Ember.jsでは、列挙型(Enumberable)は、多数の子オブジェクトを含む任意のオブジェクトであり、<a href="http://emberjs.com/api/classes/Ember.Enumerable.html">Ember.Enumerable</a>を使用して子オブジェクトを操作できます。
+アプリケーションで最も一般的な列挙型は、Ember.jsがEnumerableのインターフェイスに準拠するように拡張しているネイティブJavaScriptの配列(Array)です。</p>
+
+<!--
+By providing a standardized interface for dealing with enumerables,
 Ember.js allows you to completely change the way your underlying data is
 stored without having to modify the other parts of your application that
-access it.</p>
+access it.
+-->
 
-<p>The enumerable API follows ECMAScript specifications as much as
+<p>列挙型を扱うための標準化されたインタフェースを提供することにより、Ember.jsは、アプリケーション内で列挙型にアクセスする部分を変更することなく、基礎となるデータの格納方法を完全に変更することができます。</p>
+
+<!--
+The enumerable API follows ECMAScript specifications as much as
 possible. This minimizes incompatibility with other libraries, and
 allows Ember.js to use the native browser implementations in arrays
-where available.</p>
-<h2 id="toc_Use-of-Observable-Methods-and-Properties" class="anchorable-toc">Use of Observable Methods and Properties</h2>
-<p>In order for Ember to observe when you make a change to an enumerable, you need
-to use special methods that <code>Ember.Enumerable</code> provides. For example, if you add
-an element to an array using the standard JavaScript method <code>push()</code>, Ember will
+where available.
+-->
+
+<p>列挙可能なAPIは、可能な限りECMAScript仕様に準拠しています。 これにより、他のライブラリとの非互換性が最小限に抑えられおり、Ember.jsはブラウザのネイティブ実装が利用できる場合は利用します。</p>
+
+<!--
+## Use of Observable Methods and Properties
+-->
+<h2 id="toc_オブザーバー用のメソッドとプロパティ" class="anchorable-toc">オブザーバー用のメソッドとプロパティ</h2>
+<!--
+In order for Ember to observe when you make a change to an enumerable, you need
+to use special methods that `Ember.Enumerable` provides. For example, if you add
+an element to an array using the standard JavaScript method `push()`, Ember will
 not be able to observe the change, but if you use the enumerable method
-<code>pushObject()</code>, the change will propagate throughout your application.</p>
+`pushObject()`, the change will propagate throughout your application.
+-->
 
-<p>Here is a list of standard JavaScript array methods and their observable
-enumerable equivalents:</p>
+<p>列挙型の変更をEmberが監視できるようにするには、<code>Ember.Enumerable</code>が提供する特別なメソッドを使用する必要があります。
+たとえば、標準のJavaScriptメソッド<code>push()</code>を使用して配列に要素を追加すると、Emberは変更を監視できませんが、Enumerableの<code>pushObject()</code>メソッドを使用すると、アプリケーション全体に変更が反映されます。</p>
 
+<!--
+Here is a list of standard JavaScript array methods and their observable
+enumerable equivalents:
+-->
+
+<p>以下は、標準のJavaScript配列メソッドとオブザーバーを使う場合のメソッドの表です。</p>
+
+<!--
 <table>
   <thead>
     <tr><th>Standard Method</th><th>Observable Equivalent</th></tr>
@@ -122,17 +149,52 @@ enumerable equivalents:</p>
     <tr><td>unshift</td><td>unshiftObject</td></tr>
   </tbody>
 </table>
+-->
 
-<p>Additionally, to retrieve the first and last objects in an array
-in an observable fashion, you should use <code>myArray.get(&#39;firstObject&#39;)</code> and
-<code>myArray.get(&#39;lastObject&#39;)</code>, respectively.</p>
-<h2 id="toc_API-Overview" class="anchorable-toc">API Overview</h2>
-<p>In the rest of this guide, we&#39;ll explore some of the most common enumerable
-conveniences. For the full list, please see the <a href="http://emberjs.com/api/classes/Ember.Enumerable.html">Ember.Enumerable API
-reference documentation.</a></p>
-<h3 id="toc_Iterating-Over-an-Enumerable" class="anchorable-toc">Iterating Over an Enumerable</h3>
-<p>To enumerate all the values of an enumerable object, use the <a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_forEach"><code>forEach()</code></a>
-method:</p>
+<table>
+  <thead>
+    <tr><th>標準メソッド</th><th>オブザーバー用メソッド</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>pop</td><td>popObject</td></tr>
+    <tr><td>push</td><td>pushObject</td></tr>
+    <tr><td>reverse</td><td>reverseObjects</td></tr>
+    <tr><td>shift</td><td>shiftObject</td></tr>
+    <tr><td>unshift</td><td>unshiftObject</td></tr>
+  </tbody>
+</table>
+
+<!--
+Additionally, to retrieve the first and last objects in an array
+in an observable fashion, you should use `myArray.get('firstObject')` and
+`myArray.get('lastObject')`, respectively.
+-->
+
+<p>さらに、配列内の最初と最後のオブジェクトをオブザーブ可能な形式で取得するには、それぞれ<code>myArray.get(&#39;firstObject&#39;)</code>と<code>myArray.get(&#39;lastObject&#39;)</code>を使用する必要があります。</p>
+
+<!--
+## API Overview
+-->
+<h2 id="toc_APIの概要" class="anchorable-toc">APIの概要</h2>
+<!--
+In the rest of this guide, we'll explore some of the most common enumerable
+conveniences. For the full list, please see the [Ember.Enumerable API
+reference documentation.](http://emberjs.com/api/classes/Ember.Enumerable.html)
+-->
+
+<p>このガイドの残りの部分では、よく使う便利な機能をいくつか紹介します。
+全部の機能については、<a href="http://emberjs.com/api/classes/Ember.Enumerable.html">Ember.Enumerable APIのリファレンスドキュメント</a>を参照してください。</p>
+
+<!--
+### Iterating Over an Enumerable
+-->
+<h3 id="toc_Enumerableを繰り返し処理する" class="anchorable-toc">Enumerableを繰り返し処理する</h3>
+<!--
+To enumerate all the values of an enumerable object, use the [`forEach()`](http://emberjs.com/api/classes/Ember.Enumerable.html#method_forEach)
+method:
+-->
+
+<p>列挙型のオブジェクトのすべての値を列挙するには、<a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_forEach"><code>forEach()</code></a>メソッドを使用します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -155,9 +217,17 @@ food.forEach((item, index) =&gt; {
 <span class="comment">// Menu Item 3: Adobo Chicken</span>
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_First-and-Last-Objects" class="anchorable-toc">First and Last Objects</h3>
-<p>All enumerables expose <a href="http://emberjs.com/api/classes/Ember.Enumerable.html#property_firstObject"><code>firstObject</code></a> and <a href="http://emberjs.com/api/classes/Ember.Enumerable.html#property_lastObject"><code>lastObject</code></a> properties
-that you can bind to.</p>
+</div></div>
+<!--
+### First and Last Objects
+-->
+<h3 id="toc_最初と最後のオブジェクト" class="anchorable-toc">最初と最後のオブジェクト</h3>
+<!--
+All enumerables expose [`firstObject`](http://emberjs.com/api/classes/Ember.Enumerable.html#property_firstObject) and [`lastObject`](http://emberjs.com/api/classes/Ember.Enumerable.html#property_lastObject) properties
+that you can bind to.
+-->
+
+<p>すべての列挙型は、バインドできる<a href="http://emberjs.com/api/classes/Ember.Enumerable.html#property_firstObject"><code>firstObject</code></a>および<a href="http://emberjs.com/api/classes/Ember.Enumerable.html#property_lastObject"><code>lastObject</code></a>プロパティを持っています。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -180,10 +250,18 @@ animals.get(<span class="string"><span class="delimiter">'</span><span class="co
 <span class="comment">//=&gt; &quot;peacock&quot;</span>
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_Map" class="anchorable-toc">Map</h3>
-<p>You can easily transform each item in an enumerable using the
-<a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_map"><code>map()</code></a> method, which creates a new array with results of calling a
-function on each item in the enumerable.</p>
+</div></div>
+<!--
+### Map
+-->
+<h3 id="toc_マップ" class="anchorable-toc">マップ</h3>
+<!--
+You can easily transform each item in an enumerable using the
+[`map()`](http://emberjs.com/api/classes/Ember.Enumerable.html#method_map) method, which creates a new array with results of calling a
+function on each item in the enumerable.
+-->
+
+<p><a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_map"><code>map()</code></a>メソッドを使用して列挙型の各アイテムを簡単に変換することができます。これは、列挙型の各アイテムに関数を実行した結果の新しい配列を作成します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -197,9 +275,14 @@ let emphaticWords = words.map(item =&gt; <span class="error">`</span><span class
 </pre></td>
 </tr></table>
 </div></div>
-<p>If your enumerable is composed of objects, there is a <a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_mapBy"><code>mapBy()</code></a>
+<!--
+If your enumerable is composed of objects, there is a [`mapBy()`](http://emberjs.com/api/classes/Ember.Enumerable.html#method_mapBy)
 method that will extract the named property from each of those objects
-in turn and return a new array:</p>
+in turn and return a new array:
+-->
+
+<p>列挙型がオブジェクトで構成されている場合、<a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_mapBy"><code>mapBy()</code></a>メソッドがあります
+このメソッドは、各オブジェクトから名前付きプロパティを順番に抽出し、新しい配列を返します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -232,14 +315,27 @@ states.mapBy(<span class="string"><span class="delimiter">'</span><span class="c
 <span class="comment">//=&gt; [&quot;Honolulu&quot;, &quot;Sacramento&quot;]</span>
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_Filtering" class="anchorable-toc">Filtering</h3>
-<p>Another common task to perform on an enumerable is to take the
+</div></div>
+<!--
+### Filtering
+-->
+<h3 id="toc_フィルタリング" class="anchorable-toc">フィルタリング</h3>
+<!--
+Another common task to perform on an enumerable is to take the
 enumerable as input, and return an Array after filtering it based on
-some criteria.</p>
+some criteria.
+-->
 
-<p>For arbitrary filtering, use the <a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_filter"><code>filter()</code></a> method.  The filter method
-expects the callback to return <code>true</code> if Ember should include it in the
-final Array, and <code>false</code> or <code>undefined</code> if Ember should not.</p>
+<p>ほかに列挙型に対してよく実行するタスクは、列挙型を入力として受け取り、いくつかの条件に基づいてフィルタリングした後に配列を返すことです。</p>
+
+<!--
+For arbitrary filtering, use the [`filter()`](http://emberjs.com/api/classes/Ember.Enumerable.html#method_filter) method.  The filter method
+expects the callback to return `true` if Ember should include it in the
+final Array, and `false` or `undefined` if Ember should not.
+-->
+
+<p>任意のフィルタリングを行うには、<a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_filter"><code>filter()</code></a>メソッドを使用します。
+コールバックが<code>true</code>を返すと、配列に対象を含めます。<code>false</code>または<code>undefined</code>の場合は除外します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -255,7 +351,13 @@ arr.filter((item, index, self) =&gt; item &lt; <span class="integer">4</span>);
 </pre></td>
 </tr></table>
 </div></div>
-<p>When working with a collection of Ember objects, you will often want to filter a set of objects based upon the value of some property. The <a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_filterBy"><code>filterBy()</code></a> method provides a shortcut.</p>
+<!--
+
+When working with a collection of Ember objects, you will often want to filter a set of objects based upon the value of some property. The [`filterBy()`](http://emberjs.com/api/classes/Ember.Enumerable.html#method_filterBy) method provides a shortcut.
+-->
+
+<p>Emberオブジェクトの配列を扱う際、しばしば、プロパティの値に基づいてオブジェクトのセットをフィルタリング場面が出てきます。
+<a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_filterBy"><code>filterBy()</code></a>メソッドはショートカットを提供します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -291,12 +393,24 @@ todos.filterBy(<span class="string"><span class="delimiter">'</span><span class=
 </pre></td>
 </tr></table>
 </div></div>
-<p>If you only want to return the first matched value, rather than an Array
-containing all of the matched values, you can use <a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_find"><code>find()</code></a> and <a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_findBy"><code>findBy()</code></a>,
-which work like <code>filter()</code> and <code>filterBy()</code>, but return only one item.</p>
-<h3 id="toc_Aggregate-Information-(Every-or-Any)" class="anchorable-toc">Aggregate Information (Every or Any)</h3>
-<p>To find out whether every item in an enumerable matches some condition, you can
-use the <a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_every"><code>every()</code></a> method:</p>
+<!--
+If you only want to return the first matched value, rather than an Array
+containing all of the matched values, you can use [`find()`](http://emberjs.com/api/classes/Ember.Enumerable.html#method_find) and [`findBy()`](http://emberjs.com/api/classes/Ember.Enumerable.html#method_findBy),
+which work like `filter()` and `filterBy()`, but return only one item.
+-->
+
+<p>一致したすべての値を含む配列ではなく、最初に一致した値のみを返す場合は、<code>filter()</code>および<code>filterBy()</code>のように機能する<a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_find"><code>find()</code></a>および<a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_findBy"><code>findBy()</code></a>を使用できます。</p>
+
+<!--
+### Aggregate Information (Every or Any)
+-->
+<h3 id="toc_情報の集計(EveryとAny)" class="anchorable-toc">情報の集計(EveryとAny)</h3>
+<!--
+To find out whether every item in an enumerable matches some condition, you can
+use the [`every()`](http://emberjs.com/api/classes/Ember.Enumerable.html#method_every) method:
+-->
+
+<p>列挙型のすべての項目がある条件に一致するかどうかを調べるには、<a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_every"><code>every()</code></a>メソッドを使用します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -332,8 +446,12 @@ people.every((person, index, self) =&gt; person.get(<span class="string"><span c
 </pre></td>
 </tr></table>
 </div></div>
-<p>To find out whether at least one item in an enumerable matches some condition,
-you can use the <a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_any"><code>any()</code></a> method:</p>
+<!--
+To find out whether at least one item in an enumerable matches some condition,
+you can use the [`any()`](http://emberjs.com/api/classes/Ember.Enumerable.html#method_any) method:
+-->
+
+<p>列挙型の中の少なくとも1つの項目がある条件と一致するかどうかを調べるには、<a href="http://emberjs.com/api/classes/Ember.Enumerable.html#method_any"><code>any()</code></a>メソッドを使用します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -345,8 +463,12 @@ you can use the <a href="http://emberjs.com/api/classes/Ember.Enumerable.html#me
 </pre></td>
 </tr></table>
 </div></div>
-<p>Like the filtering methods, the <code>every()</code> and <code>any()</code> methods have 
-analogous <code>isEvery()</code> and <code>isAny()</code> methods.</p>
+<!--
+Like the filtering methods, the `every()` and `any()` methods have 
+analogous `isEvery()` and `isAny()` methods.
+-->
+
+<p>フィルタリングメソッドと同様に、<code>every()</code>メソッド<code>any()</code>メソッドには、<code>isEvery()</code>メソッドと<code>isAny()</code>メソッドがあります。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2

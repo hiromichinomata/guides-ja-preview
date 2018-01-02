@@ -3,6 +3,8 @@
 
 ## 2018.01.02
 
+The Object Model was completed! 🎉
+
 - [x] The Object Model - Objects in Ember
 - [x] The Object Model - Classes and Instances
 - [x] The Object Model - Reopening Classes and Instances
@@ -10,6 +12,7 @@
 - [x] The Object Model - Computed Properties and Aggregate Data
 - [x] The Object Model - Observers
 - [x] The Object Model - Bindings
+- [x] The Object Model - Enumberables
 
 ## 2017.12.31
 
