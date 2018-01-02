@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2018.01.03
+
+- [x] Routing - Introduction
 
 ## 2018.01.02
 
@@ -19,33 +22,37 @@ The Object Model was completed! 🎉
 The following sections were done. 🎉
 All sections in Tutorial were done.
 
-- Tutorial "Using Ember Data"
-- Tutorial "Building a Complex Component"
-- Tutorial "Services and Utilities"
-- Tutorial "Adding Nested Routes"
-- Tutorial "Deploying"
+- [x] Tutorial - Using Ember Data
+- [x] Tutorial - Building a Complex Component
+- [x] Tutorial - Services and Utilities
+- [x] Tutorial - Adding Nested Routes
+- [x] Tutorial - Deploying
 
 ## 2017.12.28
 
-The following sections were done. 🎉
-
-- Tutorial "The Model Hook"
-- Tutorial "Installing Addons"
-- Tutorial "Building a Simple Component"
-- Tutorial "Creating a Handlebars Helper"
+- [x] Tutorial - The Model Hook
+- [x] Tutorial - Installing Addons
+- [x] Tutorial - Building a Simple Component
+- [x] Tutorial - Creating a Handlebars Helper
 
 ## 2017.12.23
 
 Small improvements.
 
-- Tutorial "Routes and Templates" was done. 🎉
+- [x] Tutorial - Routes and Templates
 - Header and footer
 - Fragment identifier in header links were changed (use Japanese)
 - Some minor wording
 
 ## 2017.12.17
 
-- 🎉🎉🎉 GitHub Page Preview Open! 🎉🎉🎉
-- Top page and Getting Started were translated completely. 🎉
-- Tutorial "Create a New App" was done. 🎉
-- Tutorial "Planning Your App" was done. 🎉
+🎉🎉🎉 GitHub Page Preview Open! 🎉🎉🎉
+
+Getting Started part was done. 🎉
+
+- [x] Getting Started - Quick Start
+- [x] Getting Started - Installing Ember
+- [x] Getting Started - Core Concepts
+- [x] Getting Started - JavaScript Primer
+- [x] Tutorial - Create a New App
+- [x] Tutorial - Planning Your App
