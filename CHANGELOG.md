@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2018.01.04
+
+- [x] Routing - Specifying a Route's Model
+
 ## 2018.01.03
 
 - [x] Routing - Introduction
