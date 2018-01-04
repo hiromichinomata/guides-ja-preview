@@ -4,6 +4,7 @@
 
 - [x] Routing - Specifying a Route's Model
 - [x] Routing - Rendering a Template
+- [x] Routing - Redirecting
 
 ## 2018.01.03
 
