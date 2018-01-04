@@ -6,6 +6,7 @@
 - [x] Routing - Rendering a Template
 - [x] Routing - Redirecting
 - [x] Routing - Preventing and Retrying Transitions 
+- [x] Routing - Loading / Error Substates
 
 ## 2018.01.03
 
