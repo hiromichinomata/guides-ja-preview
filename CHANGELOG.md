@@ -3,6 +3,7 @@
 ## 2018.01.04
 
 - [x] Routing - Specifying a Route's Model
+- [x] Routing - Rendering a Template
 
 ## 2018.01.03
 
