@@ -5,6 +5,7 @@
 - [x] Routing - Specifying a Route's Model
 - [x] Routing - Rendering a Template
 - [x] Routing - Redirecting
+- [x] Routing - Preventing and Retrying Transitions 
 
 ## 2018.01.03
 
