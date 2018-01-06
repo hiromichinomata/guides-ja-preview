@@ -7,6 +7,8 @@ Routing section was done! 🎉
 - [x] Routing - Query Parameters
   - With translation note where @dopin couldn't understand. 😳😭
 - [x] Routing - Asynchronous Routing
+- [x] Templates - Handlebars Basics
+
 
 ## 2018.01.04
 
