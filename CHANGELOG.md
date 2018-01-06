@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2018.01.06
+
+- [x] Routing - Query Parameters
+  - With translation note where @dopin couldn't understand. 😳😭
+
 ## 2018.01.04
 
 - [x] Routing - Specifying a Route's Model
@@ -7,6 +12,7 @@
 - [x] Routing - Redirecting
 - [x] Routing - Preventing and Retrying Transitions 
 - [x] Routing - Loading / Error Substates
+- [x] Routing - Query Parameters
 
 ## 2018.01.03
 
