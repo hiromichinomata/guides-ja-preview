@@ -10,6 +10,8 @@ Routing section was done! 🎉
 - [x] Templates - Handlebars Basics
 - [x] Templates - Built-in Helpers
 - [x] Templates - Conditionals
+- [x] Templates - Displaying a List of Items
+
 
 ## 2018.01.04
 
