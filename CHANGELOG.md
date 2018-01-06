@@ -8,6 +8,7 @@ Routing section was done! 🎉
   - With translation note where @dopin couldn't understand. 😳😭
 - [x] Routing - Asynchronous Routing
 - [x] Templates - Handlebars Basics
+- [x] Templates - Built-in Helpers
 
 
 ## 2018.01.04
