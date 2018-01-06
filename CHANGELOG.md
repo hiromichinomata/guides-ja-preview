@@ -13,11 +13,7 @@ Routing section was done! 🎉
 - [x] Templates - Displaying a List of Items
 - [x] Templates - Displaying the Keys in an Object
 - [x] Templates - Binding Element Attributes
-- [x] Templates - Links
-- [x] Templates - Actions
-- [x] Templates - Input Helpers
-- [x] Templates - Development Helpers
-- [x] Templates - Writing Helpers
+
 
 
 ## 2018.01.04
