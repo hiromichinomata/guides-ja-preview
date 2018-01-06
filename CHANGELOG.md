@@ -2,8 +2,11 @@
 
 ## 2018.01.06
 
+Routing section was done! 🎉
+
 - [x] Routing - Query Parameters
   - With translation note where @dopin couldn't understand. 😳😭
+- [x] Routing - Asynchronous Routing
 
 ## 2018.01.04
 

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - ルーティング: Asynchronous Routing</title>
-    <meta property="st:title" content="ルーティング: Asynchronous Routing" />
+    <title>Ember.js - ルーティング: 非同期ルーティング</title>
+    <meta property="st:title" content="ルーティング: 非同期ルーティング" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -71,7 +71,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 selected'><a href="#">ルーティング</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">はじめに</a></li><li class='toc-level-1 '><a href="../defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../query-params/">クエリーパラメーター</a></li><li class='toc-level-1 selected'><a href="./">Asynchronous Routing</a></li></ol></li><li class='toc-level-0 '><a href="#">Templates</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebars Basics</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">Built-in Helpers</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">Conditionals</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../../templates/links/">Links</a></li><li class='toc-level-1 '><a href="../../templates/actions/">Actions</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 selected'><a href="#">ルーティング</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">はじめに</a></li><li class='toc-level-1 '><a href="../defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../query-params/">クエリーパラメーター</a></li><li class='toc-level-1 selected'><a href="./">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">Templates</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebars Basics</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">Built-in Helpers</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">Conditionals</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../../templates/links/">Links</a></li><li class='toc-level-1 '><a href="../../templates/actions/">Actions</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -79,26 +79,44 @@
 
       <article class="chapter">
         <h1>
-          Asynchronous Routing
+          非同期ルーティング
           <a href="https://github.com/emberjs/guides/edit/master/source/routing/asynchronous-routing.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>This section covers some more advanced features of the router and its
-capability for handling complex async logic within your app.</p>
-<h3 id="toc_A-Word-on-Promises..." class="anchorable-toc">A Word on Promises...</h3>
-<p>Ember&#39;s approach to handling asynchronous logic in the router makes
+        <!--
+This section covers some more advanced features of the router and its
+capability for handling complex async logic within your app.
+-->
+
+<p>このセクションでは、ルータのより高度な機能と、アプリ内で複雑な非同期ロジックを処理する機能について説明します。</p>
+
+<!--
+### A Word on Promises...
+-->
+<h3 id="toc_約束の言葉..." class="anchorable-toc">約束の言葉...</h3>
+<!--
+Ember's approach to handling asynchronous logic in the router makes
 heavy use of the concept of Promises. In short, promises are objects that
-represent an eventual value. A promise can either <em>fulfill</em>
-(successfully resolve the value) or <em>reject</em> (fail to resolve the
+represent an eventual value. A promise can either _fulfill_
+(successfully resolve the value) or _reject_ (fail to resolve the
 value). The way to retrieve this eventual value, or handle the cases
-when the promise rejects, is via the promise&#39;s <a href="https://www.emberjs.com/api/ember/2.16/classes/Promise/methods/then?anchor=then"><code>then()</code></a> method, which
+when the promise rejects, is via the promise's [`then()`](https://www.emberjs.com/api/ember/2.16/classes/Promise/methods/then?anchor=then) method, which
 accepts two optional callbacks, one for fulfillment and one for
 rejection. If the promise fulfills, the fulfillment handler gets called
 with the fulfilled value as its sole argument, and if the promise rejects,
 the rejection handler gets called with a reason for the rejection as its
-sole argument. For example:</p>
+sole argument. For example:
+-->
+
+<p>ルータで非同期ロジックを扱う際、EmberではPromisesという概念を大いに活用しています。
+手短に言えば、Promiseは最終的な値を表すオブジェクトです。
+Promiseは、成功(値をうまく解決)するか、拒否する(値の解決に失敗)ことができます。
+この最終的な値を取得するには、成功時と拒否時(オプション)の2つのコールバックを受け取るpromiseの<a href="https://www.emberjs.com/api/ember/2.16/classes/Promise/methods/then?anchor=then">then()</a>メソッドを使用します。
+Promiseが解決されれば、解決時の値がコールバックに渡され、失敗れた場合、エラーオブジェクトだけが引数に渡されます。</p>
+
+<p>例:</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -126,8 +144,12 @@ promise.then(fulfill, reject);
 </span></span></pre></td>
 </tr></table>
 </div></div>
-<p>Much of the power of promises comes from the fact that they can be
-chained together to perform sequential asynchronous operations:</p>
+<!--
+Much of the power of promises comes from the fact that they can be
+chained together to perform sequential asynchronous operations:
+-->
+
+<p>Promiseの良い点は、一連の非同期処理を連鎖できるところです。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -147,39 +169,77 @@ usernamesPromise.then(fetchPhotosOfUsers)
 </pre></td>
 </tr></table>
 </div></div>
-<p>In the above example, if any of the methods
-<code>fetchPhotosOfUsers</code>, <code>applyInstagramFilters</code>, or
-<code>uploadTrendyPhotoAlbum</code> returns a promise that rejects,
-<code>handleErrors</code> will be called with
+<!--
+In the above example, if any of the methods
+`fetchPhotosOfUsers`, `applyInstagramFilters`, or
+`uploadTrendyPhotoAlbum` returns a promise that rejects,
+`handleErrors` will be called with
 the reason for the failure. In this manner, promises approximate an
 asynchronous form of try-catch statements that prevent the rightward
 flow of nested callback after nested callback and facilitate a saner
-approach to managing complex asynchronous logic in your applications.</p>
+approach to managing complex asynchronous logic in your applications.
+-->
 
-<p>This guide doesn&#39;t intend to fully delve into all the different ways
-promises can be used, but if you&#39;d like a more thorough introduction,
-take a look at the readme for <a href="https://github.com/tildeio/rsvp.js">RSVP</a>,
-the promise library that Ember uses.</p>
-<h3 id="toc_The-Router-Pauses-for-Promises" class="anchorable-toc">The Router Pauses for Promises</h3>
-<p>When transitioning between routes, the Ember router collects all of the
-models (via the <code>model</code> hook) that will be passed to the route&#39;s
-controllers at the end of the transition. If the <code>model</code> hook (or the related
-<code>beforeModel</code> or <code>afterModel</code> hooks) return normal (non-promise) objects or
-arrays, the transition will complete immediately. But if the <code>model</code> hook
-(or the related <code>beforeModel</code> or <code>afterModel</code> hooks) returns a promise (or
-if a promise was provided as an argument to <code>transitionTo</code>), the transition
-will pause until that promise fulfills or rejects.</p>
+<p>上記の例では、<code>fetchPhotosOfUsers</code>、<code>applyInstagramFilters</code>、または<code>uploadTrendyPhotoAlbum</code>のいずれかが失敗した場合、<code>handleErrors</code>が失敗の理由とともに呼び出されます。
+このように、ネストしたコールバックの後さらにネストを重ねるようなことはせず、try-catch構文のように
+アプリケーションで複雑な非同期ロジックを賢く管理することができます。</p>
 
-<p>The router considers any object with a <code>then()</code> method
-defined on it to be a promise.</p>
+<!--
+This guide doesn't intend to fully delve into all the different ways
+promises can be used, but if you'd like a more thorough introduction,
+take a look at the readme for [RSVP](https://github.com/tildeio/rsvp.js),
+the promise library that Ember uses.
+-->
 
-<p>If the promise fulfills, the transition will pick up where it left off and
-begin resolving the next (child) route&#39;s model, pausing if it too is a
+<p>このガイドでは、Promiseの使い方を完全に掘り下げるつもりはありませんので、もっと徹底的に知りたい方は、
+Emberで使用されているPromiseについては<a href="https://github.com/tildeio/rsvp.js">RSVP</a>のreadmeをご覧ください。</p>
+
+<!--
+### The Router Pauses for Promises
+-->
+<h3 id="toc_ルーターはPromiseを待つ" class="anchorable-toc">ルーターはPromiseを待つ</h3>
+<!--
+When transitioning between routes, the Ember router collects all of the
+models (via the `model` hook) that will be passed to the route's
+controllers at the end of the transition. If the `model` hook (or the related
+`beforeModel` or `afterModel` hooks) return normal (non-promise) objects or
+arrays, the transition will complete immediately. But if the `model` hook
+(or the related `beforeModel` or `afterModel` hooks) returns a promise (or
+if a promise was provided as an argument to `transitionTo`), the transition
+will pause until that promise fulfills or rejects.
+-->
+
+<p>ルート間を移動(トランジション)する時、Emberルーターは、トランジションの終わりに(<code>model</code>フックを介して)すべてのモデルを収集し、ルートのコントローラに渡します。 
+<code>model</code>フック（または<code>beforeModel</code>、<code>afterModel</code>フック）が通常の(Promiseではない)
+オブジェクトか配列を返す場合、そのトランジションは直ちに完了します。
+しかし、<code>model</code>フック(か<code>beforeModel</code>か<code>afterModel</code>フック)がPromiseを返す場合、
+(または、Promiseが<code>transitionTo</code>の引数に渡された場合)、そのPromiseが解決するか失敗するまで、トランジションは一時停止されます。</p>
+
+<!--
+The router considers any object with a `then()` method
+defined on it to be a promise.
+-->
+
+<p>ルータは <code>then()</code>メソッドを持つオブジェクトをすべてPromiseと見なします。</p>
+
+<!--
+If the promise fulfills, the transition will pick up where it left off and
+begin resolving the next (child) route's model, pausing if it too is a
 promise, and so on, until all destination route models have been
-resolved. The values passed to the <a href="https://www.emberjs.com/api/ember/2.16/classes/Route/methods/setupController?anchor=setupController"><code>setupController()</code></a> hook for each route
-will be the fulfilled values from the promises.</p>
+resolved. The values passed to the [`setupController()`](https://www.emberjs.com/api/ember/2.16/classes/Route/methods/setupController?anchor=setupController) hook for each route
+will be the fulfilled values from the promises.
+-->
 
-<p>A basic example:</p>
+<p>Promiseが解決されば、トランジションは中断されたところから再開します。
+そして、次の(子)ルートのモデルの解決を開始し、それがPromiseであれば一時停止するのを、
+目的地までのルートのモデルが全て解決されるまで繰り返します。
+各ルートの<a href="https://www.emberjs.com/api/ember/2.16/classes/Route/methods/setupController?anchor=setupController"><code>setupController()</code></a>フックに渡される値は、Promiseから得られた値です。</p>
+
+<!--
+A basic example:
+-->
+
+<p>基本的な例:</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -223,27 +283,83 @@ will be the fulfilled values from the promises.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>When transitioning into <code>route:tardy</code>, the <code>model()</code> hook will be called and
-return a promise that won&#39;t resolve until 3 seconds later, during which time
+<!--
+When transitioning into `route:tardy`, the `model()` hook will be called and
+return a promise that won't resolve until 3 seconds later, during which time
 the router will be paused in mid-transition. When the promise eventually
 fulfills, the router will continue transitioning and eventually call
-<code>route:tardy</code>&#39;s <code>setupController()</code> hook with the resolved object.</p>
+`route:tardy`'s `setupController()` hook with the resolved object.
+-->
 
-<p>This pause-on-promise behavior is extremely valuable for when you need
-to guarantee that a route&#39;s data has fully loaded before displaying a
-new template.</p>
-<h3 id="toc_When-Promises-Reject..." class="anchorable-toc">When Promises Reject...</h3>
-<p>We&#39;ve covered the case when a model promise fulfills, but what if it rejects?</p>
+<p><code>route:tardy</code>に移動すると、<code>model()</code>フックが呼び出され、3秒後まで解決されない約束が返されます。
+その間、ルータは移行の途中で一時停止します。
+Promiseが最終的に解決されると、ルータはトランジションを継続し、解決されたオブジェクトを最終的に<code>route:tardy</code>の<code>setupController()</code>フックに渡して呼びます。</p>
 
-<p>By default, if a model promise rejects during a transition, the transition is
+<!--
+This pause-on-promise behavior is extremely valuable for when you need
+to guarantee that a route's data has fully loaded before displaying a
+new template.
+-->
+
+<p>この`pause-on-promise(Promiseで一時停止)の動作は、新たにテンプレートが表示される前にルートのデータが完全にロードされていることを保証する必要があるケースで、非常に役立ちます。</p>
+
+<!--
+### When Promises Reject...
+-->
+<h3 id="toc_Promiseがrejectされた時..." class="anchorable-toc">Promiseがrejectされた時...</h3>
+<!--
+We've covered the case when a model promise fulfills, but what if it rejects?
+-->
+
+<p>モデルのPromiseが解決した場合については説明しましたが、失敗(reject)した場合はどうなるでしょうか？</p>
+
+<!--
+By default, if a model promise rejects during a transition, the transition is
 aborted, no new destination route templates are rendered, and an error
-is logged to the console.</p>
+is logged to the console.
+-->
 
-<p>You can configure this error-handling logic via the <code>error</code> handler on
-the route&#39;s <code>actions</code> hash. When a promise rejects, an <code>error</code> event
-will be fired on that route and bubble up to <code>route:application</code>&#39;s
+<p>デフォルトでは、移行中にモデルのPromiseが失敗された場合、トランジションは中止され、目的のルートのテンプレートは描画されず、
+コンソールにエラーログが出ます。</p>
+
+<!--
+You can configure this error-handling logic via the `error` handler on
+the route's `actions` hash. When a promise rejects, an `error` event
+will be fired on that route and bubble up to `route:application`'s
 default error handler unless it is handled by a custom error handler
-along the way, e.g.:</p>
+along the way, e.g.:
+-->
+
+<p>エラーを適切に処理したい場合は、ルートの<code>actions</code>ハッシュに<code>error</code>を実装します。
+Promiseが失敗すると、そのルートで<code>error</code>イベントが発生し、途中に<code>error</code>の実装がない限り、
+<code>route:application</code>のデフォルトのエラーハンドラに伝播します。</p>
+
+<p>例:</p>
+
+<!--
+```app/routes/good-for-nothing.js
+import Ember from 'ember';
+import RSVP from 'rsvp';
+
+export default Ember.Route.extend({
+  model() {
+    return RSVP.reject("FAIL");
+  },
+
+  actions: {
+    error(reason) {
+      alert(reason); // "FAIL"
+
+      // Can transition to another route here, e.g.
+      // this.transitionTo('index');
+
+      // Uncomment the line below to bubble this error event:
+      // return true;
+    }
+  }
+});
+```
+-->
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -271,6 +387,7 @@ along the way, e.g.:</p>
 18
 19
 <strong>20</strong>
+21
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
 <span class="reserved">import</span> RSVP from <span class="string"><span class="delimiter">'</span><span class="content">rsvp</span><span class="delimiter">'</span></span>;
@@ -282,12 +399,13 @@ along the way, e.g.:</p>
 
   <span class="key">actions</span>: {
     error(reason) {
-      alert(reason); <span class="comment">// &quot;FAIL&quot;</span>
+      alert(reason); <span class="comment">// &quot;失敗&quot;</span>
 
-      <span class="comment">// Can transition to another route here, e.g.</span>
+      <span class="comment">// 以下のように他のルートに飛ばすこともできます</span>
       <span class="comment">// this.transitionTo('index');</span>
 
-      <span class="comment">// Uncomment the line below to bubble this error event:</span>
+      <span class="comment">// errorイベントを祖先ルートに伝播したい場合は、</span>
+      <span class="comment">// コメントを外してtrueを返してください。</span>
       <span class="comment">// return true;</span>
     }
   }
@@ -295,14 +413,29 @@ along the way, e.g.:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>In the above example, the error event would stop right at
-<code>route:good-for-nothing</code>&#39;s error handler and not continue to bubble. To
-make the event continue bubbling up to <code>route:application</code>, you can
-return true from the error handler.</p>
-<h3 id="toc_Recovering-from-Rejection" class="anchorable-toc">Recovering from Rejection</h3>
-<p>Rejected model promises halt transitions, but because promises are chainable,
-you can catch promise rejects within the <code>model</code> hook itself and convert
-them into fulfills that won&#39;t halt the transition.</p>
+<!--
+In the above example, the error event would stop right at
+`route:good-for-nothing`'s error handler and not continue to bubble. To
+make the event continue bubbling up to `route:application`, you can
+return true from the error handler.
+-->
+
+<p>上の例では、エラーイベントは<code>route:good-for-nothing</code>ルートで終了します。
+イベントが<code>route:application</code>まで伝播するようにするには、エラーハンドラで<code>true</code>を返します。</p>
+
+<!--
+### Recovering from Rejection
+-->
+<h3 id="toc_Promiseのrejectをカバーする" class="anchorable-toc">Promiseのrejectをカバーする</h3>
+<!--
+Rejected model promises halt transitions, but because promises are chainable,
+you can catch promise rejects within the `model` hook itself and convert
+them into fulfills that won't halt the transition.
+-->
+
+<p>モデルでPromiseが失敗(reject)した時は、トランジションが停止されますが、
+Promiseはチェーン(連鎖)できるので、
+<code>model</code>フック自体の中でPromiseの失敗を捕捉(catch)し、トランンジションを停止させないよう変更できます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
