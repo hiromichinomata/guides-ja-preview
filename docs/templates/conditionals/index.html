@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - テンプレート: Conditionals</title>
-    <meta property="st:title" content="テンプレート: Conditionals" />
+    <title>Ember.js - テンプレート: 条件分岐</title>
+    <meta property="st:title" content="テンプレート: 条件分岐" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -71,7 +71,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 selected'><a href="#">テンプレート</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 selected'><a href="./">Conditionals</a></li><li class='toc-level-1 '><a href="../displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../links/">Links</a></li><li class='toc-level-1 '><a href="../actions/">Actions</a></li><li class='toc-level-1 '><a href="../input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 selected'><a href="#">テンプレート</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 selected'><a href="./">条件分岐</a></li><li class='toc-level-1 '><a href="../displaying-a-list-of-items/">Displaying a List of Items</a></li><li class='toc-level-1 '><a href="../displaying-the-keys-in-an-object/">Displaying the Keys in an Object</a></li><li class='toc-level-1 '><a href="../binding-element-attributes/">Binding Element Attributes</a></li><li class='toc-level-1 '><a href="../links/">Links</a></li><li class='toc-level-1 '><a href="../actions/">Actions</a></li><li class='toc-level-1 '><a href="../input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -79,19 +79,32 @@
 
       <article class="chapter">
         <h1>
-          Conditionals
+          条件分岐
           <a href="https://github.com/emberjs/guides/edit/master/source/templates/conditionals.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>Statements like <a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=if"><code>if</code></a>
-and <a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=unless"><code>unless</code></a>
+        <!--
+Statements like [`if`](https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=if)
+and [`unless`](https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=unless)
 are implemented as built-in helpers. Helpers can be invoked three ways, each
-of which is illustrated below with conditionals.</p>
+of which is illustrated below with conditionals.
+-->
 
-<p>The first style of invocation is <strong>inline invocation</strong>. This looks similar to
-displaying a property, but helpers accept arguments. For example:</p>
+<p><a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=if"><code>if</code></a>と<a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=unless"><code>unless</code></a>のような文は、ビルトイン(組み込み)ヘルパーとして実装されています。
+ヘルパーは3つの方法で呼び出すことができます
+その3つ方法を、ifを例に説明します。</p>
+
+<!--
+The first style of invocation is **inline invocation**. This looks similar to
+displaying a property, but helpers accept arguments. For example:
+-->
+
+<p>まず1つ目は、インライン呼び出しです。
+これはプロパティの表示と似ていますが、ヘルパーは引数を取ることができます。</p>
+
+<p>例:</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -103,13 +116,23 @@ displaying a property, but helpers accept arguments. For example:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p><a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=if"><code>{{if}}</code></a>
-in this case returns <code>&quot;zoooom&quot;</code> when <code>isFast</code> is true and
-<code>&quot;putt-putt-putt&quot;</code> when <code>isFast</code> is false. Helpers invoked as inline expressions
-render a single value, the same way that properties are a single value.</p>
+<!--
+[`{{if}}`](https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=if)
+in this case returns `"zoooom"` when `isFast` is true and
+`"putt-putt-putt"` when `isFast` is false. Helpers invoked as inline expressions
+render a single value, the same way that properties are a single value.
+-->
 
-<p>Inline helpers don&#39;t need to be used inside HTML tags. They can also be used
-inside attribute values:</p>
+<p>上記の例の<a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=if"><code>{{if}}</code></a>は、<code>isFast</code>がtrueの時は<code>&quot;zoooom&quot;</code>を返し、<code>isFast</code>がfalseの時は<code>&quot;putt-putt-putt&quot;</code>を返します。
+インライン式として呼び出されるヘルパーは、プロパティが単一の値であるのと同じように、単一の値を描画します。</p>
+
+<!--
+Inline helpers don't need to be used inside HTML tags. They can also be used
+inside attribute values:
+-->
+
+<p>インラインヘルパーは、HTMLタグ内で使用する必要はありません。
+属性値内でも使用できます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -119,9 +142,15 @@ inside attribute values:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p><strong>Nested invocation</strong> is another way to use a helper. Like inline helpers,
+<!--
+**Nested invocation** is another way to use a helper. Like inline helpers,
 nested helpers generate and return a single value. For example, this template
-only renders <code>&quot;zoooom&quot;</code> if both <code>isFast</code> and <code>isFueled</code> are true:</p>
+only renders `"zoooom"` if both `isFast` and `isFueled` are true:
+-->
+
+<p>2つ目の方法は、<strong>ネスト</strong>による呼び出しです。
+インラインヘルパーと同様に、ネストされたヘルパーは単一の値を生成して返します。
+以下のテンプレートは例では、<code>isFast</code>と<code>isFueled</code>の両方がtrueの場合、<code>&quot;zoooom&quot;</code>を描画されます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -133,17 +162,32 @@ only renders <code>&quot;zoooom&quot;</code> if both <code>isFast</code> and <co
 </pre></td>
 </tr></table>
 </div></div>
-<p>The nested helper is called first returning <code>&quot;zoooom&quot;</code> only if <code>isFueled</code> is
-true. Then the inline expression is called, rendering the nested helper&#39;s
-value (<code>&quot;zoooom&quot;</code>) only if <code>isFast</code> is true.</p>
+<!--
+The nested helper is called first returning `"zoooom"` only if `isFueled` is
+true. Then the inline expression is called, rendering the nested helper's
+value (`"zoooom"`) only if `isFast` is true.
+-->
 
-<p>The third form of helper usage is <strong>block invocation</strong>. Use block helpers
+<p>ネストされたヘルパーは、先に呼ばれ、<code>isFueled</code>がtrueの場合にのみ、<code>&quot;zoooom&quot;</code>を返します。
+次に、<code>isFast</code>がtrueの場合にのみ、ネストされたヘルパーの値(<code>&quot;zoooom&quot;</code>)を描画するインライン式が呼び出されます。</p>
+
+<!--
+The third form of helper usage is **block invocation**. Use block helpers
 to render only part of a template. Block invocation of a helper can be
-recognized by the <code>#</code> before the helper name, and the closing <code>{{/</code> double
-curly brace at the end of the invocation.</p>
+recognized by the `#` before the helper name, and the closing `{{/` double
+curly brace at the end of the invocation.
+-->
 
-<p>For example, this template conditionally shows
-properties on <code>person</code> only if that it is present:</p>
+<p>3つ目のはブロック形式での呼び出しです。
+ブロックヘルパーを使用して、テンプレートの一部のみを描画することができます。
+ヘルパーのブロック呼び出しは、ヘルパー名の前の<code>#</code>と、呼び出し終了時の閉じ括弧<code>{{/</code>で感知されます。</p>
+
+<!--
+For example, this template conditionally shows
+properties on `person` only if that it is present:
+-->
+
+<p>以下のテンプレートの例は、personが存在する場合のみ、人物の情報を表示しています。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -155,13 +199,22 @@ properties on <code>person</code> only if that it is present:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p><a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=if"><code>{{if}}</code></a>
-checks for truthiness, which means all values except <code>false</code>,
-<code>undefined</code>, <code>null</code>, <code>&#39;&#39;</code>, <code>0</code>  or <code>[]</code> (i.e., any JavaScript falsy value or an
-empty array).</p>
+<!--
+[`{{if}}`](https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=if)
+checks for truthiness, which means all values except `false`,
+`undefined`, `null`, `''`, `0`  or `[]` (i.e., any JavaScript falsy value or an
+empty array).
+-->
 
-<p>If a value passed to <code>{{#if}}</code> evaluates to falsy, the <code>{{else}}</code> block
-of that invocation is rendered:</p>
+<p><a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=if"><code>{{if}}</code></a>は真(truthy)であるかを確認します。
+真でない値(falsy)は、<code>false</code>、<code>undefined</code>、<code>null</code>、<code>&#39;&#39;</code>、<code>0</code>または<code>[]</code>です。</p>
+
+<!--
+If a value passed to `{{#if}}` evaluates to falsy, the `{{else}}` block
+of that invocation is rendered:
+-->
+
+<p><code>{{#if}}</code>に渡された値がfalsyと評価された場合、その呼び出しの<code>{{else}}</code>ブロックが描画されます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -177,8 +230,13 @@ of that invocation is rendered:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p><code>{{else}}</code> can chain helper invocation, the most common usecase for this being
-<code>{{else if}}</code>:</p>
+<!--
+`{{else}}` can chain helper invocation, the most common usecase for this being
+`{{else if}}`:
+-->
+
+<p><code>{{else}}</code>はヘルパー呼び出しをチェーンすることができます。最
+も一般的な使用例は<code>{{else if}}</code>のです。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -194,10 +252,16 @@ of that invocation is rendered:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The inverse of <code>{{if}}</code> is
-<a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=unless"><code>{{unless}}</code></a>,
+<!--
+The inverse of `{{if}}` is
+[`{{unless}}`](https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=unless),
 which can be used in the same three styles of invocation. For example, this
-template only shows an amount due when the user has not paid:</p>
+template only shows an amount due when the user has not paid:
+-->
+
+<p><code>{{if}}</code>の反対は<a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/if?anchor=unless"><code>{{unless}}</code></a>です。
+ifと同じく3つの呼び出し方が使えます。
+以下のテンプレートの例では、ユーザーが支払いを行わなかった場合に支払い額のみを表示します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2

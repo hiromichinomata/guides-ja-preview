@@ -9,7 +9,7 @@ Routing section was done! 🎉
 - [x] Routing - Asynchronous Routing
 - [x] Templates - Handlebars Basics
 - [x] Templates - Built-in Helpers
-
+- [x] Templates - Conditionals
 
 ## 2018.01.04
 
