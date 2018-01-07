@@ -3,6 +3,7 @@
 ## 2018.01.07
 
 - [x] Templates - Actions
+- [x] Templates - Input Helpers
 
 ## 2018.01.06
 
