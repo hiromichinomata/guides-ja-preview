@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - テンプレート: Actions</title>
-    <meta property="st:title" content="テンプレート: Actions" />
+    <title>Ember.js - テンプレート: アクション</title>
+    <meta property="st:title" content="テンプレート: アクション" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -71,7 +71,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 selected'><a href="#">テンプレート</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../links/">リンク</a></li><li class='toc-level-1 selected'><a href="./">Actions</a></li><li class='toc-level-1 '><a href="../input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 selected'><a href="#">テンプレート</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../links/">リンク</a></li><li class='toc-level-1 selected'><a href="./">アクション</a></li><li class='toc-level-1 '><a href="../input-helpers/">Input Helpers</a></li><li class='toc-level-1 '><a href="../development-helpers/">Development Helpers</a></li><li class='toc-level-1 '><a href="../writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -79,20 +79,29 @@
 
       <article class="chapter">
         <h1>
-          Actions
+          アクション
           <a href="https://github.com/emberjs/guides/edit/master/source/templates/actions.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>Your app will often need a way to let users interact with controls that
+        <!--
+Your app will often need a way to let users interact with controls that
 change application state. For example, imagine that you have a template
-that shows a blog title, and supports expanding the post to show the body.</p>
+that shows a blog title, and supports expanding the post to show the body.
+-->
 
-<p>If you add the
-<a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/action?anchor=action"><code>{{action}}</code></a>
+<p>アプリでは、ユーザーの操作によってアプリケーションの状態を変更できるようにすることがよくあります。
+例えば、ブログのタイトルを表示するテンプレートがあり、記事の本文を「さらに読む」などで広げて表示できるようにするとします。</p>
+
+<!--
+If you add the
+[`{{action}}`](https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/action?anchor=action)
 helper to any HTML DOM element, when a user clicks the element, the named event
-will be sent to the template&#39;s corresponding component or controller.</p>
+will be sent to the template's corresponding component or controller.
+-->
+
+<p>HTML DOM要素に<a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/action?anchor=action"><code>{{action}}</code></a>ヘルパーを追加すると、ユーザーがその要素をクリックすると、指定されたイベントがテンプレートに付随するコンポーネントかコントローラに送信されます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -112,8 +121,12 @@ will be sent to the template&#39;s corresponding component or controller.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>In the component or controller, you can then define what the action does within
-the <code>actions</code> hook:</p>
+<!--
+In the component or controller, you can then define what the action does within
+the `actions` hook:
+-->
+
+<p>コンポーネントかコントローラの<code>actions</code>フック内にアクションの動作を定義します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -143,14 +156,31 @@ the <code>actions</code> hook:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>You will learn about more advanced usages in the Component&#39;s <a href="../../components/triggering-changes-with-actions/">Triggering Changes With Actions</a> guide,
-but you should familiarize yourself with the following basics first.</p>
-<h2 id="toc_Action-Parameters" class="anchorable-toc">Action Parameters</h2>
-<p>You can optionally pass arguments to the action handler. Any values
-passed to the <code>{{action}}</code> helper after the action name will be passed to
-the handler as arguments.</p>
+<!--
+You will learn about more advanced usages in the Component's [Triggering Changes With Actions](../../components/triggering-changes-with-actions/) guide,
+but you should familiarize yourself with the following basics first.
+-->
 
-<p>For example, if the <code>post</code> argument was passed:</p>
+<p>コンポーネントのより高度な使い方については、<a href="../../components/triggering-changes-with-actions/">変更をアクションでトリガーする</a>のところで説明していますが、その前に基本事項を熟知しておく必要があります。</p>
+
+<!--
+## Action Parameters
+-->
+<h2 id="toc_アクションの引数" class="anchorable-toc">アクションの引数</h2>
+<!--
+You can optionally pass arguments to the action handler. Any values
+passed to the `{{action}}` helper after the action name will be passed to
+the handler as arguments.
+-->
+
+<p>アクションハンドラには引数を渡すことができます。
+<code>{{action}}</code>ヘルパーのアクション名の後に渡された値はすべて引数としてハンドラに渡されます。</p>
+
+<!--
+For example, if the `post` argument was passed:
+-->
+
+<p>例えば、<code>post</code>を引数として渡すには、以下のようにします。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -158,8 +188,12 @@ the handler as arguments.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The <code>select</code> action handler would be called with a single argument
-containing the post model:</p>
+<!--
+The `select` action handler would be called with a single argument
+containing the post model:
+-->
+
+<p>そうすると、<code>select</code>アクションハンドラは、postモデルを第1引数に取って呼び出されます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -188,13 +222,25 @@ containing the post model:</p>
 });
 </pre></td>
 </tr></table>
-</div></div><h2 id="toc_Specifying-the-Type-of-Event" class="anchorable-toc">Specifying the Type of Event</h2>
-<p>By default, the
-<a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/action?anchor=action"><code>{{action}}</code></a>
+</div></div>
+<!--
+## Specifying the Type of Event
+-->
+<h2 id="toc_イベントタイプの指定" class="anchorable-toc">イベントタイプの指定</h2>
+<!--
+By default, the
+[`{{action}}`](https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/action?anchor=action)
 helper listens for click events and triggers the action when the user clicks
-on the element.</p>
+on the element.
+-->
 
-<p>You can specify an alternative event by using the <code>on</code> option.</p>
+<p>デフォルトでは、<a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/action?anchor=action"><code>{{action}}</code></a>ヘルパーはクリックイベントのため、ユーザーが要素をクリックしたときにアクションを呼び出します。</p>
+
+<!--
+You can specify an alternative event by using the `on` option.
+-->
+
+<p><code>on</code>オプションを使用すると、別のイベントにできます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -208,12 +254,28 @@ on the element.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>You should use the <code>camelCased</code> event names, so two-word names like <code>keypress</code>
-become <code>keyPress</code>.</p>
-<h2 id="toc_Allowing-Modifier-Keys" class="anchorable-toc">Allowing Modifier Keys</h2>
-<p>By default, the <code>{{action}}</code> helper will ignore click events with
-pressed modifier keys. You can supply an <code>allowedKeys</code> option
-to specify which keys should not be ignored.</p>
+<!--
+You should use the <code>camelCased</code> event names, so two-word names like `keypress`
+become `keyPress`.
+-->
+
+<p>イベント名はキャメルケースで指定します。
+<code>keypress</code>のような2単語の場合は<code>keyPress</code>のようになります。</p>
+
+<!--
+## Allowing Modifier Keys
+-->
+<h2 id="toc_修飾キーの許可" class="anchorable-toc">修飾キーの許可</h2>
+<p><em>訳注: 修飾キー(modifier keys)とは、シフト、コントロール、オルタネート(alt)キーなどのことです。</em></p>
+
+<!--
+By default, the `{{action}}` helper will ignore click events with
+pressed modifier keys. You can supply an `allowedKeys` option
+to specify which keys should not be ignored.
+-->
+
+<p>デフォルトでは、<code>{{action}}</code>ヘルパーは修飾キーを押した状態のクリックイベントを無視します。
+<code>allowedKeys</code>オプションを指定すると、無視しないキーを指定できます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -225,16 +287,33 @@ to specify which keys should not be ignored.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>This way the <code>{{action}}</code> will fire when clicking with the alt key
-pressed down.</p>
-<h2 id="toc_Allowing-Default-Browser-Action" class="anchorable-toc">Allowing Default Browser Action</h2>
-<p>By default, the <code>{{action}}</code> helper prevents the default browser action of the
-DOM event. If you want to allow the browser action, you can stop Ember from
-preventing it.</p>
+<!--
+This way the `{{action}}` will fire when clicking with the alt key
+pressed down.
+-->
 
-<p>For example, if you have a normal link tag and want the link to bring the user
+<p>こうするとaltキーを押した状態のクリックで<code>{{action}}</code>が呼ばれるようになります。</p>
+
+<!--
+## Allowing Default Browser Action
+-->
+<h2 id="toc_ブラウザのデフォルトのアクションを許可する" class="anchorable-toc">ブラウザのデフォルトのアクションを許可する</h2>
+<!--
+By default, the `{{action}}` helper prevents the default browser action of the
+DOM event. If you want to allow the browser action, you can stop Ember from
+preventing it.
+-->
+
+<p>デフォルトでは、<code>{{action}}</code>ヘルパーはDOMイベントのブラウザのデフォルトのアクションを防ぐため実行されません。
+ブラウザーのデフォルトのアクションを実行したい場合は、Emberに防がせないよう指定します。</p>
+
+<!--
+For example, if you have a normal link tag and want the link to bring the user
 to another page in addition to triggering an ember action when clicked, you can
-use <code>preventDefault=false</code>:</p>
+use `preventDefault=false`:
+-->
+
+<p>例えば、通常のリンクタグがあり、リンクをクリックしてEmberのアクションを実行しつつ別のページに遷移させたい時は、<code>preventDefault=false</code>を指定します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -242,17 +321,34 @@ use <code>preventDefault=false</code>:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>With <code>preventDefault=false</code> omitted, if the user clicked on the link, Ember.js
-will trigger the action, but the user will remain on the current page.</p>
+<!--
+With `preventDefault=false` omitted, if the user clicked on the link, Ember.js
+will trigger the action, but the user will remain on the current page.
+-->
 
-<p>With <code>preventDefault=false</code> present, if the user clicked on the link, Ember.js
-will trigger the action <em>and</em> the user will be directed to the new page.</p>
-<h2 id="toc_Modifying-the-action&#39;s-first-parameter" class="anchorable-toc">Modifying the action&#39;s first parameter</h2>
-<p>If a <code>value</code> option for the
-<a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/action?anchor=action"><code>{{action}}</code></a>
+<p><code>preventDefault=false</code>を省略すると、ユーザーがリンクをクリックすると、Ember.jsがアクションを実行しますが、ユーザーはページに留まったままになります。</p>
+
+<!--
+With `preventDefault=false` present, if the user clicked on the link, Ember.js
+will trigger the action *and* the user will be directed to the new page.
+-->
+
+<p><code>preventDefault=false</code>が指定されている場合は、ユーザーがリンクをクリックすると、Ember.jsがアクションを実行し、ユーザーはリンク先のページに遷移します。</p>
+
+<!--
+## Modifying the action's first parameter
+-->
+<h2 id="toc_アクションにeventのプロパティを渡す方法" class="anchorable-toc">アクションにeventのプロパティを渡す方法</h2>
+<!--
+If a `value` option for the
+[`{{action}}`](https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/action?anchor=action)
 helper is specified, its value will be considered a property path that will
 be read off of the first parameter of the action. This comes very handy with
-event listeners and enables to work with one-way bindings.</p>
+event listeners and enables to work with one-way bindings.
+-->
+
+<p><a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/action?anchor=action"><code>{{action}}</code></a>ヘルパーで<code>value</code>オプションが指定されている場合、その値は、アクションの第1引数から読み取るプロパティ名(パス)と見なされます。
+これはイベントリスナーで、単方向バインディングで処理する時にとてもに便利です。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -262,7 +358,11 @@ event listeners and enables to work with one-way bindings.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Let&#39;s assume we have an action handler that prints its first parameter:</p>
+<!--
+Let's assume we have an action handler that prints its first parameter:
+-->
+
+<p>第1引数を出力するアクションハンドラがあるとしましょう。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -278,12 +378,20 @@ event listeners and enables to work with one-way bindings.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>By default, the action handler receives the first parameter of the event
+<!--
+By default, the action handler receives the first parameter of the event
 listener, the event object the browser passes to the handler, so
-<code>bandDidChange</code> prints <code>Event {}</code>.</p>
+`bandDidChange` prints `Event {}`.
+-->
 
-<p>Using the <code>value</code> option modifies that behavior by extracting that property from
-the event object:</p>
+<p>デフォルトでは、ブラウザがイベントリスナーの第1引数に渡すeventオブジェクトがアクションハンドラに渡されるので、<code>bandDidChange</code>は<code>Event {}</code>を出力します。</p>
+
+<!--
+Using the `value` option modifies that behavior by extracting that property from
+the event object:
+-->
+
+<p><code>value</code>オプションを使用すると、イベントオブジェクトから指定したプロパティを取得して渡すように変更できます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -293,15 +401,32 @@ the event object:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The <code>newValue</code> parameter thus becomes the <code>target.value</code> property of the event
-object, which is the value of the input field the user typed. (e.g &#39;Foo Fighters&#39;)</p>
-<h2 id="toc_Attaching-Actions-to-Non-Clickable-Elements" class="anchorable-toc">Attaching Actions to Non-Clickable Elements</h2>
-<p>Note that actions may be attached to any element of the DOM, but not all
-respond to the <code>click</code> event. For example, if an action is attached to an <code>a</code>
-link without an <code>href</code> attribute, or to a <code>div</code>, some browsers won&#39;t execute
-the associated function. If it&#39;s really needed to define actions over such
-elements, a CSS workaround exists to make them clickable, <code>cursor: pointer</code>.
-For example:</p>
+<!--
+The `newValue` parameter thus becomes the `target.value` property of the event
+object, which is the value of the input field the user typed. (e.g 'Foo Fighters')
+-->
+
+<p>したがって、<code>newValue</code>パラメーターは、イベントオブジェクトの<code>target.value</code>プロパティーになります。
+この場合、ユーザーが入力した入力フィールドの値になります。 (例: &quot;Foo Fighters&quot;)</p>
+
+<!--
+## Attaching Actions to Non-Clickable Elements
+-->
+<h2 id="toc_クリックできない要素での注意点" class="anchorable-toc">クリックできない要素での注意点</h2>
+<!--
+Note that actions may be attached to any element of the DOM, but not all
+respond to the `click` event. For example, if an action is attached to an `a`
+link without an `href` attribute, or to a `div`, some browsers won't execute
+the associated function. If it's really needed to define actions over such
+elements, a CSS workaround exists to make them clickable, `cursor: pointer`.
+For example:
+-->
+
+<p>アクションはDOMの任意の要素にアタッチすることができますが、すべての要素がクリックイベントに反応するわけではありません。
+例えば、アクションが<code>href</code>属性を持っていない<code>a</code>要素や<code>div</code>にアタッチされている場合、ブラウザによっては関連する機能が動作しないことがあります。
+そのような要素に対してアクションを定義することが本当に必要な場合のために、その要素がクリックできることを表現する<code>cursor: pointer</code>というCSSでの回避策があります。</p>
+
+<p>例:</p>
 <div class="highlight css "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -313,12 +438,19 @@ For example:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Keep in mind that even with this workaround in place, the <code>click</code> event will
-not automatically trigger via keyboard driven <code>click</code> equivalents (such as
-the <code>enter</code> key when focused). Browsers will trigger this on clickable
-elements only by default. This also doesn&#39;t make an element accessible to
+<!--
+Keep in mind that even with this workaround in place, the `click` event will
+not automatically trigger via keyboard driven `click` equivalents (such as
+the `enter` key when focused). Browsers will trigger this on clickable
+elements only by default. This also doesn't make an element accessible to
 users of assistive technology. You will need to add additional things like
-<code>role</code> and/or <code>tabindex</code> to make this accessible for your users.</p>
+`role` and/or `tabindex` to make this accessible for your users.
+-->
+
+<p>この回避策を講じても、クリックイベントはキーボードの操作によるクリック(要素にフォーカスを当ててエンターキーを打つなど)には反応しないため注意が必要です。
+ブラウザは、デフォルトでクリック可能な要素でのみ反応します。
+この回避策は支援技術を使っているユーザーがその要素にアクセスできるようにもしてくれません。
+ユーザーがアクセスできるようにするには、<code>role</code>や<code>tabindex</code>のなどを追加する必要があります。</p>
 
 
 

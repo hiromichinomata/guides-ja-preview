@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2018.01.07
+
+- [x] Templates - Actions
+
 ## 2018.01.06
 
 Routing section was done! 🎉
