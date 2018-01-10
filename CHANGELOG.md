@@ -7,6 +7,7 @@ Templates section was done! 🎉
 
 - [x] Templates - Writing Helpers
 - [x] Components - Defining a Component
+- [x] Components - The Component Lifecycle
 
 ## 2018.01.07
 
