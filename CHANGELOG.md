@@ -6,6 +6,7 @@
 Templates section was done! 🎉
 
 - [x] Templates - Writing Helpers
+- [x] Components - Defining a Component
 
 ## 2018.01.07
 
