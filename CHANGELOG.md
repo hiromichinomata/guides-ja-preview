@@ -1,5 +1,12 @@
 # CHANGELOG
 
+
+## 2018.01.10
+
+Templates section was done! 🎉
+
+- [x] Templates - Writing Helpers
+
 ## 2018.01.07
 
 - [x] Templates - Actions

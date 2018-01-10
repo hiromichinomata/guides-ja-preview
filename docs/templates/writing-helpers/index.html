@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - テンプレート: Writing Helpers</title>
-    <meta property="st:title" content="テンプレート: Writing Helpers" />
+    <title>Ember.js - テンプレート: ヘルパーの作成</title>
+    <meta property="st:title" content="テンプレート: ヘルパーの作成" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -71,7 +71,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 selected'><a href="#">テンプレート</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../links/">リンク</a></li><li class='toc-level-1 '><a href="../actions/">アクション</a></li><li class='toc-level-1 '><a href="../input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 selected'><a href="./">Writing Helpers</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 selected'><a href="#">テンプレート</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../links/">リンク</a></li><li class='toc-level-1 '><a href="../actions/">アクション</a></li><li class='toc-level-1 '><a href="../input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 selected'><a href="./">ヘルパーの作成</a></li></ol></li><li class='toc-level-0 '><a href="#">Components</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">Defining a Component</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../../components/block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -79,32 +79,55 @@
 
       <article class="chapter">
         <h1>
-          Writing Helpers
+          ヘルパーの作成
           <a href="https://github.com/emberjs/guides/edit/master/source/templates/writing-helpers.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>Helpers allow you to add additional functionality to your
+        <!--
+Helpers allow you to add additional functionality to your
 templates beyond what is included out-of-the-box in Ember. Helpers are
 most useful for transforming raw values from models and components into
-a format more appropriate for your users.</p>
+a format more appropriate for your users.
+-->
 
-<p>For example, imagine we have an <code>Invoice</code> model that contains a
-<code>totalDue</code> attribute, which represents the total amount due for that
+<p>ヘルパーを使用すると、Emberですぐに使用できる機能に止まらず、さらに機能をテンプレートに追加することができます。
+ヘルパーは、モデルやコンポーネントの生の値をユーザーにとってより適切な形式に変換するのに最も役立ちます。</p>
+
+<!--
+For example, imagine we have an `Invoice` model that contains a
+`totalDue` attribute, which represents the total amount due for that
 invoice.  Because we do not want our company to go out of business due
-to strange JavaScript rounding errors, <a href="http://stackoverflow.com/a/3730040">we store this value in cents
-instead of a floating point dollar value</a>.</p>
+to strange JavaScript rounding errors, [we store this value in cents
+instead of a floating point dollar value][currency-stackoverflow].
+-->
 
-<p>However, if we display dollar values to our users as &quot;100¢&quot; instead of
-&quot;$1.00&quot;, they may be very confused. We can write a helper to
-format these values into the appropriate human-readable form.</p>
+<p>例えば、請求書(<code>Invoice</code>)の総額を表す<code>totalDue</code>属性を含む請求書モデルがあるとします。
+JavaScriptの奇妙な丸めの誤差によって会社を廃業させたくないので、<a href="http://stackoverflow.com/a/3730040">この値を浮動小数点のドル値の代わりにセントで保存</a>することにします。</p>
 
-<p>Let&#39;s create a <code>format-currency</code> helper that takes an integer count of
-cents and turns it into formatted dollars.</p>
+<!--
+However, if we display dollar values to our users as "100¢" instead of
+"$1.00", they may be very confused. We can write a helper to
+format these values into the appropriate human-readable form.
+-->
 
-<p>To use the <code>format-currency</code> helper, you call it using curly braces in
-your template:</p>
+<p>ですが、ドル値を「$1.00」ではなく「100¢」としてユーザーに表示すると、非常に混乱することがあります。
+そこで、これらの値を人間が読める適切な形式に変換するヘルパーを書きます。</p>
+
+<!--
+Let's create a `format-currency` helper that takes an integer count of
+cents and turns it into formatted dollars.
+-->
+
+<p>整数のセントを受け取り、ドル形式に変換する<code>format-currency</code>ヘルパーを作成しましょう。</p>
+
+<!--
+To use the `format-currency` helper, you call it using curly braces in
+your template:
+-->
+
+<p><code>format-currency</code>ヘルパーを使うには、テンプレートで中括弧を使用して呼び出します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -112,13 +135,23 @@ your template:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Let&#39;s now implement the helper. Helpers are functions that take
+<!--
+Let's now implement the helper. Helpers are functions that take
 one or more inputs and return a single output that should be put into
-the HTML.</p>
+the HTML.
+-->
 
-<p>To add a new helper, create a file with the name of the helper you want
-(e.g. <code>format-currency.js</code>) in your application&#39;s <code>helpers</code> directory.
-You can also have Ember generate the file for you from the command line:</p>
+<p>ヘルパーを実装しましょう。
+ヘルパーは、1つ以上の入力を受け取り、それをHTMLに挿入する1つの出力にして返す関数です。</p>
+
+<!--
+To add a new helper, create a file with the name of the helper you want
+(e.g. `format-currency.js`) in your application's `helpers` directory.
+You can also have Ember generate the file for you from the command line:
+-->
+
+<p>新しいヘルパーを追加するには、アプリケーションの<code>helpers</code>ディレクトリにヘルパーの名前(例: <code>format-currency.js</code>など)を含むファイルを作成します。
+Ember CLIでファイルを生成することもできます。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -126,7 +159,11 @@ You can also have Ember generate the file for you from the command line:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>That file should export a function wrapped with <a href="http://emberjs.com/api/classes/Ember.Helper.html#method_helper"><code>Ember.Helper.helper()</code></a>:</p>
+<!--
+That file should export a function wrapped with [`Ember.Helper.helper()`](http://emberjs.com/api/classes/Ember.Helper.html#method_helper):
+-->
+
+<p>ヘルパーのファイルでは、<a href="http://emberjs.com/api/classes/Ember.Helper.html#method_helper"><code>Ember.Helper.helper()</code></a>でラップされた関数をエクスポートします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -162,14 +199,28 @@ You can also have Ember generate the file for you from the command line:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>In this example, the function receives a dollar amount in cents as the first
-parameter (<code>value</code>). We then use regular JavaScript to turn the
-count of cents into a formatted string, like <code>&quot;$5.00&quot;</code>.</p>
+<!--
+In this example, the function receives a dollar amount in cents as the first
+parameter (`value`). We then use regular JavaScript to turn the
+count of cents into a formatted string, like `"$5.00"`.
+-->
 
-<p>Whenever you use your helper in a template, Ember will call this
-function and insert whatever you return from the helper into the DOM.</p>
+<p>この例では、関数は第1引数(<code>value値</code>)としてセント単位の金額を受け取ります。
+次に、通常のJavaScriptを使用してセントから<code>&quot;$5.00&quot;</code>のように文字列にフォーマットします。</p>
 
-<p>So, if we want to display a purchase total we can pass the value into the template in cents:</p>
+<!--
+Whenever you use your helper in a template, Ember will call this
+function and insert whatever you return from the helper into the DOM.
+-->
+
+<p>このヘルパーをテンプレートで使用する時はいつも、Emberはこの関数を呼び出して、ヘルパーが返したものなら何
+であれDOMに挿入します。</p>
+
+<!--
+So, if we want to display a purchase total we can pass the value into the template in cents:
+-->
+
+<p>したがって、購入合計額を表示したい場合は、値をテンプレートにセントで渡すことができます。</p>
 <div class="highlight hbs "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -177,7 +228,11 @@ function and insert whatever you return from the helper into the DOM.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>And Ember makes use of our new helper function to replace the content inside the <code>{{ }}</code> with the formatted amount.</p>
+<!--
+And Ember makes use of our new helper function to replace the content inside the ```{{ }}``` with the formatted amount.
+-->
+
+<p>そして、Emberはそのヘルパー関数を使って、<code>{{ }}</code>の中のコンテンツをフォーマットされた金額に置き換えます。</p>
 <div class="highlight hbs "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -185,18 +240,44 @@ function and insert whatever you return from the helper into the DOM.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Whenever the arguments you&#39;ve passed to a helper change, whether they
+<!--
+Whenever the arguments you've passed to a helper change, whether they
 come from a model or a component, Ember will automatically call your
-helper again with the new values and keep the page up-to-date.</p>
-<h3 id="toc_Helper-Names" class="anchorable-toc">Helper Names</h3>
-<p>Unlike <a href="../../components/defining-a-component/">components</a>, which require a dash in the name to follow the Custom Element spec, helper names can be single or multi-word. If your helper&#39;s name is multi-word, it should be dasherized as the examples on this page.</p>
-<h3 id="toc_Helper-Arguments" class="anchorable-toc">Helper Arguments</h3>
-<p>You can pass one or more arguments to be used
-inside the function. In the above example, we passed the amount in cents
-as the first and only argument.</p>
+helper again with the new values and keep the page up-to-date.
+-->
 
-<p>To pass multiple arguments to a helper, add them as a space-separated
-list after the helper name:</p>
+<p>モデルやコンポーネントのどちらから渡されても、渡されたものが更新されれば、Emberは自動的にヘルパーを新しい値で呼び出し、ページを最新の状態に保ちます。</p>
+
+<!--
+### Helper Names
+-->
+<h3 id="toc_ヘルパーの名前" class="anchorable-toc">ヘルパーの名前</h3>
+<!--
+Unlike [components](../../components/defining-a-component/), which require a dash in the name to follow the Custom Element spec, helper names can be single or multi-word. If your helper's name is multi-word, it should be dasherized as the examples on this page.
+-->
+
+<p>カスタム要素の仕様に従うために名前にダッシュを要求する<a href="../../components/defining-a-component/">コンポーネント</a>とは異なり、ヘルパー名は単一または複数の単語にすることができます。
+ヘルパーの名前が複数の単語である場合は、このページの例にあるように、ダッシュで単語間を繋ぎます。</p>
+
+<!--
+### Helper Arguments
+-->
+<h3 id="toc_ヘルパーの引数" class="anchorable-toc">ヘルパーの引数</h3>
+<!--
+You can pass one or more arguments to be used
+inside the function. In the above example, we passed the amount in cents
+as the first and only argument.
+-->
+
+<p>関数内で使用される1つまたは複数の引数を渡すことができます。
+上の例では、引数は1つだけで、セントで金額を渡しました。</p>
+
+<!--
+To pass multiple arguments to a helper, add them as a space-separated
+list after the helper name:
+-->
+
+<p>複数の引数をヘルパーに渡すには、ヘルパー名の後に空白で区切って追加します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -204,7 +285,11 @@ list after the helper name:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>An array of these arguments is passed to the helper function:</p>
+<!--
+An array of these arguments is passed to the helper function:
+-->
+
+<p>引数が複数の時は、配列としてヘルパー関数に渡されます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -236,8 +321,13 @@ list after the helper name:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>You can use JavaScript&#39;s destructuring assignment shorthand to clean up
-the code. This example is equivalent to the above example (note the function signature):</p>
+<!--
+You can use JavaScript's destructuring assignment shorthand to clean up
+the code. This example is equivalent to the above example (note the function signature):
+-->
+
+<p>JavaScriptの分割代入を使用して、コードをクリーンアップすることができます。
+以下の例は上記の例に相当します(関数の書き方を見比べてください)。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -264,25 +354,48 @@ the code. This example is equivalent to the above example (note the function sig
 <span class="reserved">export</span> <span class="keyword">default</span> helper(myHelper);
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_Named-Arguments" class="anchorable-toc">Named Arguments</h3>
-<p>Normal arguments are useful for passing data to be transformed into
+</div></div>
+<!--
+### Named Arguments
+-->
+<h3 id="toc_名前付き引数" class="anchorable-toc">名前付き引数</h3>
+<!--
+Normal arguments are useful for passing data to be transformed into
 helper functions. However, because the order in which you pass arguments
 matters, it is usually best not to have helpers take more than one or
-two of them.</p>
+two of them.
+-->
 
-<p>That said, sometimes you may want to make behavior of helpers
+<p>通常の引数は、ヘルパー関数に変換するデータを渡すのには便利です。
+しかし、引数を渡す順序が重要なので、通常はヘルパーが2つ以上の引数を取らないようにするのがベストです。</p>
+
+<!--
+That said, sometimes you may want to make behavior of helpers
 configurable by the developers that call them from their templates. For
-example, let&#39;s abandon our Americentric ways and update our
-<code>format-currency</code> helper to take an optional configuration for which
-currency symbol to display.</p>
+example, let's abandon our Americentric ways and update our
+`format-currency` helper to take an optional configuration for which
+currency symbol to display.
+-->
 
-<p>Helpers allow you to pass named arguments as a JavaScript
+<p>ヘルパーをテンプレートから呼び出す時に、開発者がヘルパーの動作を設定できるようにしたい場合があります。
+例えば、アメリカ風なやり方をやめて、<code>format-currency</code>ヘルパーを変更して、表示する通貨記号をオプションで設定できるようにするとしましょう。</p>
+
+<!--
+Helpers allow you to pass named arguments as a JavaScript
 object that contains the name of the argument along with an associated
 value.  The order in which named arguments are supplied does not affect
-functionality.</p>
+functionality.
+-->
 
-<p>In this example, we can pass a <code>sign</code> argument to our <code>format-currency</code>
-helper:</p>
+<p>ヘルパーを使用すると、指定された引数を、関連付けられた値とともに引数の名前を含むJavaScriptオブジェクトとして渡すことができます。
+名前付き引数の指定順序は機能に影響しません。</p>
+
+<!--
+In this example, we can pass a `sign` argument to our `format-currency`
+helper:
+-->
+
+<p>この例では、<code>format-currency</code>ヘルパーに<code>sign</code>引数を渡すしています。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -290,7 +403,11 @@ helper:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>We&#39;d like our helper to print pounds sterling rather than US dollars:</p>
+<!--
+We'd like our helper to print pounds sterling rather than US dollars:
+-->
+
+<p>ヘルパーに米ドルではなく英ポンドを表示させます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -298,9 +415,14 @@ helper:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The object containing named arguments is passed as the second argument
+<!--
+The object containing named arguments is passed as the second argument
 to the helper function.  Here is our example from above, updated to
-support the optional <code>sign</code> option:</p>
+support the optional `sign` option:
+-->
+
+<p>名前付き引数を含むオブジェクトは、第2引数としてヘルパー関数に渡されます。
+以下の例で上記の例に<code>sign</code>オプションを追加しています。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -336,8 +458,13 @@ support the optional <code>sign</code> option:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>You can pass as many named arguments as you&#39;d like. They get added to the
-<code>namedArgs</code> argument passed to the function:</p>
+<!--
+You can pass as many named arguments as you'd like. They get added to the
+`namedArgs` argument passed to the function:
+-->
+
+<p>名前付き引数は、必要な分だけ渡すことができます。
+関数渡された名前付き引数は<code>namedArgs</code>に追加されます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -373,8 +500,12 @@ support the optional <code>sign</code> option:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>You can use JavaScript&#39;s destructuring assignment shorthand in this case
-as well to clean up the above code:</p>
+<!--
+You can use JavaScript's destructuring assignment shorthand in this case
+as well to clean up the above code:
+-->
+
+<p>この場合も同様に、JavaScriptの分割代入を使って上記のコードをクリーンアップすることができます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -404,7 +535,11 @@ as well to clean up the above code:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>In sum, arguments are good for passing values:</p>
+<!--
+In sum, arguments are good for passing values:
+-->
+
+<p>要約すると、通常の引数は値を渡すのに適しています。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -412,7 +547,11 @@ as well to clean up the above code:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Hashes are useful for configuring the behavior of a helper:</p>
+<!--
+Hashes are useful for configuring the behavior of a helper:
+-->
+
+<p>ハッシュはヘルパーの動作を設定するのに便利です。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -420,8 +559,12 @@ as well to clean up the above code:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>You can have as many of both as you want, so long as the parameters come
-first:</p>
+<!--
+You can have as many of both as you want, so long as the parameters come
+first:
+-->
+
+<p>通常の引数は先頭に置き、名前付き引数はその後ろに置くことで、両方とも必要な数だけ渡すことができます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -429,39 +572,74 @@ first:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The above example contains two arguments:</p>
+<!--
+The above example contains two arguments:
+-->
+
+<p>上記の例は以下の2つの引数を持っています。</p>
 
 <ul>
 <li><code>date</code></li>
 <li><code>time</code></li>
 </ul>
 
-<p>And two named arguments:</p>
+<!--
+And two named arguments:
+-->
+
+<p>そして以下の2つの名前付き引数を持っています。</p>
 
 <ul>
 <li><code>format=&quot;YYY MM DD h:mm&quot;</code></li>
 <li><code>locale=&quot;en&quot;</code></li>
 </ul>
-<h3 id="toc_Class-based-Helpers" class="anchorable-toc">Class-based Helpers</h3>
-<p>By default, helpers are <em>stateless</em>. They are passed inputs (parameters
-and a hash), they perform an operation on those inputs, and return a
-single output. They have no side-effects and don&#39;t save any information
-that is used on subsequent runs of the function.</p>
 
-<p>In some situations, however, you may need to write a helper that interacts with
+<!--
+### Class-based Helpers
+-->
+<h3 id="toc_クラスベースのヘルパー" class="anchorable-toc">クラスベースのヘルパー</h3>
+<!--
+By default, helpers are _stateless_. They are passed inputs (parameters
+and a hash), they perform an operation on those inputs, and return a
+single output. They have no side-effects and don't save any information
+that is used on subsequent runs of the function.
+-->
+
+<p>デフォルトでは、ヘルパーはステートレスです。
+ヘルパーは入力(パラメータとハッシュ)を渡され、入力を処理し、単一の出力を返します。
+ヘルパーには副作用がなく、後続の処理で使われる情報は保存しません。</p>
+
+<!--
+In some situations, however, you may need to write a helper that interacts with
 the rest of your application. You can create class-based helpers that have
 access to services in your application, and can optionally save state as well,
-although this is usually unnecessary and error-prone.</p>
+although this is usually unnecessary and error-prone.
+-->
 
-<p>To create a class-based helper, rather than exporting a simple function, you
-should export a subclass of <a href="https://www.emberjs.com/api/ember/2.16/classes/Helper"><code>Ember.Helper</code></a>. Helper classes must contain a
-<a href="https://www.emberjs.com/api/ember/2.16/classes/Helper/methods/compute?anchor=compute"><code>compute</code></a> method that behaves the same as the function passed to
-<a href="http://emberjs.com/api/classes/Ember.Helper.html#method_helper"><code>Ember.Helper.helper</code></a>.  In order to access a service, you must first inject it
-into the class-based helper.  Once added, you can call the service&#39;s methods or
-access its properties from within the <code>compute()</code> method.</p>
+<p>ただし、状況によっては、アプリケーションの他の部分とやりとりするヘルパーを作成する必要があります。
+その場合、アプリケーション内のサービスにアクセスできるクラスベースのヘルパーを作成することもできます。
+状態を保存することもできますが、通常はその必要はなく、また、エラーが発生しやすくなります。</p>
 
-<p>As an exercise, here is the above <code>format-currency</code> helper re-factored
-into a class-based helper:</p>
+<!--
+To create a class-based helper, rather than exporting a simple function, you
+should export a subclass of [`Ember.Helper`][1]. Helper classes must contain a
+[`compute`][2] method that behaves the same as the function passed to
+[`Ember.Helper.helper`][3].  In order to access a service, you must first inject it
+into the class-based helper.  Once added, you can call the service's methods or
+access its properties from within the `compute()` method.
+-->
+
+<p>単純な関数をエクスポートするのではなく、クラスベースのヘルパーを作成するには、<a href="https://www.emberjs.com/api/ember/2.16/classes/Helper"><code>Ember.Helper</code></a>のサブクラスをエクスポートする必要があります。
+ヘルパークラスには、<a href="http://emberjs.com/api/classes/Ember.Helper.html#method_helper"><code>Ember.Helper.helper</code></a>に渡される関数と同じように動作する<a href="https://www.emberjs.com/api/ember/2.16/classes/Helper/methods/compute?anchor=compute"><code>compute</code></a>メソッドが含まれている必要があります。
+サービスにアクセスするには、まずクラスベースのヘルパーにサービスを注入(inject)する必要があります。
+追加すると、サービスのメソッドを呼び出すことも、<code>compute()</code>メソッドの中からプロパティにアクセスすることもできます。</p>
+
+<!--
+As an exercise, here is the above `format-currency` helper re-factored
+into a class-based helper:
+-->
+
+<p>練習として、上記の<code>format-currency</code>ヘルパーをクラスベースのヘルパーにリファクタリングしました。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -497,12 +675,21 @@ into a class-based helper:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>This is exactly equivalent to the <code>format-currency</code> example above. You
+<!--
+This is exactly equivalent to the `format-currency` example above. You
 can think of the function version as a shorthand for the longer class
-form if it does not require dependency injection.</p>
+form if it does not require dependency injection.
+-->
 
-<p>As another example, let&#39;s make a helper utilizing an authentication
-service that welcomes users by their name if they&#39;re logged in:</p>
+<p>上記の<code>format-currency</code>の例とまったく同じ動作をします。
+依存注入(Dependency Injection)を必要としない場合は、関数をエクスポートしている方をクラスベースの省略版と捉えることもできます。</p>
+
+<!--
+As another example, let's make a helper utilizing an authentication
+service that welcomes users by their name if they're logged in:
+-->
+
+<p>別の例として、ユーザがログインしている時に、ユーザ名を表示して歓迎する認証サービスを利用するヘルパーを作ってみましょう。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -545,12 +732,24 @@ service that welcomes users by their name if they&#39;re logged in:</p>
 });
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_Escaping-HTML-Content" class="anchorable-toc">Escaping HTML Content</h3>
-<p>To protect your application from cross-site scripting attacks (XSS),
+</div></div>
+<!--
+### Escaping HTML Content
+-->
+<h3 id="toc_HTMLコンテンツのエスケープ" class="anchorable-toc">HTMLコンテンツのエスケープ</h3>
+<!--
+To protect your application from cross-site scripting attacks (XSS),
 Ember automatically escapes any value you return from a helper so that
-the browser will not interpret it as HTML.</p>
+the browser will not interpret it as HTML.
+-->
 
-<p>For example, here&#39;s a <code>make-bold</code> helper that returns a string containing HTML:</p>
+<p>Emberは、クロスサイトスクリプティング攻撃(XSS)からアプリケーションを保護するため、ブラウザがHTMLとして解釈しないよう、ヘルパーの戻り値を自動的にエスケープします。</p>
+
+<!--
+For example, here's a `make-bold` helper that returns a string containing HTML:
+-->
+
+<p>例えば、HTMLを含む文字列を返す<code>make-bold</code>ヘルパーがあるとします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -576,7 +775,11 @@ the browser will not interpret it as HTML.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>You can invoke it like this:</p>
+<!--
+You can invoke it like this:
+-->
+
+<p>以下のようにして呼び出すと、</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -584,7 +787,11 @@ the browser will not interpret it as HTML.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Ember will escape the HTML tags, like this:</p>
+<!--
+Ember will escape the HTML tags, like this:
+-->
+
+<p>Emberは以下のようにHTMLタグをエスケープします。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -592,10 +799,15 @@ the browser will not interpret it as HTML.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>This shows the literal string <code>&lt;b&gt;Hello world&lt;/b&gt;</code> to the user, rather
+<!--
+This shows the literal string `<b>Hello world</b>` to the user, rather
 than the text in bold as you probably intended. We can tell Ember not to
-escape the return value (that is, that it is <em>safe</em>) by using the
-<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fstring/methods/htmlSafe?anchor=htmlSafe"><code>htmlSafe</code></a> string utility:</p>
+escape the return value (that is, that it is _safe_) by using the
+[`htmlSafe`][4] string utility:
+-->
+
+<p>その結果、テキストは太文字で表示されず、代わりに<code>&lt;b&gt;Hello world&lt;/b&gt;</code>というテキストが表示されます。
+<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fstring/methods/htmlSafe?anchor=htmlSafe"><code>htmlSafe</code></a>を使用して、戻り値をエスケープしないようにEmberに指示できます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -623,17 +835,30 @@ escape the return value (that is, that it is <em>safe</em>) by using the
 </pre></td>
 </tr></table>
 </div></div>
-<p>If you return a <code>SafeString</code> (a string that has been wrapped in a call
-to <a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fstring/methods/htmlSafe?anchor=htmlSafe"><code>htmlSafe</code></a>), Ember knows that you have vouched on its behalf that it
-contains no malicious HTML.</p>
+<!--
+If you return a `SafeString` (a string that has been wrapped in a call
+to [`htmlSafe`][4]), Ember knows that you have vouched on its behalf that it
+contains no malicious HTML.
+-->
 
-<p>However, note that in the above code we may have inadvertently
+<p><code>SafeString</code>(<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fstring/methods/htmlSafe?anchor=htmlSafe"><code>htmlSafe</code></a>の呼び出しでラップされた文字列)を返すと、Emberは悪意のあるHTMLが含まれていないことが保証されていることを認識します。</p>
+
+<!--
+However, note that in the above code we may have inadvertently
 introduced an XSS vulnerability into our application! By blindly marking
 the string as safe, a malicious user could get their own HTML into our
-app, allowing them to do things like access sensitive customer data.</p>
+app, allowing them to do things like access sensitive customer data.
+-->
 
-<p>For example, imagine that we have a chat app  and use our <code>make-bold</code>
-helper to welcome the new users into the channel:</p>
+<p>ただし、上記のコードでは、アプリケーションにXSSの脆弱性が誤って投入されている可能性があります。
+盲目的に文字列の安全性を保証すると、悪意のあるユーザーが独自のHTMLをアプリケーションに入れ込むことで、機密性の高い顧客データなどにアクセスできるようになってしまいます。</p>
+
+<!--
+For example, imagine that we have a chat app  and use our `make-bold`
+helper to welcome the new users into the channel:
+-->
+
+<p>例えば、チャットアプリがあり、新しいユーザーをチャンネルに歓迎するために<code>make-bold</code>ヘルパーを使用しているとします。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -641,16 +866,25 @@ helper to welcome the new users into the channel:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Now a malicious user simply needs to set their <code>firstName</code> to a string
-containing HTML (like a <code>&lt;script&gt;</code> tag that sends private customer data
+<!--
+Now a malicious user simply needs to set their `firstName` to a string
+containing HTML (like a `<script>` tag that sends private customer data
 to their server, for example) and every user in that chat room has been
-compromised.</p>
+compromised.
+-->
 
-<p>In general, you should prefer using components if you are wrapping
+<p>悪意のあるユーザーは<code>firstName</code>をHTMLを含む文字列(たとえば、プライベート顧客データをサーバーに送信する<code>&lt;script&gt;</code>タグなど)に設定すると、そのチャットルーム内のすべてのユーザーに危害が及んでしまいます。</p>
+
+<!--
+In general, you should prefer using components if you are wrapping
 content in HTML. However, if you really want to include a mix of HTML
 and values from models in what you return from the helper, make sure you
 escape anything that may have come from an untrusted user with the
-<code>escapeExpression</code> utility:</p>
+`escapeExpression` utility:
+-->
+
+<p>一般に、HTMLでコンテンツをラップする場合は、コンポーネントを使用する方がよいでしょう。
+しかし、ヘルパーの戻り値にHTMLとモデルの値を混在させたい場合は、信頼できないユーザーから来た可能性のあるものを<code>escapeExpression</code>ユーティリティで確実にエスケープしてください。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -682,10 +916,16 @@ escape anything that may have come from an untrusted user with the
 </pre></td>
 </tr></table>
 </div></div>
-<p>Now the value passed into the helper has its HTML escaped, but the trusted
-<code>&lt;b&gt;</code> tags that we want to wrap the value in are <em>not</em> escaped. A
-malicious user setting their <code>firstName</code> to something containing HTML
-would see this:</p>
+<!--
+Now the value passed into the helper has its HTML escaped, but the trusted
+`<b>` tags that we want to wrap the value in are _not_ escaped. A
+malicious user setting their `firstName` to something containing HTML
+would see this:
+-->
+
+<p>上記の例ではヘルパーに渡された値がHTMLがエスケープされています。
+値をラップしている<code>&lt;b&gt;</code>タグは信頼できるためエスケープされていません。
+これにより、<code>firstName</code>にHTMLを含めた値に設定した悪意のあるユーザーには、以下のように表示されるようになります。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
