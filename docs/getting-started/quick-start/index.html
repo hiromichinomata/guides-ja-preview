@@ -273,7 +273,7 @@ which means that any nested route will be rendered in that place.
 -->
 
 <p>Emberはファイルの変更を自動で検出し、バックグランドでページをリロードします。
-ウェルカムページが&quot;PeopleTacker&quot;に置き換わったのが見えるはずです。
+ウェルカムページが&quot;PeopleTracker&quot;に置き換わったのが見えるはずです。
 このページに<code>{{outlet}}</code>も合わせて追加しましたので、
 ネストしたルートはそこに表示されることになります。</p>
 
@@ -621,7 +621,7 @@ First add an `action` helper to the `li` in your `people-list` component.
 <p>ここまでデータの一覧表示をやりましたが、まだユーザがその情報を操作したりできません。
 Webアプリケーションでは、クリックやホバーといったイベントを使いたいでしょう。
 Emberでは簡単にそれをすることができます。
-まず始めに、<code>people-list</code>コポーネント内の<code>li</code>に<code>action</code>ヘルパーを追加します。</p>
+まず始めに、<code>people-list</code>コンポーネント内の<code>li</code>に<code>action</code>ヘルパーを追加します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -659,7 +659,7 @@ Think of this like calling `this.actions.showPerson(person)` from our template.
 <p><code>action</code>ヘルパーは要素にイベントリスナーを追加し名前付き関数を呼ぶようにしてくれます。
 デフォルトで、<code>action</code>ヘルパーは<code>click</code>イベントリスナーを追加しますが、
 どの要素でも使えるわけではありません。
-さて、これで<code>li</code>要素をクリックすると、<code>people-list</code>コポーネントの<code>actions</code>オブジェクト内の<code>showPerson</code>関数が呼ばれるようになりました。
+さて、これで<code>li</code>要素をクリックすると、<code>people-list</code>コンポーネントの<code>actions</code>オブジェクト内の<code>showPerson</code>関数が呼ばれるようになりました。
 ここでは <code>this.actions.showPerson(person)</code> がテンプレートから呼ばれていると考えておきましょう。</p>
 
 <!--
@@ -702,7 +702,7 @@ Now in the browser when a scientist's name is clicked,
 this function is called and the person's name is alerted.
 -->
 
-<p>ブラウザ上で科学者の名前がクリックされると、この関数が呼ばれ、ある人物の名前か<code>alert</code>されるようになりました。</p>
+<p>ブラウザ上で科学者の名前がクリックされると、この関数が呼ばれ、その人物の名前が<code>alert</code>されるようになりました。</p>
 
 <!--
 ## Building For Production
@@ -753,7 +753,7 @@ check out the [Ember CLI Deploy](http://ember-cli-deploy.com/) addon.
 -->
 
 <p>Emberコミュニティは協力や皆が頼りにするツールを作ることを大事にしています。
-プロダクションのデプロイと速く、信頼できる方法に興味がある場合は、<a href="http://ember-cli-deploy.com/">Ember CLI Deploy</a>アドオンをチェックしてみてください。</p>
+速く、信頼できる方法でプロダクションへデプロイすることに興味がある場合は、<a href="http://ember-cli-deploy.com/">Ember CLI Deploy</a>アドオンをチェックしてみてください。</p>
 
 <!--
 If you deploy your application to an Apache web server, first create a new virtual host for the application.

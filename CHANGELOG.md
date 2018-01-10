@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 2018.01.11
+
+- Fix typos and some wording [#42](https://github.com/dopin/emberjs-guides-ja/pull/42) by [@hibariya] https://github.com/hibariya
 
 ## 2018.01.10
 
