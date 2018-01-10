@@ -8,6 +8,7 @@ Templates section was done! 🎉
 - [x] Templates - Writing Helpers
 - [x] Components - Defining a Component
 - [x] Components - The Component Lifecycle
+- [x] Components - Passing Properties to a Component
 
 ## 2018.01.07
 
