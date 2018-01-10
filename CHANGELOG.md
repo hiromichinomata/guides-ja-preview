@@ -9,6 +9,7 @@ Templates section was done! 🎉
 - [x] Components - Defining a Component
 - [x] Components - The Component Lifecycle
 - [x] Components - Passing Properties to a Component
+- [x] Components - Wrapping Content in a Component
 
 ## 2018.01.07
 
