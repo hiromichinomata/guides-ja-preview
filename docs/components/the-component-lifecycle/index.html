@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - Components: The Component Lifecycle</title>
-    <meta property="st:title" content="Components: The Component Lifecycle" />
+    <title>Ember.js - コンポーネント: コンポーネントのライフサイクル</title>
+    <meta property="st:title" content="コンポーネント: コンポーネントのライフサイクル" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -71,7 +71,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">テンプレート</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../../templates/links/">リンク</a></li><li class='toc-level-1 '><a href="../../templates/actions/">アクション</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 selected'><a href="#">Components</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../defining-a-component/">Defining a Component</a></li><li class='toc-level-1 selected'><a href="./">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../wrapping-content-in-a-component/">コンポーネント内のコンテンツをラップする</a></li><li class='toc-level-1 '><a href="../customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">テンプレート</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../../templates/links/">リンク</a></li><li class='toc-level-1 '><a href="../../templates/actions/">アクション</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">ヘルパーの作成</a></li></ol></li><li class='toc-level-0 selected'><a href="#">コンポーネント</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../defining-a-component/">コンポーネントの定義</a></li><li class='toc-level-1 selected'><a href="./">コンポーネントのライフサイクル</a></li><li class='toc-level-1 '><a href="../passing-properties-to-a-component/">コンポーネントへのプロパティの受け渡し</a></li><li class='toc-level-1 '><a href="../wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -79,21 +79,46 @@
 
       <article class="chapter">
         <h1>
-          The Component Lifecycle
+          コンポーネントのライフサイクル
           <a href="https://github.com/emberjs/guides/edit/master/source/components/the-component-lifecycle.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>Part of what makes components so useful is that they let you take complete control of a section of the DOM.
-This allows for direct DOM manipulation, listening and responding to browser events, and using 3rd party JavaScript libraries in your Ember app.</p>
+        <!--
+Part of what makes components so useful is that they let you take complete control of a section of the DOM.
+This allows for direct DOM manipulation, listening and responding to browser events, and using 3rd party JavaScript libraries in your Ember app.
+-->
 
-<p>As components are rendered, re-rendered and finally removed, Ember provides <em>lifecycle hooks</em> that allow you to run code at specific times in a component&#39;s life.</p>
+<p>コンポーネントが非常に便利な理由の1つは、DOMのセクションを完全に制御できるということです。
+これにより、直接的なDOM操作、ブラウザイベントへの応答とリッスン、EmberアプリケーションでのサードパーティJavaScriptライブラリの使用が可能になります。</p>
 
-<p>To get the most use out of a component, it is important to understand these lifecycle methods.</p>
-<h2 id="toc_Order-of-Lifecycle-Hooks-Called" class="anchorable-toc">Order of Lifecycle Hooks Called</h2>
-<p>Listed below are the component lifecycle hooks in order of execution according to render scenario.</p>
-<h3 id="toc_On-Initial-Render" class="anchorable-toc">On Initial Render</h3>
+<!--
+As components are rendered, re-rendered and finally removed, Ember provides _lifecycle hooks_ that allow you to run code at specific times in a component's life.
+-->
+
+<p>コンポーネントが描画されたり、再描画されたり、最終的に削除される時に、Emberはライフサイクルフックを呼び、コンポーネントが動いている間の特定の時間に任意のコードを実行することができます。</p>
+
+<!--
+To get the most use out of a component, it is important to understand these lifecycle methods.
+-->
+
+<p>コンポーネントを最大限に使用するには、ライフサイクルの使い方を理解することが重要です。</p>
+
+<!--
+## Order of Lifecycle Hooks Called
+-->
+<h2 id="toc_呼び出されるライフサイクルフックの順序" class="anchorable-toc">呼び出されるライフサイクルフックの順序</h2>
+<!--
+Listed below are the component lifecycle hooks in order of execution according to render scenario.
+-->
+
+<p>以下は、描画時のシナリオに従って実行されるコンポーネントのライフサイクルフックを示しています。</p>
+
+<!--
+### On Initial Render
+-->
+<h2 id="toc_初期描画時" class="anchorable-toc">初期描画時</h2>
 <ol>
 <li><code>init</code></li>
 <li><a href="#toc_formatting-component-attributes-with-code-didreceiveattrs-code"><code>didReceiveAttrs</code></a></li>
@@ -101,7 +126,11 @@ This allows for direct DOM manipulation, listening and responding to browser eve
 <li><a href="#toc_integrating-with-third-party-libraries-with-code-didinsertelement-code"><code>didInsertElement</code></a></li>
 <li><a href="#toc_making-updates-to-the-rendered-dom-with-code-didrender-code"><code>didRender</code></a></li>
 </ol>
-<h3 id="toc_On-Re-Render" class="anchorable-toc">On Re-Render</h3>
+
+<!--
+### On Re-Render
+-->
+<h2 id="toc_再描画時" class="anchorable-toc">再描画時</h2>
 <ol>
 <li><a href="#toc_resetting-presentation-state-on-attribute-change-with-code-didupdateattrs-code"><code>didUpdateAttrs</code></a></li>
 <li><a href="#toc_formatting-component-attributes-with-code-didreceiveattrs-code"><code>didReceiveAttrs</code></a></li>
@@ -110,23 +139,53 @@ This allows for direct DOM manipulation, listening and responding to browser eve
 <li><code>didUpdate</code></li>
 <li><a href="#toc_making-updates-to-the-rendered-dom-with-code-didrender-code"><code>didRender</code></a></li>
 </ol>
-<h3 id="toc_On-Component-Destroy" class="anchorable-toc">On Component Destroy</h3>
+
+<!--
+### On Component Destroy
+-->
+<h2 id="toc_削除時" class="anchorable-toc">削除時</h2>
 <ol>
 <li><a href="#toc_detaching-and-tearing-down-component-elements-with-code-willdestroyelement-code"><code>willDestroyElement</code></a></li>
 <li><code>willClearRender</code></li>
 <li><code>didDestroyElement</code></li>
 </ol>
-<h2 id="toc_Lifecycle-Hook-Examples" class="anchorable-toc">Lifecycle Hook Examples</h2>
-<p>Below are some samples of ways to use lifecycle hooks within your components.</p>
-<h3 id="toc_Resetting-Presentation-State-on-Attribute-Change-with-<code>didUpdateAttrs</code>" class="anchorable-toc">Resetting Presentation State on Attribute Change with <code>didUpdateAttrs</code></h3>
-<p><code>didUpdateAttrs</code> runs when the attributes of a component have changed, but not when the component is re-rendered, via <code>component.rerender</code>,
-<code>component.set</code>, or changes in models or services used by the template.</p>
 
-<p>Since <code>didUpdateAttrs</code> is called prior to rerender, you can use this hook to execute code when specific attributes are changed.
-This hook can be an effective alternative to an observer, as it will run prior to a re-render, but after an attribute has changed.</p>
+<!--
+## Lifecycle Hook Examples
+-->
+<h2 id="toc_ライフサイクルフックの例" class="anchorable-toc">ライフサイクルフックの例</h2>
+<!--
+Below are some samples of ways to use lifecycle hooks within your components.
+-->
 
-<p>An example of this scenario in action is a profile editor component.  As you are editing one user, and the user attribute is changed,
-you can use <code>didUpdateAttrs</code> to clear any error state that was built up from editing the previous user.</p>
+<p>以下に、コンポーネント内でライフサイクルフックを使用する方法のサンプルをいくつか示します。</p>
+
+<!--
+### Resetting Presentation State on Attribute Change with `didUpdateAttrs`
+-->
+<h3 id="toc_<code>didUpdateAttrs</code>による属性変更に関するプレゼンテーション状態のリセット" class="anchorable-toc"><code>didUpdateAttrs</code>による属性変更に関するプレゼンテーション状態のリセット</h3>
+<!--
+`didUpdateAttrs` runs when the attributes of a component have changed, but not when the component is re-rendered, via `component.rerender`,
+`component.set`, or changes in models or services used by the template.
+-->
+
+<p><code>didUpdateAttrs</code>は、コンポーネントの属性が変更されたときに実行されますが、コンポーネントが再描画される時や、<code>component.rerender</code>、<code>component.set</code>、またはテンプレートで使用しているモデルやサービスの変更では実行されません。</p>
+
+<!--
+Since `didUpdateAttrs` is called prior to rerender, you can use this hook to execute code when specific attributes are changed.
+This hook can be an effective alternative to an observer, as it will run prior to a re-render, but after an attribute has changed.
+-->
+
+<p><code>didUpdateAttrs</code>は再描画の前に呼び出されるので、特定の属性が変更されたときにこのフックを使用してコードを実行できます。
+このフックは、再描画の前、属性が変更された後に実行されるため、オブザーバに代わる有効な代替手段となります。</p>
+
+<!--
+An example of this scenario in action is a profile editor component.  As you are editing one user, and the user attribute is changed,
+you can use `didUpdateAttrs` to clear any error state that was built up from editing the previous user.
+-->
+
+<p>実例としてプロフィール編集コンポーネントを説明します。
+1人のユーザーを編集中に、ユーザー属性が変更された場合、<code>didUpdateAttrs</code>を使用して、前のユーザーの編集で作成されたエラー状態をクリアできます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -209,15 +268,33 @@ you can use <code>didUpdateAttrs</code> to clear any error state that was built 
 });
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_Formatting-Component-Attributes-with-<code>didReceiveAttrs</code>" class="anchorable-toc">Formatting Component Attributes with <code>didReceiveAttrs</code></h3>
-<p><code>didReceiveAttrs</code> runs after <code>init</code>, and it also runs on subsequent re-renders, which is useful for logic that is the same on all renders.
-It does not run when the re-render has been initiated internally.</p>
+</div></div>
+<!--
+### Formatting Component Attributes with `didReceiveAttrs`
+-->
+<h3 id="toc_<code>didReceiveAttrs</code>によるコンポーネント属性の書式設定" class="anchorable-toc"><code>didReceiveAttrs</code>によるコンポーネント属性の書式設定</h3>
+<!--
+`didReceiveAttrs` runs after `init`, and it also runs on subsequent re-renders, which is useful for logic that is the same on all renders.
+It does not run when the re-render has been initiated internally.
+-->
 
-<p>Since the <code>didReceiveAttrs</code> hook is called every time a component&#39;s attributes are updated whether on render or re-render,
-you can use the hook to effectively act as an observer, ensuring code is executed every time an attribute changes.</p>
+<p><code>didReceiveAttrs</code>は<code>init</code>の後に実行され、その後の再描画の時も実行されます。
+これは、すべての描画時で同じロジックを実行するのに便利です。
+再描画が内部的に開始されたときには実行されません。</p>
 
-<p>For example, if you have a component that renders based on a json configuration, but you want to provide your component with the option of taking the config as a string,
-you can leverage <code>didReceiveAttrs</code> to ensure the incoming config is always parsed.</p>
+<!--
+Since the `didReceiveAttrs` hook is called every time a component's attributes are updated whether on render or re-render,
+you can use the hook to effectively act as an observer, ensuring code is executed every time an attribute changes.
+-->
+
+<p><code>didReceiveAttrs</code>フックは、描画時または再描画時にコンポーネントの属性が更新されるたびに呼び出されるため、このフックを使用してオブザーバとして効果的に機能させ、属性が変更されるたびにコードが確実に実行されるようできます。</p>
+
+<!--
+For example, if you have a component that renders based on a json configuration, but you want to provide your component with the option of taking the config as a string,
+you can leverage `didReceiveAttrs` to ensure the incoming config is always parsed.
+-->
+
+<p>例えば、jsonに基づいて描画するコンポーネントがあり、そのコンポーネントに文字列でも設定を渡すオプションを渡したい場合に、<code>didReceiveAttrs</code>を利用して、受け取った設定を常にパーズするようにすることができます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -254,25 +331,53 @@ you can leverage <code>didReceiveAttrs</code> to ensure the incoming config is a
 });
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_Integrating-with-Third-Party-Libraries-with-<code>didInsertElement</code>" class="anchorable-toc">Integrating with Third-Party Libraries with <code>didInsertElement</code></h3>
-<p>Suppose you want to integrate your favorite date picker library into an Ember project.
+</div></div>
+<!--
+### Integrating with Third-Party Libraries with `didInsertElement`
+-->
+<h3 id="toc_<code>didInsertElement</code>を使用した第三者のライブラリとの統合" class="anchorable-toc"><code>didInsertElement</code>を使用した第三者のライブラリとの統合</h3>
+<!--
+Suppose you want to integrate your favorite date picker library into an Ember project.
 Typically, 3rd party JS/jQuery libraries require a DOM element to bind to.
-So, where is the best place to initialize and attach the library?</p>
+So, where is the best place to initialize and attach the library?
+-->
 
-<p>After a component successfully renders its backing HTML element into the DOM, it will trigger its <a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/didInsertElement?anchor=didInsertElement"><code>didInsertElement()</code></a> hook.</p>
+<p>お気に入りの日付選択ライブラリをEmberプロジェクトに統合したいとします。
+通常、サードパーティのJS/jQueryライブラリでは、バインドするにはDOM要素が必要です。
+では、ライブラリを初期化して添付するのに最適な場所はどこでしょうか？</p>
 
-<p>Ember guarantees that, by the time <code>didInsertElement()</code> is called:</p>
+<!--
+After a component successfully renders its backing HTML element into the DOM, it will trigger its [`didInsertElement()`][did-insert-element] hook.
+-->
+
+<p>コンポーネントのHTML要素がDOMに描画されると、<a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/didInsertElement?anchor=didInsertElement"><code>didInsertElement()</code></a>フックが呼ばれます。</p>
+
+<!--
+Ember guarantees that, by the time `didInsertElement()` is called:
+-->
+
+<p>Emberは、<code>didInsertElement()</code>が呼び出されるまでに、次のことを保証します。</p>
+
+<!--
+1. The component's element has been both created and inserted into the
+   DOM.
+2. The component's element is accessible via the component's
+   [`$()`][dollar]
+   method.
+-->
 
 <ol>
-<li>The component&#39;s element has been both created and inserted into the
-DOM.</li>
-<li>The component&#39;s element is accessible via the component&#39;s
-<a href="https://www.emberjs.com/api/ember/2.16/classes/Component/methods/$?anchor=%24"><code>$()</code></a>
-method.</li>
+<li>コンポーネントの要素が作成され、DOMに挿入されていルコと</li>
+<li>コンポーネントの要素がコンポーネントの<a href="https://www.emberjs.com/api/ember/2.16/classes/Component/methods/$?anchor=%24"><code>$()</code></a>メソッドを介してアクセスできること</li>
 </ol>
 
-<p>A component&#39;s <a href="https://www.emberjs.com/api/ember/2.16/classes/Component/methods/$?anchor=%24"><code>$()</code></a> method allows you to access the component&#39;s DOM element by returning a JQuery element.
-For example, you can set an attribute using jQuery&#39;s <code>attr()</code> method:</p>
+<!--
+A component's [`$()`][dollar] method allows you to access the component's DOM element by returning a JQuery element.
+For example, you can set an attribute using jQuery's `attr()` method:
+-->
+
+<p>コンポーネントの<a href="https://www.emberjs.com/api/ember/2.16/classes/Component/methods/$?anchor=%24"><code>$()</code></a>メソッドを使用すると、JQueryのオブジェクトが返され、それを使ってコンポーネントのDOM要素にアクセスできます。
+例えば、jQueryの<code>attr()</code>メソッドを使用して属性を設定できます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -300,7 +405,11 @@ For example, you can set an attribute using jQuery&#39;s <code>attr()</code> met
 </pre></td>
 </tr></table>
 </div></div>
-<p><a href="https://www.emberjs.com/api/ember/2.16/classes/Component/methods/$?anchor=%24"><code>$()</code></a> will, by default, return a jQuery object for the component&#39;s root element, but you can also target child elements within the component&#39;s template by passing a selector:</p>
+<!--
+[`$()`][dollar] will, by default, return a jQuery object for the component's root element, but you can also target child elements within the component's template by passing a selector:
+-->
+
+<p><a href="https://www.emberjs.com/api/ember/2.16/classes/Component/methods/$?anchor=%24"><code>$()</code></a>はデフォルトでコンポーネントのルート要素のjQueryオブジェクトを返しますが、セレクタを渡すことでコンポーネントのテンプレート内の子要素を対象にすることもできます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -328,9 +437,17 @@ For example, you can set an attribute using jQuery&#39;s <code>attr()</code> met
 </pre></td>
 </tr></table>
 </div></div>
-<p>Let&#39;s initialize our date picker by overriding the <a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/didInsertElement?anchor=didInsertElement"><code>didInsertElement()</code></a> method.</p>
+<!--
+Let's initialize our date picker by overriding the [`didInsertElement()`][did-insert-element] method.
+-->
 
-<p>Date picker libraries usually attach to an <code>&lt;input&gt;</code> element, so we will use jQuery to find an appropriate input within our component&#39;s template.</p>
+<p><a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/didInsertElement?anchor=didInsertElement"><code>didInsertElement()</code></a>メソッドをオーバーライドして、日付ピッカーを初期化しましょう。</p>
+
+<!--
+Date picker libraries usually attach to an `<input>` element, so we will use jQuery to find an appropriate input within our component's template.
+-->
+
+<p>日付ピッカーライブラリは通常<code>&lt;input&gt;</code>要素にアタッチするので、jQueryを使用してコンポーネントのテンプレート内の適切なinput要素を探します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -358,13 +475,22 @@ For example, you can set an attribute using jQuery&#39;s <code>attr()</code> met
 </pre></td>
 </tr></table>
 </div></div>
-<p><a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/didInsertElement?anchor=didInsertElement"><code>didInsertElement()</code></a> is also a good place to
+<!--
+[`didInsertElement()`][did-insert-element] is also a good place to
 attach event listeners. This is particularly useful for custom events or
-other browser events which do not have a <a href="http://guides.emberjs.com/v2.1.0/components/handling-events/#toc_event-names">built-in event
-handler</a>.</p>
+other browser events which do not have a [built-in event
+handler][event-names].
+-->
 
-<p>For example, perhaps you have some custom CSS animations trigger when the component
-is rendered and you want to handle some cleanup when it ends:</p>
+<p><a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/didInsertElement?anchor=didInsertElement"><code>didInsertElement()</code></a>は、イベントリスナーをアタッチするのにも適しています。
+これは、カスタムイベントや<a href="http://guides.emberjs.com/v2.1.0/components/handling-events/#toc_event-names">組み込みのイベントハンドラ</a>を持たない他のブラウザイベントで特に便利です。</p>
+
+<!--
+For example, perhaps you have some custom CSS animations trigger when the component
+is rendered and you want to handle some cleanup when it ends:
+-->
+
+<p>例えば、コンポーネントが描画され時にカスタムCSSアニメーションを実行し、終了時にいくつかのクリーンアップを処理したい場合は以下のようにします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -396,26 +522,57 @@ is rendered and you want to handle some cleanup when it ends:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>There are a few things to note about the <code>didInsertElement()</code> hook:</p>
+<!--
+There are a few things to note about the `didInsertElement()` hook:
+-->
+
+<p><code>didInsertElement()</code>フックについて注意すべき点がいくつかあります。</p>
+
+<!--
+- It is only triggered once when the component element is first rendered.
+- In cases where you have components nested inside other components, the child component will always receive the `didInsertElement()` call before its parent does.
+- Setting properties on the component in [`didInsertElement()`][did-insert-element] triggers a re-render, and for performance reasons,
+  is not allowed.
+- While [`didInsertElement()`][did-insert-element] is technically an event that can be listened for using `on()`, it is encouraged to override the default method itself,
+  particularly when order of execution is important.
+-->
 
 <ul>
-<li>It is only triggered once when the component element is first rendered.</li>
-<li>In cases where you have components nested inside other components, the child component will always receive the <code>didInsertElement()</code> call before its parent does.</li>
-<li>Setting properties on the component in <a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/didInsertElement?anchor=didInsertElement"><code>didInsertElement()</code></a> triggers a re-render, and for performance reasons,
-is not allowed.</li>
-<li>While <a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/didInsertElement?anchor=didInsertElement"><code>didInsertElement()</code></a> is technically an event that can be listened for using <code>on()</code>, it is encouraged to override the default method itself,
-particularly when order of execution is important.</li>
+<li>このフックはコンポーネント要素の初期描画時に初めて呼び出されます</li>
+<li>他のコンポーネントの中にコンポーネントがネストされている場合、子コンポーネントの<code>didInsertElement()</code>が親コンポーネントより常に先に呼び出されます</li>
+<li><a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/didInsertElement?anchor=didInsertElement"><code>didInsertElement()</code></a>でコンポーネントのプロパティを設定すると再描画が走るため、パフォーマンス上の理由から許可されていません</li>
+<li><a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/didInsertElement?anchor=didInsertElement"><code>didInsertElement()</code></a>は厳密には<code>on()</code>を使用してリッスンできるイベントですが、特に実行順序が重要な場合は、デフォルトのメソッド自体をオーバーライドすることが推奨されています</li>
 </ul>
-<h3 id="toc_Making-Updates-to-the-Rendered-DOM-with-<code>didRender</code>" class="anchorable-toc">Making Updates to the Rendered DOM with <code>didRender</code></h3>
-<p>The <code>didRender</code> hook is called during both render and re-render after the template has rendered and the DOM updated.
-You can leverage this hook to perform post-processing on the DOM of a component after it&#39;s been updated.</p>
 
-<p>In this example, there is a list component that needs to scroll to a selected item when rendered.
+<!--
+### Making Updates to the Rendered DOM with `didRender`
+-->
+<h3 id="toc_<code>didRender</code>でDOMが描画された後に処理を実行する" class="anchorable-toc"><code>didRender</code>でDOMが描画された後に処理を実行する</h3>
+<!--
+The `didRender` hook is called during both render and re-render after the template has rendered and the DOM updated.
+You can leverage this hook to perform post-processing on the DOM of a component after it's been updated.
+-->
+
+<p><code>didRender</code>フックは、テンプレートが描画され、DOMが更新された後、描画と再描画時の両方で呼び出されます。
+このフックを利用して、コンポーネントのDOMが更新された後で処理を実行できます。</p>
+
+<!--
+In this example, there is a list component that needs to scroll to a selected item when rendered.
 Since scrolling to a specific spot is based on positions within the DOM, we need to ensure that the list has been rendered before scrolling.
-We can first render this list, and then set the scroll.</p>
+We can first render this list, and then set the scroll.
+-->
 
-<p>The component below takes a list of items and displays them on the screen.
-Additionally, it takes an object representing which item is selected and will select and set the scroll top to that item.</p>
+<p>この例では、描画時に選択項目にスクロールする必要があるリストコンポーネントがあります。
+特定の場所へのスクロールはDOM内の位置に基づくため、スクロールする前にリストが描画されていることを確認する必要があります。
+リストを先に描画してからスクロールが可能になります。</p>
+
+<!--
+The component below takes a list of items and displays them on the screen.
+Additionally, it takes an object representing which item is selected and will select and set the scroll top to that item.
+-->
+
+<p>以下のコンポーネントはアイテムのリストを取得し、それらを画面に表示します。
+さらに、どの項目が選択されているかを表すオブジェクトを取り、それ選択してその項目にスクロールトップを設定します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -429,7 +586,11 @@ Additionally, it takes an object representing which item is selected and will se
 </pre></td>
 </tr></table>
 </div></div>
-<p>When rendered the component will iterate through the given list and apply a class to the one that is selected.</p>
+<!--
+When rendered the component will iterate through the given list and apply a class to the one that is selected.
+-->
+
+<p>描画されると、コンポーネントは指定されたリストを反復し、選択中のものにクラスを適用します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -447,7 +608,11 @@ Additionally, it takes an object representing which item is selected and will se
 </pre></td>
 </tr></table>
 </div></div>
-<p>The scroll happens on <code>didRender</code>, where it will scroll the component&#39;s container to the element with the selected class name.</p>
+<!--
+The scroll happens on `didRender`, where it will scroll the component's container to the element with the selected class name.
+-->
+
+<p>スクロールは<code>didRender</code>で行い、選択されたクラス名を持つ要素にコンポーネントのコンテナをスクロールさせます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -498,12 +663,25 @@ Additionally, it takes an object representing which item is selected and will se
 });
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_Detaching-and-Tearing-Down-Component-Elements-with-<code>willDestroyElement</code>" class="anchorable-toc">Detaching and Tearing Down Component Elements with <code>willDestroyElement</code></h3>
-<p>When a component detects that it is time to remove itself from the DOM, Ember will trigger the <a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/willDestroyElement?anchor=willDestroyElement"><code>willDestroyElement()</code></a> method,
-allowing for any teardown logic to be performed.</p>
+</div></div>
+<!--
+### Detaching and Tearing Down Component Elements with `willDestroyElement`
+-->
+<h3 id="toc_<code>willDestroyElement</code>でコンポーネントのデタッチと削除" class="anchorable-toc"><code>willDestroyElement</code>でコンポーネントのデタッチと削除</h3>
+<!--
+When a component detects that it is time to remove itself from the DOM, Ember will trigger the [`willDestroyElement()`](https://www.emberjs.com/api/ember/2.16/classes/Component/events/willDestroyElement?anchor=willDestroyElement) method,
+allowing for any teardown logic to be performed.
+-->
 
-<p>Component teardown can be triggered by a number of different conditions.
-For instance, the user may navigate to a different route, or a conditional Handlebars block surrounding your component may change:</p>
+<p>コンポーネントがDOMから自身を削除する時間であることを検出すると、Emberは<a href="https://www.emberjs.com/api/ember/2.16/classes/Component/events/willDestroyElement?anchor=willDestroyElement"><code>willDestroyElement()</code></a>メソッドを呼び出し、解体処理を実行できるようにします。</p>
+
+<!--
+Component teardown can be triggered by a number of different conditions.
+For instance, the user may navigate to a different route, or a conditional Handlebars block surrounding your component may change:
+-->
+
+<p>コンポーネントの解体は、さまざまな条件によって呼び出されます。
+例えば、ユーザーが別のルートに移動したり、コンポーネントを囲む条件分岐Handlebarsブロックの変更などです。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -521,7 +699,11 @@ For instance, the user may navigate to a different route, or a conditional Handl
 </pre></td>
 </tr></table>
 </div></div>
-<p>Let&#39;s use this hook to cleanup our date picker and event listener from above:</p>
+<!--
+Let's use this hook to cleanup our date picker and event listener from above:
+-->
+
+<p>このフックを使用して、上記で設定した日付ピッカーのイベントリスナーをクリーンアップしましょう。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -555,7 +737,7 @@ For instance, the user may navigate to a different route, or a conditional Handl
 
         
       <footer>
-        <a class="previous-guide" href="../defining-a-component/">Defining a Component</a> <a class="next-guide" href="../passing-properties-to-a-component/">Passing Properties to a Component</a>
+        <a class="previous-guide" href="../defining-a-component/">コンポーネントの定義</a> <a class="next-guide" href="../passing-properties-to-a-component/">コンポーネントへのプロパティの受け渡し</a>
       </footer>
       
       </article>

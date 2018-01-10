@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - Components: Defining a Component</title>
-    <meta property="st:title" content="Components: Defining a Component" />
+    <title>Ember.js - コンポーネント: コンポーネントの定義</title>
+    <meta property="st:title" content="コンポーネント: コンポーネントの定義" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -71,7 +71,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">テンプレート</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../../templates/links/">リンク</a></li><li class='toc-level-1 '><a href="../../templates/actions/">アクション</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">Writing Helpers</a></li></ol></li><li class='toc-level-0 selected'><a href="#">Components</a><ol class='toc-level-1 selected'><li class='toc-level-1 selected'><a href="./">Defining a Component</a></li><li class='toc-level-1 '><a href="../the-component-lifecycle/">The Component Lifecycle</a></li><li class='toc-level-1 '><a href="../passing-properties-to-a-component/">Passing Properties to a Component</a></li><li class='toc-level-1 '><a href="../wrapping-content-in-a-component/">コンポーネント内のコンテンツをラップする</a></li><li class='toc-level-1 '><a href="../customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">テンプレート</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../../templates/links/">リンク</a></li><li class='toc-level-1 '><a href="../../templates/actions/">アクション</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">ヘルパーの作成</a></li></ol></li><li class='toc-level-0 selected'><a href="#">コンポーネント</a><ol class='toc-level-1 selected'><li class='toc-level-1 selected'><a href="./">コンポーネントの定義</a></li><li class='toc-level-1 '><a href="../the-component-lifecycle/">コンポーネントのライフサイクル</a></li><li class='toc-level-1 '><a href="../passing-properties-to-a-component/">コンポーネントへのプロパティの受け渡し</a></li><li class='toc-level-1 '><a href="../wrapping-content-in-a-component/">Wrapping Content in a Component</a></li><li class='toc-level-1 '><a href="../customizing-a-components-element/">Customizing a Component's Element</a></li><li class='toc-level-1 '><a href="../block-params/">Using Block Params</a></li><li class='toc-level-1 '><a href="../handling-events/">Handling Events</a></li><li class='toc-level-1 '><a href="../triggering-changes-with-actions/">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -79,13 +79,17 @@
 
       <article class="chapter">
         <h1>
-          Defining a Component
+          コンポーネントの定義
           <a href="https://github.com/emberjs/guides/edit/master/source/components/defining-a-component.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>To define a component, run:</p>
+        <!--
+To define a component, run:
+-->
+
+<p>コンポーネントを定義するには、次のコマンドを実行します。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -93,13 +97,24 @@
 </pre></td>
 </tr></table>
 </div></div>
-<p>Components must have at least one dash in their name. So <code>blog-post</code> is an acceptable
-name, and so is <code>audio-player-controls</code>, but <code>post</code> is not. This prevents clashes with
-current or future HTML element names, aligns Ember components with the W3C <a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html">Custom
-Elements</a>
-spec, and ensures Ember detects the components automatically.</p>
+<!--
+Components must have at least one dash in their name. So `blog-post` is an acceptable
+name, and so is `audio-player-controls`, but `post` is not. This prevents clashes with
+current or future HTML element names, aligns Ember components with the W3C [Custom
+Elements](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html)
+spec, and ensures Ember detects the components automatically.
+-->
 
-<p>A sample component template could look like this:</p>
+<p>コンポーネント名にはダッシュが少なくとも1つ必要です。
+つまり、<code>blog-post</code>や<code>audio-player-controls</code>は使えますが、<code>post</code>は使えません。
+これにより、現在または将来のHTML要素名との衝突を防ぎ、EmberコンポーネントをW3C <a href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html">Custom
+Elements</a>仕様に揃え、Emberがコンポーネントを自動的に検出すること確実にします。</p>
+
+<!--
+A sample component template could look like this:
+-->
+
+<p>以下はコンポーネントテンプレートの例です。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -121,7 +136,11 @@ spec, and ensures Ember detects the components automatically.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Given the above template, you can now use the <code>{{blog-post}}</code> component:</p>
+<!--
+Given the above template, you can now use the `{{blog-post}}` component:
+-->
+
+<p>上記のテンプレートがある場合、<code>{{blog-post}}</code>コンポーネントを使用できるようになます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -143,7 +162,11 @@ spec, and ensures Ember detects the components automatically.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Its model is populated in <code>model</code> hook in the route handler:</p>
+<!--
+Its model is populated in `model` hook in the route handler:
+-->
+
+<p>modelはルートハンドラの<code>model</code>フックが返すデータです。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -169,43 +192,91 @@ spec, and ensures Ember detects the components automatically.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Each component is backed by an element under the hood. By default, 
-Ember will use a <code>&lt;div&gt;</code> element to contain your component&#39;s template.
+<!--
+Each component is backed by an element under the hood. By default, 
+Ember will use a `<div>` element to contain your component's template.
 To learn how to change the element Ember uses for your component, see
-<a href="../customizing-a-components-element">Customizing a Component&#39;s
-Element</a>.</p>
-<h2 id="toc_Defining-a-Component-Subclass" class="anchorable-toc">Defining a Component Subclass</h2>
-<p>Often times, your components will just encapsulate certain snippets of
+[Customizing a Component's
+Element](../customizing-a-components-element).
+-->
+
+<p>各コンポーネントは、フードの下にある要素によってサポートされています。
+デフォルトでは、Emberは<code>&lt;div&gt;</code>要素を使用してコンポーネントのテンプレートを格納します。
+Emberがコンポーネントに使用する要素を変更する方法については、<a href="../customizing-a-components-element">コンポーネントの要素のカスタマイズ</a>を参照してください。</p>
+
+<!--
+## Defining a Component Subclass
+-->
+<h2 id="toc_コンポーネントのサブクラスの定義" class="anchorable-toc">コンポーネントのサブクラスの定義</h2>
+<!--
+Often times, your components will just encapsulate certain snippets of
 Handlebars templates that you find yourself using over and over. In
 those cases, you do not need to write any JavaScript at all. Define
 the Handlebars template as described above and use the component that is
-created.</p>
+created.
+-->
 
-<p>If you need to customize the behavior of the component you&#39;ll
-need to define a subclass of <a href="https://www.emberjs.com/api/ember/2.16/classes/Component"><code>Component</code></a>. For example, you would
-need a custom subclass if you wanted to change a component&#39;s element,
-respond to actions from the component&#39;s template, or manually make
-changes to the component&#39;s element using JavaScript.</p>
+<p>しばしば、コンポーネントは、何度も繰り返し使用しているHandlebarsテンプレートをカプセル化します。
+そのような場合は、JavaScriptをまったく書く必要はありません。
+上記のようにハンドルバーテンプレートを定義し、作成されたコンポーネントを使用します。</p>
 
-<p>Ember knows which subclass powers a component based on its filename. For
-example, if you have a component called <code>blog-post</code>, you would create a
-file at <code>app/components/blog-post.js</code>. If your component was called
-<code>audio-player-controls</code>, the file name would be at
-<code>app/components/audio-player-controls.js</code>.</p>
-<h2 id="toc_Dynamically-rendering-a-component" class="anchorable-toc">Dynamically rendering a component</h2>
-<p>The <a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/component?anchor=component"><code>{{component}}</code></a> helper can be used to defer the selection of a component to
-run time. The <code>{{my-component}}</code> syntax always renders the same component,
-while using the <code>{{component}}</code> helper allows choosing a component to render on
+<!--
+If you need to customize the behavior of the component you'll
+need to define a subclass of [`Component`](https://www.emberjs.com/api/ember/2.16/classes/Component). For example, you would
+need a custom subclass if you wanted to change a component's element,
+respond to actions from the component's template, or manually make
+changes to the component's element using JavaScript.
+-->
+
+<p>コンポーネントの動作をカスタマイズする必要がある場合は、<a href="https://www.emberjs.com/api/ember/2.16/classes/Component"><code>Component</code></a>のサブクラスを定義する必要があります。
+例えば、コンポーネントの要素を変更したり、コンポーネントのテンプレートからのアクションに応答したり、JavaScriptを使用してコンポーネントの要素を手動で変更したりする場合は、サブクラスでカスタマイズします。</p>
+
+<!--
+Ember knows which subclass powers a component based on its filename. For
+example, if you have a component called `blog-post`, you would create a
+file at `app/components/blog-post.js`. If your component was called
+`audio-player-controls`, the file name would be at
+`app/components/audio-player-controls.js`.
+-->
+
+<p>Emberは、ファイル名に基づいてコンポーネントのサブクラスのファイルを特定します。
+例えば、<code>blog-post</code>というコンポーネントの場合は、<code>app/components/blog-post.js</code>にファイルを作成します。
+コンポーネントが<code>audio-player-controls</code>という名前の場合、ファイル名は<code>app/components/audio-player-controls.js</code>になります。</p>
+
+<!--
+## Dynamically rendering a component
+-->
+<h2 id="toc_コンポーネントの動的レンダリング" class="anchorable-toc">コンポーネントの動的レンダリング</h2>
+<!--
+The [`{{component}}`](https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/component?anchor=component) helper can be used to defer the selection of a component to
+run time. The `{{my-component}}` syntax always renders the same component,
+while using the `{{component}}` helper allows choosing a component to render on
 the fly. This is useful in cases where you want to interact with different
-external libraries depending on the data. Using the <code>{{component}}</code> helper would
-allow you to keep different logic well separated.</p>
+external libraries depending on the data. Using the `{{component}}` helper would
+allow you to keep different logic well separated.
+-->
 
-<p>The first parameter of the helper is the name of a component to render, as a
-string. So <code>{{component &#39;blog-post&#39;}}</code> is the same as using <code>{{blog-post}}</code>.</p>
+<p><a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/component?anchor=component"><code>{{component}}</code></a>ヘルパーを使用して、コンポーネントの選択を実行時まで保留することができます。
+<code>{{my-component}}</code>構文は常に同じコンポーネントを描画しますが、<code>{{component}}</code>ヘルパーを使用すると、実行時に描画するコンポーネントを選択できます。
+これは、データに応じて異なる外部ライブラリとやり取りしたい場合に便利です。
+<code>{{component}}</code>ヘルパーを使用すると、別のロジックを適切に分離しておくことができます。</p>
 
-<p>The real value of <a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/component?anchor=component"><code>{{component}}</code></a> comes from being able to dynamically pick
+<!--
+The first parameter of the helper is the name of a component to render, as a
+string. So `{{component 'blog-post'}}` is the same as using `{{blog-post}}`.
+-->
+
+<p>ヘルパーの第1引数は、描画するコンポーネントの名前です。
+つまり<code>{{component &#39;blog-post&#39;}}</code>は<code>{{blog-post}}</code>と同じです。</p>
+
+<!--
+The real value of [`{{component}}`](https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/component?anchor=component) comes from being able to dynamically pick
 the component being rendered. Below is an example of using the helper as a
-means of choosing different components for displaying different kinds of posts:</p>
+means of choosing different components for displaying different kinds of posts:
+-->
+
+<p><a href="https://www.emberjs.com/api/ember/2.16/classes/Ember.Templates.helpers/methods/component?anchor=component"><code>{{component}}</code></a>の真の価値は、描画するコンポーネントを動的に選択できることにあります。
+以下は、さまざまな種類の投稿を表示するためのさまざまなコンポーネントを選択する手段としてヘルパーを使用する例です。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -277,19 +348,29 @@ means of choosing different components for displaying different kinds of posts:<
 </pre></td>
 </tr></table>
 </div></div>
-<p>When the parameter passed to <code>{{component}}</code> evaluates to <code>null</code> or <code>undefined</code>,
+<!--
+When the parameter passed to `{{component}}` evaluates to `null` or `undefined`,
 the helper renders nothing. When the parameter changes, the currently rendered
-component is destroyed and the new component is created and brought in.</p>
+component is destroyed and the new component is created and brought in.
+-->
 
-<p>Picking different components to render in response to the data allows you to
-have different template and behavior for each case. The <code>{{component}}</code> helper
-is a powerful tool for improving code modularity.</p>
+<p><code>{{component}}</code>に渡された引数が<code>null</code>または<code>undefined</code>と評価されると、ヘルパーは何も描画しません。
+引数が変更されると、描画されているコンポーネントが破棄され、新たにコンポーネントが作成されて取り込まれます。</p>
+
+<!--
+Picking different components to render in response to the data allows you to
+have different template and behavior for each case. The `{{component}}` helper
+is a powerful tool for improving code modularity.
+-->
+
+<p>データに応じて描画するさまざまなコンポーネントを選択すると、それぞれのケースごとに異なるテンプレートと動作を持つことができます。
+<code>{{component}}</code>ヘルパーは、コードのモジュール性を向上させる強力なツールです。</p>
 
 
 
         
       <footer>
-        <a class="previous-guide" href="../../templates/writing-helpers/">Writing Helpers</a> <a class="next-guide" href="../the-component-lifecycle/">The Component Lifecycle</a>
+        <a class="previous-guide" href="../../templates/writing-helpers/">ヘルパーの作成</a> <a class="next-guide" href="../the-component-lifecycle/">コンポーネントのライフサイクル</a>
       </footer>
       
       </article>
