@@ -5,6 +5,7 @@
 - Sync [#43](https://github.com/dopin/emberjs-guides-ja/pull/43)
 - [x] Components - Customizing a Component's Element
 - [x] Components - Using Block Params
+- [x] Components - Handling Events
 
 ## 2018.01.11
 
