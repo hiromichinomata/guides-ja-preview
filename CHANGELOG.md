@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2018.01.12
+
+- Sync [#43](https://github.com/dopin/emberjs-guides-ja/pull/43)
+- [x] Components - Customizing a Component's Element
+
 ## 2018.01.11
 
 - Fix typos and some wording [#42](https://github.com/dopin/emberjs-guides-ja/pull/42) by [@hibariya](https://github.com/hibariya)
