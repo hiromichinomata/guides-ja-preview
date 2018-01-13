@@ -1,9 +1,10 @@
 # CHANGELOG
 
-## 2018.01.12
+## 2018.01.13
 
 - Sync [#43](https://github.com/dopin/emberjs-guides-ja/pull/43)
 - [x] Components - Customizing a Component's Element
+- [x] Components - Using Block Params
 
 ## 2018.01.11
 
