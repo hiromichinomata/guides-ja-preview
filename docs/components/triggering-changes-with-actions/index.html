@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - コンポーネント: Triggering Changes with Actions</title>
-    <meta property="st:title" content="コンポーネント: Triggering Changes with Actions" />
+    <title>Ember.js - コンポーネント: アクションによる変更のトリガー</title>
+    <meta property="st:title" content="コンポーネント: アクションによる変更のトリガー" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -71,7 +71,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">テンプレート</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../../templates/links/">リンク</a></li><li class='toc-level-1 '><a href="../../templates/actions/">アクション</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">ヘルパーの作成</a></li></ol></li><li class='toc-level-0 selected'><a href="#">コンポーネント</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../defining-a-component/">コンポーネントの定義</a></li><li class='toc-level-1 '><a href="../the-component-lifecycle/">コンポーネントのライフサイクル</a></li><li class='toc-level-1 '><a href="../passing-properties-to-a-component/">コンポーネントへのプロパティの受け渡し</a></li><li class='toc-level-1 '><a href="../wrapping-content-in-a-component/">コンポーネント内のコンテンツをラップする</a></li><li class='toc-level-1 '><a href="../customizing-a-components-element/">コンポーネントの要素のカスタマイズ</a></li><li class='toc-level-1 '><a href="../block-params/">ブロック引数を使う</a></li><li class='toc-level-1 '><a href="../handling-events/">イベント処理</a></li><li class='toc-level-1 selected'><a href="./">Triggering Changes with Actions</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">テンプレート</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../../templates/links/">リンク</a></li><li class='toc-level-1 '><a href="../../templates/actions/">アクション</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">ヘルパーの作成</a></li></ol></li><li class='toc-level-0 selected'><a href="#">コンポーネント</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../defining-a-component/">コンポーネントの定義</a></li><li class='toc-level-1 '><a href="../the-component-lifecycle/">コンポーネントのライフサイクル</a></li><li class='toc-level-1 '><a href="../passing-properties-to-a-component/">コンポーネントへのプロパティの受け渡し</a></li><li class='toc-level-1 '><a href="../wrapping-content-in-a-component/">コンポーネント内のコンテンツをラップする</a></li><li class='toc-level-1 '><a href="../customizing-a-components-element/">コンポーネントの要素のカスタマイズ</a></li><li class='toc-level-1 '><a href="../block-params/">ブロック引数を使う</a></li><li class='toc-level-1 '><a href="../handling-events/">イベント処理</a></li><li class='toc-level-1 selected'><a href="./">アクションによる変更のトリガー</a></li></ol></li><li class='toc-level-0 '><a href="#">Controllers</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">Introduction</a></li></ol></li><li class='toc-level-0 '><a href="#">Models</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">Introduction</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">Defining Models</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">Finding Records</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">Creating, Updating and Deleting</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Acceptance Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -79,35 +79,69 @@
 
       <article class="chapter">
         <h1>
-          Triggering Changes with Actions
+          アクションによる変更のトリガー
           <a href="https://github.com/emberjs/guides/edit/master/source/components/triggering-changes-with-actions.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>You can think of a component as a black box of UI functionality.
-So far, you&#39;ve learned how parent components can pass attributes in to a
+        <!--
+You can think of a component as a black box of UI functionality.
+So far, you've learned how parent components can pass attributes in to a
 child component, and how that component can use those attributes from
-both JavaScript and its template.</p>
+both JavaScript and its template.
+-->
 
-<p>But what about the opposite direction? How does data flow back out of
-the component to the parent? In Ember, components use <strong>actions</strong> to
-communicate events and changes.</p>
+<p>コンポーネントは、UI機能のブラックボックスと考えることができます。
+これまで、親コンポーネントから子コンポーネントに属性を渡す方法と、子コンポーネントに渡されたプロパティをJavaScriptとテンプレートで使う方法を学びました。</p>
 
-<p>Let&#39;s look at a simple example of how a component can use an action to
-communicate with its parent.</p>
+<!--
+But what about the opposite direction? How does data flow back out of
+the component to the parent? In Ember, components use **actions** to
+communicate events and changes.
+-->
 
-<p>Imagine we&#39;re building an application where users can have accounts. We
-need to build the UI for users to delete their account. Because we don&#39;t
-want users to accidentally delete their accounts, we&#39;ll build a button
+<p>しかし、反対方向はどうでしょうか？
+データを子コンポーネントから親コンポーネントに逆に流すには？
+Emberでは、コンポーネントは<strong>アクション</strong>を使用してイベントや変更を伝えます。</p>
+
+<!--
+Let's look at a simple example of how a component can use an action to
+communicate with its parent.
+-->
+
+<p>コンポーネントでアクション使って親コンポーネントとやりとりする簡単な例を見てみましょう。</p>
+
+<!--
+Imagine we're building an application where users can have accounts. We
+need to build the UI for users to delete their account. Because we don't
+want users to accidentally delete their accounts, we'll build a button
 that requires the user to confirm in order to trigger some
-action.</p>
+action.
+-->
 
-<p>Once we create this &quot;button with confirmation&quot;
-component, we want to be able to reuse it all over our application.</p>
-<h2 id="toc_Creating-the-Component" class="anchorable-toc">Creating the Component</h2>
-<p>Let&#39;s call our component <code>button-with-confirmation</code>. We can create it by
-typing:</p>
+<p>ユーザーアカウントがあるアプリケーションを開発しているところを想像してください。
+ユーザーがアカウントを削除するためのUIを構築する必要があります。
+ユーザーが誤ってアカウントを削除しないようにするため、ユーザーに確認を要求するボタンを作成します。</p>
+
+<!--
+Once we create this "button with confirmation"
+component, we want to be able to reuse it all over our application.
+-->
+
+<p>この「確認ボタン」コンポーネントを作成すると、アプリケーション全体に再利用できるようになります。</p>
+
+<!--
+## Creating the Component
+-->
+<h2 id="toc_コンポーネントの作成" class="anchorable-toc">コンポーネントの作成</h2>
+<!--
+Let's call our component `button-with-confirmation`. We can create it by
+typing:
+-->
+
+<p><code>button-with-confirmation</code>コンポーネントと呼ぶことにしましょう。
+これを作成するには、次のように入力します。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
@@ -115,7 +149,11 @@ typing:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>We&#39;ll plan to use the component in a template something like this:</p>
+<!--
+We'll plan to use the component in a template something like this:
+-->
+
+<p>このコンポーネントをテンプレートで次のように使用します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -133,7 +171,11 @@ typing:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>We&#39;ll also want to use the component elsewhere, perhaps like this:</p>
+<!--
+We'll also want to use the component elsewhere, perhaps like this:
+-->
+
+<p>また、次のように、このコンポーネントを別の場所でも使用したいと考えています。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -150,38 +192,82 @@ typing:</p>
 <span class="inline-delimiter">}}</span></span>
 </pre></td>
 </tr></table>
-</div></div><h2 id="toc_Designing-the-Action" class="anchorable-toc">Designing the Action</h2>
-<p>When implementing an action on a component that will be handled outside the component, you need to break it down into two steps:</p>
+</div></div>
+<!--
+## Designing the Action
+-->
+<h2 id="toc_アクションの設計" class="anchorable-toc">アクションの設計</h2>
+<!--
+When implementing an action on a component that will be handled outside the component, you need to break it down into two steps:
+-->
+
+<p>コンポーネントの外部で処理されるアクションをコンポーネントに実装する場合は、次の2つの手順に分けてください。</p>
+
+<!--
+1. In the parent component, decide how you want to react to the action.
+   Here, we want to have the action delete the user's account when it's used in one place, and
+   send a message when used in another place.
+2. In the component, determine when something has happened, and when to tell the
+   outside world. Here, we want to trigger the outside action (deleting the
+   account or sending the message) after the user clicks the button and then
+   confirms.
+-->
 
 <ol>
-<li>In the parent component, decide how you want to react to the action.
-Here, we want to have the action delete the user&#39;s account when it&#39;s used in one place, and
-send a message when used in another place.</li>
-<li>In the component, determine when something has happened, and when to tell the
-outside world. Here, we want to trigger the outside action (deleting the
-account or sending the message) after the user clicks the button and then
-confirms.</li>
+<li>親コンポーネントで、アクションにどのように反応させるかを決める。
+今の例では、ある個所ではユーザーのアカウントを削除し、
+別の個所ではメッセージを送信したいと考えています。</li>
+<li>子コンポーネントでは、何かが起こったことを判定し、それをいつ外界に伝えるかを決める。
+今の例では、ユーザーがボタンをクリックして確認した後で外部アクション(アカウント削除、またはメッセージ送信)を実行します。</li>
 </ol>
 
-<p>Let&#39;s take it step by step.</p>
-<h2 id="toc_Implementing-the-Action" class="anchorable-toc">Implementing the Action</h2>
-<p>In the parent component, let&#39;s first define what we want to happen when the
-user clicks the button and then confirms. In the first case, we&#39;ll find the user&#39;s
-account and delete it.</p>
+<!--
+Let's take it step by step.
+-->
 
-<p>In Ember, each component can
-have a property called <code>actions</code>, where you put functions that can be
-<a href="../../templates/actions/">invoked by the user interacting with the component
-itself</a>, or by child components.</p>
+<p>各ステップごとにやっていきましょう。</p>
 
-<p>Let&#39;s look at the parent component&#39;s JavaScript file. In this example,
-imagine we have a parent component called <code>user-profile</code> that shows the
-user&#39;s profile to them.</p>
+<!--
+## Implementing the Action
+-->
+<h2 id="toc_アクションの実装" class="anchorable-toc">アクションの実装</h2>
+<!--
+In the parent component, let's first define what we want to happen when the
+user clicks the button and then confirms. In the first case, we'll find the user's
+account and delete it.
+-->
 
-<p>We&#39;ll implement an action on the parent component called
-<code>userDidDeleteAccount()</code> that, when called, gets a hypothetical <code>login</code>
-<a href="../../applications/services/">service</a> and calls the service&#39;s
-<code>deleteUser()</code> method.</p>
+<p>親コンポーネントでは、まず、ユーザーがボタンをクリックして確認したときに何をするかを定義します。
+まず一つ目は、ユーザーのアカウントを見つけて削除することです。</p>
+
+<!--
+In Ember, each component can
+have a property called `actions`, where you put functions that can be
+[invoked by the user interacting with the component
+itself](../../templates/actions/), or by child components.
+-->
+
+<p>Emberでは、各コンポーネントに<code>action</code>というプロパティを設定できます。
+このプロパティには、<a href="../../templates/actions/">ユーザの操作によってコンポーネント自身とやりとりする</a>関数か子コンポーネントから呼び出される関数を配置します。</p>
+
+<!--
+Let's look at the parent component's JavaScript file. In this example,
+imagine we have a parent component called `user-profile` that shows the
+user's profile to them.
+-->
+
+<p>親コンポーネントのJavaScriptファイルを見てみましょう。
+この例では、ユーザーのプロフィールを表示する<code>user-profile</code>という親コンポーネントがあるとします。</p>
+
+<!--
+We'll implement an action on the parent component called
+`userDidDeleteAccount()` that, when called, gets a hypothetical `login`
+[service](../../applications/services/) and calls the service's
+`deleteUser()` method.
+-->
+
+<p><code>userDidDeleteAccount()</code>というアクションを親コンポーネントに実装します。
+このアクションが呼び出されると、仮想的な<code>login</code><a href="../../applications/services/">サービス</a>を取得し、そのサービスの<code>deleteUser()</code>メソッドを呼び出します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -217,11 +303,24 @@ user&#39;s profile to them.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Now we&#39;ve implemented our action, but we have not told Ember when we
-want this action to be triggered, which is the next step.</p>
-<h2 id="toc_Designing-the-Child-Component" class="anchorable-toc">Designing the Child Component</h2>
-<p>Next,
-in the child component we will implement the logic to confirm that the user wants to take the action they indicated by clicking the button:</p>
+<!--
+Now we've implemented our action, but we have not told Ember when we
+want this action to be triggered, which is the next step.
+-->
+
+<p>さて、アクションは実装しましたが、このアクションをいつ実行するをまだEmberに指示していませんね。
+それが次のステップです。</p>
+
+<!--
+## Designing the Child Component
+-->
+<h2 id="toc_子コンポーネントの設計" class="anchorable-toc">子コンポーネントの設計</h2>
+<!--
+Next,
+in the child component we will implement the logic to confirm that the user wants to take the action they indicated by clicking the button:
+-->
+
+<p>次に、子コンポーネントで、ユーザーがボタンをクリックしてアクションの続行を望んでいるのかを確認するロジックを実装します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -269,8 +368,12 @@ in the child component we will implement the logic to confirm that the user want
 </pre></td>
 </tr></table>
 </div></div>
-<p>The component template will have a button and a div that shows the confirmation dialog
-based on the value of <code>confirmShown</code>.</p>
+<!--
+The component template will have a button and a div that shows the confirmation dialog
+based on the value of `confirmShown`.
+-->
+
+<p>コンポーネントテンプレートには、<code>confirmShown</code>の値に基づいて確認ダイアログを表示するボタンとdivがあります。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -295,11 +398,23 @@ based on the value of <code>confirmShown</code>.</p>
 <span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">if</span><span class="inline-delimiter">}}</span></span>
 </pre></td>
 </tr></table>
-</div></div><h2 id="toc_Passing-the-Action-to-the-Component" class="anchorable-toc">Passing the Action to the Component</h2>
-<p>Now we need to make it so that the <code>userDidDeleteAccount()</code> action defined in the parent component <code>user-profile</code> can be triggered from within <code>button-with-confirmation</code>.
-We&#39;ll do this by passing the action to the child component in exactly the same way that we pass other properties.
+</div></div>
+<!--
+## Passing the Action to the Component
+-->
+<h2 id="toc_アクションをコンポーネントに渡す" class="anchorable-toc">アクションをコンポーネントに渡す</h2>
+<!--
+Now we need to make it so that the `userDidDeleteAccount()` action defined in the parent component `user-profile` can be triggered from within `button-with-confirmation`.
+We'll do this by passing the action to the child component in exactly the same way that we pass other properties.
 This is possible since actions are simply functions, just like any other method on a component,
-and they can therefore be passed from one component to another like this:</p>
+and they can therefore be passed from one component to another like this:
+-->
+
+<p>次は、親コンポーネントである<code>user-profile</code>に定義されテイル<code>userDidDeleteAccount()</code>アクションを、
+子コンポーネントの<code>button-with-confirmation</code>から実行できるようにします。
+これを行うには、他のプロパティを渡すのとまったく同じ方法で、子コンポーネントにアクションを渡します。
+なぜ渡すことができるかというと、アクションがコンポーネントの他のメソッドと同様に単なる関数だからです。
+そのため、コンポーネントから別のコンポーネントへと、以下のように渡すことができます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -319,11 +434,21 @@ and they can therefore be passed from one component to another like this:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>This snippet says &quot;take the <code>userDidDeleteAccount</code> action from the parent and make it available on the child component as the property <code>onConfirm</code>.&quot;
-Note the use here of the <code>action</code> helper,
-which serves to return the function named <code>&quot;userDidDeleteAccount&quot;</code> that we are passing to the component.</p>
+<!--
+This snippet says "take the `userDidDeleteAccount` action from the parent and make it available on the child component as the property `onConfirm`."
+Note the use here of the `action` helper,
+which serves to return the function named `"userDidDeleteAccount"` that we are passing to the component.
+-->
 
-<p>We can do a similar thing for our <code>send-message</code> component:</p>
+<p>上記のコードには「親から<code>userDidDeleteAccount</code>アクションを取得し、それを子コンポーネントの<code>onConfirm</code>というプロパティで利用可能にする」というのが書かれています。
+ここでの<code>action</code>ヘルパーの使い方に注意してください。
+これは、<code>&quot;userDidDeleteAccount&quot;</code>という名前の関数を返す働きをし、それが返す値をコンポーネントに渡しています。</p>
+
+<!--
+We can do a similar thing for our `send-message` component:
+-->
+
+<p><code>send-message</code>コンポーネントでも同様のことができます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -343,8 +468,12 @@ which serves to return the function named <code>&quot;userDidDeleteAccount&quot;
 </pre></td>
 </tr></table>
 </div></div>
-<p>Now, we can use <code>onConfirm</code> in the child component to invoke the action on the
-parent:</p>
+<!--
+Now, we can use `onConfirm` in the child component to invoke the action on the
+parent:
+-->
+
+<p>そして、子コンポーネントで<code>onConfirm</code>を使って親コンポーネントに対してアクションを呼び出すことができます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -392,28 +521,62 @@ parent:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p><code>this.get(&#39;onConfirm&#39;)</code> will return the function passed from the parent as the
-value of <code>onConfirm</code>, and the following <code>()</code> will invoke the function.</p>
+<!--
+`this.get('onConfirm')` will return the function passed from the parent as the
+value of `onConfirm`, and the following `()` will invoke the function.
+-->
 
-<p>Like normal attributes, actions can be a property on the component; the
+<p><code>this.get(&#39;onConfirm&#39;)</code>は、親から渡された関数を<code>onConfirm</code>の値として返し、次の<code>()</code>がその関数を呼び出します。</p>
+
+<!--
+Like normal attributes, actions can be a property on the component; the
 only difference is that the property is set to a function that knows how
-to trigger behavior.</p>
+to trigger behavior.
+-->
 
-<p>That makes it easy to remember how to add an action to a component. It&#39;s
-like passing an attribute, but you use the <code>action</code> helper to pass
-a function instead.</p>
+<p>通常の属性と同様に、アクションはコンポーネントのプロパティにも設定できます。
+唯一の違いは、プロパティには動作をトリガする方法を知っている関数を設定することです。</p>
 
-<p>Actions in components allow you to decouple an event happening from how it&#39;s handled, leading to modular,
-more reusable components.</p>
-<h2 id="toc_Handling-Action-Completion" class="anchorable-toc">Handling Action Completion</h2>
-<p>Often actions perform asynchronous tasks, such as making an ajax request to a server.
+<!--
+That makes it easy to remember how to add an action to a component. It's
+like passing an attribute, but you use the `action` helper to pass
+a function instead.
+-->
+
+<p>これにより、コンポーネントにアクションを追加する方法を覚えやすくなります。
+属性を渡すような感じで、<code>action</code>ヘルパーを使用して代わりに関数を渡します。</p>
+
+<!--
+Actions in components allow you to decouple an event happening from how it's handled, leading to modular,
+more reusable components.
+-->
+
+<p>コンポーネントのアクションは、発生したイベントをどのように処理するかを切り離すことができ、モジュール化され、再利用可能なコンポーネントへ導いてくれます。</p>
+
+<!--
+## Handling Action Completion
+-->
+<h2 id="toc_アクション完了の処理" class="anchorable-toc">アクション完了の処理</h2>
+<!--
+Often actions perform asynchronous tasks, such as making an ajax request to a server.
 Since actions are functions that can be passed in by a parent component, they are able to return values when called.
-The most common scenario is for an action to return a promise so that the component can handle the action&#39;s completion.</p>
+The most common scenario is for an action to return a promise so that the component can handle the action's completion.
+-->
 
-<p>In our user <code>button-with-confirmation</code> component we want to leave the confirmation modal open until we know that the
+<p>多くの場合、アクションはサーバへのajaxリクエストといった非同期処理を行います。
+アクションは親コンポーネントから渡される関数でもあるため、呼び出された時に値を返すことができます。
+最も一般的なシナリオは、コンポーネントがアクションの完了を処理できるようにアクションからPromiseを返すことです。</p>
+
+<!--
+In our user `button-with-confirmation` component we want to leave the confirmation modal open until we know that the
 operation has completed successfully.
-This is accomplished by expecting a promise to be returned from <code>onConfirm</code>.
-Upon resolution of the promise, we set a property used to indicate the visibility of the confirmation modal.</p>
+This is accomplished by expecting a promise to be returned from `onConfirm`.
+Upon resolution of the promise, we set a property used to indicate the visibility of the confirmation modal.
+-->
+
+<p><code>button-with-confirmation</code>コンポーネントでは、操作が正常に完了したことがわかるまで、確認モーダルを開いたままにします。
+これは<code>onConfirm</code>がPromiseを返すことで実現できます。
+Promiseが解決した時に、確認モーダルの表示に使っているプロパティを変更します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -466,12 +629,22 @@ Upon resolution of the promise, we set a property used to indicate the visibilit
 });
 </pre></td>
 </tr></table>
-</div></div><h2 id="toc_Passing-Arguments" class="anchorable-toc">Passing Arguments</h2>
-<p>Sometimes the parent component invoking an action has some context needed for the action that the child component
-doesn&#39;t.
+</div></div>
+<!--
+## Passing Arguments
+-->
+<h2 id="toc_引き数を渡す" class="anchorable-toc">引き数を渡す</h2>
+<!--
+Sometimes the parent component invoking an action has some context needed for the action that the child component
+doesn't.
 Consider, for example,
-the case where the <code>button-with-confirmation</code> component we&#39;ve defined is used within <code>send-message</code>.
-The <code>sendMessage</code> action that we pass to the child component may expect a message type parameter to be provided as an argument:</p>
+the case where the `button-with-confirmation` component we've defined is used within `send-message`.
+The `sendMessage` action that we pass to the child component may expect a message type parameter to be provided as an argument:
+-->
+
+<p>親コンポーネントのアクションの呼び出しに必要なコンテキスト(引数)があり、子コンポーネントがそれを持っていない時があります。
+例えば、先ほど定義した<code>button-with-confirmation</code>コンポーネントが<code>send-message</code>内で使用されている場合を考えてみましょう。
+子コンポーネントに渡す<code>sendMessage</code>アクションには、メッセージの種類を引数で指定できます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -501,10 +674,16 @@ The <code>sendMessage</code> action that we pass to the child component may expe
 </pre></td>
 </tr></table>
 </div></div>
-<p>However,
-the <code>button-with-confirmation</code> component invoking the action doesn&#39;t know or care what type of message it&#39;s collecting.
+<!--
+However,
+the `button-with-confirmation` component invoking the action doesn't know or care what type of message it's collecting.
 In cases like this, the parent template can provide the required parameter when the action is passed to the child.
-For example, if we want to use the button to send a message of type <code>&quot;info&quot;</code>:</p>
+For example, if we want to use the button to send a message of type `"info"`:
+-->
+
+<p>ただし、アクションを呼び出す<code>button-with-confirmation</code>コンポーネントは、メッセージの種類を知らないか気にしません。
+このような場合、必要な引数をアクションと一緒に親テンプレートで子コンポーネントに渡すことができます。
+例えば、<code>&quot;info&quot;</code>の種類のメッセージを送信する場合は、次のようになります。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -524,8 +703,13 @@ For example, if we want to use the button to send a message of type <code>&quot;
 </pre></td>
 </tr></table>
 </div></div>
-<p>Within <code>button-with-confirmation</code>, the code in the <code>submitConfirm</code> action does not change.
-It will still invoke <code>onConfirm</code> without explicit arguments:</p>
+<!--
+Within `button-with-confirmation`, the code in the `submitConfirm` action does not change.
+It will still invoke `onConfirm` without explicit arguments:
+-->
+
+<p><code>button-with-confirmation</code>は、<code>submitConfirm</code>アクションのコードの変更はしません。
+引き続き、明示的な引数なしで<code>onConfirm</code>を呼び出します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -539,15 +723,26 @@ It will still invoke <code>onConfirm</code> without explicit arguments:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>However the expression <code>(action &quot;sendMessage&quot; &quot;info&quot;)</code> used in passing the action to the component creates a closure,
-i.e. an object that binds the parameter we&#39;ve provided to the function specified.
-So now when the action is invoked, that parameter will automatically be passed as its argument, effectively calling <code>sendMessage(&quot;info&quot;)</code>,
-despite the argument not appearing in the calling code.</p>
+<!--
+However the expression `(action "sendMessage" "info")` used in passing the action to the component creates a closure,
+i.e. an object that binds the parameter we've provided to the function specified.
+So now when the action is invoked, that parameter will automatically be passed as its argument, effectively calling `sendMessage("info")`,
+despite the argument not appearing in the calling code.
+-->
 
-<p>So far in our example, the action we have passed to <code>button-with-confirmation</code> is a function that accepts one argument,
-<code>messageType</code>.
-Suppose we want to extend this by allowing <code>sendMessage</code> to take a second argument,
-the actual text of the message the user is sending:</p>
+<p>なぜかというと、アクションをコンポーネントに渡す際に使用した式<code>(action &quot;sendMessage&quot; &quot;info&quot;)</code>はクロージャーを作成するからです。
+クロージャーは指定した関数と渡した引数がバインドされたオブジェクトです。
+したがって、アクションが呼び出されると、バインドされた引数が引数として自動的に渡され、アクションを呼び出している部分で引数が書かれていないにも関わらず、実際には<code>sendMessage(&quot;info&quot;)</code>が呼び出されます。</p>
+
+<!--
+So far in our example, the action we have passed to `button-with-confirmation` is a function that accepts one argument,
+`messageType`.
+Suppose we want to extend this by allowing `sendMessage` to take a second argument,
+the actual text of the message the user is sending:
+-->
+
+<p>これまでの例では、 <code>button-with-confirmation</code>に渡されたアクションは、<code>messageType</code>という引数を1つ取る関数でした。
+次は<code>sendMessage</code>の第2引数に、ユーザーが送信するメッセージのテキストを取るように変更しましょう。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -577,17 +772,33 @@ the actual text of the message the user is sending:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>We want to arrange for the action to be invoked from within <code>button-with-confirmation</code> with both arguments.
-We&#39;ve seen already that if we provide a <code>messageType</code> value to the <code>action</code> helper when we insert <code>button-with-confirmation</code> into its parent <code>send-message</code> template,
-that value will be passed to the <code>sendMessage</code> action as its first argument automatically when invoked as <code>onConfirm</code>.
-If we subsequently pass a single additional argument to <code>onConfirm</code> explicitly,
-that argument will be passed to <code>sendMessage</code> as its second argument
-(This ability to provide arguments to a function one at a time is known as <a href="https://en.wikipedia.org/wiki/Currying">currying</a>).</p>
+<!--
+We want to arrange for the action to be invoked from within `button-with-confirmation` with both arguments.
+We've seen already that if we provide a `messageType` value to the `action` helper when we insert `button-with-confirmation` into its parent `send-message` template,
+that value will be passed to the `sendMessage` action as its first argument automatically when invoked as `onConfirm`.
+If we subsequently pass a single additional argument to `onConfirm` explicitly,
+that argument will be passed to `sendMessage` as its second argument
+(This ability to provide arguments to a function one at a time is known as [currying](https://en.wikipedia.org/wiki/Currying)).
+-->
 
-<p>In our case, the explicit argument that we pass to <code>onConfirm</code> will be the required <code>messageText</code>.
-However, remember that internally our <code>button-with-confirmation</code> component does not know or care that it is being used in a messaging application.
-Therefore within the component&#39;s javascript file,
-we will use a property <code>confirmValue</code> to represent that argument and pass it to <code>onConfirm</code> as shown here:</p>
+<p>この2つの引数で<code>button-with-confirmation</code>の中から呼び出されるアクションを手配したいと思っています。
+先程、<code>send-message</code>テンプレートに<code>button-with-confirmation</code>を挿入する時に、<code>action</code>ヘルパーに<code>messageType</code>値を与えると、
+<code>onConfirm</code>として呼び出された時に、その値が<code>sendMessage</code>アクションの第1引数に自動的に渡されることを確認しました。
+続いて明示的に<code>onConfirm</code>に引数を一つを渡すと、
+その引数は2番目の引数として<code>sendMessage</code>に渡されます。
+(別のところで関数に引数を渡せるこの機能は<a href="https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%AA%E3%83%BC%E5%8C%96">カリー化</a>と呼ばれます)。</p>
+
+<!--
+In our case, the explicit argument that we pass to `onConfirm` will be the required `messageText`.
+However, remember that internally our `button-with-confirmation` component does not know or care that it is being used in a messaging application.
+Therefore within the component's javascript file,
+we will use a property `confirmValue` to represent that argument and pass it to `onConfirm` as shown here:
+-->
+
+<p>上記の場合、<code>onConfirm</code>に明示的に渡す引数の<code>messageText</code>は省略できません。
+しかし、内部的には、<code>button-with-confirmation</code>コンポーネントはその引数がアプリケーションで使われていることは知らないか気にしません。
+したがって、以下に示すように、コンポーネントのJavaScriptファイル内で、
+その引数を表すために<code>confirmValue</code>というプロパティを使い、<code>onConfirm</code>に渡します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -629,10 +840,15 @@ we will use a property <code>confirmValue</code> to represent that argument and 
 </pre></td>
 </tr></table>
 </div></div>
-<p>In order for <code>confirmValue</code> to take on the value of the message text,
-we&#39;ll bind the property to the value of a user input field that will appear when the button is clicked.
+<!--
+In order for `confirmValue` to take on the value of the message text,
+we'll bind the property to the value of a user input field that will appear when the button is clicked.
 To accomplish this,
-we&#39;ll first modify the component so that it can be used in block form and we will <a href="../wrapping-content-in-a-component/">yield</a> <code>confirmValue</code> to the block within the <code>&quot;confirmDialog&quot;</code> element:</p>
+we'll first modify the component so that it can be used in block form and we will [yield](../wrapping-content-in-a-component/) `confirmValue` to the block within the `"confirmDialog"` element:
+-->
+
+<p><code>confirmValue</code>がメッセージテキストの値を得るためには、ボタンをクリックしたときに表示されるテキストフィールドの値とこのプロパティをバインドします。
+これを実現するために、、まずブロック形式で使用できるようにコンポーネントを変更し、<code>confirmDialog</code>要素内のブロックに<code>confirmValue</code>を<a href="../wrapping-content-in-a-component/">yield</a>で渡します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -660,8 +876,12 @@ we&#39;ll first modify the component so that it can be used in block form and we
 </pre></td>
 </tr></table>
 </div></div>
-<p>With this modification,
-we can now use the component in <code>send-message</code> to wrap a text input element whose <code>value</code> attribute is set to <code>confirmValue</code>:</p>
+<!--
+With this modification,
+we can now use the component in `send-message` to wrap a text input element whose `value` attribute is set to `confirmValue`:
+-->
+
+<p>この変更により、<code>send-message</code>の中でこのコンポーネントを使用してテキストフィールドをラップし、テキストフィールドの<code>value</code>属性を<code>confirmValue</code>に設定することができます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -685,13 +905,28 @@ we can now use the component in <code>send-message</code> to wrap a text input e
 </pre></td>
 </tr></table>
 </div></div>
-<p>When the user enters their message into the input field,
-the message text will now be available to the component as <code>confirmValue</code>.
-Then, once they click the &quot;OK&quot; button, the <code>submitConfirm</code> action will be triggered, calling <code>onConfirm</code> with the provided <code>confirmValue</code>,
-thus invoking the <code>sendMessage</code> action in <code>send-message</code> with both the <code>messageType</code> and <code>messageText</code> arguments.</p>
-<h2 id="toc_Invoking-Actions-Directly-on-Component-Collaborators" class="anchorable-toc">Invoking Actions Directly on Component Collaborators</h2>
-<p>Actions can be invoked on objects other than the component directly from the template.  For example, in our
-<code>send-message</code> component we might include a service that processes the <code>sendMessage</code> logic.</p>
+<!--
+When the user enters their message into the input field,
+the message text will now be available to the component as `confirmValue`.
+Then, once they click the "OK" button, the `submitConfirm` action will be triggered, calling `onConfirm` with the provided `confirmValue`,
+thus invoking the `sendMessage` action in `send-message` with both the `messageType` and `messageText` arguments.
+-->
+
+<p>ユーザーがメッセージをテキストフィールドに入力した値は、コンポーネントの<code>confirmValue</code>として参照できます。
+次に、&quot;OK&quot;ボタンをクリックすると、<code>submitConfirm</code>アクションが実行され、<code>onConfirm</code>に<code>confirmValue</code>を渡して呼び出し、
+<code>send-message</code>コンポーネントの<code>sendMessage</code>アクションが<code>messageType</code>と<code>messageText</code>が引数に渡されて呼び出されます。</p>
+
+<!--
+## Invoking Actions Directly on Component Collaborators
+-->
+<h2 id="toc_コンポーネント内のオブジェクトのアクションを直接呼び出す" class="anchorable-toc">コンポーネント内のオブジェクトのアクションを直接呼び出す</h2>
+<!--
+Actions can be invoked on objects other than the component directly from the template.  For example, in our
+`send-message` component we might include a service that processes the `sendMessage` logic.
+-->
+
+<p>アクションは、テンプレートからコンポーネント以外のオブジェクトに対しても直接呼び出すことができます。
+例えば、<code>send-message</code>コンポーネントで、<code>sendMessage</code>ロジックを処理するサービスを入れたとします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -719,7 +954,11 @@ thus invoking the <code>sendMessage</code> action in <code>send-message</code> w
 </pre></td>
 </tr></table>
 </div></div>
-<p>We can tell the action to invoke the <code>sendMessage</code> action directly on the messaging service with the <code>target</code> attribute.</p>
+<!--
+We can tell the action to invoke the `sendMessage` action directly on the messaging service with the `target` attribute.
+-->
+
+<p><code>target</code>属性を使ってmessagingサービスの<code>sendMessage</code>を直接呼び出すようにアクションを伝えることができます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -743,8 +982,12 @@ thus invoking the <code>sendMessage</code> action in <code>send-message</code> w
 </pre></td>
 </tr></table>
 </div></div>
-<p>By supplying the <code>target</code> attribute, the action helper will look to invoke the <code>sendMessage</code> action directly on the messaging
-service, saving us from writing code on the component that just passes the action along to the service.</p>
+<!--
+By supplying the `target` attribute, the action helper will look to invoke the `sendMessage` action directly on the messaging
+service, saving us from writing code on the component that just passes the action along to the service.
+-->
+
+<p><code>target</code>属性を指定することで、actionヘルパーはmessagingサービスの<code>sendMessage</code>を直接呼び出すようになり、アクションをサービスに渡すだけのコードをコンポーネントに書かなくて済みます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -773,11 +1016,20 @@ service, saving us from writing code on the component that just passes the actio
 });
 </pre></td>
 </tr></table>
-</div></div><h2 id="toc_Destructuring-Objects-Passed-as-Action-Arguments" class="anchorable-toc">Destructuring Objects Passed as Action Arguments</h2>
-<p>A component will often not know what information a parent needs to process an action, and will just pass all the
+</div></div>
+<!--
+## Destructuring Objects Passed as Action Arguments
+-->
+<h2 id="toc_アクションの引数に渡したオブジェクトの分解" class="anchorable-toc">アクションの引数に渡したオブジェクトの分解</h2>
+<!--
+A component will often not know what information a parent needs to process an action, and will just pass all the
 information it has.
-For example, our <code>user-profile</code> component is going to notify its parent, <code>system-preferences-editor</code>, that a
-user&#39;s account was deleted, and passes along with it the full user profile object.</p>
+For example, our `user-profile` component is going to notify its parent, `system-preferences-editor`, that a
+user's account was deleted, and passes along with it the full user profile object.
+-->
+
+<p>多くの場合、子コンポーネントは、親がアクションを処理するために必要な情報を把握せず、ただ持っている情報をすべて渡すことがあります。
+例えば、<code>user-profile</code>コンポーネントは、親の<code>system-preferences-editor</code>に、ユーザのアカウントが削除されたことを通知し、ユーザプロファイルオブジェクトごと渡します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -815,9 +1067,14 @@ user&#39;s account was deleted, and passes along with it the full user profile o
 </pre></td>
 </tr></table>
 </div></div>
-<p>All our <code>system-preferences-editor</code> component really needs to process a user deletion is an account ID.
-For this case, the action helper provides the <code>value</code> attribute to allow a parent component to dig into the passed
-object to pull out only what it needs.</p>
+<!--
+All our `system-preferences-editor` component really needs to process a user deletion is an account ID.
+For this case, the action helper provides the `value` attribute to allow a parent component to dig into the passed
+object to pull out only what it needs.
+-->
+
+<p><code>system-preferences-editor</code>コンポーネントがユーザの削除に必要な情報はそのユーザーIDだけです。
+そのような場合のために、アクションヘルパーには、親コンポーネントが渡されたオブジェクから必要なものだけを取得できる<code>value</code>属性があります。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -831,7 +1088,11 @@ object to pull out only what it needs.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Now when the <code>system-preferences-editor</code> handles the delete action, it receives only the user&#39;s account <code>id</code> string.</p>
+<!--
+Now when the `system-preferences-editor` handles the delete action, it receives only the user's account `id` string.
+-->
+
+<p>これにより、<code>system-preferences-editor</code>が削除アクションを実行する時はユーザのアカウント<code>id</code>だけを受け取るようになります。。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -860,13 +1121,31 @@ object to pull out only what it needs.</p>
 });
 </pre></td>
 </tr></table>
-</div></div><h2 id="toc_Calling-Actions-Up-Multiple-Component-Layers" class="anchorable-toc">Calling Actions Up Multiple Component Layers</h2>
-<p>When your components go multiple template layers deep, it is common to need to handle an action several layers up the tree. 
-Using the action helper, parent components can pass actions to child components through templates alone without adding JavaScript code to those child components.</p>
+</div></div>
+<!--
+## Calling Actions Up Multiple Component Layers
+-->
+<h2 id="toc_複数のコンポーネントレイヤー上のアクションの実行" class="anchorable-toc">複数のコンポーネントレイヤー上のアクションの実行</h2>
+<!--
+When your components go multiple template layers deep, it is common to need to handle an action several layers up the tree. 
+Using the action helper, parent components can pass actions to child components through templates alone without adding JavaScript code to those child components.
+-->
 
-<p>For example, say we want to move account deletion from the <code>user-profile</code> component to its parent <code>system-preferences-editor</code>.</p>
+<p>コンポーネントが複数のテンプレートレイヤーに深くなると、いくつか上のレイヤーで処理する必要がある時がよくあります。
+actionヘルパーを使う時に、テンプレートだけでアクションを親コンポーネントから子コンポーネントに渡すことができます。
+JavaScriptコードを子コンポーネントに追加する必要はありません。</p>
 
-<p>First we would move the <code>deleteUser</code> action from <code>user-profile.js</code> to the actions object on <code>system-preferences-editor</code>.</p>
+<!--
+For example, say we want to move account deletion from the `user-profile` component to its parent `system-preferences-editor`.
+-->
+
+<p>例えば、アカウントの削除を<code>user-profile</code>コンポーネントから親<code>system-preferences-editor</code>に移したいとしましょう。</p>
+
+<!--
+First we would move the `deleteUser` action from `user-profile.js` to the actions object on `system-preferences-editor`.
+-->
+
+<p>まず<code>deleteUser</code>アクションを<code>user-profile.js</code>から <code>system-preferences-editor</code>のactionsオブジェクトに移します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -900,8 +1179,10 @@ Using the action helper, parent components can pass actions to child components 
 </pre></td>
 </tr></table>
 </div></div>
-<p>Then our <code>system-preferences-editor</code> template passes its local <code>deleteUser</code> action into the <code>user-profile</code> as that
-component&#39;s <code>deleteCurrentUser</code> property.</p>
+<!--
+Then our `system-preferences-editor` template passes its local `deleteUser` action into the `user-profile` as that
+component's `deleteCurrentUser` property.
+-->
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -919,9 +1200,21 @@ component&#39;s <code>deleteCurrentUser</code> property.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The action <code>deleteUser</code> is in quotes, since <code>system-preferences-editor</code> is where the action is defined now. Quotes indicate that the action should be looked for in <code>actions</code> local to that component, rather than in those that have been passed from a parent.</p>
+<p>次に、<code>system-preferences-editor</code>テンプレートでローカルの<code>deleteUser</code>アクションを<code>user-profile</code>コンポーネントの<code>deleteCurrentUser</code>プロパティとして渡します。</p>
 
-<p>In our <code>user-profile.hbs</code> template we change our action to call <code>deleteCurrentUser</code> as passed above.</p>
+<!--
+The action `deleteUser` is in quotes, since `system-preferences-editor` is where the action is defined now. Quotes indicate that the action should be looked for in `actions` local to that component, rather than in those that have been passed from a parent.
+-->
+
+<p>アクション<code>deleteUser</code>は引用符で囲まれています。
+これは、<code>system-preferences-editor</code>にアクションが定義されているためです。
+引用符は、アクションが、親から渡されたアクションではなく、そのコンポーネントにローカルな<code>actions</code>で検索されるべきであることを示します。</p>
+
+<!--
+In our `user-profile.hbs` template we change our action to call `deleteCurrentUser` as passed above.
+-->
+
+<p><code>user-profile.hbs</code>テンプレートでは、上記で指定した<code>deleteCurrentUser</code>を呼び出すようにアクションを変更します。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -941,9 +1234,18 @@ component&#39;s <code>deleteCurrentUser</code> property.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Note that <code>deleteCurrentUser</code> is no longer in quotes here as opposed to <a href="#toc_passing-the-action-to-the-component">previously</a>. Quotes are used to initially pass the action down the component tree, but at every subsequent level you are instead passing the actual function reference (without quotes) in the action helper.</p>
+<!--
+Note that `deleteCurrentUser` is no longer in quotes here as opposed to [previously](#toc_passing-the-action-to-the-component). Quotes are used to initially pass the action down the component tree, but at every subsequent level you are instead passing the actual function reference (without quotes) in the action helper.
+-->
 
-<p>Now when you confirm deletion, the action goes straight to the <code>system-preferences-editor</code> to be handled in its local context.</p>
+<p><code>deleteCurrentUser</code>は、<a href="#toc_%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%81%AB%E6%B8%A1%E3%81%99">前述</a>とは違い、ここで引用符で囲まれていないことに注意してください。
+引用符は、最初にアクションをコンポーネントツリーに渡すために使用されますが、後続の各レベルでは、実際の関数リファレンス(引用符なし)をactionヘルパーに渡しています。</p>
+
+<!--
+Now when you confirm deletion, the action goes straight to the `system-preferences-editor` to be handled in its local context.
+-->
+
+<p>変更後、削除を許可すると、アクションが<code>system-preferences-editor</code>に直接送られ、ローカルコンテキストで処理されます。</p>
 
 
 

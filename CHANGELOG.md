@@ -6,6 +6,7 @@
 - [x] Components - Customizing a Component's Element
 - [x] Components - Using Block Params
 - [x] Components - Handling Events
+- [x] Components - Triggering Changes with Actions
 
 ## 2018.01.11
 
