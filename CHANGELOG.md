@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2018.01.20
+
+- Sync [#52](https://github.com/dopin/emberjs-guides-ja/pull/52)
+
 ## 2018.01.13
 
 - Sync [#43](https://github.com/dopin/emberjs-guides-ja/pull/43)
