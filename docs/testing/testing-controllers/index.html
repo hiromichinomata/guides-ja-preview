@@ -247,7 +247,7 @@ controller post</code>, and <code>ember generate controller comments</code>.</p>
 6
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> Controller from <span class="string"><span class="delimiter">'</span><span class="content">@ember/controller</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> { alias } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/object/computed</span><span class="delimiter">&quot;</span></span>;
+<span class="reserved">import</span> { alias } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object/computed</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">default</span> Controller.extend({
   <span class="key">title</span>: alias(<span class="string"><span class="delimiter">'</span><span class="content">model.title</span><span class="delimiter">'</span></span>)
@@ -270,7 +270,7 @@ controller post</code>, and <code>ember generate controller comments</code>.</p>
 7
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> Controller, { inject as controller } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/controller</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> { alias } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/object/computed</span><span class="delimiter">&quot;</span></span>;
+<span class="reserved">import</span> { alias } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object/computed</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">default</span> Controller.extend({
   <span class="key">post</span>: controller(),
@@ -297,7 +297,7 @@ our third argument that has the controller&#39;s <code>needs</code>.</p>
 7
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> { moduleFor, test } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/object</span><span class="delimiter">&quot;</span></span>;
+<span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
 <span class="reserved">import</span> { run } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/runloop</span><span class="delimiter">'</span></span>;
 
 moduleFor(<span class="string"><span class="delimiter">'</span><span class="content">controller:comments</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Comments Controller</span><span class="delimiter">'</span></span>, {
@@ -348,7 +348,7 @@ moduleFor(<span class="string"><span class="delimiter">'</span><span class="cont
 31
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> { moduleFor, test } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/object</span><span class="delimiter">&quot;</span></span>;
+<span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
 <span class="reserved">import</span> { run } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/runloop</span><span class="delimiter">'</span></span>;
 
 moduleFor(<span class="string"><span class="delimiter">'</span><span class="content">controller:comments</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Comments Controller</span><span class="delimiter">'</span></span>, {

@@ -150,7 +150,7 @@ Consider the following:
 6
 7
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> Route from <span class="string"><span class="delimiter">'</span><span class="content">@ember/routing/router</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> Route from <span class="string"><span class="delimiter">'</span><span class="content">@ember/routing/route</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">default</span> Route.extend({
   model() {
@@ -424,9 +424,9 @@ we can implement the `loading` action and let it bubble by returning `true`.
 14
 15
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> Route from <span class="string"><span class="delimiter">'</span><span class="content">@ember/routing/route</span><span class="delimiter">'</span></span>;
 
-<span class="reserved">export</span> <span class="keyword">default</span> Ember.Route.extend({
+<span class="reserved">export</span> <span class="keyword">default</span> Route.extend({
   ...
   actions: {
     loading(transition) {
@@ -637,9 +637,9 @@ we can handle the `error` event and let it bubble by returning `true`.
 13
 14
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> Route from <span class="string"><span class="delimiter">'</span><span class="content">@ember/routing/route</span><span class="delimiter">'</span></span>;
 
-<span class="reserved">export</span> <span class="keyword">default</span> Ember.Route.extend({
+<span class="reserved">export</span> <span class="keyword">default</span> Route.extend({
   model(params) {
     <span class="keyword">return</span> <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">store</span><span class="delimiter">'</span></span>).findAll(<span class="string"><span class="delimiter">'</span><span class="content">privileged-model</span><span class="delimiter">'</span></span>);
   },

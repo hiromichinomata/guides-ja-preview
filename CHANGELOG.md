@@ -1,8 +1,12 @@
 # CHANGELOG
 
+## 2018.01.28
+
+- Sync[#53](https://github.com/dopin/emberjs-guides-ja/pull/53)
+
 ## 2018.01.20
 
-- Sync [#52](https://github.com/dopin/emberjs-guides-ja/pull/52)
+- Sync[#52](https://github.com/dopin/emberjs-guides-ja/pull/52)
 - [x] Controllers - Introduction
 
 ## 2018.01.13

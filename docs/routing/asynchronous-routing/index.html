@@ -263,14 +263,16 @@ A basic example:
 14
 15
 16
+17
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
 <span class="reserved">import</span> RSVP from <span class="string"><span class="delimiter">'</span><span class="content">rsvp</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> { later } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/runloop</span><span class="delimiter">'</span></span>;
 
-<span class="reserved">export</span> <span class="keyword">default</span> Ember.Route.extend({
+<span class="reserved">export</span> <span class="keyword">default</span> Route.extend({
   model() {
     <span class="keyword">return</span> <span class="keyword">new</span> RSVP.Promise(<span class="keyword">function</span>(resolve) {
-      Ember.run.later(<span class="keyword">function</span>() {
+      later(<span class="keyword">function</span>() {
         resolve({ <span class="key">msg</span>: <span class="string"><span class="delimiter">'</span><span class="content">Hold Your Horses</span><span class="delimiter">'</span></span> });
       }, <span class="integer">3000</span>);
     });
@@ -338,10 +340,10 @@ Promiseが失敗すると、そのルートで<code>error</code>イベントが�
 
 <!--
 ```app/routes/good-for-nothing.js
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 import RSVP from 'rsvp';
 
-export default Ember.Route.extend({
+export default Route.extend({
   model() {
     return RSVP.reject("FAIL");
   },
@@ -389,10 +391,10 @@ export default Ember.Route.extend({
 <strong>20</strong>
 21
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> Route from <span class="string"><span class="delimiter">'</span><span class="content">@ember/routing/route</span><span class="delimiter">'</span></span>;
 <span class="reserved">import</span> RSVP from <span class="string"><span class="delimiter">'</span><span class="content">rsvp</span><span class="delimiter">'</span></span>;
 
-<span class="reserved">export</span> <span class="keyword">default</span> Ember.Route.extend({
+<span class="reserved">export</span> <span class="keyword">default</span> Route.extend({
   model() {
     <span class="keyword">return</span> RSVP.reject(<span class="string"><span class="delimiter">&quot;</span><span class="content">FAIL</span><span class="delimiter">&quot;</span></span>);
   },
@@ -455,9 +457,9 @@ Promiseはチェーン(連鎖)できるので、
 <strong>10</strong>
 11
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> Route from <span class="string"><span class="delimiter">'</span><span class="content">@ember/routing/route</span><span class="delimiter">'</span></span>;
 
-<span class="reserved">export</span> <span class="keyword">default</span> Ember.Route.extend({
+<span class="reserved">export</span> <span class="keyword">default</span> Route.extend({
   model() {
     <span class="keyword">return</span> iHopeThisWorks().<span class="keyword">catch</span>(<span class="keyword">function</span>() {
       <span class="comment">// Promise rejected, fulfill with some default value to</span>
