@@ -3,6 +3,7 @@
 ## 2018.01.28
 
 - Sync[#53](https://github.com/dopin/emberjs-guides-ja/pull/53)
+- [x] Models - Introduction
 
 ## 2018.01.20
 
