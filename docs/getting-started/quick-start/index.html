@@ -188,8 +188,8 @@ By providing everything you need to build production-ready web applications in a
 Ember makes starting new projects a breeze.
 -->
 
-<p>プロダクト向けのWebアプリケーションのビルドできるように、
-必要なもの全てを1つのパッケージで入ることで、
+<p>プロダクト向けのWebアプリケーションをビルドできるように、
+必要なもの全てを1つのパッケージに入れることで、
 Emberでは新しいプロジェクトを楽に始めることができます。</p>
 
 <!--
@@ -383,7 +383,7 @@ We do that by specifying a _model_ for that route,
 and we can specify a model by editing `app/routes/scientists.js`.
 -->
 
-<p><code>scientists</code> のテンプレートが描画されましたので、いくつかデータを描画してましょう。
+<p><code>scientists</code> のテンプレートが描画されましたので、いくつかデータを描画してみましょう。
 データを表示するには、そのルートの <em>model</em> を指定します。 modelの指定は、
 <code>app/routes/scientists.js</code> を変更します。</p>
 
@@ -483,7 +483,7 @@ Emberではテンプレートを再利用可能なコンポーネントに簡単
 Let's create a `people-list` component that we can use in multiple places to show a list of people.
 -->
 
-<p>人物一覧内 で繰り返す使える<code>people-list</code>コンポネーントを作成してみましょう。</p>
+<p>人物一覧内で繰り返し使える<code>people-list</code>コンポーネントを作成してみましょう。</p>
 
 <!--
 As usual, there's a generator that makes this easy for us.
@@ -544,7 +544,7 @@ Components look like HTML tags but instead of using angle brackets (`<tag>`) the
 
 <p>テンプレートを保存し、 <code>scientists</code> テンプレートに戻ります。
 前のコードをコンポーネントを使ったコードに置き換えます。
-コンポーネオントはHTMLタグのように見えますが、山括弧(<code>&lt;tag&gt;</code>)の代わりに2回波括弧(<code>{{component}}</code>)を使います。</p>
+コンポーネントはHTMLタグのように見えますが、山括弧(<code>&lt;tag&gt;</code>)の代わりに2回波括弧(<code>{{component}}</code>)を使います。</p>
 
 <!--
 We're going to tell our component:
@@ -604,7 +604,7 @@ By re-using the `people-list` component, you can do it in almost no code at all.
 -->
 
 <p>新しいルートを作成し違う人物一覧を表示すれば実際に分かるでしょう。
-練習として、 有名なプログラマーの一覧を表示する <code>programmers</code> ルートを作成してみるのもいいですね。</p>
+練習として、有名なプログラマーの一覧を表示する <code>programmers</code> ルートを作成してみるのもいいですね。</p>
 
 <!--
 ## Click Events
@@ -618,7 +618,7 @@ Ember makes this easy to do.
 First add an `action` helper to the `li` in your `people-list` component.
 -->
 
-<p>ここまでデータの一覧表示をやりましたが、まだユーザがその情報を操作したりできません。
+<p>ここまでデータの一覧表示をやりましたが、まだユーザがその情報を操作できません。
 Webアプリケーションでは、クリックやホバーといったイベントを使いたいでしょう。
 Emberでは簡単にそれをすることができます。
 まず始めに、<code>people-list</code>コンポーネント内の<code>li</code>に<code>action</code>ヘルパーを追加します。</p>
