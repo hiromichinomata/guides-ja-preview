@@ -119,7 +119,7 @@ URLが入力される方法はいくつか存在します。</p>
 <li>ユーザがアプリにアクセスする</li>
 <li>ユーザが手動で変える、ブラウザバックしたりアドレスバーで変更するなど</li>
 <li>アプリ内のリンクをクリックする</li>
-<li>アプリ内のその他のイベントによりURL変更が変わる</li>
+<li>アプリ内のその他のイベントによりURLが変更される</li>
 </ul>
 
 <!--
@@ -203,7 +203,7 @@ Templates can also display properties provided to them from their context, which
 Here, `{{name}}` is a property provided by the template's context.
 -->
 
-<p>この<code>{{name}}</code>はテプレートのコンテキストから与えられるプロパティです。</p>
+<p>この<code>{{name}}</code>はテンプレートのコンテキストから与えられるプロパティです。</p>
 
 <!--
 Besides properties, double curly braces (`{{}}`) may also contain
@@ -249,7 +249,7 @@ While templates describe how a user interface looks, components control how the 
 Components consist of two parts: a template written in Handlebars, and a source file written in JavaScript that defines the component's behavior. For example, our property rental application might have a component for displaying all the rentals called `all-rentals`, and another component for displaying an individual rental called `rental-tile`. The `rental-tile` component might define a behavior that lets the user hide and show the image property of the rental.
 -->
 
-<p>コンポーネントは、Handlbars構文で書かれたテンプレートと、振る舞いを書いたJavaScriptの2つから成り立ちます。例えば、賃貸物件アプリで、全物件を表示する<code>all-rentals</code>コンポーネントがあり、一つの物件を表示する<code>rental-tile</code>コンポーネントがあるとして、<code>rental-tile</code>コンポーネントに、ユーザが物件画像の表示や非表示ができるようにコードを書く、という感じです。</p>
+<p>コンポーネントは、Handlebars構文で書かれたテンプレートと、振る舞いを書いたJavaScriptの2つから成り立ちます。例えば、賃貸物件アプリで、全物件を表示する<code>all-rentals</code>コンポーネントがあり、一つの物件を表示する<code>rental-tile</code>コンポーネントがあるとして、<code>rental-tile</code>コンポーネントに、ユーザが物件画像の表示や非表示ができるようにコードを書く、という感じです。</p>
 
 <!--
 Let's see these core concepts in action by building a property rental application in the next lesson.
