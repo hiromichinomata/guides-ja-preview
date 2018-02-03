@@ -28,38 +28,93 @@
       <script src="../../javascripts/common-modern.js"></script>
     <!--<![endif]-->
 
-    <header class="header">
-  <nav role="navigation" aria-label="main">
-    <ul class="header-nav container">
-      <li class="header-logo">
-        <a href="http://emberjs.com/"><span class="visually-hidden">Emberホームページ</span></a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/learn">参考</a>
-      </li>
-      <li class="active" aria-label="You are here">
-        <a href="/">ガイド</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/api">API</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/community">コミュニティ</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/blog">ブログ</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/builds">リリース</a>
-      </li>
-
-      <li class="header-search">
-        <form>
-          <input type="text" id="search-input" class="search-input" placeholder="ガイド内検索"/>
-        </form>
-      </li>
-    </ul>
-  </nav>
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">切替</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="http://emberjs.com"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ドキュメント <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="http://emberjs.com/guides">ガイド</a></li>
+      <li><a href="http://emberjs.com/api">APIリファレンス</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="http://emberjs.com/learn">学ぶ</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">リリース <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="http://emberjs.com/builds">チャネル</a></li>
+      <li><a href="http://emberjs.com/builds/release">-- ステーブル</a></li>
+      <li><a href="http://emberjs.com/builds/beta">-- ベータ</a></li>
+      <li><a href="http://emberjs.com/builds/canary">-- カナリア</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="http://emberjs.com/deprecations">廃止予定</a></li>
+      <li><a href="http://emberjs.com/statusboard">ステータスボード</a></li>
+     </ul>
+    </li>
+    <li><a href="http://emberjs.com/blog">ブログ</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">コミュニティ <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="http://emberjs.com/community">Emberコミュニティ</a></li>
+       <li><a href="http://emberjs.com/guidelines">ガイドライン</a></li>
+       <li><a href="http://github.com/emberjs/">貢献(Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/community/meetups">イベント</a></li>
+       <li><a href="http://jobs.emberjs.com/">採用情報</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="http://emberjs.com/team">チーム</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/logos">ロゴ</a></li>
+       <li><a href="http://emberjs.com/mascots">マスコット</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/ember-users">Ember採用企業</a></li>
+       <li><a href="http://emberjs.com/sponsors">スポンサー</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/legal">法関連</a></li>
+       <li><a href="http://emberjs.com/security">セキュリティ</a></li>
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">検索</label>
+        <input type="text"
+        class="form-control search input ds-input"
+        placeholder="検索..."
+        id="search-input"
+        role="combobox"
+        aria-expanded="false"
+        aria-owns="algolia-autocomplete-listbox-0"
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false"
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
 </header>
 
 
@@ -184,7 +239,7 @@ That file should export a function wrapped with [`Ember.Helper.helper()`](http:/
 11
 12
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> { helper } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/component/helper</span><span class="delimiter">&quot;</span></span>
+  <td class="code"><pre><span class="reserved">import</span> { helper } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/component/helper</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">function</span> <span class="function">formatCurrency</span>([value, ...rest]) {
   let dollars = Math.floor(value / <span class="integer">100</span>);
@@ -308,7 +363,7 @@ An array of these arguments is passed to the helper function:
 9
 <strong>10</strong>
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> { helper } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/component/helper</span><span class="delimiter">&quot;</span></span>
+  <td class="code"><pre><span class="reserved">import</span> { helper } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/component/helper</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">function</span> <span class="function">myHelper</span>(params) {
   let [arg1, arg2] = params;
@@ -344,7 +399,7 @@ the code. This example is equivalent to the above example (note the function sig
 7
 8
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> { helper } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/component/helper</span><span class="delimiter">&quot;</span></span>
+  <td class="code"><pre><span class="reserved">import</span> { helper } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/component/helper</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">function</span> <span class="function">myHelper</span>([arg1, arg2]) {
   console.log(arg1); <span class="comment">// =&gt; &quot;hello&quot;</span>
@@ -660,7 +715,7 @@ into a class-based helper:
 11
 12
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> Helper from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/component/helper</span><span class="delimiter">&quot;</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> Helper from <span class="string"><span class="delimiter">'</span><span class="content">@ember/component/helper</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">default</span> Helper.extend({
   compute([value, ...rest], hash) {
@@ -714,23 +769,23 @@ service that welcomes users by their name if they're logged in:
 15
 16
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> Helper from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/component/helper</span><span class="delimiter">&quot;</span></span>;
-<span class="reserved">import</span> { inject as service } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/service</span><span class="delimiter">&quot;</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> Helper from <span class="string"><span class="delimiter">'</span><span class="content">@ember/component/helper</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> { inject as service } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/service;
 
-<span class="reserved">export</span> <span class="keyword">default</span> Helper.extend({
-  <span class="key">authentication</span>: service(),
+export default Helper.extend({
+  authentication: service(),
 
   compute() {
-    let authentication = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">authentication</span><span class="delimiter">'</span></span>);
+    let authentication = this.get(</span><span class="delimiter">'</span></span>authentication<span class="string"><span class="delimiter">'</span><span class="content">);
 
-    <span class="keyword">if</span> (authentication.get(<span class="string"><span class="delimiter">'</span><span class="content">isAuthenticated</span><span class="delimiter">'</span></span>)) {
-      <span class="keyword">return</span> <span class="string"><span class="delimiter">'</span><span class="content">Welcome back, </span><span class="delimiter">'</span></span> + authentication.get(<span class="string"><span class="delimiter">'</span><span class="content">username</span><span class="delimiter">'</span></span>);
-    } <span class="keyword">else</span> {
-      <span class="keyword">return</span> <span class="string"><span class="delimiter">'</span><span class="content">Not logged in</span><span class="delimiter">'</span></span>;
+    if (authentication.get(</span><span class="delimiter">'</span></span>isAuthenticated<span class="string"><span class="delimiter">'</span><span class="content">)) {
+      return </span><span class="delimiter">'</span></span>Welcome back, <span class="string"><span class="delimiter">'</span><span class="content"> + authentication.get(</span><span class="delimiter">'</span></span>username<span class="string"><span class="delimiter">'</span><span class="content">);
+    } else {
+      return </span><span class="delimiter">'</span></span>Not logged <span class="keyword">in</span><span class="string"><span class="delimiter">'</span><span class="content">;
     }
   }
 });
-</pre></td>
+</span></span></pre></td>
 </tr></table>
 </div></div>
 <!--
@@ -765,7 +820,7 @@ For example, here's a `make-bold` helper that returns a string containing HTML:
 6
 7
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> { helper } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/component/helper</span><span class="delimiter">&quot;</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> { helper } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/component/helper</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">function</span> <span class="function">makeBold</span>([param, ...rest]) {
   <span class="keyword">return</span> <span class="error">`</span><span class="tag">&lt;b&gt;</span>${param}<span class="tag">&lt;/b&gt;</span><span class="error">`</span>;
@@ -824,7 +879,7 @@ escape the return value (that is, that it is _safe_) by using the
 7
 8
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> { helper } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/component/helper</span><span class="delimiter">&quot;</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> { helper } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/component/helper</span><span class="delimiter">'</span></span>;
 <span class="reserved">import</span> { htmlSafe } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/string</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">function</span> <span class="function">makeBold</span>([param, ...rest]) {
@@ -904,7 +959,7 @@ escape anything that may have come from an untrusted user with the
 <strong>10</strong>
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">&quot;</span><span class="content">ember</span><span class="delimiter">&quot;</span></span>;
-<span class="reserved">import</span> { helper } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/component/helper</span><span class="delimiter">&quot;</span></span>;
+<span class="reserved">import</span> { helper } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/component/helper</span><span class="delimiter">'</span></span>;
 <span class="reserved">import</span> { htmlSafe } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/string</span><span class="delimiter">&quot;</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">function</span> <span class="function">makeBold</span>([param, ...rest]) {

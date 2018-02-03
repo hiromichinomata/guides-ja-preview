@@ -28,38 +28,93 @@
       <script src="../../javascripts/common-modern.js"></script>
     <!--<![endif]-->
 
-    <header class="header">
-  <nav role="navigation" aria-label="main">
-    <ul class="header-nav container">
-      <li class="header-logo">
-        <a href="http://emberjs.com/"><span class="visually-hidden">Emberホームページ</span></a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/learn">参考</a>
-      </li>
-      <li class="active" aria-label="You are here">
-        <a href="/">ガイド</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/api">API</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/community">コミュニティ</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/blog">ブログ</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/builds">リリース</a>
-      </li>
-
-      <li class="header-search">
-        <form>
-          <input type="text" id="search-input" class="search-input" placeholder="ガイド内検索"/>
-        </form>
-      </li>
-    </ul>
-  </nav>
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">切替</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="http://emberjs.com"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ドキュメント <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="http://emberjs.com/guides">ガイド</a></li>
+      <li><a href="http://emberjs.com/api">APIリファレンス</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="http://emberjs.com/learn">学ぶ</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">リリース <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="http://emberjs.com/builds">チャネル</a></li>
+      <li><a href="http://emberjs.com/builds/release">-- ステーブル</a></li>
+      <li><a href="http://emberjs.com/builds/beta">-- ベータ</a></li>
+      <li><a href="http://emberjs.com/builds/canary">-- カナリア</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="http://emberjs.com/deprecations">廃止予定</a></li>
+      <li><a href="http://emberjs.com/statusboard">ステータスボード</a></li>
+     </ul>
+    </li>
+    <li><a href="http://emberjs.com/blog">ブログ</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">コミュニティ <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="http://emberjs.com/community">Emberコミュニティ</a></li>
+       <li><a href="http://emberjs.com/guidelines">ガイドライン</a></li>
+       <li><a href="http://github.com/emberjs/">貢献(Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/community/meetups">イベント</a></li>
+       <li><a href="http://jobs.emberjs.com/">採用情報</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="http://emberjs.com/team">チーム</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/logos">ロゴ</a></li>
+       <li><a href="http://emberjs.com/mascots">マスコット</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/ember-users">Ember採用企業</a></li>
+       <li><a href="http://emberjs.com/sponsors">スポンサー</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/legal">法関連</a></li>
+       <li><a href="http://emberjs.com/security">セキュリティ</a></li>
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">検索</label>
+        <input type="text"
+        class="form-control search input ds-input"
+        placeholder="検索..."
+        id="search-input"
+        role="combobox"
+        aria-expanded="false"
+        aria-owns="algolia-autocomplete-listbox-0"
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false"
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
 </header>
 
 
@@ -316,17 +371,25 @@ Update the content of the integration test to the following to fix it:
 6
 7
 8
-9
-<strong>10</strong>
+<span class="highlight-line removed">9</span>
+<span class="highlight-line removed"><strong>10</strong></span>
 <span class="highlight-line removed">11</span>
 <span class="highlight-line added">12</span>
-13
+<span class="highlight-line added">13</span>
 14
 15
-<span class="highlight-line removed">16</span>
-<span class="highlight-line added">17</span>
-18
-19</pre></td>
+16
+<span class="highlight-line removed">17</span>
+<span class="highlight-line added">18</span>
+19
+<strong>20</strong>
+<span class="highlight-line added">21</span>
+<span class="highlight-line added">22</span>
+<span class="highlight-line added">23</span>
+<span class="highlight-line added">24</span>
+<span class="highlight-line added">25</span>
+<span class="highlight-line added">26</span>
+<span class="highlight-line added">27</span></pre></td>
   <td class="code"><pre>
 <span class="reserved">import</span> { moduleForComponent, test } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
 <span class="reserved">import</span> hbs from <span class="string"><span class="delimiter">'</span><span class="content">htmlbars-inline-precompile</span><span class="delimiter">'</span></span>;
@@ -335,16 +398,25 @@ moduleForComponent(<span class="string"><span class="delimiter">'</span><span cl
   <span class="key">integration</span>: <span class="predefined-constant">true</span>
 });
 
-<span class="comment">// Replace this with your real tests.</span>
-test(<span class="string"><span class="delimiter">'</span><span class="content">it renders</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {
+<span class="highlight-line removed"><span class="comment">// Replace this with your real tests.</span></span>
+<span class="highlight-line removed">test(<span class="string"><span class="delimiter">'</span><span class="content">it renders</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {</span>
 <span class="highlight-line removed">  <span class="local-variable">this</span>.set(<span class="string"><span class="delimiter">'</span><span class="content">inputValue</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">1234</span><span class="delimiter">'</span></span>);</span>
-<span class="highlight-line added">  <span class="local-variable">this</span>.set(<span class="string"><span class="delimiter">'</span><span class="content">inputValue</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Standalone</span><span class="delimiter">'</span></span>);</span>
+<span class="highlight-line added">test(<span class="string"><span class="delimiter">'</span><span class="content">it renders correctly for a Standalone rental</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {</span>
+<span class="highlight-line added">  <span class="local-variable">this</span>.set(<span class="string"><span class="delimiter">'</span><span class="content">inputValue</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Estate</span><span class="delimiter">'</span></span>);</span>
 
   <span class="local-variable">this</span>.render(hbs<span class="error">`</span>{{rental-property-type inputValue}}<span class="error">`</span>);
 
 <span class="highlight-line removed">  assert.equal(<span class="local-variable">this</span>.<span class="predefined">$</span>().text().trim(), <span class="string"><span class="delimiter">'</span><span class="content">1234</span><span class="delimiter">'</span></span>);</span>
 <span class="highlight-line added">  assert.equal(<span class="local-variable">this</span>.<span class="predefined">$</span>().text().trim(), <span class="string"><span class="delimiter">'</span><span class="content">Standalone</span><span class="delimiter">'</span></span>);</span>
-});</pre></td>
+});
+
+<span class="highlight-line added">test(<span class="string"><span class="delimiter">'</span><span class="content">it renders correctly for a Community rental</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {</span>
+<span class="highlight-line added">  <span class="local-variable">this</span>.set(<span class="string"><span class="delimiter">'</span><span class="content">inputValue</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Apartment</span><span class="delimiter">'</span></span>);</span>
+<span class="highlight-line added"/>
+<span class="highlight-line added">  <span class="local-variable">this</span>.render(hbs<span class="error">`</span>{{rental-property-type inputValue}}<span class="error">`</span>);</span>
+<span class="highlight-line added"/>
+<span class="highlight-line added">  assert.equal(<span class="local-variable">this</span>.<span class="predefined">$</span>().text().trim(), <span class="string"><span class="delimiter">'</span><span class="content">Community</span><span class="delimiter">'</span></span>);</span>
+<span class="highlight-line added">});</span></pre></td>
 </tr></table>
 </div></div>
 

@@ -28,38 +28,93 @@
       <script src="../../javascripts/common-modern.js"></script>
     <!--<![endif]-->
 
-    <header class="header">
-  <nav role="navigation" aria-label="main">
-    <ul class="header-nav container">
-      <li class="header-logo">
-        <a href="http://emberjs.com/"><span class="visually-hidden">Emberホームページ</span></a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/learn">参考</a>
-      </li>
-      <li class="active" aria-label="You are here">
-        <a href="/">ガイド</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/api">API</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/community">コミュニティ</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/blog">ブログ</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/builds">リリース</a>
-      </li>
-
-      <li class="header-search">
-        <form>
-          <input type="text" id="search-input" class="search-input" placeholder="ガイド内検索"/>
-        </form>
-      </li>
-    </ul>
-  </nav>
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">切替</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="http://emberjs.com"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ドキュメント <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="http://emberjs.com/guides">ガイド</a></li>
+      <li><a href="http://emberjs.com/api">APIリファレンス</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="http://emberjs.com/learn">学ぶ</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">リリース <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="http://emberjs.com/builds">チャネル</a></li>
+      <li><a href="http://emberjs.com/builds/release">-- ステーブル</a></li>
+      <li><a href="http://emberjs.com/builds/beta">-- ベータ</a></li>
+      <li><a href="http://emberjs.com/builds/canary">-- カナリア</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="http://emberjs.com/deprecations">廃止予定</a></li>
+      <li><a href="http://emberjs.com/statusboard">ステータスボード</a></li>
+     </ul>
+    </li>
+    <li><a href="http://emberjs.com/blog">ブログ</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">コミュニティ <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="http://emberjs.com/community">Emberコミュニティ</a></li>
+       <li><a href="http://emberjs.com/guidelines">ガイドライン</a></li>
+       <li><a href="http://github.com/emberjs/">貢献(Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/community/meetups">イベント</a></li>
+       <li><a href="http://jobs.emberjs.com/">採用情報</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="http://emberjs.com/team">チーム</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/logos">ロゴ</a></li>
+       <li><a href="http://emberjs.com/mascots">マスコット</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/ember-users">Ember採用企業</a></li>
+       <li><a href="http://emberjs.com/sponsors">スポンサー</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/legal">法関連</a></li>
+       <li><a href="http://emberjs.com/security">セキュリティ</a></li>
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">検索</label>
+        <input type="text"
+        class="form-control search input ds-input"
+        placeholder="検索..."
+        id="search-input"
+        role="combobox"
+        aria-expanded="false"
+        aria-owns="algolia-autocomplete-listbox-0"
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false"
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
 </header>
 
 
@@ -145,7 +200,7 @@ or application instance initializers (with the former being much more common).</
 15
 16
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/object</span><span class="delimiter">&quot;</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">function</span> <span class="function">initialize</span>(application) {
   let Logger = EmberObject.extend({
@@ -239,7 +294,7 @@ register your factories as non-singletons using the <code>singleton: false</code
 13
 14
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/object</span><span class="delimiter">&quot;</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">function</span> <span class="function">initialize</span>(application) {
   let Message = EmberObject.extend({
@@ -284,7 +339,7 @@ register your factories as non-singletons using the <code>singleton: false</code
 16
 17
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/object</span><span class="delimiter">&quot;</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">function</span> <span class="function">initialize</span>(application) {
   let Logger = EmberObject.extend({
@@ -325,7 +380,7 @@ The value of <code>logger</code> will come from the factory named <code>logger:m
 7
 8
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> Route from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/routing/route</span><span class="delimiter">&quot;</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> Route from <span class="string"><span class="delimiter">'</span><span class="content">@ember/routing/route</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">default</span> Route.extend({
   activate() {
@@ -369,7 +424,7 @@ and services (via <code>import { inject } from &#39;@ember/service&#39;;</code>)
 6
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> Component from <span class="string"><span class="delimiter">'</span><span class="content">@ember/component</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> { inject as service } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/service</span><span class="delimiter">&quot;</span></span>;
+<span class="reserved">import</span> { inject as service } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/service</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">default</span> Component.extend({
   <span class="key">cart</span>: service(<span class="string"><span class="delimiter">'</span><span class="content">shopping-cart</span><span class="delimiter">'</span></span>)
@@ -394,7 +449,7 @@ simply leave off the service name (the dasherized version of the name will be us
 6
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> Component from <span class="string"><span class="delimiter">'</span><span class="content">@ember/component</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> { inject as service } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/service</span><span class="delimiter">&quot;</span></span>;
+<span class="reserved">import</span> { inject as service } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/service</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">default</span> Component.extend({
   <span class="key">shoppingCart</span>: service()
@@ -485,12 +540,12 @@ on a song&#39;s <code>audioType</code>.</p>
 <strong>20</strong>
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> Component from <span class="string"><span class="delimiter">'</span><span class="content">@ember/component</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> { computed } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/object</span><span class="delimiter">&quot;</span></span>;
-<span class="reserved">import</span> { getOwner } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/application</span><span class="delimiter">&quot;</span></span>;
+<span class="reserved">import</span> { computed } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> { getOwner } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/application</span><span class="delimiter">'</span></span>;
 
 <span class="comment">// Usage:</span>
 <span class="comment">//</span>
-<span class="comment">//   {{play-audio song=song}}</span>
+<span class="comment">// {{play-audio song=song}}</span>
 <span class="comment">//</span>
 <span class="reserved">export</span> <span class="keyword">default</span> Component.extend({
   <span class="key">audioService</span>: computed(<span class="string"><span class="delimiter">'</span><span class="content">song.audioType</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {

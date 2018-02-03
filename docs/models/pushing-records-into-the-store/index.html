@@ -28,38 +28,93 @@
       <script src="../../javascripts/common-modern.js"></script>
     <!--<![endif]-->
 
-    <header class="header">
-  <nav role="navigation" aria-label="main">
-    <ul class="header-nav container">
-      <li class="header-logo">
-        <a href="http://emberjs.com/"><span class="visually-hidden">Emberホームページ</span></a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/learn">参考</a>
-      </li>
-      <li class="active" aria-label="You are here">
-        <a href="/">ガイド</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/api">API</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/community">コミュニティ</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/blog">ブログ</a>
-      </li>
-      <li>
-        <a href="http://emberjs.com/builds">リリース</a>
-      </li>
-
-      <li class="header-search">
-        <form>
-          <input type="text" id="search-input" class="search-input" placeholder="ガイド内検索"/>
-        </form>
-      </li>
-    </ul>
-  </nav>
+    <header>
+<nav class="navbar navbar-inverse">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">切替</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="http://emberjs.com"><img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/ember-logo.svg" alt="home" /></a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbar-collapse">
+   <ul class="nav navbar-nav">
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ドキュメント <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="http://emberjs.com/guides">ガイド</a></li>
+      <li><a href="http://emberjs.com/api">APIリファレンス</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="http://emberjs.com/learn">学ぶ</a></li>
+     </ul>
+    </li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">リリース <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="http://emberjs.com/builds">チャネル</a></li>
+      <li><a href="http://emberjs.com/builds/release">-- ステーブル</a></li>
+      <li><a href="http://emberjs.com/builds/beta">-- ベータ</a></li>
+      <li><a href="http://emberjs.com/builds/canary">-- カナリア</a></li>
+      <li role="separator" class="divider"></li>
+      <li><a href="http://emberjs.com/deprecations">廃止予定</a></li>
+      <li><a href="http://emberjs.com/statusboard">ステータスボード</a></li>
+     </ul>
+    </li>
+    <li><a href="http://emberjs.com/blog">ブログ</a></li>
+    <li class="dropdown">
+     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">コミュニティ <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+      <li><a href="http://emberjs.com/community">Emberコミュニティ</a></li>
+       <li><a href="http://emberjs.com/guidelines">ガイドライン</a></li>
+       <li><a href="http://github.com/emberjs/">貢献(Github)</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/community/meetups">イベント</a></li>
+       <li><a href="http://jobs.emberjs.com/">採用情報</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberconf.com/">Ember Conf</a></li>
+     </ul>
+     </li>
+     <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="http://emberjs.com/team">チーム</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/logos">ロゴ</a></li>
+       <li><a href="http://emberjs.com/mascots">マスコット</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/ember-users">Ember採用企業</a></li>
+       <li><a href="http://emberjs.com/sponsors">スポンサー</a></li>
+       <li role="separator" class="divider"></li>
+       <li><a href="http://emberjs.com/legal">法関連</a></li>
+       <li><a href="http://emberjs.com/security">セキュリティ</a></li>
+      </ul>
+     </li>
+   </ul>
+   <form class="navbar-form navbar-right searchbox">
+    <div class="input-group">
+      <label for="search-input" class="control-label sr-only">検索</label>
+        <input type="text"
+        class="form-control search input ds-input"
+        placeholder="検索..."
+        id="search-input"
+        role="combobox"
+        aria-expanded="false"
+        aria-owns="algolia-autocomplete-listbox-0"
+        autocorrect="off"
+        autocapitalize="none"
+        spellcheck="false"
+        />
+        <span></span>
+    </div>
+   </form>
+  </div>
+  <!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container-fluid -->
+</nav>
 </header>
 
 
@@ -228,7 +283,6 @@ serializer before pushing it into the store, you can use the
 7
 8
 9
-<strong>10</strong>
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
 
@@ -238,8 +292,7 @@ serializer before pushing it into the store, you can use the
     <span class="keyword">delete</span> hash[<span class="string"><span class="delimiter">'</span><span class="content">song_count</span><span class="delimiter">'</span></span>]
     <span class="keyword">return</span> <span class="local-variable">this</span>._super(typeHash, hash);
   }
-
-})
+});
 </pre></td>
 </tr></table>
 </div></div><div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
@@ -327,12 +380,14 @@ so it can be accessed by other parts of your application.</p>
 14
 15
 16
+17
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> Route from <span class="string"><span class="delimiter">'</span><span class="content">@ember/routing/route</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> <span class="predefined">$</span> from <span class="string"><span class="delimiter">'</span><span class="content">jquery</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">default</span> Route.extend({
   <span class="key">actions</span>: {
-    <span class="function">confirm</span>: <span class="keyword">function</span>(data) {
+    confirm(data) {
       <span class="predefined">$</span>.ajax({
         <span class="key">data</span>: data,
         <span class="key">method</span>: <span class="string"><span class="delimiter">'</span><span class="content">POST</span><span class="delimiter">'</span></span>,
