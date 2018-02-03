@@ -4,6 +4,7 @@
 
 -  Sync[#57](https://github.com/dopin/emberjs-guides-ja/pull/57) [#58](https://github.com/dopin/emberjs-guides-ja/pull/58)
 - [x] Models - Defining Models
+- Fix typo [#59](https://github.com/dopin/emberjs-guides-ja/pull/59) by [@hogesuke](https://github.com/hogesuke)
 
 ## 2018.02.02
 
