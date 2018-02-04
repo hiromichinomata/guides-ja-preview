@@ -154,7 +154,7 @@ Later, we'll switch to using [Ember Data](https://github.com/emberjs/data),
 a library for robustly managing data in our app.
 -->
 
-<p>Emberは、<code>model</code>と呼ばれるオブジェクトのページのデータを保持します。
+<p>Emberは、<code>model</code>と呼ばれるオブジェクトにページのデータを保持します。
 最初は物事を単純にするため、物件一覧ページのモデルにJavaScriptオブジェクトの配列をハードコードします。
 その次に、アプリでデータを堅牢に管理するためのライブラリである<a href="https://github.com/emberjs/data">Ember Data</a>の使用に切り替えます。</p>
 
@@ -176,7 +176,7 @@ The model function we've added to our `rentals` route handler will be called whe
 <p>Emberでは、ルートハンドラがページのデータをモデルにロードします。
 <a href="https://www.emberjs.com/api/ember/2.16/classes/Route/methods/model?anchor=model"><code>model</code></a>と呼ばれる関数で行います。
 <code>model</code>関数は、その時々において実行される<strong>フック</strong>です。
-<code>rentals</code>ルートハンドラに追加したモデル関数は、ルートURL<code>http://localhost:4200</code>または<code>http:// localhost:4200/rentals</code>経由でレンタルルートにナビゲートすると呼び出されます。</p>
+<code>rentals</code>ルートハンドラに追加したモデル関数は、ルートURL<code>http://localhost:4200</code>または<code>http://localhost:4200/rentals</code>経由でレンタルルートにナビゲートすると呼び出されます。</p>
 
 <!--
 Let's open `app/routes/rentals.js` and return an array of rental objects from the `model` function:
@@ -368,7 +368,7 @@ You may move onto the [next page](../installing-addons/) to keep implementing ne
 -->
 
 <p>新しい機能の実装を続けるには<a href="../installing-addons/">次のページ</a>に行ってください。
-ここから先は、ここまでで作成した昨日のテストの実装です。</p>
+ここから先は、ここまでで作成した機能のテストの実装です。</p>
 
 <!--
 ### Acceptance Testing the Rental List
@@ -385,7 +385,7 @@ In `app/templates/rentals.hbs`, we wrapped each rental display in an `article` e
 We will use the listing class to find out how many rentals are shown on the page.
 -->
 
-<p><code>app/templates/rentals.hbs</code>では、各物件情報を<code>listing</code>というクラスを持った<code>article</code>要素でラップました。
+<p><code>app/templates/rentals.hbs</code>では、各物件情報を<code>listing</code>というクラスを持った<code>article</code>要素でラップしました。
 listingクラスを使用して、ページに表示される物件数を確認します。</p>
 
 <!--
@@ -396,7 +396,7 @@ In this case it will return an array of all the elements with a class called `li
 
 <p><code>listing</code>というクラスを持つ要素を見つけるために、<a href="http://emberjs.com/api/classes/Ember.Test.html#method_find">find</a>というテストヘルパーを使います。
 <code>find</code>関数は与えられた[CSS selectors(https://developer.mozilla.org/ja-JP/docs/Web/CSS/CSS_Selectors)と一致する要素を返します。
-この場合、 <code>listing</code>というクラスを持つすべての要素の配列を返します。</p>
+この場合、<code>listing</code>というクラスを持つすべての要素の配列を返します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -431,7 +431,7 @@ This leaves us with 2 remaining acceptance test failures (and 1 eslint failure):
 -->
 
 <p>物件一覧を表示していることをテストで検証することができました。
-これにより、残りの失敗しているテストが２件になりました。（ESLintを加えると３件）</p>
+これにより、残りの失敗しているテストが2件になりました。（ESLintを加えると3件）</p>
 
 <p><img src="../../images/model-hook/model-hook.png" alt="list rentals test passing"></p>
 
