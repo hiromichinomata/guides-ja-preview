@@ -3,7 +3,7 @@
 ## 2018.02.05
 
 - Fix typo [#60](https://github.com/dopin/emberjs-guides-ja/pull60) by [@hogesuke](https://github.com/hogesuke)
-
+- Sync[#61](https://github.com/dopin/emberjs-guides-ja/pull/61)
 
 ## 2018.02.03
 

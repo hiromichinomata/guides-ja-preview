@@ -147,11 +147,11 @@ format, Ember Data allows you to customize the serializer or use a
 different serializer entirely.</p>
 
 <p>Ember Data ships with 3 serializers. The
-<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONAPISerializer"><code>JSONAPISerializer</code></a>
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer"><code>JSONAPISerializer</code></a>
 is the default serializer and works with JSON API backends. The
-<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONSerializer"><code>JSONSerializer</code></a>
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONSerializer"><code>JSONSerializer</code></a>
 is a simple serializer for working with single json object or arrays of records. The
-<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.RESTSerializer"><code>RESTSerializer</code></a>
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.RESTSerializer"><code>RESTSerializer</code></a>
 is a more complex serializer that supports sideloading and was the default
 serializer before 2.0.</p>
 <h2 id="toc_JSONAPISerializer-Conventions" class="anchorable-toc">JSONAPISerializer Conventions</h2>
@@ -361,7 +361,7 @@ you had a <code>post</code> model you could also define a <code>post</code> seri
 </tr></table>
 </div></div>
 <p>To change the format of the data that is sent to the backend store, you can use
-the <a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONAPISerializer/methods/serialize?anchor=serialize"><code>serialize()</code></a>
+the <a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/serialize?anchor=serialize"><code>serialize()</code></a>
 hook. Let&#39;s say that we have this JSON API response from Ember Data:</p>
 <div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
@@ -470,7 +470,7 @@ hook. Let&#39;s say that we have this JSON API response from Ember Data:</p>
 </div></div>
 <p>Similarly, if your backend store provides data in a format other than JSON API,
 you can use the
-<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONAPISerializer/methods/serialize?anchor=normalizeResponse"><code>normalizeResponse()</code></a>
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/serialize?anchor=normalizeResponse"><code>normalizeResponse()</code></a>
 hook. Using the same example as above, if the server provides data that looks
 like:</p>
 <div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
@@ -569,10 +569,10 @@ like:</p>
 </tr></table>
 </div></div>
 <p>To normalize only a single model, you can use the
-<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONAPISerializer/methods/serialize?anchor=normalize"><code>normalize()</code></a>
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/serialize?anchor=normalize"><code>normalize()</code></a>
 hook similarly.</p>
 
-<p>For more hooks to customize the serializer with, see the <a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONAPISerializer">Ember Data serializer
+<p>For more hooks to customize the serializer with, see the <a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer">Ember Data serializer
 API documentation</a>.</p>
 <h3 id="toc_IDs" class="anchorable-toc">IDs</h3>
 <p>In order to keep track of unique records in the store Ember Data
@@ -660,7 +660,7 @@ in the document payload returned by your server:</p>
 </div></div>
 <p>If the attributes returned by your server use a different convention
 you can use the serializer&#39;s
-<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONAPISerializer/methods/keyForAttribute?anchor=keyForAttribute"><code>keyForAttribute()</code></a>
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/keyForAttribute?anchor=keyForAttribute"><code>keyForAttribute()</code></a>
 method to convert an attribute name in your model to a key in your JSON
 payload. For example, if your backend returned attributes that are
 <code>under_scored</code> instead of <code>dash-cased</code> you could override the <code>keyForAttribute</code>
@@ -863,7 +863,7 @@ a model:</p>
 </div></div>
 <p>If needed these naming conventions can be overwritten by implementing
 the
-<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONAPISerializer/methods/keyForAttribute?anchor=keyForRelationship"><code>keyForRelationship()</code></a>
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/keyForAttribute?anchor=keyForRelationship"><code>keyForRelationship()</code></a>
 method.</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
@@ -1066,7 +1066,7 @@ looks similar to this:</p>
 <p>The <code>JSONAPISerializer</code> is built on top of the <code>JSONSerializer</code> so they share
 many of the same hooks for customizing the behavior of the
 serialization process. Be sure to check out the
-<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.JSONSerializer">API docs</a>
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONSerializer">API docs</a>
 for a full list of methods and properties.</p>
 <h2 id="toc_EmbeddedRecordMixin" class="anchorable-toc">EmbeddedRecordMixin</h2>
 <p>Although Ember Data encourages you to sideload your relationships,
@@ -1362,7 +1362,7 @@ return looks like this:</p>
 <code>relatedPosts: hasMany(&#39;post&#39;)</code> on the model.</p>
 <h4 id="toc_Normalizing-adapter-responses" class="anchorable-toc">Normalizing adapter responses</h4>
 <p>When creating a custom serializer you will need to define a
-<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Serializer/methods/normalizeResponse?anchor=normalizeResponse">normalizeResponse</a>
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Serializer/methods/normalizeResponse?anchor=normalizeResponse">normalizeResponse</a>
 method to transform the response from the adapter into the normalized
 JSON object described above.</p>
 
@@ -1381,7 +1381,7 @@ used for normalizing requests made outside of Ember Data because they
 do not fall into the normal CRUD flow that the adapter provides.</p>
 <h4 id="toc_Serializing-records" class="anchorable-toc">Serializing records</h4>
 <p>Finally a serializer will need to implement a
-<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Serializer/methods/serialize?anchor=serialize">serialize</a>
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Serializer/methods/serialize?anchor=serialize">serialize</a>
 method.
 Ember Data will provide a record snapshot and an options hash and this
 method should return an object that the adapter will send to the
