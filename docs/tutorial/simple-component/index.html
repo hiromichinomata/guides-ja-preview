@@ -190,7 +190,7 @@ installing component-test
 A component consists of two parts:
 -->
 
-<p>コンポーネントは2つの部分で構成されています。</p>
+<p>コンポーネントは2つの部品で構成されています。</p>
 
 <!--
 * A template that defines how it will look (`app/templates/components/rental-listing.hbs`)
@@ -334,7 +334,7 @@ with our new `rental-listing` component:
 Here we invoke the `rental-listing` component by name, and assign each `rentalUnit` as the `rental` attribute of the component.
 -->
 
-<p>ここでは、 <code>rent-listing</code>コンポーネントを名前で呼び出し、各<code>rentalUnit</code>をコンポーネントの<code>rent</code>属性として割り当てます。</p>
+<p>ここでは、<code>rental-listing</code>コンポーネントを名前で呼び出し、各<code>rentalUnit</code>をコンポーネントの<code>rental</code>属性として割り当てます。</p>
 
 <!--
 Our app should behave now as before, with the addition of an image for each rental item.
@@ -444,8 +444,8 @@ To allow the user to widen the image, we will need to add an action that toggles
 Let's call this action `toggleImageSize`
 -->
 
-<p>ユーザーが画像を拡大できるようにするには、 <code>isWide</code>の値をトグルするアクションを追加する必要があります。
-このアクションを <code>toggleImageSize</code>と呼ぶことにしましょう。</p>
+<p>ユーザーが画像を拡大できるようにするには、<code>isWide</code>の値をトグルするアクションを追加する必要があります。
+このアクションを<code>toggleImageSize</code>と呼ぶことにしましょう。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -757,7 +757,7 @@ Since we set the `rentalObj` variable to our local scope, we can access it as pa
 
 <p>次に、 <code>render</code>関数を使ってコンポーネントをレンダリングしましょう。
 <code>render</code>関数はテンプレート文字列を渡すことができるので、テンプレートと同じ方法でコンポーネントを宣言することができます。
-<code>rentObj</code>変数をローカルスコープに設定したので、レンダリング文字列の一部としてレンダリングすることができます。</p>
+<code>rentalObj</code>変数をローカルスコープに設定したので、レンダリング文字列の一部としてレンダリングすることができます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -863,9 +863,9 @@ Note that we find the image element using the CSS selector `.image`.
 -->
 
 <p>2番目のテストでは、画像をクリックするとサイズが切り替わることを確認します。
-コンポーネントが <code>wide</code>クラス名なしでレンダリングされることを確認します。
-画像をクリックすると、クラスに <code>wide</code>クラスが追加され、2回目にクリックすると<code>wide</code>クラスが削除されます。
-image要素はCSSセレクタ<code>.image</code>を使って検索してしていることに注意してしてください。</p>
+コンポーネントが<code>wide</code>クラス名なしでレンダリングされることを確認します。
+画像をクリックすると、クラスに<code>wide</code>クラスが追加され、2回目にクリックすると<code>wide</code>クラスが削除されます。
+image要素はCSSセレクタ<code>.image</code>を使って検索していることに注意してください。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -984,7 +984,7 @@ To find the new test, locate "Integration | Component | rental listing" in the "
 -->
 
 <p><code>ember t -s</code>を実行して、新しいテストがパスしていることを確認してください。
-新しいテストを探すには、テストUIの&quot;Module&quot;フィールドで&quot;Integration | Component | rental listing&quot;と入力するしてください。</p>
+新しいテストを探すには、テストUIの&quot;Module&quot;フィールドで&quot;Integration | Component | rental listing&quot;と入力してください。</p>
 
 <p><img src="../../images/simple-component/simple-component-test.gif" alt="simple_component_test"></p>
 
