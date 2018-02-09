@@ -274,7 +274,7 @@ It is the main interface you use to interact with Ember Data.
 In this case, call the [`findAll`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Store/methods/findAll?anchor=findAll) function on the store and provide it with the name of your newly created rental model class.
 -->
 
-<p>作成したモデルを使用するには、<a href="../model-hook/">以前にルートハンドラで定義したmodel関数</a>を変更する必要があります。 ハードコードされたJavaScript配列を削除し、<a href="../../models/#toc_the-store-and-a-single-source-of-truth">Ember Data Storeサービス</a>を使うよう以下の書き換えてください。 Storeサービスは、Emberのすべてのルートとルートのコントローラにインジェクト(注入)されています。 StoreはEmber Dataとやりとりするために使用するメインインターフェイスです。 今回は、Storeの<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Store/methods/findAll?anchor=findAll"><code>findAll</code></a>関数に作成したRentalモデルクラスの名前を指定して実行します。</p>
+<p>作成したモデルを使用するには、<a href="../model-hook/">以前にルートハンドラで定義したmodel関数</a>を変更する必要があります。 ハードコードされたJavaScript配列を削除し、<a href="../../models/#toc_the-store-and-a-single-source-of-truth">Ember Data Storeサービス</a>を使うように以下を書き換えてください。 Storeサービスは、Emberのすべてのルートとルートのコントローラにインジェクト(注入)されています。 StoreはEmber Dataとやりとりするために使用するメインインターフェイスです。 今回は、Storeの<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Store/methods/findAll?anchor=findAll"><code>findAll</code></a>関数に作成したRentalモデルクラスの名前を指定して実行します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
   <thead>
@@ -360,7 +360,7 @@ When we call `findAll`, Ember Data will attempt to fetch rentals from `/api/rent
 If you recall, in the section titled [Installing Addons](../installing-addons/) we set up an adapter to route data requests through `/api`.
 -->
 
-<p>findAllを実行すると、Ember Dataは<code>/api/rentals</code>からの物件を取得しようとします。 <code>/api</code>が付くのは、<a href="../installing-addons/">アドオンのインストール</a> セクションで、リクエストが<code>/api</code>を介すようアダプタを設定したためです。</p>
+<p>findAllを実行すると、Ember Dataは<code>/api/rentals</code>から物件を取得しようとします。 <code>/api</code>が付くのは、<a href="../installing-addons/">アドオンのインストール</a> セクションで、リクエストが<code>/api</code>を介すようアダプタを設定したためです。</p>
 
 <!--
 You can read more about Ember Data in the [Models section](../../models/).
