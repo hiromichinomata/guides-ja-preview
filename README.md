@@ -2,4 +2,4 @@
 
 鋭意翻訳中
 
-[https://dopin.github.io/emberjs-guides-ja-preview/](https://dopin.github.io/emberjs-guides-ja-preview/)
+[https://emberjs-japan.github.io/guides-ja-preview/](https://emberjs-japan.github.io/guides-ja-preview/)

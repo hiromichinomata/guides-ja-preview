@@ -2,47 +2,47 @@
 
 ## 2018.02.09
 
-- Fix typo [#66](https://github.com/dopin/emberjs-guides-ja/pull/66) by [@hogesuke](https://github.com/hogesuke)
+- Fix typo [#66](https://github.com/emberjs-japan/guides-ja/pull/66) by [@hogesuke](https://github.com/hogesuke)
 
 ## 2018.02.07
 
-- Fix typo [#63](https://github.com/dopin/emberjs-guides-ja/pull/63) by [@hogesuke](https://github.com/hogesuke)
-- Fix typo [#65](https://github.com/dopin/emberjs-guides-ja/pull/65) by [@hogesuke](https://github.com/hogesuke)
+- Fix typo [#63](https://github.com/emberjs-japan/guides-ja/pull/63) by [@hogesuke](https://github.com/hogesuke)
+- Fix typo [#65](https://github.com/emberjs-japan/guides-ja/pull/65) by [@hogesuke](https://github.com/hogesuke)
 
 ## 2018.02.05
 
-- Fix typo [#60](https://github.com/dopin/emberjs-guides-ja/pull/60) by [@hogesuke](https://github.com/hogesuke)
-- Sync[#61](https://github.com/dopin/emberjs-guides-ja/pull/61)
-- Fix typo [#62](https://github.com/dopin/emberjs-guides-ja/pull/62) by [@hogesuke](https://github.com/hogesuke)
+- Fix typo [#60](https://github.com/emberjs-japan/guides-ja/pull/60) by [@hogesuke](https://github.com/hogesuke)
+- Sync[#61](https://github.com/emberjs-japan/guides-ja/pull/61)
+- Fix typo [#62](https://github.com/emberjs-japan/guides-ja/pull/62) by [@hogesuke](https://github.com/hogesuke)
 
 ## 2018.02.03
 
--  Sync[#57](https://github.com/dopin/emberjs-guides-ja/pull/57) [#58](https://github.com/dopin/emberjs-guides-ja/pull/58)
+-  Sync[#57](https://github.com/emberjs-japan/guides-ja/pull/57) [#58](https://github.com/emberjs-japan/guides-ja/pull/58)
 - [x] Models - Defining Models
-- Fix typo [#59](https://github.com/dopin/emberjs-guides-ja/pull/59) by [@hogesuke](https://github.com/hogesuke)
+- Fix typo [#59](https://github.com/emberjs-japan/guides-ja/pull/59) by [@hogesuke](https://github.com/hogesuke)
 
 ## 2018.02.02
 
-- Fix typo [#56](https://github.com/dopin/emberjs-guides-ja/pull/56) by [@hogesuke](https://github.com/hogesuke)
+- Fix typo [#56](https://github.com/emberjs-japan/guides-ja/pull/56) by [@hogesuke](https://github.com/hogesuke)
 
 
 ## 2018.01.31
 
-- Fix typo [#55](https://github.com/dopin/emberjs-guides-ja/pull/55) by [@hogesuke](https://github.com/hogesuke)
+- Fix typo [#55](https://github.com/emberjs-japan/guides-ja/pull/55) by [@hogesuke](https://github.com/hogesuke)
 
 ## 2018.01.28
 
-- Sync[#53](https://github.com/dopin/emberjs-guides-ja/pull/53)
+- Sync[#53](https://github.com/emberjs-japan/guides-ja/pull/53)
 - [x] Models - Introduction
 
 ## 2018.01.20
 
-- Sync[#52](https://github.com/dopin/emberjs-guides-ja/pull/52)
+- Sync[#52](https://github.com/emberjs-japan/guides-ja/pull/52)
 - [x] Controllers - Introduction
 
 ## 2018.01.13
 
-- Sync [#43](https://github.com/dopin/emberjs-guides-ja/pull/43)
+- Sync [#43](https://github.com/emberjs-japan/guides-ja/pull/43)
 - [x] Components - Customizing a Component's Element
 - [x] Components - Using Block Params
 - [x] Components - Handling Events
@@ -50,7 +50,7 @@
 
 ## 2018.01.11
 
-- Fix typos and some wording [#42](https://github.com/dopin/emberjs-guides-ja/pull/42) by [@hibariya](https://github.com/hibariya)
+- Fix typos and some wording [#42](https://github.com/emberjs-japan/guides-ja/pull/42) by [@hibariya](https://github.com/hibariya)
 
 ## 2018.01.10
 
