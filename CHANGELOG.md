@@ -6,6 +6,7 @@
 - Fix typo [#68](https://github.com/emberjs-japan/guides-ja/pull/68) by [@hogesuke](https://github.com/hogesuke)
 - Sync[#69](https://github.com/emberjs-japan/guides-ja/pull/69)
 - [x] Models - Finding Records
+- [x] Models - Creating, Updating and Deleting Records 
 
 ## 2018.02.09
 
