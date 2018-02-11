@@ -145,7 +145,7 @@ For Super Rentals, we want to be able to display a map showing where each rental
 To implement this feature, we will take advantage of several Ember concepts:
 -->
 
-<p>Super Rentalsで、各物件の場所を地図上を表示できるようにしたいですね。 この機能を実装するために、Emberのいくつかのコンセプトを活用しましょう。</p>
+<p>Super Rentalsで、各物件の場所を地図上に表示できるようにしたいですね。 この機能を実装するために、Emberのいくつかのコンセプトを活用しましょう。</p>
 
 <!--
 1. A utility function to create a map from the Google Maps API.
@@ -223,7 +223,7 @@ Now that we have the maps API available to the application, we can create our ma
 Utility files can be generated using Ember CLI.
 -->
 
-<p>アプリケーションでマップAPIを使用できるようになったので、マップユーティリティを作成に取り掛かりましょう。
+<p>アプリケーションでマップAPIを使用できるようになったので、マップユーティリティの作成に取り掛かりましょう。
 ユーティリティファイルは、Ember CLIを使用して生成することができます。</p>
 <div class="highlight shell "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
@@ -352,7 +352,7 @@ Accessing our maps API through a [service](../../applications/services) will giv
 -->
 
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Service_locator_pattern">サービスロケータ</a>とともにインジェクトさルため、マップAPIを使用するコードからマップAPIを抽象化し、より簡単なリファクタリングとメンテナンスが可能になります。</li>
+<li><a href="https://en.wikipedia.org/wiki/Service_locator_pattern">サービスロケータ</a>とともにインジェクトされるため、マップAPIを使用するコードからマップAPIを抽象化し、より簡単なリファクタリングとメンテナンスが可能になります。</li>
 <li>遅延ロードされているため、最初に呼び出されるまで初期化されません。 場合によっては、これによりアプリのプロセッサ負荷とメモリ消費量が減少する可能性があります。</li>
 <li>シングルトンであるため、ブラウザにはサービスオブジェクトのインスタンスが1つしかありません。 これにより、ユーザーがアプリを開いている間は地図データを保持できるため、ページに戻る際に地図を再読み込みする必要はありません。</li>
 </ul>
@@ -494,7 +494,7 @@ Let's start by adding a `div` element to the component template.
 This `div` will act as a place for the 3rd party map API to render the map to.
 -->
 
-<p>コンポーネントテンプレートに <code>div</code>要素を追加することから始めましょう。
+<p>コンポーネントテンプレートに<code>div</code>要素を追加することから始めましょう。
 この<code>div</code>は、サードパーティのマップAPIがマップを描画する場所として使います。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
 <table class="CodeRay">
@@ -579,7 +579,7 @@ You may have noticed that `this.get('location')` refers to a property location w
 This property will be passed in to the component by its parent template below.
 -->
 
-<p><code>this.get(&#39;location&#39;)</code>は、定義していないプロパティの場所を参照していることに気づいたかもしれません。 このプロパティは、下の親テンプレートによってコンポーネントに渡されます。</p>
+<p><code>this.get(&#39;location&#39;)</code>は、定義していないlocationプロパティを参照していることに気づいたかもしれません。 このプロパティは、下の親テンプレートによってコンポーネントに渡されます。</p>
 
 <!--
 Finally open the template file for our `rental-listing` component and add the new `location-map` component.
@@ -671,7 +671,7 @@ We will isolate our tests from actually calling Google Maps by stubbing our map 
 On line 6 of `maps-test.js` below we create an Ember object to simulate the behavior of the utility, but instead of creating a google map, we return an empty JavaScript object.
 -->
 
-<p>サービスの単体テストでは、以前にロードされた場所はキャッシュからフェッチされ、新しい場所はユーティリティーを使用して作成されることを検証します。
+<p>サービスの単体テストでは、以前にロードされた場所はキャッシュからフェッチされ、新しい場所はユーティリティを使用して作成されることを検証します。
 マップユーティリティをスタブして、実際にGoogleマップを呼び出さないようテストを分離します。
 下の<code>maps-test.js</code>の6行目では、ユーティリティの動作をシミュレートするEmberオブジェクトを作成しますが、Googleマップを作成する代わりに空のJavaScriptオブジェクトを返します。</p>
 
@@ -781,8 +781,8 @@ When the service calls `createMap` on our fake utility, we will run asserts to v
 In our first test notice that we expect four asserts to be run in line 17. Two of the asserts run in the test function, while the other two are run when `createMap` is called.
 -->
 
-<p>サービスが偽のユーティリティの<code>createMap</code>の実行すると、呼び出されたことを確認するためにアサートが実行されます。
-最初のテストでは、17行目で4つのアサーションが実行されることがわかります.2つのアサーションはテスト関数で実行され、残りの2つは <code>createMap</code>が呼び出されたときに実行されます。</p>
+<p>サービスが偽のユーティリティの<code>createMap</code>を実行すると、呼び出されたことを確認するためにアサートが実行されます。
+最初のテストでは、17行目で4つのアサーションが実行されることがわかります。2つのアサーションはテスト関数で実行され、残りの2つは<code>createMap</code>が呼び出されたときに実行されます。</p>
 
 <!--
 In the second test, only one assert is expected (line 26), since the map element is fetched from cache and does not use the utility.
@@ -806,7 +806,7 @@ This matches the behavior in `getMapElement` when city has not yet been cached.
 
 <p>キャッシュ内の都市名は<a href="https://www.emberjs.com/api/ember/2.16/classes/String/methods/camelize?anchor=camelize"><code>camelized</code></a>されています（30行目）。
 その要素を調べるための鍵として使用することができます。
-これは、都市がまだキャッシュされていないときの <code>getMapElement</code>の振る舞いと合わせています。</p>
+これは、都市がまだキャッシュされていないときの<code>getMapElement</code>の振る舞いと合わせています。</p>
 
 <!--
 ### Integration Testing the Map Component
