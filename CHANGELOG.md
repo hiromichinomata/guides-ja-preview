@@ -4,6 +4,7 @@
 
 - Fix typo [#67](https://github.com/emberjs-japan/guides-ja/pull/67) by [@hogesuke](https://github.com/hogesuke)
 - Fix typo [#68](https://github.com/emberjs-japan/guides-ja/pull/68) by [@hogesuke](https://github.com/hogesuke)
+- Sync[#69](https://github.com/emberjs-japan/guides-ja/pull/69)
 
 ## 2018.02.09
 

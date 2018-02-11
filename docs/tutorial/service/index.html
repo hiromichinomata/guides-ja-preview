@@ -968,7 +968,7 @@ Add the following code after the imports to our acceptance test:
 <span class="highlight-line added">14</span>
 <span class="highlight-line added">15</span>
 <span class="highlight-line added">16</span>
-<span class="highlight-line added">17</span></pre></td>
+<span class="highlight-line added"/></pre></td>
   <td class="code"><pre><span class="reserved">import</span> { test } from <span class="string"><span class="delimiter">'</span><span class="content">qunit</span><span class="delimiter">'</span></span>;
 <span class="reserved">import</span> moduleForAcceptance from <span class="string"><span class="delimiter">'</span><span class="content">super-rentals/tests/helpers/module-for-acceptance</span><span class="delimiter">'</span></span>;
 <span class="highlight-line added"><span class="reserved">import</span> Service from <span class="string"><span class="delimiter">'</span><span class="content">@ember/service</span><span class="delimiter">'</span></span>;</span>
@@ -982,10 +982,10 @@ Add the following code after the imports to our acceptance test:
 <span class="highlight-line removed">moduleForAcceptance(<span class="string"><span class="delimiter">'</span><span class="content">Acceptance | list-rentals</span><span class="delimiter">'</span></span>);</span>
 <span class="highlight-line added">moduleForAcceptance(<span class="string"><span class="delimiter">'</span><span class="content">Acceptance | list rentals</span><span class="delimiter">'</span></span>, {</span>
 <span class="highlight-line added">  beforeEach() {</span>
-<span class="highlight-line added">    <span class="local-variable">this</span>.application.register(<span class="string"><span class="delimiter">'</span><span class="content">service:stubMaps</span><span class="delimiter">'</span></span>, StubMapsService);</span>
-<span class="highlight-line added">    <span class="local-variable">this</span>.application.inject(<span class="string"><span class="delimiter">'</span><span class="content">component:location-map</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">maps</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">service:stubMaps</span><span class="delimiter">'</span></span>);</span>
+<span class="highlight-line added">    <span class="local-variable">this</span>.application.register(<span class="string"><span class="delimiter">'</span><span class="content">service:maps</span><span class="delimiter">'</span></span>, StubMapsService);</span>
 <span class="highlight-line added">  }</span>
-<span class="highlight-line added">});</span></pre></td>
+<span class="highlight-line added">});</span>
+<span class="highlight-line added"/></pre></td>
 </tr></table>
 </div></div>
 <!--
