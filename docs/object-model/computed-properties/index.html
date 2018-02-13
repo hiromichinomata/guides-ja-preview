@@ -226,7 +226,7 @@ Subsequent access of `fullName` will read from the cache without calling the fun
 Changing any of the dependent properties causes the cache to invalidate, so that the computed function runs again on the next access.
 -->
 
-<p>上記のコードは、<code>fullName</code>が算出プロパティであり、<code>firstName</code>と<code>lastName</code>がそれが依存するプロパティとして宣言します。
+<p>上記のコードは、<code>fullName</code>が算出プロパティであり、<code>firstName</code>と<code>lastName</code>を依存するプロパティとして宣言します。
 最初に<code>fullName</code>プロパティにアクセスすると、関数が呼び出され、結果がキャッシュされます。
 その後の<code>fullName</code>へのアクセスは、関数を呼び出さずにキャッシュから読み取ります。
 依存プロパティのいずれかを変更すると、キャッシュが無効になり、計算された関数が次のアクセス時に再び実行されます。</p>
@@ -361,7 +361,7 @@ Let's add a `description` computed property to the previous example,
 and use the existing `fullName` property and add in some other properties:
 -->
 
-<p>算出プロパティを値として使用して、新しい算出プロパティを作成できます。
+<p>算出プロパティを値として使用し、新しい算出プロパティを作成できます。
 前の例に算出プロパティ<code>description</code>を追加し、既存の<code>fullName</code>プロパティを使用して、他のプロパティを追加してみましょう。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
@@ -569,7 +569,7 @@ To see the full list of computed property macros, have a look at
 [the API documentation](https://www.emberjs.com/api/ember/2.16/modules/@ember%2Fobject)
 -->
 
-<p>算出プロパティマクロの完全なリストを見るには、<a href="https://www.emberjs.com/api/ember/2.16/modules/@ember%2Fobject">APIドキュメント</a>を見てください。</p>
+<p>算出プロパティマクロの完全なリストは、<a href="https://www.emberjs.com/api/ember/2.16/modules/@ember%2Fobject">APIドキュメント</a>をご覧ください。</p>
 
 
 
