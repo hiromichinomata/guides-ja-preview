@@ -147,7 +147,7 @@ as other major features of the Ember object model.
 -->
 
 <p>Emberについて学ぶ際、<code>Component.extend()</code>や<code>DS.Model.extend()</code>などのコードを目にするでしょう。
-ここでは、この<code>extend()</code>メソッド、およびEmberオブジェクトモデルのその他の主な機能について学美ます。</p>
+ここでは、この<code>extend()</code>メソッド、およびEmberオブジェクトモデルのその他の主な機能について学びます。</p>
 
 <!--
 ### Defining Classes
@@ -295,7 +295,7 @@ let yehuda = Soldier.create({
   <span class="key">name</span>: <span class="string"><span class="delimiter">'</span><span class="content">矢吹田猫</span><span class="delimiter">'</span></span>
 });
 
-yehuda.say(<span class="string"><span class="delimiter">'</span><span class="content">はい</span><span class="delimiter">'</span></span>); <span class="comment">// &quot;矢吹田猫: はい、了解しした！&quot;をアラート表示</span>
+yehuda.say(<span class="string"><span class="delimiter">'</span><span class="content">はい</span><span class="delimiter">'</span></span>); <span class="comment">// &quot;矢吹田猫: はい、了解しました！&quot;をアラート表示</span>
 </pre></td>
 </tr></table>
 </div></div>
@@ -303,7 +303,7 @@ yehuda.say(<span class="string"><span class="delimiter">'</span><span class="con
 In certain cases, you will want to pass arguments to `_super()` before or after overriding.
 -->
 
-<p>場合によっては、オーバーライドの前または後に <code>_super()</code>に引数を渡したいと思うでしょう。</p>
+<p>場合によっては、オーバーライドの前または後に<code>_super()</code>に引数を渡したいと思うでしょう。</p>
 
 <!--
 This allows the original method to continue operating as it normally would.
@@ -338,7 +338,7 @@ normalizeResponse(store, primaryModelClass, payload, id, requestType)  {
 4
 </pre></td>
   <td class="code"><pre>normalizeResponse(store, primaryModelClass, payload, id, requestType)  {
-  <span class="comment">// Ember-Data様にJSONペイロードをカスタマイズ</span>
+  <span class="comment">// Ember-Data用にJSONペイロードをカスタマイズ</span>
   <span class="keyword">return</span> <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
 }
 </pre></td>
@@ -395,7 +395,7 @@ When creating an instance, you can initialize the values of its properties
 by passing an optional hash to the `create()` method:
 -->
 
-<p>インスタンスを作成する際、プロパティを初期値を指定できます。
+<p>インスタンスを作成する際、プロパティの初期値を指定できます。
 <code>create()</code>メソッドにハッシュを渡します:</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
@@ -435,7 +435,7 @@ computed properties and should not redefine existing or define new methods. You 
 properties, create a new subclass and instantiate that.
 -->
 
-<p>パフォーマンス上の理由から、<code>create()</code> を呼び出す際にインスタンスの算出プロパティを再定義することはできず、既存のメソッドの再定義、新しいメソッドの定義もできません。
+<p>パフォーマンス上の理由から、<code>create()</code>を呼び出す際にインスタンスの算出プロパティを再定義することはできず、既存のメソッドの再定義、新しいメソッドの定義もできません。
 <code>create()</code>を呼び出すときには、単純なプロパティのみを設定してください。
 メソッドや算出プロパティを定義または再定義する必要がある場合は、新しいサブクラスを作成してインスタンス化してください。</p>
 
