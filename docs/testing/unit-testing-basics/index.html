@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - Testing: Unit Testing Basics</title>
-    <meta property="st:title" content="Testing: Unit Testing Basics" />
+    <title>Ember.js - Testing: Testing Basics</title>
+    <meta property="st:title" content="Testing: Testing Basics" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -126,7 +126,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">テンプレート</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../../templates/links/">リンク</a></li><li class='toc-level-1 '><a href="../../templates/actions/">アクション</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">ヘルパーの作成</a></li></ol></li><li class='toc-level-0 '><a href="#">コンポーネント</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">コンポーネントの定義</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">コンポーネントのライフサイクル</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">コンポーネントへのプロパティの受け渡し</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">コンポーネント内のコンテンツをラップする</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">コンポーネントの要素のカスタマイズ</a></li><li class='toc-level-1 '><a href="../../components/block-params/">ブロック引数を使う</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">イベント処理</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">アクションによる変更のトリガー</a></li></ol></li><li class='toc-level-0 '><a href="#">コントローラー</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">はじめに</a></li></ol></li><li class='toc-level-0 '><a href="#">モデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">はじめに</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">モデルの定義</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">レコード検索</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">作成、更新、削除</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 selected'><a href="#">Testing</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">Introduction</a></li><li class='toc-level-1 '><a href="../acceptance/">Acceptance Tests</a></li><li class='toc-level-1 selected'><a href="./">Unit Testing Basics</a></li><li class='toc-level-1 '><a href="../testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">テンプレート</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../../templates/links/">リンク</a></li><li class='toc-level-1 '><a href="../../templates/actions/">アクション</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">ヘルパーの作成</a></li></ol></li><li class='toc-level-0 '><a href="#">コンポーネント</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">コンポーネントの定義</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">コンポーネントのライフサイクル</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">コンポーネントへのプロパティの受け渡し</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">コンポーネント内のコンテンツをラップする</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">コンポーネントの要素のカスタマイズ</a></li><li class='toc-level-1 '><a href="../../components/block-params/">ブロック引数を使う</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">イベント処理</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">アクションによる変更のトリガー</a></li></ol></li><li class='toc-level-0 '><a href="#">コントローラー</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">はじめに</a></li></ol></li><li class='toc-level-0 '><a href="#">モデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../models/">はじめに</a></li><li class='toc-level-1 '><a href="../../models/defining-models/">モデルの定義</a></li><li class='toc-level-1 '><a href="../../models/finding-records/">レコード検索</a></li><li class='toc-level-1 '><a href="../../models/creating-updating-and-deleting-records/">作成、更新、削除</a></li><li class='toc-level-1 '><a href="../../models/relationships/">Relationships</a></li><li class='toc-level-1 '><a href="../../models/pushing-records-into-the-store/">Pushing Records into the Store</a></li><li class='toc-level-1 '><a href="../../models/handling-metadata/">Handling Metadata</a></li><li class='toc-level-1 '><a href="../../models/customizing-adapters/">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../../models/customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 selected'><a href="#">Testing</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">Introduction</a></li><li class='toc-level-1 '><a href="../acceptance/">Application Tests</a></li><li class='toc-level-1 selected'><a href="./">Testing Basics</a></li><li class='toc-level-1 '><a href="../testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -134,65 +134,27 @@
 
       <article class="chapter">
         <h1>
-          Unit Testing Basics
+          Testing Basics
           <a href="https://github.com/emberjs/guides/edit/master/source/testing/unit-testing-basics.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>Unit tests are generally used to test a small piece of code and ensure that it
-is doing what was intended. Unlike acceptance tests, they are narrow in scope
-and do not require the Ember application to be running.</p>
+        <p>Unit tests (as well as container tests) are generally used to test a small piece of code
+and ensure that it is doing what was intended.
+Unlike application tests, they are narrow in scope and do not require the Ember application to be running.</p>
 
-<p>As it is the basic object type in Ember, being able to test a simple
-<a href="https://www.emberjs.com/api/ember/2.16/modules/@ember%2Fobject?show=inherited%2Cprotected%2Cprivate%2Cdeprecated"><code>EmberObject</code></a> sets the foundation for testing more specific parts of your
-Ember application such as controllers, components, etc. Testing an <code>EmberObject</code>
-is as simple as creating an instance of the object, setting its state, and
-running assertions against the object. By way of example, let&#39;s look at a few
-common cases.</p>
+<p>Let&#39;s have a look at a common use case - testing a service - to understand the basic principles of testing in Ember.
+This will set the foundation for other parts of your Ember application such as controllers, components, helpers and others.
+Testing a service is as simple as creating a container test,
+looking up the service on the application&#39;s container and running assertions against it.</p>
 <h3 id="toc_Testing-Computed-Properties" class="anchorable-toc">Testing Computed Properties</h3>
-<p>Let&#39;s start by creating an object that has a <code>computedFoo</code> computed property
+<p>Let&#39;s start by creating an service that has a <code>computedFoo</code> computed property
 based on a <code>foo</code> property.</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
-      <td colspan="2">app/models/some-thing.js</td>
-    </tr>
-  </thead>
-<tr>
-  <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-<strong>10</strong>
-11
-</pre></td>
-  <td class="code"><pre><span class="reserved">import</span> EmberObject, { computed } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
-
-<span class="reserved">export</span> <span class="keyword">default</span> EmberObject.extend({
-  <span class="key">foo</span>: <span class="string"><span class="delimiter">'</span><span class="content">bar</span><span class="delimiter">'</span></span>,
-
-  <span class="key">computedFoo</span>: computed(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
-    const foo = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>);
-
-    <span class="keyword">return</span> <span class="error">`</span>computed <span class="predefined">$</span>{foo}<span class="error">`</span>;
-  })
-});
-</pre></td>
-</tr></table>
-</div></div>
-<p>Within the test for this object we&#39;ll create an instance, update the <code>foo</code> property (which
-should trigger the computed property), and assert that the logic in our
-computed property is working correctly.</p>
-<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
-  <thead>
-    <tr>
-      <td colspan="2">tests/unit/models/some-thing-test.js</td>
+      <td colspan="2">app/services/some-thing.js</td>
     </tr>
   </thead>
 <tr>
@@ -209,26 +171,70 @@ computed property is working correctly.</p>
 11
 12
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> { moduleFor, test } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> Service from <span class="string"><span class="delimiter">'</span><span class="content">@ember/service</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> { computed } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
 
-moduleFor(<span class="string"><span class="delimiter">'</span><span class="content">model:some-thing</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Unit | some thing</span><span class="delimiter">'</span></span>, {
-  <span class="key">unit</span>: <span class="predefined-constant">true</span>
-});
+<span class="reserved">export</span> <span class="keyword">default</span> Service.extend({
+  <span class="key">foo</span>: <span class="string"><span class="delimiter">'</span><span class="content">bar</span><span class="delimiter">'</span></span>,
 
-test(<span class="string"><span class="delimiter">'</span><span class="content">should correctly concat foo</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {
-  const someThing = <span class="local-variable">this</span>.subject();
-  someThing.set(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">baz</span><span class="delimiter">'</span></span>);
+  <span class="key">computedFoo</span>: computed(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+    const foo = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>);
 
-  assert.equal(someThing.get(<span class="string"><span class="delimiter">'</span><span class="content">computedFoo</span><span class="delimiter">'</span></span>), <span class="string"><span class="delimiter">'</span><span class="content">computed baz</span><span class="delimiter">'</span></span>);
+    <span class="keyword">return</span> <span class="error">`</span>computed <span class="predefined">$</span>{foo}<span class="error">`</span>;
+  })
 });
 </pre></td>
 </tr></table>
 </div></div>
-<p>See that we have used <code>moduleFor</code>, one of the several unit-test helpers provided by Ember-Qunit.
-Test helpers provide us with some conveniences, such as the <code>subject</code> function that handles lookup and instantiation for our object under test.
-Note that in a unit test you can customize the initialization of your object under test by passing to the
-<code>subject</code> function an object containing the instance variables you would like to initialize.  For example, to initialize
-the property &#39;foo&#39; in our object under test, we would call <code>this.subject({ foo: &#39;bar&#39; });</code></p>
+<p>Within the test for this object, we&#39;ll lookup the service instance, update the <code>foo</code> property (which
+should trigger the computed property), and assert that the logic in our
+computed property is working correctly.</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">tests/unit/service/some-thing-test.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+13
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> { module, test } from <span class="string"><span class="delimiter">'</span><span class="content">qunit</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> { setupTest } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
+
+module(<span class="string"><span class="delimiter">'</span><span class="content">Unit | Service | some thing</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(hooks) {
+  setupTest(hooks);
+
+  test(<span class="string"><span class="delimiter">'</span><span class="content">should correctly concat foo</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {
+    const someThing = <span class="local-variable">this</span>.owner.lookup(<span class="string"><span class="delimiter">'</span><span class="content">service:some-thing</span><span class="delimiter">'</span></span>);
+    someThing.set(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">baz</span><span class="delimiter">'</span></span>);
+
+    assert.equal(someThing.get(<span class="string"><span class="delimiter">'</span><span class="content">computedFoo</span><span class="delimiter">'</span></span>), <span class="string"><span class="delimiter">'</span><span class="content">computed baz</span><span class="delimiter">'</span></span>);
+  });
+});
+</pre></td>
+</tr></table>
+</div></div>
+<p>See that first, we are creating a new testing module using the <a href="http://api.qunitjs.com/QUnit/module"><code>QUnit.module</code></a> function.
+This will scope all of our tests together into one group that can be configured
+and run independently from other modules defined in our test suite.
+Also, we have used <code>setupTest</code>, one of the several test helpers provided by <a href="https://github.com/emberjs/ember-qunit">ember-qunit</a>.
+The <code>setupTest</code> helper provides us with some conveniences, such as the <code>this.owner</code> object, that helps us to create or lookup objects
+which are needed to setup our test.
+In this example, we use the <code>this.owner</code> object to lookup the service instance that becomes our test subject: <code>someThing</code>.
+Note that in a unit test you can customize any object under test by setting its properties accordingly.
+We can use the <code>set</code> method of the test object to achieve this.</p>
 <h3 id="toc_Testing-Object-Methods" class="anchorable-toc">Testing Object Methods</h3>
 <p>Next let&#39;s look at testing logic found within an object&#39;s method. In this case
 the <code>testMethod</code> method alters some internal state of the object (by updating
@@ -236,7 +242,7 @@ the <code>foo</code> property).</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
-      <td colspan="2">app/models/some-thing.js</td>
+      <td colspan="2">app/services/some-thing.js</td>
     </tr>
   </thead>
 <tr>
@@ -250,9 +256,9 @@ the <code>foo</code> property).</p>
 8
 9
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> Service from <span class="string"><span class="delimiter">'</span><span class="content">@ember/service</span><span class="delimiter">'</span></span>;
 
-<span class="reserved">export</span> <span class="keyword">default</span> EmberObject.extend({
+<span class="reserved">export</span> <span class="keyword">default</span> Service.extend({
   <span class="key">foo</span>: <span class="string"><span class="delimiter">'</span><span class="content">bar</span><span class="delimiter">'</span></span>,
 
   testMethod() {
@@ -268,7 +274,7 @@ result of the method call.</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
-      <td colspan="2">tests/unit/models/some-thing-test.js</td>
+      <td colspan="2">tests/unit/services/some-thing-test.js</td>
     </tr>
   </thead>
 <tr>
@@ -283,28 +289,34 @@ result of the method call.</p>
 9
 <strong>10</strong>
 11
+12
+13
+14
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> { moduleFor, test } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> { module, test } from <span class="string"><span class="delimiter">'</span><span class="content">qunit</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> { setupTest } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
 
-moduleFor(<span class="string"><span class="delimiter">'</span><span class="content">model:some-thing</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Unit | some thing</span><span class="delimiter">'</span></span>, {
-  <span class="key">unit</span>: <span class="predefined-constant">true</span>
-});
+module(<span class="string"><span class="delimiter">'</span><span class="content">Unit | Service | some thing</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(hooks) {
+  setupTest(hooks);
 
-test(<span class="string"><span class="delimiter">'</span><span class="content">should update foo on testMethod</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {
-  const someThing = <span class="local-variable">this</span>.subject();
-  someThing.testMethod();
-  assert.equal(someThing.get(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>), <span class="string"><span class="delimiter">'</span><span class="content">baz</span><span class="delimiter">'</span></span>);
+  test(<span class="string"><span class="delimiter">'</span><span class="content">should update foo on testMethod</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {
+    const someThing = <span class="local-variable">this</span>.owner.lookup(<span class="string"><span class="delimiter">'</span><span class="content">service:some-thing</span><span class="delimiter">'</span></span>);
+
+    someThing.testMethod();
+
+    assert.equal(someThing.get(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>), <span class="string"><span class="delimiter">'</span><span class="content">baz</span><span class="delimiter">'</span></span>);
+  });
 });
 </pre></td>
 </tr></table>
 </div></div>
-<p>In the event the object&#39;s method returns a value, you can simply assert that the
+<p>In case the object&#39;s method returns a value, you can simply assert that the
 return value is calculated correctly. Suppose our object has a <code>calc</code> method
 that returns a value based on some internal state.</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
-      <td colspan="2">app/models/some-thing.js</td>
+      <td colspan="2">app/services/some-thing.js</td>
     </tr>
   </thead>
 <tr>
@@ -321,7 +333,7 @@ that returns a value based on some internal state.</p>
 11
 12
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> Service from <span class="string"><span class="delimiter">'</span><span class="content">@ember/service</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">default</span> EmberObject.extend({
   <span class="key">count</span>: <span class="integer">0</span>,
@@ -340,7 +352,7 @@ that returns a value based on some internal state.</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
-      <td colspan="2">tests/unit/models/some-thing-test.js</td>
+      <td colspan="2">tests/unit/services/some-thing-test.js</td>
     </tr>
   </thead>
 <tr>
@@ -355,17 +367,21 @@ that returns a value based on some internal state.</p>
 9
 <strong>10</strong>
 11
+12
+13
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> { moduleFor, test } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> { module, test } from <span class="string"><span class="delimiter">'</span><span class="content">qunit</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> { setupTest } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
 
-moduleFor(<span class="string"><span class="delimiter">'</span><span class="content">model:some-thing</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Unit | some thing</span><span class="delimiter">'</span></span>, {
-  <span class="key">unit</span>: <span class="predefined-constant">true</span>
-});
+module(<span class="string"><span class="delimiter">'</span><span class="content">Unit | Service | some thing</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(hooks) {
+  setupTest(hooks);
 
-test(<span class="string"><span class="delimiter">'</span><span class="content">should return incremented count on calc</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {
-  const someThing = <span class="local-variable">this</span>.subject();
-  assert.equal(someThing.calc(), <span class="string"><span class="delimiter">'</span><span class="content">count: 1</span><span class="delimiter">'</span></span>);
-  assert.equal(someThing.calc(), <span class="string"><span class="delimiter">'</span><span class="content">count: 2</span><span class="delimiter">'</span></span>);
+  test(<span class="string"><span class="delimiter">'</span><span class="content">should return incremented count on calc</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {
+    const someThing = <span class="local-variable">this</span>.owner.lookup(<span class="string"><span class="delimiter">'</span><span class="content">service:some-thing</span><span class="delimiter">'</span></span>);
+
+    assert.equal(someThing.calc(), <span class="string"><span class="delimiter">'</span><span class="content">count: 1</span><span class="delimiter">'</span></span>);
+    assert.equal(someThing.calc(), <span class="string"><span class="delimiter">'</span><span class="content">count: 2</span><span class="delimiter">'</span></span>);
+  });
 });
 </pre></td>
 </tr></table>
@@ -374,7 +390,7 @@ test(<span class="string"><span class="delimiter">'</span><span class="content">
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
-      <td colspan="2">app/models/some-thing.js</td>
+      <td colspan="2">app/services/some-thing.js</td>
     </tr>
   </thead>
 <tr>
@@ -390,10 +406,10 @@ test(<span class="string"><span class="delimiter">'</span><span class="content">
 <strong>10</strong>
 11
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
-<span class="reserved">import</span> { observer } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> Service from <span class="string"><span class="delimiter">'</span><span class="content">@ember/service</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> { observer } from <span class="string"><span class="delimiter">&quot;</span><span class="content">@ember/object</span><span class="delimiter">&quot;</span></span>;
 
-<span class="reserved">export</span> <span class="keyword">default</span> EmberObject.extend({
+<span class="reserved">export</span> <span class="keyword">default</span> Service.extend({
   <span class="key">foo</span>: <span class="string"><span class="delimiter">'</span><span class="content">bar</span><span class="delimiter">'</span></span>,
   <span class="key">other</span>: <span class="string"><span class="delimiter">'</span><span class="content">no</span><span class="delimiter">'</span></span>,
 
@@ -409,7 +425,7 @@ update the observed property (<code>foo</code>), and assert that the expected ef
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
-      <td colspan="2">tests/unit/models/some-thing-test.js</td>
+      <td colspan="2">tests/unit/services/some-thing-test.js</td>
     </tr>
   </thead>
 <tr>
@@ -424,17 +440,21 @@ update the observed property (<code>foo</code>), and assert that the expected ef
 9
 <strong>10</strong>
 11
+12
+13
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> { moduleFor, test } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> { module, test } from <span class="string"><span class="delimiter">'</span><span class="content">qunit</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> { setupTest } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
 
-moduleFor(<span class="string"><span class="delimiter">'</span><span class="content">model:some-thing</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Unit | some thing</span><span class="delimiter">'</span></span>, {
-  <span class="key">unit</span>: <span class="predefined-constant">true</span>
-});
+module(<span class="string"><span class="delimiter">'</span><span class="content">Unit | Service | some thing</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(hooks) {
+  setupTest(hooks);
 
-test(<span class="string"><span class="delimiter">'</span><span class="content">should set other prop to yes when foo changes</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {
-  const someThing = <span class="local-variable">this</span>.subject();
-  someThing.set(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">baz</span><span class="delimiter">'</span></span>);
-  assert.equal(someThing.get(<span class="string"><span class="delimiter">'</span><span class="content">other</span><span class="delimiter">'</span></span>), <span class="string"><span class="delimiter">'</span><span class="content">yes</span><span class="delimiter">'</span></span>);
+  test(<span class="string"><span class="delimiter">'</span><span class="content">should set other prop to yes when foo changes</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {
+    const someThing = <span class="local-variable">this</span>.owner.lookup(<span class="string"><span class="delimiter">'</span><span class="content">service:some-thing</span><span class="delimiter">'</span></span>);
+
+    someThing.set(<span class="string"><span class="delimiter">'</span><span class="content">foo</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">baz</span><span class="delimiter">'</span></span>);
+    assert.equal(someThing.get(<span class="string"><span class="delimiter">'</span><span class="content">other</span><span class="delimiter">'</span></span>), <span class="string"><span class="delimiter">'</span><span class="content">yes</span><span class="delimiter">'</span></span>);
+  });
 });
 </pre></td>
 </tr></table>
@@ -452,7 +472,7 @@ You can do it by using <code>skip</code>:</p>
 8
 9
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> { test, skip } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
+  <td class="code"><pre><span class="reserved">import</span> { test, skip } from <span class="string"><span class="delimiter">'</span><span class="content">qunit</span><span class="delimiter">'</span></span>;
 
 test(<span class="string"><span class="delimiter">'</span><span class="content">run this test</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>(assert) {
     assert.ok(<span class="predefined-constant">true</span>)
@@ -468,7 +488,7 @@ skip(<span class="string"><span class="delimiter">'</span><span class="content">
 
         
       <footer>
-        <a class="previous-guide" href="../acceptance/">Acceptance Tests</a> <a class="next-guide" href="../testing-components/">Testing Components</a>
+        <a class="previous-guide" href="../acceptance/">Application Tests</a> <a class="next-guide" href="../testing-components/">Testing Components</a>
       </footer>
       
       </article>
