@@ -5,6 +5,7 @@
 - Fix typo [#73](https://github.com/emberjs-japan/guides-ja/pull/73) by [@hogesuke](https://github.com/hogesuke)
 - Fix typo [#74](https://github.com/emberjs-japan/guides-ja/pull/74) by [@hogesuke](https://github.com/hogesuke)
 - Sync [#75](https://github.com/emberjs-japan/guides-ja/pull/75)
+- [x] Model - Relationships
 
 ## 2018.02.14
 
