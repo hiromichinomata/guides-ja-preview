@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2018.02.17
+
+- Fix typo [#73](https://github.com/emberjs-japan/guides-ja/pull/73) by [@hogesuke](https://github.com/hogesuke)
+- Fix typo [#74](https://github.com/emberjs-japan/guides-ja/pull/74) by [@hogesuke](https://github.com/hogesuke)
+
 ## 2018.02.14
 
 - Fix typo [#72](https://github.com/emberjs-japan/guides-ja/pull/72) by [@hogesuke](https://github.com/hogesuke)
