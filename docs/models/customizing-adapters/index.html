@@ -140,31 +140,53 @@
         </h1>
         <hr>
 
-        <p>In Ember Data, the Adapter determines how data is persisted to a
+        <!--
+In Ember Data, the Adapter determines how data is persisted to a
 backend data store, such as the URL format and headers for a REST API.
 (The format of the data itself is determined by the
-<a href="../customizing-serializers/">serializer</a>.)
-Ember Data&#39;s default Adapter has some built-in
-assumptions of how a <a href="http://jsonapi.org/">REST API should look</a>. If
+[serializer](../customizing-serializers/).)
+Ember Data's default Adapter has some built-in
+assumptions of how a [REST API should look](http://jsonapi.org/). If
 your backend conventions differ from these assumptions Ember Data
 makes it easy to change its functionality by swapping out or extending
-the default Adapter.</p>
+the default Adapter.
+-->
 
-<p>Some reasons for customizing an Adapter include using
-<code>underscores_case</code> in your urls, using a medium other than REST to
+<p>Ember Dataでは、アダプタはURL形式やREST APIのヘッダーなど、バックエンドとデータのやり取りをどの行うかを判断します。
+(データ自体のフォーマットは<a href="../customizing-serializers/">シリアライザ</a>が処理します。)
+Ember Dataのデフォルトアダプタには、<a href="http://jsonapi.org/">REST APIはどうあるべきか</a>のいくつかの組み込みの前提があります。
+バックエンドの規約がこれらの前提条件と異なる場合、Ember Dataはデフォルトのアダプタを交換または拡張することにより、その機能を簡単に変更することができます。</p>
+
+<!--
+Some reasons for customizing an Adapter include using
+`underscores_case` in your urls, using a medium other than REST to
 communicate with your backend API or even using a
-<a href="https://github.com/locks/ember-localstorage-adapter">local storage backend</a>.</p>
+[local storage backend](https://github.com/locks/ember-localstorage-adapter).
+-->
 
-<p>Extending Adapters is a natural process in Ember Data. Ember takes the
+<p>アダプターをカスタマイズする理由の1つに、URLでアンダースコアを使う、REST以外の手段でバックエンドAPIと通信、<a href="https://github.com/locks/ember-localstorage-adapter">ローカルストレージ</a>を使うなどがあります。</p>
+
+<!--
+Extending Adapters is a natural process in Ember Data. Ember takes the
 position that you should extend an adapter to add different
 functionality. This results in code that is
 more testable, easier to understand and reduces bloat for people who
-may want to subclass your adapter.</p>
+may want to subclass your adapter.
+-->
 
-<p>If your backend has some consistent rules you can define an
-<code>adapter:application</code>. The <code>adapter:application</code> will get priority over
+<p>アダプターの拡張は、Ember Dataの自然なプロセスです。
+Emberは、さまざまな機能を追加するためにはアダプタを拡張すべきという見解を示しています。
+これにより、アダプターをサブクラス化する場合でも、テスト可能で理解しやすいく、コードは肥大化しないでしょう。</p>
+
+<!--
+If your backend has some consistent rules you can define an
+`adapter:application`. The `adapter:application` will get priority over
 the default Adapter, however it will still be superseded by model
-specific Adapters.</p>
+specific Adapters.
+-->
+
+<p>バックエンドに一定の規則がある場合は、<code>adapter:application</code>で定義できます。
+<code>adapter:application</code>は、デフォルトのアダプタより優先されますが、モデル固有のアダプタによりオーバーライドされます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -186,11 +208,16 @@ specific Adapters.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>If you have one model that has exceptional rules for communicating
+<!--
+If you have one model that has exceptional rules for communicating
 with its backend than the others you can create a Model specific
-Adapter by running the command <code>ember generate adapter adapter-name</code>.
-For example, running <code>ember generate adapter post</code> will create the
-following file:</p>
+Adapter by running the command `ember generate adapter adapter-name`.
+For example, running `ember generate adapter post` will create the
+following file:
+-->
+
+<p>バックエンドと通信で例外的なルールを持つモデルがある場合は、コマンド<code>ember generate adapter adapter-name</code>を実行してモデル固有のアダプタを作成します。
+例えば、<code>ember generate adapter post</code>を実行すると、次のファイルが作成されます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -212,21 +239,35 @@ following file:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Ember Data comes with several built-in adapters.
-Feel free to use these adapters as a starting point for creating your own custom adapter.</p>
+<!--
+Ember Data comes with several built-in adapters.
+Feel free to use these adapters as a starting point for creating your own custom adapter.
+-->
 
-<ul>
-<li><p><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Adapter">DS.Adapter</a> is the basic adapter
+<p>Ember Dataには、いくつかのビルトインアダプタが付属しています。
+独自のカスタムアダプターを作成するための出発点として、これらのアダプターを自由に使用してください。</p>
+
+<!--
+- [DS.Adapter](https://www.emberjs.com/api/ember-data/release/classes/DS.Adapter) is the basic adapter
 with no functionality. It is generally a good starting point if you
 want to create an adapter that is radically different from the other
-Ember adapters.</p></li>
-<li><p><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPIAdapter">DS.JSONAPIAdapter</a>
-The <code>JSONAPIAdapter</code> is the default adapter and follows JSON API
+Ember adapters.
+
+- [DS.JSONAPIAdapter](https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPIAdapter)
+The `JSONAPIAdapter` is the default adapter and follows JSON API
 conventions to communicate with an HTTP server by transmitting JSON
-via XHR.</p></li>
-<li><p><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.RESTAdapter">DS.RESTAdapter</a>
-The <code>RESTAdapter</code> allows your store to communicate with an HTTP server
-by transmitting JSON via XHR. Before Ember Data 2.0 this adapter was the default.</p></li>
+via XHR.
+
+- [DS.RESTAdapter](https://www.emberjs.com/api/ember-data/release/classes/DS.RESTAdapter)
+The `RESTAdapter` allows your store to communicate with an HTTP server
+by transmitting JSON via XHR. Before Ember Data 2.0 this adapter was the default.
+-->
+
+<ul>
+<li><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Adapter">DS.Adapter</a>は機能を持たない基本アダプタです。
+他のEmberアダプタとは根本的に異なるアダプタを作成する場合は、一般的には適切な出発点です。</li>
+<li><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPIAdapter">DS.JSONAPIAdapter</a> <code>JSONAPIAdapter</code>はデフォルトのアダプタであり、XHR経由でJSONを送信してHTTPサーバーと通信するためのJSON API規約に従います。</li>
+<li><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.RESTAdapter">DS.RESTAdapter</a> <code>RESTAdapter</code>を使用すると、JSONをXHR経由で送信し、ストアがHTTPサーバーと通信できるようになります。 Ember Data 2.0以前はこのアダプタがデフォルトでした。</li>
 </ul>
 <h2 id="toc_Customizing-the-JSONAPIAdapter" class="anchorable-toc">Customizing the JSONAPIAdapter</h2>
 <p>The
