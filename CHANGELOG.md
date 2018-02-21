@@ -4,6 +4,7 @@
 
 - Fix typo [#80](https://github.com/emberjs-japan/guides-ja/pull/80) by [@hogesuke](https://github.com/hogesuke)
 - Sync [#81](https://github.com/emberjs-japan/guides-ja/pull/81)
+- [x] Models - Pushing Records into the Store
 
 ## 2018.02.20
 
