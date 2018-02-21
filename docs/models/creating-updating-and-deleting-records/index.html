@@ -146,11 +146,11 @@
 <h2 id="toc_レコードの作成" class="anchorable-toc">レコードの作成</h2>
 <!--
 You can create records by calling the
-[`createRecord()`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Store/methods/createRecord?anchor=createRecord)
+[`createRecord()`](https://www.emberjs.com/api/ember-data/release/classes/DS.Store/methods/createRecord?anchor=createRecord)
 method on the store.
 -->
 
-<p>ストアの<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Store/methods/createRecord?anchor=createRecord"><code>createRecord()</code></a>メソッドを呼び出すと、レコードを作成できます。</p>
+<p>ストアの<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Store/methods/createRecord?anchor=createRecord"><code>createRecord()</code></a>メソッドを呼び出すと、レコードを作成できます。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -214,12 +214,12 @@ modifying attributes. For example, you can use `Ember.Object`'s
 <h2 id="toc_レコードの保存" class="anchorable-toc">レコードの保存</h2>
 <!--
 Records in Ember Data are persisted on a per-instance basis.
-Call [`save()`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/methods/save?anchor=save)
+Call [`save()`](https://www.emberjs.com/api/ember-data/release/classes/DS.Model/methods/save?anchor=save)
 on any instance of `DS.Model` and it will make a network request.
 -->
 
 <p>Ember Dataのレコードは、インスタンスごとに保存されます。
-DS.Modelのインスタンスで<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/methods/save?anchor=save"><code>save()</code></a>を呼び出すと、ネットワークリクエストが発生します。</p>
+DS.Modelのインスタンスで<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Model/methods/save?anchor=save"><code>save()</code></a>を呼び出すと、ネットワークリクエストが発生します。</p>
 
 <!--
 Ember Data takes care of tracking the state of each record for
@@ -279,16 +279,16 @@ Records that already exist on the backend are updated using the HTTP `PATCH` ver
 <!--
 You can tell if a record has outstanding changes that have not yet been
 saved by checking its
-[`hasDirtyAttributes`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/properties/hasDirtyAttributes?anchor=hasDirtyAttributes)
+[`hasDirtyAttributes`](https://www.emberjs.com/api/ember-data/release/classes/DS.Model/properties/hasDirtyAttributes?anchor=hasDirtyAttributes)
 property. You can also see what parts of
 the record were changed and what the original value was using the
-[`changedAttributes()`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/methods/changedAttributes?anchor=changedAttributes)
+[`changedAttributes()`](https://www.emberjs.com/api/ember-data/release/classes/DS.Model/methods/changedAttributes?anchor=changedAttributes)
 method. `changedAttributes` returns an object, whose keys are the changed
 properties and values are an array of values `[oldValue, newValue]`.
 -->
 
-<p>レコードの<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/properties/hasDirtyAttributes?anchor=hasDirtyAttributes"><code>hasDirtyAttributes</code></a>プロパティをチェックすることで、まだ保存されていない変更があるかどうかを知ることができます。
-レコードのどの部分が変更されたか、変更前の元の値は<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/methods/changedAttributes?anchor=changedAttributes"><code>changedAttributes()</code></a>メソッドで確認できます。
+<p>レコードの<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Model/properties/hasDirtyAttributes?anchor=hasDirtyAttributes"><code>hasDirtyAttributes</code></a>プロパティをチェックすることで、まだ保存されていない変更があるかどうかを知ることができます。
+レコードのどの部分が変更されたか、変更前の元の値は<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Model/methods/changedAttributes?anchor=changedAttributes"><code>changedAttributes()</code></a>メソッドで確認できます。
 <code>changedAttributes</code>は、変更されたプロパティをキーとするオブジェクトを返し、値は<code>[oldValue, newValue]</code>の値の配列です。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
@@ -308,13 +308,13 @@ person.changedAttributes();       <span class="comment">// =&gt; { isAdmin: [fal
 <!--
 At this point, you can either persist your changes via `save()` or you can roll
 back your changes. Calling
-[`rollbackAttributes()`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/methods/rollbackAttributes?anchor=rollbackAttributes)
+[`rollbackAttributes()`](https://www.emberjs.com/api/ember-data/release/classes/DS.Model/methods/rollbackAttributes?anchor=rollbackAttributes)
 for a saved record reverts all the `changedAttributes` to their original value.
 If the record `isNew` it will be removed from the store.
 -->
 
 <p>この時点で、<code>save()</code>を使って変更を保持することも、変更をロールバックすることもできます。
-保存されたレコードの<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/methods/rollbackAttributes?anchor=rollbackAttributes"><code>rollbackAttributes()</code></a>を呼び出すと、すべての<code>changedAttributes</code>が元の値に戻ります。
+保存されたレコードの<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Model/methods/rollbackAttributes?anchor=rollbackAttributes"><code>rollbackAttributes()</code></a>を呼び出すと、すべての<code>changedAttributes</code>が元の値に戻ります。
 レコードが新しい(<code>isNew</code>)場合は、ストアから削除されます。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
@@ -367,12 +367,12 @@ the errors from saving a blog post in your template:
 </tr></table>
 </div></div><h2 id="toc_Promises" class="anchorable-toc">Promises</h2>
 <!--
-[`save()`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/methods/save?anchor=save) returns
+[`save()`](https://www.emberjs.com/api/ember-data/release/classes/DS.Model/methods/save?anchor=save) returns
 a promise, which makes it easy to asynchronously handle success and failure
 scenarios.  Here's a common pattern:
 -->
 
-<p><a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/methods/save?anchor=save"><code>save()</code></a>はPromiseを返します。
+<p><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Model/methods/save?anchor=save"><code>save()</code></a>はPromiseを返します。
 成功と失敗のシナリオを非同期に処理できるようにします。
 よくあるパターンは次のとおりです。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
@@ -423,17 +423,17 @@ post.save().then(transitionToPost).<span class="keyword">catch</span>(failure);
 -->
 <h2 id="toc_レコードの削除" class="anchorable-toc">レコードの削除</h2>
 <!--
-Deleting records is as straightforward as creating records. Call [`deleteRecord()`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/methods/deleteRecord?anchor=deleteRecord)
+Deleting records is as straightforward as creating records. Call [`deleteRecord()`](https://www.emberjs.com/api/ember-data/release/classes/DS.Model/methods/deleteRecord?anchor=deleteRecord)
 on any instance of `DS.Model`. This flags the record as `isDeleted`. The
 deletion can then be persisted using `save()`.  Alternatively, you can use
-the [`destroyRecord`](https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/methods/deleteRecord?anchor=destroyRecord) method to delete and persist at the same time.
+the [`destroyRecord`](https://www.emberjs.com/api/ember-data/release/classes/DS.Model/methods/deleteRecord?anchor=destroyRecord) method to delete and persist at the same time.
 -->
 
 <p>レコードの削除は、レコードの作成と同じくらい簡単です。
-<code>DS.Model</code>の任意のインスタンスで<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/methods/deleteRecord?anchor=deleteRecord"><code>deleteRecord()</code></a>を呼び出します。
+<code>DS.Model</code>の任意のインスタンスで<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Model/methods/deleteRecord?anchor=deleteRecord"><code>deleteRecord()</code></a>を呼び出します。
 これはレコードの<code>isDeleted</code>フラグを立てます。
 削除は、<code>save()</code>を使用して永続化することができます。
-また、<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Model/methods/deleteRecord?anchor=destroyRecord"><code>destroyRecord</code></a>メソッドを使用して、削除と永続化を同時に行うこともできます。</p>
+また、<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Model/methods/deleteRecord?anchor=destroyRecord"><code>destroyRecord</code></a>メソッドを使用して、削除と永続化を同時に行うこともできます。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -464,7 +464,7 @@ The `backgroundReload` option is used to prevent the fetching of the destroyed r
 -->
 
 <p><code>backgroundReload</code>オプションは、破棄されたレコードのフェッチを防ぐために使用します。
-<a href="https://www.emberjs.com/api/ember-data/2.16/classes/DS.Store/methods/findRecord?anchor=findRecord">findRecord()</a>が自動的にアダプタからレコードのフェッチをスケジュールするためです。</p>
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Store/methods/findRecord?anchor=findRecord">findRecord()</a>が自動的にアダプタからレコードのフェッチをスケジュールするためです。</p>
 
 
 

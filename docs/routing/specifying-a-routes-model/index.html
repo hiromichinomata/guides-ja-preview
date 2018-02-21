@@ -171,11 +171,11 @@ For example, take this router:
 </tr></table>
 </div></div>
 <!--
-To load a model for the `favorite-posts` route, you would use the [`model()`](https://www.emberjs.com/api/ember/2.16/classes/Route/methods/model?anchor=model)
+To load a model for the `favorite-posts` route, you would use the [`model()`](https://www.emberjs.com/api/ember/release/classes/Route/methods/model?anchor=model)
 hook in the `favorite-posts` route handler:
 -->
 
-<p><code>favorite-posts</code>ルートのモデルを読み込むには、<code>favorite-posts</code>ルートハンドラで<a href="https://www.emberjs.com/api/ember/2.16/classes/Route/methods/model?anchor=model"><code>model()</code></a>フックを使います：</p>
+<p><code>favorite-posts</code>ルートのモデルを読み込むには、<code>favorite-posts</code>ルートハンドラで<a href="https://www.emberjs.com/api/ember/release/classes/Route/methods/model?anchor=model"><code>model()</code></a>フックを使います：</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -431,12 +431,12 @@ Routes without dynamic segments will always execute the model hook.
 <h2 id="toc_複数のモデル" class="anchorable-toc">複数のモデル</h2>
 <!--
 Multiple models can be returned through an
-[RSVP.hash](https://www.emberjs.com/api/ember/2.16/classes/rsvp/methods/hash?anchor=hash).
+[RSVP.hash](https://www.emberjs.com/api/ember/release/classes/rsvp/methods/hash?anchor=hash).
 The `RSVP.hash` method takes an object with promises or values as properties as an argument, and returns a single promise.
 When all of the promises in the object resolve, the returned promise will resolve with an object of all of the promise values. For example:
 -->
 
-<p>複数のモデルは、<a href="https://www.emberjs.com/api/ember/2.16/classes/rsvp/methods/hash?anchor=hash">RSVP.hash</a>を使って返すことができます。
+<p>複数のモデルは、<a href="https://www.emberjs.com/api/ember/release/classes/rsvp/methods/hash?anchor=hash">RSVP.hash</a>を使って返すことができます。
 <code>RSVP.hash</code>は、引数に<code>Promise</code>か値を持つオブジェクトをとり、<code>Promise</code>を返します。
 返されたPromiseは、オブジェクト内の<code>Promise</code>が全て解決されると、promiseで解決された値を入れたオブジェクトで解決されます。
 例:
