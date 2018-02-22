@@ -278,7 +278,7 @@ For example:
 -->
 
 <p>リダイレクトするかの判断のために、モデルに関する情報が必要な場合は、<a href="https://www.emberjs.com/api/ember/2.16/classes/Route/methods/transitionTo?anchor=afterModel"><code>afterModel()</code></a>フックを使用します。
-第1引数にPromiseが)解決したモデルを受け取り、第2引数にトランジションを受け取ります。
+第1引数にPromiseが解決したモデルを受け取り、第2引数にトランジションを受け取ります。
 例えば、下記の場合、</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
@@ -333,7 +333,7 @@ the current transition will be aborted in favor of redirecting to the `PostRoute
 with the single post object being its model.
 -->
 
-<p><code>posts</code>ルートに移動した際、<code>posts</code>が1つしかないことが判明したら、現在のトランジションが中止し<code>post</code>ルートにリダイレクトし、その1件のpostオブジェクトをモデルにしています。</p>
+<p><code>posts</code>ルートに移動した際、<code>posts</code>が1つしかないことが判明したら、現在のトランジションを中止し<code>post</code>ルートにリダイレクトし、その1件のpostオブジェクトをモデルにしています。</p>
 
 <!--
 ### Child Routes
@@ -343,7 +343,7 @@ with the single post object being its model.
 Let's change the router above to use a nested route, like this:
 -->
 
-<p>上記のルータを次のようにネストしたルートを使用するように変更しましょう。</p>
+<p>上記のルーターを次のようにネストしたルートを使用するように変更しましょう。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -383,7 +383,7 @@ transition validated, and not cause the parent route's hooks to fire again:
 -->
 
 <p>そこで、<a href="https://www.emberjs.com/api/ember/2.16/classes/Route/methods/transitionTo?anchor=redirect"><code>redirect()</code></a>メソッドを使います。
-このメソッドでは、元のトランジションを有効なままなので、親ルートのフックは再び発動させません。</p>
+このメソッドでは、元のトランジションは有効なままなので、親ルートのフックは再び発動されません。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
