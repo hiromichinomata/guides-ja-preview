@@ -145,7 +145,7 @@ The Ember Router allows you to provide feedback that a route is loading, as well
 as when an error occurs in loading a route.
 -->
 
-<p>Ember Routerでは、ルートのロード中や、エラーが発生したことを、ユーザに見せることができます。</p>
+<p>Ember Routerでは、ルートのロード中や、エラーが発生したことを、ユーザーに見せることができます。</p>
 
 <!--
 The `error` and `loading` substates exist as a part of each route, so they
@@ -229,15 +229,15 @@ templates for `slow-model` load.
 -->
 
 <p><code>slow-model</code>に移動する時に、<code>model</code>フックでクエリが完了するまでに時間がかかることがあります。
-この間、UIは実際に何が起こっているかについてのフィードバックをユーザに与えていません。
-ブラウザの更新でこのルートにアクセスすると、ルートの処理が完全に終わるまではテンプレートが表示されていないため、完全に空白になページが表示されます。
+この間、UIは実際に何が起こっているかについてのフィードバックをユーザーに与えていません。
+ブラウザの更新でこのルートにアクセスすると、ルートの処理が完全に終わるまではテンプレートが表示されていないため、完全に空白なページが表示されます。
 <code>slow-model</code>に別のルートから移動すると、移動前のルートが表示され続け、<code>slow-model</code>のモデルのロードが完了した途端にドバッと<code>slow-model</code>のテンプレートが一気に表示されます。</p>
 
 <!--
 So, how can we provide some visual feedback during the transition?
 -->
 
-<p>このような場合に、処理中であることをユーザに見せることできます。</p>
+<p>このような場合に、処理中であることをユーザーに見せることできます。</p>
 
 <!--
 Simply define a template called `loading` (and optionally a corresponding route)
@@ -293,7 +293,7 @@ find a `routeName-loading` or `loading` template in the hierarchy starting with
 `foo.bar.slow-model-loading`:
 -->
 
-<p><code>foo.bar.slow-model</code>ルートにアクセスすると、Emberは、以下ように、<code>foo.bar.slow-model-loading</code>、<code>routeName-loading</code>、<code>loading</code>という順でテンプレートを探します。</p>
+<p><code>foo.bar.slow-model</code>ルートにアクセスすると、Emberは以下のように、<code>foo.bar.slow-model-loading</code>、<code>routeName-loading</code>、<code>loading</code>という順でテンプレートを探します。</p>
 
 <!--
 1. `foo.bar.slow-model-loading`
@@ -506,7 +506,7 @@ Ember provides an analogous approach to `loading` substates in
 the case of errors encountered during a transition.
 -->
 
-<p>Emberは、トランジション中にエラーが発生した場合、<code>loading</code>サブステートと似たの手段を提供します。</p>
+<p>Emberは、トランジション中にエラーが発生した場合、<code>loading</code>サブステートと似た手段を提供します。</p>
 
 <!--
 Similar to how the default `loading` event handlers are implemented,
@@ -514,7 +514,7 @@ the default `error` handlers will look for an appropriate error substate to
 enter, if one can be found.
 -->
 
-<p><code>loading</code>イベントハンドラーの実装方法と同様に、<code>error</code>ハンドラーも該当する<code>error</code>サブステートがあるか探します。</p>
+<p><code>loading</code>イベントハンドラの実装方法と同様に、<code>error</code>ハンドラも該当する<code>error</code>サブステートがあるか探します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -564,7 +564,7 @@ that substate (without updating the URL). The "reason" for the error
 to that error state as its `model`.
 -->
 
-<p>上記のいずれかが見つかった場合、ルータはすぐにそのサブステートに移ります。(URLは更新されません)
+<p>上記のいずれかが見つかった場合、ルーターはすぐにそのサブステートに移ります。(URLは更新されません)
 エラーの理由(すなわち、throwされた例外またはPromiseのリジェクト値)、errorが以下のように<code>model</code>として渡されます。</p>
 
 <!--
@@ -608,7 +608,7 @@ This `error` event can be handled and used to display an error message,
 redirect to a login page, etc.
 -->
 
-<p><code>articles.overview</code>ルートの<code>model</code>フックでPromiseがrejctされた場合(例えばサーバからエラーが返されたり、ユーザがログインしていないなど)、<a href="https://www.emberjs.com/api/ember/2.16/classes/Route/events/error?anchor=error"><code>error</code></a>イベントはそのルートから発生して、親ルートに伝播されます。
+<p><code>articles.overview</code>ルートの<code>model</code>フックでPromiseがrejectされた場合(例えばサーバからエラーが返されたり、ユーザーがログインしていないなど)、<a href="https://www.emberjs.com/api/ember/2.16/classes/Route/events/error?anchor=error"><code>error</code></a>イベントはそのルートから発生して、親ルートに伝播されます。
 <code>error</code>イベントは、エラーメッセージの表示、ログインページへのリダイレクトなどに使用できます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>

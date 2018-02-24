@@ -303,7 +303,7 @@ itself](../../templates/actions/), or by child components.
 -->
 
 <p>Emberでは、各コンポーネントに<code>action</code>というプロパティを設定できます。
-このプロパティには、<a href="../../templates/actions/">ユーザの操作によってコンポーネント自身とやりとりする</a>関数か子コンポーネントから呼び出される関数を配置します。</p>
+このプロパティには、<a href="../../templates/actions/">ユーザーの操作によってコンポーネント自身とやりとりする</a>関数か子コンポーネントから呼び出される関数を配置します。</p>
 
 <!--
 Let's look at the parent component's JavaScript file. In this example,
@@ -1084,7 +1084,7 @@ user's account was deleted, and passes along with it the full user profile objec
 -->
 
 <p>多くの場合、子コンポーネントは、親がアクションを処理するために必要な情報を把握せず、ただ持っている情報をすべて渡すことがあります。
-例えば、<code>user-profile</code>コンポーネントは、親の<code>system-preferences-editor</code>に、ユーザのアカウントが削除されたことを通知し、ユーザプロファイルオブジェクトごと渡します。</p>
+例えば、<code>user-profile</code>コンポーネントは、親の<code>system-preferences-editor</code>に、ユーザーのアカウントが削除されたことを通知し、ユーザープロファイルオブジェクトごと渡します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -1128,7 +1128,7 @@ For this case, the action helper provides the `value` attribute to allow a paren
 object to pull out only what it needs.
 -->
 
-<p><code>system-preferences-editor</code>コンポーネントがユーザの削除に必要な情報はそのユーザーIDだけです。
+<p><code>system-preferences-editor</code>コンポーネントがユーザーの削除に必要な情報はそのユーザーIDだけです。
 そのような場合のために、アクションヘルパーには、親コンポーネントが渡されたオブジェクから必要なものだけを取得できる<code>value</code>属性があります。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
@@ -1147,7 +1147,7 @@ object to pull out only what it needs.
 Now when the `system-preferences-editor` handles the delete action, it receives only the user's account `id` string.
 -->
 
-<p>これにより、<code>system-preferences-editor</code>が削除アクションを実行する時はユーザのアカウント<code>id</code>だけを受け取るようになります。。</p>
+<p>これにより、<code>system-preferences-editor</code>が削除アクションを実行する時はユーザーのアカウント<code>id</code>だけを受け取るようになります。。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>

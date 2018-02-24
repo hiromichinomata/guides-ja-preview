@@ -164,7 +164,7 @@ route, the opportunity to decide whether or not the transition should occur.
 -->
 
 <p><code>{{link-to}}</code>、<code>transitionTo</code>、またはURLの変更を経てトランジションが試行されると、アクティブルートで<code>willTransition</code>アクションが呼ばれます。
- これにより、一番端のルートから順に、各アクティブルートへ、その遷移が発生するかどうかを判断する機会が与えられます。</p>
+これにより、一番端のルートから順に、各アクティブルートへ、その遷移が発生するかどうかを判断する機会が与えられます。</p>
 
 <!--
 Imagine your app is in a route that's displaying a complex form for the user
@@ -173,7 +173,7 @@ transition is prevented, the user might lose all of the progress they
 made on the form, which can make for a pretty frustrating user experience.
 -->
 
-<p>複雑なフォームを表示しているルートにあり、ユーザが誤って前のページに戻るところを想像してください。
+<p>複雑なフォームを表示しているルートにあり、ユーザーが誤って前のページに戻るところを想像してください。
 そのトランジションを中止しないと、ユーザーはフォーム上に入力したデータを失う可能性があり、利便性を損なう可能性があります。</p>
 
 <!--
@@ -315,7 +315,7 @@ they've logged in.
 -->
 
 <p>中止されたトランジションは後で再試行できます。
-よくある例だと、認証が必要なルートがユーザをログインページにリダイレクトしてから、ログイン後に元いたルートへのリダイレクトです。</p>
+一般的な例は、認証が必要なルートでユーザーをログインページにリダイレクトし、ログイン後に元いたルートにリダイレクトする処理です。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -401,7 +401,7 @@ export default Controller.extend({
 <span class="reserved">export</span> <span class="keyword">default</span> Controller.extend({
   <span class="key">actions</span>: {
     login() {
-      <span class="comment">// ユーザをログインさせ、ログイン前にアクセスしたルートがあれば、</span>
+      <span class="comment">// ユーザーをログインさせ、ログイン前にアクセスしたルートがあれば、</span>
       <span class="comment">// そのルートに飛ばす</span>
       let previousTransition = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">previousTransition</span><span class="delimiter">'</span></span>);
       <span class="keyword">if</span> (previousTransition) {
