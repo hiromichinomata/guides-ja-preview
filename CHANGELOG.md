@@ -3,6 +3,7 @@
 ## 2018.02.25
 
 - Sync [#90](https://github.com/emberjs-japan/guides-ja/pull/90)
+- [x] Models - Customizing Adapters
 
 ## 2018.02.24
 

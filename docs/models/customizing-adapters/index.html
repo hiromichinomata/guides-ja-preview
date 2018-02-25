@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - モデル: Customizing Adapters</title>
-    <meta property="st:title" content="モデル: Customizing Adapters" />
+    <title>Ember.js - モデル: アダプターのカスタマイズ</title>
+    <meta property="st:title" content="モデル: アダプターのカスタマイズ" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -126,7 +126,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">テンプレート</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../../templates/links/">リンク</a></li><li class='toc-level-1 '><a href="../../templates/actions/">アクション</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">ヘルパーの作成</a></li></ol></li><li class='toc-level-0 '><a href="#">コンポーネント</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">コンポーネントの定義</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">コンポーネントのライフサイクル</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">コンポーネントへのプロパティの受け渡し</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">コンポーネント内のコンテンツをラップする</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">コンポーネントの要素のカスタマイズ</a></li><li class='toc-level-1 '><a href="../../components/block-params/">ブロック引数を使う</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">イベント処理</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">アクションによる変更のトリガー</a></li></ol></li><li class='toc-level-0 '><a href="#">コントローラー</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">はじめに</a></li></ol></li><li class='toc-level-0 selected'><a href="#">モデル</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">はじめに</a></li><li class='toc-level-1 '><a href="../defining-models/">モデルの定義</a></li><li class='toc-level-1 '><a href="../finding-records/">レコード検索</a></li><li class='toc-level-1 '><a href="../creating-updating-and-deleting-records/">作成、更新、削除</a></li><li class='toc-level-1 '><a href="../relationships/">モデルの関連付け</a></li><li class='toc-level-1 '><a href="../pushing-records-into-the-store/">レコードをストアにプッシュする</a></li><li class='toc-level-1 '><a href="../handling-metadata/">メタデータの処理</a></li><li class='toc-level-1 selected'><a href="./">Customizing Adapters</a></li><li class='toc-level-1 '><a href="../customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Application Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">テンプレート</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../../templates/links/">リンク</a></li><li class='toc-level-1 '><a href="../../templates/actions/">アクション</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">ヘルパーの作成</a></li></ol></li><li class='toc-level-0 '><a href="#">コンポーネント</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">コンポーネントの定義</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">コンポーネントのライフサイクル</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">コンポーネントへのプロパティの受け渡し</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">コンポーネント内のコンテンツをラップする</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">コンポーネントの要素のカスタマイズ</a></li><li class='toc-level-1 '><a href="../../components/block-params/">ブロック引数を使う</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">イベント処理</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">アクションによる変更のトリガー</a></li></ol></li><li class='toc-level-0 '><a href="#">コントローラー</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">はじめに</a></li></ol></li><li class='toc-level-0 selected'><a href="#">モデル</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">はじめに</a></li><li class='toc-level-1 '><a href="../defining-models/">モデルの定義</a></li><li class='toc-level-1 '><a href="../finding-records/">レコード検索</a></li><li class='toc-level-1 '><a href="../creating-updating-and-deleting-records/">作成、更新、削除</a></li><li class='toc-level-1 '><a href="../relationships/">モデルの関連付け</a></li><li class='toc-level-1 '><a href="../pushing-records-into-the-store/">レコードをストアにプッシュする</a></li><li class='toc-level-1 '><a href="../handling-metadata/">メタデータの処理</a></li><li class='toc-level-1 selected'><a href="./">アダプターのカスタマイズ</a></li><li class='toc-level-1 '><a href="../customizing-serializers/">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Application Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a class="back-to-top" href="#">&#11014; トップに戻る</a>
 </aside>
@@ -134,7 +134,7 @@
 
       <article class="chapter">
         <h1>
-          Customizing Adapters
+          アダプターのカスタマイズ
           <a href="https://github.com/emberjs/guides/edit/master/source/models/customizing-adapters.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
@@ -152,10 +152,10 @@ makes it easy to change its functionality by swapping out or extending
 the default Adapter.
 -->
 
-<p>Ember Dataでは、アダプタはURL形式やREST APIのヘッダーなど、バックエンドとデータのやり取りをどの行うかを判断します。
+<p>Ember Dataでは、アダプターはURL形式やREST APIのヘッダーなど、バックエンドとデータのやり取りをどの行うかを判断します。
 (データ自体のフォーマットは<a href="../customizing-serializers/">シリアライザ</a>が処理します。)
-Ember Dataのデフォルトアダプタには、<a href="http://jsonapi.org/">REST APIはどうあるべきか</a>のいくつかの組み込みの前提があります。
-バックエンドの規約がこれらの前提条件と異なる場合、Ember Dataはデフォルトのアダプタを交換または拡張することにより、その機能を簡単に変更することができます。</p>
+Ember Dataのデフォルトアダプターには、<a href="http://jsonapi.org/">REST APIはどうあるべきか</a>のいくつかの組み込みの前提があります。
+バックエンドの規約がこれらの前提条件と異なる場合、Ember Dataはデフォルトのアダプターを交換または拡張することにより、その機能を簡単に変更することができます。</p>
 
 <!--
 Some reasons for customizing an Adapter include using
@@ -175,7 +175,7 @@ may want to subclass your adapter.
 -->
 
 <p>アダプターの拡張は、Ember Dataの自然なプロセスです。
-Emberは、さまざまな機能を追加するためにはアダプタを拡張すべきという見解を示しています。
+Emberは、さまざまな機能を追加するためにはアダプターを拡張すべきという見解を示しています。
 これにより、アダプターをサブクラス化する場合でも、テスト可能で理解しやすいく、コードは肥大化しないでしょう。</p>
 
 <!--
@@ -186,7 +186,7 @@ specific Adapters.
 -->
 
 <p>バックエンドに一定の規則がある場合は、<code>adapter:application</code>で定義できます。
-<code>adapter:application</code>は、デフォルトのアダプタより優先されますが、モデル固有のアダプタによりオーバーライドされます。</p>
+<code>adapter:application</code>は、デフォルトのアダプターより優先されますが、モデル固有のアダプターによりオーバーライドされます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -216,7 +216,7 @@ For example, running `ember generate adapter post` will create the
 following file:
 -->
 
-<p>バックエンドと通信で例外的なルールを持つモデルがある場合は、コマンド<code>ember generate adapter adapter-name</code>を実行してモデル固有のアダプタを作成します。
+<p>バックエンドと通信で例外的なルールを持つモデルがある場合は、コマンド<code>ember generate adapter adapter-name</code>を実行してモデル固有のアダプターを作成します。
 例えば、<code>ember generate adapter post</code>を実行すると、次のファイルが作成されます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
@@ -244,7 +244,7 @@ Ember Data comes with several built-in adapters.
 Feel free to use these adapters as a starting point for creating your own custom adapter.
 -->
 
-<p>Ember Dataには、いくつかのビルトインアダプタが付属しています。
+<p>Ember Dataには、いくつかのビルトインアダプターが付属しています。
 独自のカスタムアダプターを作成するための出発点として、これらのアダプターを自由に使用してください。</p>
 
 <!--
@@ -264,20 +264,37 @@ by transmitting JSON via XHR. Before Ember Data 2.0 this adapter was the default
 -->
 
 <ul>
-<li><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Adapter">DS.Adapter</a>は機能を持たない基本アダプタです。
-他のEmberアダプタとは根本的に異なるアダプタを作成する場合は、一般的には適切な出発点です。</li>
-<li><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPIAdapter">DS.JSONAPIAdapter</a> <code>JSONAPIAdapter</code>はデフォルトのアダプタであり、XHR経由でJSONを送信してHTTPサーバーと通信するためのJSON API規約に従います。</li>
-<li><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.RESTAdapter">DS.RESTAdapter</a> <code>RESTAdapter</code>を使用すると、JSONをXHR経由で送信し、ストアがHTTPサーバーと通信できるようになります。 Ember Data 2.0以前はこのアダプタがデフォルトでした。</li>
+<li><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Adapter">DS.Adapter</a>は機能を持たない基本アダプターです。
+他のEmberアダプターとは根本的に異なるアダプターを作成する場合は、一般的には適切な出発点です。</li>
+<li><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPIAdapter">DS.JSONAPIAdapter</a> <code>JSONAPIAdapter</code>はデフォルトのアダプターであり、XHR経由でJSONを送信してHTTPサーバーと通信するためのJSON API規約に従います。</li>
+<li><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.RESTAdapter">DS.RESTAdapter</a> <code>RESTAdapter</code>を使用すると、JSONをXHR経由で送信し、ストアがHTTPサーバーと通信できるようになります。 Ember Data 2.0以前はこのアダプターがデフォルトでした。</li>
 </ul>
-<h2 id="toc_Customizing-the-JSONAPIAdapter" class="anchorable-toc">Customizing the JSONAPIAdapter</h2>
-<p>The
-<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPIAdapter">DS.JSONAPIAdapter</a>
+
+<!--
+## Customizing the JSONAPIAdapter
+-->
+<h2 id="toc_JSONAPIAdapterのカスタマイズ" class="anchorable-toc">JSONAPIAdapterのカスタマイズ</h2>
+<!--
+The
+[DS.JSONAPIAdapter](https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPIAdapter)
 has a handful of hooks that are commonly used to extend it to work
-with non-standard backends.</p>
-<h3 id="toc_URL-Conventions" class="anchorable-toc">URL Conventions</h3>
-<p>The <code>JSONAPIAdapter</code> is smart enough to determine the URLs it
+with non-standard backends.
+-->
+
+<p><a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPIAdapter">DS.JSONAPIAdapter</a>には、便利なフックがあり、非標準のバックエンドと連携できるように拡張するために使用できます。</p>
+
+<!--
+### URL Conventions
+-->
+<h3 id="toc_URLの規約" class="anchorable-toc">URLの規約</h3>
+<!--
+The `JSONAPIAdapter` is smart enough to determine the URLs it
 communicates with based on the name of the model. For example, if you
-ask for a <code>Post</code> by ID:</p>
+ask for a `Post` by ID:
+-->
+
+<p><code>JSONAPIAdapter</code>はスマートで、モデル名に基づいて通信するURLを決定します。
+例えば、IDで<code>Post</code>を要求する場合は、次のようにします。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -287,11 +304,20 @@ ask for a <code>Post</code> by ID:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The JSON API adapter will automatically send a <code>GET</code> request to <code>/posts/1</code>.</p>
+<!--
+The JSON API adapter will automatically send a `GET` request to `/posts/1`.
+-->
 
-<p>The actions you can take on a record map onto the following URLs in the
-JSON API adapter:</p>
+<p>JSON APIアダプターは自動的に<code>/posts/1</code>に<code>GET</code>リクエストを送ります。</p>
 
+<!--
+The actions you can take on a record map onto the following URLs in the
+JSON API adapter:
+-->
+
+<p>レコード上で使用できるアクションは、JSONAPIアダプターで以下のURLにマップされます。</p>
+
+<!--
 <table>
   <thead>
     <tr><th>Action</th><th>HTTP Verb</th><th>URL</th></tr>
@@ -304,14 +330,38 @@ JSON API adapter:</p>
     <tr><th>Delete</th><td>DELETE</td><td>/posts/123</td></tr>
   </tbody>
 </table>
-<h4 id="toc_Pluralization-Customization" class="anchorable-toc">Pluralization Customization</h4>
-<p>To facilitate pluralizing model names when generating route urls Ember
+-->
+
+<table>
+  <thead>
+    <tr><th>アクション</th><th>HTTP メソッド</th><th>URL</th></tr>
+  </thead>
+  <tbody>
+    <tr><th>Find</th><td>GET</td><td>/posts/123</td></tr>
+    <tr><th>Find All</th><td>GET</td><td>/posts</td></tr>
+    <tr><th>Update</th><td>PATCH</td><td>/posts/123</td></tr>
+    <tr><th>Create</th><td>POST</td><td>/posts</td></tr>
+    <tr><th>Delete</th><td>DELETE</td><td>/posts/123</td></tr>
+  </tbody>
+</table>
+
+<!--
+#### Pluralization Customization
+--->
+<h4 id="toc_複数形化のカスタマイズ" class="anchorable-toc">複数形化のカスタマイズ</h4>
+<!--
+To facilitate pluralizing model names when generating route urls Ember
 Data comes bundled with
-<a href="https://github.com/stefanpenner/ember-inflector">Ember Inflector</a>, an
+[Ember Inflector](https://github.com/stefanpenner/ember-inflector), an
 ActiveSupport::Inflector compatible library for inflecting words
 between plural and singular forms. Irregular or uncountable
-pluralizations can be specified via <code>Ember.Inflector.inflector</code>.
-A common way to do this is:</p>
+pluralizations can be specified via `Ember.Inflector.inflector`.
+A common way to do this is:
+-->
+
+<p>Ember Dataでは、URLを生成する際に複数形のモデル名が使用され、複数形式と単数形式の間で単語を使用するためのActiveSupport::Inflector互換ライブラリ<a href="https://github.com/stefanpenner/ember-inflector">Ember Inflector</a>がバンドルされています。
+<code>Ember.Inflector.inflector</code>を使用して、不規則なものや不可算名詞の複数化を指定できます。
+これを行う一般的な方法は次のとおりです。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -355,20 +405,37 @@ inflector.uncountable(<span class="string"><span class="delimiter">'</span><span
 </pre></td>
 </tr></table>
 </div></div>
-<p>This will tell the JSON API adapter that requests for <code>formula</code>
-should go to <code>/formulae/1</code> instead of <code>/formulas/1</code>, and that
-requests for <code>advice</code> should go to <code>/advice/1</code> instead of <code>/advices/1</code>.</p>
+<!--
+This will tell the JSON API adapter that requests for `formula`
+should go to `/formulae/1` instead of `/formulas/1`, and that
+requests for `advice` should go to `/advice/1` instead of `/advices/1`.
+-->
 
-<p>When specifying irregular inflection rules for compound words, only the final word or phrase should be specified. For example, to specify the plural of <code>redCow</code> as <code>redKine</code> or <code>red-cow</code> as <code>red-kine</code>, only the final word segments <code>cow</code> and <code>kine</code> should be specified:</p>
+<p>これはJSON APIアダプターに、<code>formoula</code>のリクエストが<code>/formulas/1</code>ではなく<code>/formulae/1</code>に行き、<code>advice</code>のリクエストが<code>/advices/1</code>の代わりに<code>/advice/</code>1に行かなければならないことを伝えます。</p>
+
+<!--
+When specifying irregular inflection rules for compound words, only the final word or phrase should be specified. For example, to specify the plural of `redCow` as `redKine` or `red-cow` as `red-kine`, only the final word segments `cow` and `kine` should be specified:
+-->
+
+<p>複合語に不規則な語形変化を指定する場合は、最後の単語または句のみを指定する必要があります。
+例えば、<code>redCow</code> <code>red-cow</code>の複数形を<code>redKine</code> <code>red-cow</code>と指定するには、最終の単語の<code>cow</code>と<code>kine</code>のみを指定する必要があります。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 </pre></td>
   <td class="code"><pre>inflector.irregular(<span class="string"><span class="delimiter">'</span><span class="content">cow</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">kine</span><span class="delimiter">'</span></span>);
 </pre></td>
 </tr></table>
-</div></div><h4 id="toc_Endpoint-Path-Customization" class="anchorable-toc">Endpoint Path Customization</h4>
-<p>The <code>namespace</code> property can be used to prefix requests with a
-specific url namespace.</p>
+</div></div>
+<!--
+#### Endpoint Path Customization
+-->
+<h4 id="toc_エンドポイントパスのカスタマイズ" class="anchorable-toc">エンドポイントパスのカスタマイズ</h4>
+<!--
+The `namespace` property can be used to prefix requests with a
+specific url namespace.
+-->
+
+<p><code>namespace</code>プロパティを使用して、要求に特定のurl名前空間のプレフィックスを付けることができます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -390,11 +457,24 @@ specific url namespace.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Requests for <code>person</code> would now target <code>http://emberjs.com/api/1/people/1</code>.</p>
-<h4 id="toc_Host-Customization" class="anchorable-toc">Host Customization</h4>
-<p>By default, the adapter will target the current domain. If you would
-like to specify a new domain you can do so by setting the <code>host</code>
-property on the adapter.</p>
+<!--
+Requests for `person` would now target `http://emberjs.com/api/1/people/1`.
+-->
+
+<p><code>person</code>のリクエストは、<code>http://emberjs.com/api/1/people/1</code>を対象とするようになります。</p>
+
+<!--
+#### Host Customization
+-->
+<h4 id="toc_ホストのカスタマイズ" class="anchorable-toc">ホストのカスタマイズ</h4>
+<!--
+By default, the adapter will target the current domain. If you would
+like to specify a new domain you can do so by setting the `host`
+property on the adapter.
+-->
+
+<p>デフォルトでは、アダプターは現在のドメインをターゲットにします。
+他のドメインを指定する場合は、アダプターに<code>host</code>プロパティーを設定することで行うことができます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -416,15 +496,32 @@ property on the adapter.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Requests for <code>person</code> would now target <code>https://api.example.com/people/1</code>.</p>
-<h4 id="toc_Path-Customization" class="anchorable-toc">Path Customization</h4>
-<p>By default, the <code>JSONAPIAdapter</code> will attempt to pluralize and dasherize
-the model name to generate the path name. If this convention does not
-conform to your backend you can override the <code>pathForType</code> method.</p>
+<!--
+Requests for `person` would now target `https://api.example.com/people/1`.
+-->
 
-<p>For example, if you did not want to pluralize model names and needed
+<p><code>person</code>のリクエストは、<code>https://api.example.com/people/1</code>を対象とするようになります。</p>
+
+<!--
+#### Path Customization
+-->
+<h4 id="toc_パスのカスタマイズ" class="anchorable-toc">パスのカスタマイズ</h4>
+<!--
+By default, the `JSONAPIAdapter` will attempt to pluralize and dasherize
+the model name to generate the path name. If this convention does not
+conform to your backend you can override the `pathForType` method.
+-->
+
+<p>デフォルトでは、<code>JSONAPIAdapter</code>はパス名を生成する際にモデル名を複数形にしてスネークケースに変換しようとします。
+この規約がバックエンドに準拠していない場合は、<code>pathForType</code>メソッドをオーバーライドします。</p>
+
+<!--
+For example, if you did not want to pluralize model names and needed
 underscore_case instead of camelCase you could override the
-<code>pathForType</code> method like this:</p>
+`pathForType` method like this:
+-->
+
+<p>例えば、モデル名を複数形にする必要がなく、キャメルケースではなくスネークケースが必要な場合は、次のように<code>pathForType</code>メソッドをオーバーライドします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -452,12 +549,22 @@ underscore_case instead of camelCase you could override the
 </pre></td>
 </tr></table>
 </div></div>
-<p>Requests for <code>person</code> would now target <code>/person/1</code>.
-Requests for <code>user-profile</code> would now target <code>/user_profile/1</code>.</p>
+<!--
+Requests for `person` would now target `/person/1`.
+Requests for `user-profile` would now target `/user_profile/1`.
+-->
+
+<p><code>person</code>のリクエストは、<code>/person/1</code>を対象とするようになります。
+<code>user-profile</code>のリクエストは、<code>/user_profile/1</code>を対象とするようになります。</p>
 <h4 id="toc_Headers-customization" class="anchorable-toc">Headers customization</h4>
-<p>Some APIs require HTTP headers, e.g. to provide an API key. Arbitrary
-headers can be set as key/value pairs on the <code>JSONAPIAdapter</code>&#39;s <code>headers</code>
-object and Ember Data will send them along with each ajax request.</p>
+<!--
+Some APIs require HTTP headers, e.g. to provide an API key. Arbitrary
+headers can be set as key/value pairs on the `JSONAPIAdapter`'s `headers`
+object and Ember Data will send them along with each ajax request.
+-->
+
+<p>一部のAPIでは、HTTPヘッダーが必要です。
+APIキーを提供する場合、<code>JSONAPIAdapter</code>の<code>headers</code>オブジェクトに任意のヘッダをキーと値のペアとして設定することができ、Ember Dataはajaxする際にそれらを送信することができます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -485,9 +592,14 @@ object and Ember Data will send them along with each ajax request.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p><code>headers</code> can also be used as a computed property to support dynamic
+<!--
+`headers` can also be used as a computed property to support dynamic
 headers. In the example below, the headers are generated with a computed
-property dependent on the <code>session</code> service.</p>
+property dependent on the `session` service.
+-->
+
+<p>動的ヘッダーをサポートするために、ヘッダーを算出プロパティとして使用することもできます。
+以下の例では、ヘッダーは<code>session</code>サービスに依存する算出プロパティで生成されます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -527,12 +639,17 @@ property dependent on the <code>session</code> service.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>In some cases, your dynamic headers may require data from some
-object outside of Ember&#39;s observer system (for example
-<code>document.cookie</code>). You can use the
-<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject%2Fcomputed/methods/property?anchor=volatile&amp;show=inherited%2Cprotected%2Cprivate%2Cdeprecated">volatile</a>
+<!--
+In some cases, your dynamic headers may require data from some
+object outside of Ember's observer system (for example
+`document.cookie`). You can use the
+[volatile](https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject%2Fcomputed/methods/property?anchor=volatile&show=inherited%2Cprotected%2Cprivate%2Cdeprecated)
 function to set the property into a non-cached mode causing the headers to
-be recomputed with every request.</p>
+be recomputed with every request.
+-->
+
+<p>場合によっては、動的ヘッダーにEmberのオブザーバーシステム外のオブジェクト(例えば<code>document.cookie</code>)のデータが必要な場合があります。
+<a href="https://www.emberjs.com/api/ember/2.16/classes/@ember%2Fobject%2Fcomputed/methods/property?anchor=volatile&amp;show=inherited%2Cprotected%2Cprivate%2Cdeprecated">volatile</a>関数を使用して、キャッシュされていないモードにプロパティを設定して、すべてのリクエストでヘッダーを再計算することができます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -568,15 +685,25 @@ be recomputed with every request.</p>
 </pre></td>
 </tr></table>
 </div></div><h4 id="toc_Authoring-Adapters" class="anchorable-toc">Authoring Adapters</h4>
-<p>The <code>defaultSerializer</code> property can be used to specify the serializer
+<!--
+The `defaultSerializer` property can be used to specify the serializer
 that will be used by this adapter. This is only used when a model
-specific serializer or <code>serializer:application</code> are not defined.</p>
+specific serializer or `serializer:application` are not defined.
+-->
 
-<p>In an application, it is often easier to specify an
-<code>serializer:application</code>. However, if you are the author of a
+<p><code>defaultSerializer</code>プロパティを使用して、このアダプターで使用されるシリアライザを指定できます。
+これは、モデル固有のシリアライザまたは<code>serializer:application</code>が定義されていない場合にのみ使用されます。</p>
+
+<!--
+In an application, it is often easier to specify an
+`serializer:application`. However, if you are the author of a
 community adapter it is important to remember to set this property to
 ensure Ember does the right thing in the case a user of your adapter
-does not specify an <code>serializer:application</code>.</p>
+does not specify an `serializer:application`.
+-->
+
+<p>アプリケーションでは、<code>serializer:application</code>を指定するほうが簡単です。
+ただし、コミュニティアダプターの作成する場合は、ユーザーが<code>serializer:application</code>を指定していない場合に、Emberが正しいことを行うように、このプロパティを設定することを忘れないようにしてください。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -597,10 +724,20 @@ does not specify an <code>serializer:application</code>.</p>
 });
 </pre></td>
 </tr></table>
-</div></div><h2 id="toc_Community-Adapters" class="anchorable-toc">Community Adapters</h2>
-<p>If none of the built-in Ember Data Adapters work for your backend,
+</div></div>
+<!--
+## Community Adapters
+-->
+<h2 id="toc_コミュニティアダプター" class="anchorable-toc">コミュニティアダプター</h2>
+<!--
+If none of the built-in Ember Data Adapters work for your backend,
 be sure to check out some of the community maintained Ember Data
-Adapters. Some good places to look for Ember Data Adapters include:</p>
+Adapters. Some good places to look for Ember Data Adapters include:
+-->
+
+<p>組み込みのEmber DATAのアダプターのどれもバックエンドで動作しない場合は
+コミュニティがメンテナンスしているのEmber DATAのアダプターをチェックしてください。
+Ember Dataのアダプターを探すには、次のような場所があります。</p>
 
 <ul>
 <li><a href="http://emberobserver.com/categories/data">Ember Observer</a></li>
