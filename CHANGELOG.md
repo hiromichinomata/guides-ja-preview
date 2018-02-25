@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2018.02.25
+
+- Sync [#90](https://github.com/emberjs-japan/guides-ja/pull/90)
+
 ## 2018.02.24
 
 - Fix typo [#86](https://github.com/emberjs-japan/guides-ja/pull/86) 

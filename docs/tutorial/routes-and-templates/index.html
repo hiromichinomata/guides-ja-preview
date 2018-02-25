@@ -633,25 +633,25 @@ called `beforeModel`.
 
 <!--
 Each route handler has a set of "lifecycle hooks", which are functions that are invoked at specific times during the loading of a page.
-The [`beforeModel`](https://www.emberjs.com/api/ember/2.16/classes/Route/methods/beforeModel?anchor=beforeModel)
+The [`beforeModel`](https://www.emberjs.com/api/ember/release/classes/Route/methods/beforeModel?anchor=beforeModel)
 hook gets executed before the data gets fetched from the model hook, and before the page is rendered.
 See [the next section](../model-hook) for an explanation of the model hook.
 -->
 
 <p>各ルートハンドラには、「ライフサイクルフック」というものがあります。これはページのロード中に決まったタイミングで呼び出される関数です。
-<a href="https://www.emberjs.com/api/ember/2.16/classes/Route/methods/beforeModel?anchor=beforeModel"><code>beforeModel</code></a>は、<code>model</code>フックでデータが取得される前、ページが描画されるより前に呼び出されます。
+<a href="https://www.emberjs.com/api/ember/release/classes/Route/methods/beforeModel?anchor=beforeModel"><code>beforeModel</code></a>は、<code>model</code>フックでデータが取得される前、ページが描画されるより前に呼び出されます。
 モデルフックの説明については、<a href="../model-hook">次のセクション</a>を参照してください。</p>
 
 <!--
-In our index route handler, we'll call the [`replaceWith`](https://www.emberjs.com/api/ember/2.16/classes/Route/methods/beforeModel?anchor=replaceWith) function.
-The `replaceWith` function is similar to the route's [`transitionTo()`](https://www.emberjs.com/api/ember/2.16/classes/Route/methods/transitionTo?anchor=transitionTo) function,
+In our index route handler, we'll call the [`replaceWith`](https://www.emberjs.com/api/ember/release/classes/Route/methods/beforeModel?anchor=replaceWith) function.
+The `replaceWith` function is similar to the route's [`transitionTo()`](https://www.emberjs.com/api/ember/release/classes/Route/methods/transitionTo?anchor=transitionTo) function,
 the difference being that `replaceWith` will replace the current URL in the browser's history,
 while `transitionTo` will add to the history.
 Since we want our `rentals` route to serve as our home page, we will use the `replaceWith` function.
 -->
 
-<p>インデックスルートハンドラでは、<code>replaceWith</code>関数を使います。
-<code>replaceWith</code>関数はルートの<code>transitionTo</code>関数と似ていますが、<code>transitionTo</code>はブラウザの履歴に追加されるのに対し、<code>replaceWith</code>は履歴の現在のURLが置き換わります。
+<p>インデックスルートハンドラでは、<a href="https://www.emberjs.com/api/ember/release/classes/Route/methods/beforeModel?anchor=replaceWith"><code>replaceWith</code></a>関数を使います。
+<code>replaceWith</code>関数はルートの<a href="https://www.emberjs.com/api/ember/release/classes/Route/methods/transitionTo?anchor=transitionTo"><code>transitionTo</code></a>関数と似ていますが、<code>transitionTo</code>はブラウザの履歴に追加されるのに対し、<code>replaceWith</code>は履歴の現在のURLが置き換わります。
 <code>rentals</code>ルートがトップページとして機能するようにしたいので、<code>replaceWith</code>関数を使用します。</p>
 
 <!--

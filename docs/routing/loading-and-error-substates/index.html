@@ -349,10 +349,10 @@ It's important to note that `foo.bar.loading` is not considered now.
 <h3 id="toc_<code>loading</code>イベント" class="anchorable-toc"><code>loading</code>イベント</h3>
 <!--
 If the various `beforeModel`/`model`/`afterModel` hooks
-don't immediately resolve, a [`loading`](https://www.emberjs.com/api/ember/2.16/classes/Route/events/loading?anchor=loading) event will be fired on that route.
+don't immediately resolve, a [`loading`](https://www.emberjs.com/api/ember/release/classes/Route/events/loading?anchor=loading) event will be fired on that route.
 -->
 
-<p><code>beforeModel</code> / <code>model</code> / <code>afterModel</code>フックがすぐに解決されない場合、そのルートの<a href="https://www.emberjs.com/api/ember/2.16/classes/Route/events/loading?anchor=loading"><code>loading</code></a>アクションが呼ばれます。</p>
+<p><code>beforeModel</code> / <code>model</code> / <code>afterModel</code>フックがすぐに解決されない場合、そのルートの<a href="https://www.emberjs.com/api/ember/release/classes/Route/events/loading?anchor=loading"><code>loading</code></a>アクションが呼ばれます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -603,12 +603,12 @@ logged.
 <!--
 If the `articles.overview` route's `model` hook returns a promise that rejects
 (for instance the server returned an error, the user isn't logged in,
-etc.), an [`error`](https://www.emberjs.com/api/ember/2.16/classes/Route/events/error?anchor=error) event will fire from that route and bubble upward.
+etc.), an [`error`](https://www.emberjs.com/api/ember/release/classes/Route/events/error?anchor=error) event will fire from that route and bubble upward.
 This `error` event can be handled and used to display an error message,
 redirect to a login page, etc.
 -->
 
-<p><code>articles.overview</code>ルートの<code>model</code>フックでPromiseがrejectされた場合(例えばサーバからエラーが返されたり、ユーザーがログインしていないなど)、<a href="https://www.emberjs.com/api/ember/2.16/classes/Route/events/error?anchor=error"><code>error</code></a>イベントはそのルートから発生して、親ルートに伝播されます。
+<p><code>articles.overview</code>ルートの<code>model</code>フックでPromiseがrejectされた場合(例えばサーバからエラーが返されたり、ユーザーがログインしていないなど)、<a href="https://www.emberjs.com/api/ember/release/classes/Route/events/error?anchor=error"><code>error</code></a>イベントはそのルートから発生して、親ルートに伝播されます。
 <code>error</code>イベントは、エラーメッセージの表示、ログインページへのリダイレクトなどに使用できます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
