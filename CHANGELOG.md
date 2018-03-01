@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2018.03.01
+
+- Fix typos and wording by by [@hogesuke](https://github.com/hogesuke)
+  - [#89](https://github.com/emberjs-japan/guides-ja/pull/89)
+  - [#93](https://github.com/emberjs-japan/guides-ja/pull/93)
+  - [#94](https://github.com/emberjs-japan/guides-ja/pull/94)
+  - [#95](https://github.com/emberjs-japan/guides-ja/pull/95) 
+
 ## 2018.02.25
 
 - Sync [#90](https://github.com/emberjs-japan/guides-ja/pull/90)

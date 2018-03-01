@@ -176,7 +176,7 @@ they must be declared on `controller:articles`.
 -->
 
 <p>クエリーパラメーターはコントローラ上で定義します。
-<code>articles</code>ルート内でクエリーパラメータを有効するには、<code>controller:articles</code>で宣言します。</p>
+<code>articles</code>ルート内でクエリーパラメーターを有効するには、<code>controller:articles</code>で宣言します。</p>
 
 <!--
 To add a `category`
@@ -280,7 +280,7 @@ array that the `articles` template will render:
 With this code, we have established the following behaviors:
 -->
 
-<p>このコードでは、次のような動作するようにしています。</p>
+<p>このコードでは、次のような動作をするようにしています。</p>
 
 <!--
 1. If the user navigates to `/articles`, `category` will be `null`, so
@@ -297,7 +297,7 @@ With this code, we have established the following behaviors:
 <ol>
 <li>ユーザーが<code>/articles</code>に移動すると、<code>category</code>は<code>null</code>になります。したがって、記事はフィルタリングされません。</li>
 <li>ユーザーが<code>/articles?category=recent</code>に移動すると、<code>category</code>は<code>&quot;recent&quot;</code>に設定され、記事はフィルタリングされます。</li>
-<li><code>articles</code>ルート内で、<code>controller:articles</code>の<code>category</code>プロパティを変更すると、URL上のクエリパラメーターも更新されます。デフォルトでは、クエリパラメーターのプロパティを変更してもルータの完全なトランジションは発生しません。(例えば、<code>model</code>フックや<code>setupController</code>などは呼び出されません)URLが更新されるです。</li>
+<li><code>articles</code>ルート内で、<code>controller:articles</code>の<code>category</code>プロパティを変更すると、URL上のクエリーパラメーターも更新されます。デフォルトでは、クエリーパラメーターのプロパティを変更してもルータの完全なトランジションは発生しません。(例えば、<code>model</code>フックや<code>setupController</code>などは呼び出されません)URLが更新されるだけです。</li>
 </ol>
 
 <!--
@@ -348,7 +348,7 @@ active query params for this to be true.
 -->
 
 <p><code>link-to</code>ヘルパーは、アクティブ状態を判断するときにクエリーパラメーターを考慮に入れ、クラスを適切に設定します
-アクティブ状態は、リンクをクリックした後で、クエリパラメータが同じになるかどうかを計算して決定されます。
+アクティブ状態は、リンクをクリックした後で、クエリーパラメーターが同じになるかどうかを計算して決定されます。
 このためには、現在のアクティブなクエリーパラメーターをすべて指定する必要はありません。</p>
 <h3 id="toc_transitionTo" class="anchorable-toc">transitionTo</h3>
 <!--
@@ -418,7 +418,7 @@ If you have a `category` query param and you want it to trigger a model refresh,
 you can set it as follows:
 -->
 
-<p>クエリーパラメーター変更完でフックメソッドなど完全なトランジションをトリガしたい場合、<code>Route</code>で<code>queryParams</code>オプションを設定します。
+<p>クエリーパラメーターの変更でフックメソッドなど完全なトランジションをトリガしたい場合、<code>Route</code>で<code>queryParams</code>オプションを設定します。
 <code>category</code>というクエリーパラメーターがあり、モデルの更新をトリガしたい場合は、次のように設定します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
@@ -504,7 +504,7 @@ you can specify this as follows:
 -->
 
 <p>デフォルトでは、Emberは<code>pushState</code>を使用して、コントローラのクエリーパラメータープロパティの変更に応じてアドレスバーのURLを更新します。
-クエリーパラメーターの変更がブラウザの履歴に追加されないにするには、<code>replaceState</code>を使います。
+クエリーパラメーターの変更がブラウザの履歴に追加されないようにするには、<code>replaceState</code>を使います。
 次のように指定します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
@@ -546,7 +546,7 @@ which also lets you opt into a `replaceState` transition via `replace=true`.
 <!--
 ### Map a controller's property to a different query param key
 -->
-<h3 id="toc_コントローラーのプロパティーを別のクエリーパラメーターのキーに割り当てる" class="anchorable-toc">コントローラーのプロパティーを別のクエリーパラメーターのキーに割り当てる</h3>
+<h3 id="toc_コントローラーのプロパティを別のクエリーパラメーターのキーに割り当てる" class="anchorable-toc">コントローラーのプロパティを別のクエリーパラメーターのキーに割り当てる</h3>
 <!--
 By default, specifying `foo` as a controller query param property will
 bind to a query param whose key is `foo`, e.g. `?foo=123`.
@@ -554,7 +554,7 @@ You can also map a controller property to a different query param key using the 
 -->
 
 <p>デフォルトでは、コントローラのクエリーqueryParamsプロパティに<code>foo</code>指定すると、キーが<code>foo</code>であるクエリーパラメーターに(<code>?foo=123</code>が)バインドされます。
-次の設定構文を使用して、コントローラプロパティを別のクエリパラメータキーにマッピングすることもできます。</p>
+次の設定構文を使用して、コントローラプロパティを別のクエリーパラメーターキーにマッピングすることもできます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -596,7 +596,7 @@ Query params that require additional customization can
 be provided along with strings in the `queryParams` array.
 -->
 
-<p>設定が必要なクエリーパラメーターは、<code>queryParams</code>配列と内にハッシュで指定します。</p>
+<p>設定が必要なクエリーパラメーターは、<code>queryParams</code>配列内にハッシュで指定します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -688,7 +688,7 @@ This affects query param behavior in two ways:
 ブール値のデフォルト値についても同様です。
 デフォルト値が配列の場合、<code>JSON.parse</code>を使用して文字列をパーズします。</li>
 <li>コントローラのqueryParamsプロパティのデフォルト値は、URLにシリアライズされません。
-したがって、上記の例では、<code>page</code>が<code>1</code>の場合、URLは<code>/articles</code>になり、コントローラの<code>pge</code>の値を<code>2</code>に設定すると
+したがって、上記の例では、<code>page</code>が<code>1</code>の場合、URLは<code>/articles</code>になり、コントローラの<code>page</code>の値を<code>2</code>に設定すると
 URLは<code>/articles?page=2</code>になります。</li>
 </ol>
 
@@ -705,7 +705,7 @@ the new value of that query param will be preserved (rather than reset to its de
 This is a particularly handy default for preserving sort/filter parameters as you navigate back and forth between routes.
 -->
 
-<p>デフォルトでは、Emberのクエリパラメータ値は「スティッキー」(定着している)です。
+<p>デフォルトでは、Emberのクエリーパラメーター値は「スティッキー」(定着している)です。
 クエリーパラメーター変更後にそのルートから離れてからまた戻ると、クエリーパラメーターは(デフォルト値にリセットされるのではなく)ルートを離れた時の値になっています。
 これは、ルート間を行き来する際にソートやフィルタパラメーターを保持しておくのに特に便利です。</p>
 
@@ -718,7 +718,7 @@ and then navigate to `/potatoes` and filter by `"worst"`,
 then given the following nav bar links:
 -->
 
-<p>さらに、これらのスティッキーなクエリパラメーター値は、ルートにロードされたモデルに従って復元されます。
+<p>さらに、これらのスティッキーなクエリーパラメーター値は、ルートにロードされたモデルに従って復元されます。
 したがって、<code>team</code>ルートに動的セグメント<code>/:team_name</code>と、コントローラのクエリーパラメーター&quot;filter&quot;を指定した場合、
 <code>/badgers</code>に移動して &quot;ルーキー&quot;でフィルタリングし、<code>/bears</code>に移動して&quot;best&quot;でフィルタして、
 さらに<code>/potatoes</code>に移動し、&quot;worst&quot;でフィルタリングすると、以下のナビゲーションバーのリンクは、</p>
