@@ -205,7 +205,7 @@ only renders `"zoooom"` if both `isFast` and `isFueled` are true:
 
 <p>2つ目の方法は、<strong>ネスト</strong>による呼び出しです。
 インラインヘルパーと同様に、ネストされたヘルパーは単一の値を生成して返します。
-以下のテンプレートは例では、<code>isFast</code>と<code>isFueled</code>の両方がtrueの場合、<code>&quot;zoooom&quot;</code>を描画されます。</p>
+以下のテンプレートは例では、<code>isFast</code>と<code>isFueled</code>の両方がtrueの場合、<code>&quot;zoooom&quot;</code>が描画されます。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -233,7 +233,7 @@ recognized by the `#` before the helper name, and the closing `{{/` double
 curly brace at the end of the invocation.
 -->
 
-<p>3つ目のはブロック形式での呼び出しです。
+<p>3つ目はブロック形式での呼び出しです。
 ブロックヘルパーを使用して、テンプレートの一部のみを描画することができます。
 ヘルパーのブロック呼び出しは、ヘルパー名の前の<code>#</code>と、呼び出し終了時の閉じ括弧<code>{{/</code>で感知されます。</p>
 
@@ -290,8 +290,8 @@ of that invocation is rendered:
 `{{else if}}`:
 -->
 
-<p><code>{{else}}</code>はヘルパー呼び出しをチェーンすることができます。最
-も一般的な使用例は<code>{{else if}}</code>のです。</p>
+<p><code>{{else}}</code>はヘルパー呼び出しをチェーンすることができます。
+最も一般的な使用例は<code>{{else if}}</code>です。</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
