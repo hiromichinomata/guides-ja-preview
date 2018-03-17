@@ -1,6 +1,10 @@
 # CHANGELOG
 
-## 2019.03.15
+## 2018.03.17
+
+- Sync [#101](https://github.com/emberjs-japan/guides-ja/pull/101)
+
+## 2018.03.15
 
 - Fix typo [#100](https://github.com/emberjs-japan/guides-ja/pull/100) by [@hogesuke](https://github.com/hogesuke)
 
