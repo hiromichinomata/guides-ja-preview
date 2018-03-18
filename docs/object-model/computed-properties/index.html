@@ -232,6 +232,129 @@ Changing any of the dependent properties causes the cache to invalidate, so that
 依存プロパティのいずれかを変更すると、キャッシュが無効になり、計算された関数が次のアクセス時に再び実行されます。</p>
 
 <!--
+### Computed properties only recompute when they are consumed
+-->
+<h3 id="toc_算出プロパティは使われる時にのみ再計算される" class="anchorable-toc">算出プロパティは使われる時にのみ再計算される</h3>
+<!--
+A computed property will only recompute its value when it is _consumed._ Properties are consumed in two ways:
+-->
+
+<p>算出プロパティは、使われる時にのみその値を再計算します。
+プロパティは2つの方法で使われます。</p>
+
+<!--
+1. By a `get`, for example `ironMan.get('fullName')`
+2. By being referenced in a handlebars template that is currently being rendered, for example `{{ironMan.fullName}}`
+-->
+
+<ol>
+<li><code>get</code>する、例: <code>ironMan.get(&#39;fullName&#39;)</code></li>
+<li><code>{{ironMan.fullName}</code>}のように、現在レンダリング中のHandlebarsテンプレートで参照する</li>
+</ol>
+
+<!--
+Outside of those two circumstances the code in the property will not run, even if one of the property's dependencies are changed.
+-->
+
+<p>これらの2つの状況以外では、プロパティの依存関係の1つが変更されても、プロパティのコードは実行されません。</p>
+
+<!--
+We'll modify the `fullName` property from the previous example to log to the console:
+-->
+
+<p>前述の例の<code>fullName</code>プロパティを変更してコンソールにログ出力します。</p>
+
+<!--
+```javascript
+import Ember from 'ember':
+
+…
+  fullName: computed('firstName', 'lastName', function() {
+    console.log('compute fullName'); // track when the property recomputes
+    let firstName = this.get('firstName');
+    let lastName = this.get('lastName');
+
+    return `${firstName} ${lastName}`;
+  })
+…
+```
+-->
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>:
+
+<span class="error">…</span>
+  fullName: computed(<span class="string"><span class="delimiter">'</span><span class="content">firstName</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">lastName</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+    console.log(<span class="string"><span class="delimiter">'</span><span class="content">compute fullName</span><span class="delimiter">'</span></span>); <span class="comment">// プロパティ再計算をトラッキング</span>
+    let firstName = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">firstName</span><span class="delimiter">'</span></span>);
+    let lastName = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">lastName</span><span class="delimiter">'</span></span>);
+
+    <span class="keyword">return</span> <span class="error">`</span><span class="predefined">$</span>{firstName} <span class="predefined">$</span>{lastName}<span class="error">`</span>;
+  })
+<span class="error">…</span>
+</pre></td>
+</tr></table>
+</div></div>
+<!--
+Using the new property, it will only log after a `get`, and then only if either the `firstName` or `lastName` has been previously changed:
+-->
+
+<p>新しいプロパティを使用すると、取得後(<code>get</code>)にのみログに出力され、<code>firstName</code>または<code>lastName</code>のいずれかが以前に変更されている場合にのみログに出力されます。</p>
+
+<!--
+```javascript
+
+let ironMan = Person.create({
+  firstName: 'Tony',
+  lastName:  'Stark'
+});
+
+ironMan.get('fullName'); // 'compute fullName'
+ironMan.set('firstName', 'Bruce') // no console output
+
+ironMan.get('fullName'); // 'compute fullName'
+ironMan.get('fullName'); // no console output since dependencies have not changed
+```
+-->
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+</pre></td>
+  <td class="code"><pre>
+let ironMan = Person.create({
+  <span class="key">firstName</span>: <span class="string"><span class="delimiter">'</span><span class="content">Tony</span><span class="delimiter">'</span></span>,
+  <span class="key">lastName</span>:  <span class="string"><span class="delimiter">'</span><span class="content">Stark</span><span class="delimiter">'</span></span>
+});
+
+ironMan.get(<span class="string"><span class="delimiter">'</span><span class="content">fullName</span><span class="delimiter">'</span></span>); <span class="comment">// fullNameを計算させる</span>
+ironMan.set(<span class="string"><span class="delimiter">'</span><span class="content">firstName</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Bruce</span><span class="delimiter">'</span></span>) <span class="comment">// コンソールには出力されない</span>
+
+ironMan.get(<span class="string"><span class="delimiter">'</span><span class="content">fullName</span><span class="delimiter">'</span></span>); <span class="comment">// fullNameを計算させる</span>
+ironMan.get(<span class="string"><span class="delimiter">'</span><span class="content">fullName</span><span class="delimiter">'</span></span>); <span class="comment">// 依存しているものが変更されていないので、コンソールには何も出力されない</span>
+</pre></td>
+</tr></table>
+</div></div>
+<!--
 ### Multiple dependents on the same object
 -->
 <h3 id="toc_同じオブジェクト上での複数依存" class="anchorable-toc">同じオブジェクト上での複数依存</h3>
@@ -321,12 +444,16 @@ let obj = EmberObject.extend({
   <span class="key">baz</span>: {<span class="key">foo</span>: <span class="string"><span class="delimiter">'</span><span class="content">BLAMMO</span><span class="delimiter">'</span></span>, <span class="key">bar</span>: <span class="string"><span class="delimiter">'</span><span class="content">BLAZORZ</span><span class="delimiter">'</span></span>},
 
   <span class="key">something</span>: computed(<span class="string"><span class="delimiter">'</span><span class="content">baz.foo</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">baz.bar</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
-    <span class="keyword">return</span> <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.foo</span><span class="delimiter">'</span></span>) + <span class="string"><span class="delimiter">'</span><span class="content"> </span><span class="delimiter">'</span></span> + <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.bar</span><span class="delimiter">'</span></span>);
+    <span class="keyword">return</span> <span class="error">`</span><span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.foo</span><span class="delimiter">'</span></span>)} <span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.bar</span><span class="delimiter">'</span></span>)}<span class="error">`</span>;
   })
 });
 </pre></td>
 </tr></table>
 </div></div>
+<!--
+With:
+-->
+
 <p>次のように置き換えることができます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
@@ -345,7 +472,7 @@ let obj = EmberObject.extend({
   <span class="key">baz</span>: {<span class="key">foo</span>: <span class="string"><span class="delimiter">'</span><span class="content">BLAMMO</span><span class="delimiter">'</span></span>, <span class="key">bar</span>: <span class="string"><span class="delimiter">'</span><span class="content">BLAZORZ</span><span class="delimiter">'</span></span>},
 
   <span class="key">something</span>: computed(<span class="string"><span class="delimiter">'</span><span class="content">baz.{foo,bar}</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
-    <span class="keyword">return</span> <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.foo</span><span class="delimiter">'</span></span>) + <span class="string"><span class="delimiter">'</span><span class="content"> </span><span class="delimiter">'</span></span> + <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.bar</span><span class="delimiter">'</span></span>);
+    <span class="keyword">return</span> <span class="error">`</span><span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.foo</span><span class="delimiter">'</span></span>)} <span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.bar</span><span class="delimiter">'</span></span>)}<span class="error">`</span>;
   })
 });
 </pre></td>
