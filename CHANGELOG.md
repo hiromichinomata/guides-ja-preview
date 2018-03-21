@@ -2,7 +2,10 @@
 
 ## 2018.03.21
 
+Models section was done! 🎉
+
 - Sync [#103](https://github.com/emberjs-japan/guides-ja/pull/103)
+- [x] Models - Customizing Serializers
 
 ## 2018.03.18
 

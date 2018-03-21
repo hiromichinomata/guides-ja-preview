@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="theme-color" content="#e46652">
 
-    <title>Ember.js - モデル: Customizing Serializers</title>
-    <meta property="st:title" content="モデル: Customizing Serializers" />
+    <title>Ember.js - モデル: シリアライザのカスタマイズ</title>
+    <meta property="st:title" content="モデル: シリアライザのカスタマイズ" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../../images/favicon.png" rel="icon" type="image/png" />
     <!--[if lte IE 7 ]><link href="../../stylesheets/fonts/fontello-ie7.css" rel="stylesheet" /><![endif]-->
@@ -126,7 +126,7 @@
   <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox" />
   <label for="toc-toggle">目次 <span class="visually-hidden">切替</span></label>
 
-  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">テンプレート</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../../templates/links/">リンク</a></li><li class='toc-level-1 '><a href="../../templates/actions/">アクション</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">ヘルパーの作成</a></li></ol></li><li class='toc-level-0 '><a href="#">コンポーネント</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">コンポーネントの定義</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">コンポーネントのライフサイクル</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">コンポーネントへのプロパティの受け渡し</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">コンポーネント内のコンテンツをラップする</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">コンポーネントの要素のカスタマイズ</a></li><li class='toc-level-1 '><a href="../../components/block-params/">ブロック引数を使う</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">イベント処理</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">アクションによる変更のトリガー</a></li></ol></li><li class='toc-level-0 '><a href="#">コントローラー</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">はじめに</a></li></ol></li><li class='toc-level-0 selected'><a href="#">モデル</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">はじめに</a></li><li class='toc-level-1 '><a href="../defining-models/">モデルの定義</a></li><li class='toc-level-1 '><a href="../finding-records/">レコード検索</a></li><li class='toc-level-1 '><a href="../creating-updating-and-deleting-records/">作成、更新、削除</a></li><li class='toc-level-1 '><a href="../relationships/">モデルの関連付け</a></li><li class='toc-level-1 '><a href="../pushing-records-into-the-store/">レコードをストアにプッシュする</a></li><li class='toc-level-1 '><a href="../handling-metadata/">メタデータの処理</a></li><li class='toc-level-1 '><a href="../customizing-adapters/">アダプターのカスタマイズ</a></li><li class='toc-level-1 selected'><a href="./">Customizing Serializers</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Application Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
+  <nav class='toc-container' aria-label='table of contents'><ol class='toc-level-0 selected'><li class='toc-level-0 '><a href="#">はじめに</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../getting-started/quick-start/">クイックスタート</a></li><li class='toc-level-1 '><a href="../../getting-started/">Emberのインストール</a></li><li class='toc-level-1 '><a href="../../getting-started/core-concepts/">Emberのコアコンセプト</a></li><li class='toc-level-1 '><a href="../../getting-started/js-primer/">JavaScript手引き</a></li></ol></li><li class='toc-level-0 '><a href="#">チュートリアル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../tutorial/ember-cli/">アプリの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/acceptance-test/">プランニング</a></li><li class='toc-level-1 '><a href="../../tutorial/routes-and-templates/">ルートとテンプレート</a></li><li class='toc-level-1 '><a href="../../tutorial/model-hook/">モデルフック</a></li><li class='toc-level-1 '><a href="../../tutorial/installing-addons/">アドオンのインストール</a></li><li class='toc-level-1 '><a href="../../tutorial/simple-component/">コンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/hbs-helper/">ヘルパーの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/ember-data/">Ember Dataを使う</a></li><li class='toc-level-1 '><a href="../../tutorial/autocomplete-component/">複雑なコンポーネントの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/service/">サービスとユーティリティ</a></li><li class='toc-level-1 '><a href="../../tutorial/subroutes/">ネストしたルートの作成</a></li><li class='toc-level-1 '><a href="../../tutorial/deploying/">デプロイ</a></li></ol></li><li class='toc-level-0 '><a href="#">オブジェクトモデル</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../object-model/">Emberのオブジェクト</a></li><li class='toc-level-1 '><a href="../../object-model/classes-and-instances/">クラスとインスタンス</a></li><li class='toc-level-1 '><a href="../../object-model/reopening-classes-and-instances/">クラスとインスタンスの再オープン</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties/">算出プロパティ</a></li><li class='toc-level-1 '><a href="../../object-model/computed-properties-and-aggregate-data/">算出プロパティとデータ集計</a></li><li class='toc-level-1 '><a href="../../object-model/observers/">オブザーバー</a></li><li class='toc-level-1 '><a href="../../object-model/bindings/">バインディング</a></li><li class='toc-level-1 '><a href="../../object-model/enumerables/">列挙型</a></li></ol></li><li class='toc-level-0 '><a href="#">ルーティング</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../routing/">はじめに</a></li><li class='toc-level-1 '><a href="../../routing/defining-your-routes/">ルートの定義</a></li><li class='toc-level-1 '><a href="../../routing/specifying-a-routes-model/">ルートのモデルを指定する</a></li><li class='toc-level-1 '><a href="../../routing/rendering-a-template/">テンプレートの描画</a></li><li class='toc-level-1 '><a href="../../routing/redirection/">リダイレクション</a></li><li class='toc-level-1 '><a href="../../routing/preventing-and-retrying-transitions/">トランジションの中止と再開</a></li><li class='toc-level-1 '><a href="../../routing/loading-and-error-substates/">ロード中とエラーの表示</a></li><li class='toc-level-1 '><a href="../../routing/query-params/">クエリーパラメーター</a></li><li class='toc-level-1 '><a href="../../routing/asynchronous-routing/">非同期ルーティング</a></li></ol></li><li class='toc-level-0 '><a href="#">テンプレート</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../templates/handlebars-basics/">Handlebarsの基礎</a></li><li class='toc-level-1 '><a href="../../templates/built-in-helpers/">ビルトインヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/conditionals/">条件分岐</a></li><li class='toc-level-1 '><a href="../../templates/displaying-a-list-of-items/">リストの表示</a></li><li class='toc-level-1 '><a href="../../templates/displaying-the-keys-in-an-object/">オブジェクトのキーの表示</a></li><li class='toc-level-1 '><a href="../../templates/binding-element-attributes/">要素の属性のバインディング</a></li><li class='toc-level-1 '><a href="../../templates/links/">リンク</a></li><li class='toc-level-1 '><a href="../../templates/actions/">アクション</a></li><li class='toc-level-1 '><a href="../../templates/input-helpers/">inputヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/development-helpers/">開発用ヘルパー</a></li><li class='toc-level-1 '><a href="../../templates/writing-helpers/">ヘルパーの作成</a></li></ol></li><li class='toc-level-0 '><a href="#">コンポーネント</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../components/defining-a-component/">コンポーネントの定義</a></li><li class='toc-level-1 '><a href="../../components/the-component-lifecycle/">コンポーネントのライフサイクル</a></li><li class='toc-level-1 '><a href="../../components/passing-properties-to-a-component/">コンポーネントへのプロパティの受け渡し</a></li><li class='toc-level-1 '><a href="../../components/wrapping-content-in-a-component/">コンポーネント内のコンテンツをラップする</a></li><li class='toc-level-1 '><a href="../../components/customizing-a-components-element/">コンポーネントの要素のカスタマイズ</a></li><li class='toc-level-1 '><a href="../../components/block-params/">ブロック引数を使う</a></li><li class='toc-level-1 '><a href="../../components/handling-events/">イベント処理</a></li><li class='toc-level-1 '><a href="../../components/triggering-changes-with-actions/">アクションによる変更のトリガー</a></li></ol></li><li class='toc-level-0 '><a href="#">コントローラー</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../controllers/">はじめに</a></li></ol></li><li class='toc-level-0 selected'><a href="#">モデル</a><ol class='toc-level-1 selected'><li class='toc-level-1 '><a href="../">はじめに</a></li><li class='toc-level-1 '><a href="../defining-models/">モデルの定義</a></li><li class='toc-level-1 '><a href="../finding-records/">レコード検索</a></li><li class='toc-level-1 '><a href="../creating-updating-and-deleting-records/">作成、更新、削除</a></li><li class='toc-level-1 '><a href="../relationships/">モデルの関連付け</a></li><li class='toc-level-1 '><a href="../pushing-records-into-the-store/">レコードをストアにプッシュする</a></li><li class='toc-level-1 '><a href="../handling-metadata/">メタデータの処理</a></li><li class='toc-level-1 '><a href="../customizing-adapters/">アダプターのカスタマイズ</a></li><li class='toc-level-1 selected'><a href="./">シリアライザのカスタマイズ</a></li></ol></li><li class='toc-level-0 '><a href="#">Application Concerns</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../applications/applications-and-instances/">Applications and Instances</a></li><li class='toc-level-1 '><a href="../../applications/dependency-injection/">Dependency Injection</a></li><li class='toc-level-1 '><a href="../../applications/initializers/">Initializers</a></li><li class='toc-level-1 '><a href="../../applications/services/">Services</a></li><li class='toc-level-1 '><a href="../../applications/run-loop/">The Run Loop</a></li></ol></li><li class='toc-level-0 '><a href="#">Testing</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../testing/">Introduction</a></li><li class='toc-level-1 '><a href="../../testing/acceptance/">Application Tests</a></li><li class='toc-level-1 '><a href="../../testing/unit-testing-basics/">Testing Basics</a></li><li class='toc-level-1 '><a href="../../testing/testing-components/">Testing Components</a></li><li class='toc-level-1 '><a href="../../testing/testing-helpers/">Testing Helpers</a></li><li class='toc-level-1 '><a href="../../testing/testing-controllers/">Testing Controllers</a></li><li class='toc-level-1 '><a href="../../testing/testing-routes/">Testing Routes</a></li><li class='toc-level-1 '><a href="../../testing/testing-models/">Testing Models</a></li></ol></li><li class='toc-level-0 '><a href="#">Ember Inspector</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../ember-inspector/">Introduction</a></li><li class='toc-level-1 '><a href="../../ember-inspector/installation/">Installing the Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/object-inspector/">Object Inspector</a></li><li class='toc-level-1 '><a href="../../ember-inspector/view-tree/">The View Tree</a></li><li class='toc-level-1 '><a href="../../ember-inspector/routes/">Inspecting Routes</a></li><li class='toc-level-1 '><a href="../../ember-inspector/data/">Data Tab</a></li><li class='toc-level-1 '><a href="../../ember-inspector/deprecations/">Tackling Deprecations</a></li><li class='toc-level-1 '><a href="../../ember-inspector/info/">Library Info</a></li><li class='toc-level-1 '><a href="../../ember-inspector/promises/">Debugging Promises</a></li><li class='toc-level-1 '><a href="../../ember-inspector/container/">Inspecting Objects via the Container</a></li><li class='toc-level-1 '><a href="../../ember-inspector/render-performance/">Rendering Performance</a></li><li class='toc-level-1 '><a href="../../ember-inspector/troubleshooting/">Troubleshooting</a></li></ol></li><li class='toc-level-0 '><a href="#">Addons and Dependencies</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../addons-and-dependencies/managing-dependencies/">Managing Dependencies</a></li></ol></li><li class='toc-level-0 '><a href="#">Configuring Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../configuring-ember/configuring-your-app/">Configuring Your App</a></li><li class='toc-level-1 '><a href="../../configuring-ember/configuring-ember-cli/">Configuring Ember CLI</a></li><li class='toc-level-1 '><a href="../../configuring-ember/handling-deprecations/">Handling Deprecations</a></li><li class='toc-level-1 '><a href="../../configuring-ember/disabling-prototype-extensions/">Disabling Prototype Extensions</a></li><li class='toc-level-1 '><a href="../../configuring-ember/specifying-url-type/">Specifying the URL Type</a></li><li class='toc-level-1 '><a href="../../configuring-ember/embedding-applications/">Embedding Applications</a></li><li class='toc-level-1 '><a href="../../configuring-ember/feature-flags/">Feature Flags</a></li><li class='toc-level-1 '><a href="../../configuring-ember/build-targets/">Build targets</a></li><li class='toc-level-1 '><a href="../../configuring-ember/debugging/">Debugging</a></li></ol></li><li class='toc-level-0 '><a href="#">Contributing to Ember.js</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../contributing/adding-new-features/">Adding New Features</a></li><li class='toc-level-1 '><a href="../../contributing/repositories/">Repositories</a></li></ol></li><li class='toc-level-0 '><a href="#">Glossary</a><ol class='toc-level-1'><li class='toc-level-1 '><a href="../../glossary/web-development/">Web Development</a></li></ol></li></ol></nav>
 
   <a href="#" class="back-to-top">&#11014; トップに戻る</a>
 </aside>
@@ -134,37 +134,64 @@
 
       <article class="chapter">
         <h1>
-          Customizing Serializers
+          シリアライザのカスタマイズ
           <a href="https://github.com/emberjs/guides/edit/master/source/models/customizing-serializers.md"
              target="_blank" class="edit-page icon-pencil">編集</a>
         </h1>
         <hr>
 
-        <p>In Ember Data, serializers format the data sent to and received from
+        <!--
+In Ember Data, serializers format the data sent to and received from
 the backend store. By default, Ember Data serializes data using the
-<a href="http://jsonapi.org/">JSON API</a> format. If your backend uses a different
+[JSON API](http://jsonapi.org/) format. If your backend uses a different
 format, Ember Data allows you to customize the serializer or use a
-different serializer entirely.</p>
+different serializer entirely.
+-->
 
-<p>Ember Data ships with 3 serializers. The
-<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer"><code>JSONAPISerializer</code></a>
+<p>Ember Dataでは、バックエンドストアとの間で送受信されるデータをシリアライザでフォーマットします。
+デフォルトでは、Ember Dataは<a href="http://jsonapi.org/">JSON API</a>形式を使用してデータをシリアライズします。
+バックエンドが異なるフォーマットを使用する場合、Ember Dataではシリアライザをカスタマイズしたり、別のシリアライザを使用することができます。</p>
+
+<!--
+Ember Data ships with 3 serializers. The
+[`JSONAPISerializer`](https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer)
 is the default serializer and works with JSON API backends. The
-<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONSerializer"><code>JSONSerializer</code></a>
+[`JSONSerializer`](https://www.emberjs.com/api/ember-data/release/classes/DS.JSONSerializer)
 is a simple serializer for working with single json object or arrays of records. The
-<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.RESTSerializer"><code>RESTSerializer</code></a>
+[`RESTSerializer`](https://www.emberjs.com/api/ember-data/release/classes/DS.RESTSerializer)
 is a more complex serializer that supports sideloading and was the default
-serializer before 2.0.</p>
-<h2 id="toc_JSONAPISerializer-Conventions" class="anchorable-toc">JSONAPISerializer Conventions</h2>
-<p>When requesting a record, the <code>JSONAPISerializer</code> expects your server
+serializer before 2.0.
+-->
+
+<p>Ember Dataには3つのシリアライザが付属しています。
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer"><code>JSONAPISerializer</code></a>はデフォルトのシリアライザで、JSON APIバックエンドで動作します。
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONSerializer"><code>JSONSerializer</code></a>は、単一のjsonオブジェクトまたはレコードの配列を処理するシンプルなシリアライザです。
+<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.RESTSerializer"><code>RESTSerializer</code></a>は、サイドローディングをサポートするより複雑なシリアライザで、2.0以前はデフォルトのシリアライザでした。</p>
+
+<!--
+## JSONAPISerializer Conventions
+-->
+<h2 id="toc_JSONAPISerializerの規約" class="anchorable-toc">JSONAPISerializerの規約</h2>
+<!--
+When requesting a record, the `JSONAPISerializer` expects your server
 to return a JSON representation of the record that conforms to the
-following conventions.</p>
+following conventions.
+-->
+
+<p>レコードを要求するとき、<code>JSONAPISerializer</code>は、サーバーが次の規則に従ったレコードのJSON表現を返すことを期待しています。</p>
 <h3 id="toc_JSON-API-Document" class="anchorable-toc">JSON API Document</h3>
-<p>The <code>JSONAPISerializer</code> expects the backend to return a JSON API
+<!--
+The `JSONAPISerializer` expects the backend to return a JSON API
 Document that follows the JSON API specification and the conventions
-of the examples found on <a href="http://jsonapi.org/format/">http://jsonapi.org/format</a>. This means all
+of the examples found on [http://jsonapi.org/format](http://jsonapi.org/format/). This means all
 type names should be pluralized and attribute and relationship names
 should be dash-cased. For example, if you request a record from
-<code>/people/123</code>, the response should look like this:</p>
+`/people/123`, the response should look like this:
+-->
+
+<p><code>JSONAPISerializer</code>は、バックエンドがJSON API仕様に従ったJSON APIドキュメントと<a href="http://jsonapi.org/format/">http://jsonapi.org/format</a>にあるサンプルの規約を返すことを期待しています。
+つまり、すべての型名を複数形にする必要があり、属性名と関係名をケバブケースにする必要があります。
+例えば、<code>/people/123</code>にレコードを要求すると、応答は次のようになります。</p>
 <div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -190,8 +217,12 @@ should be dash-cased. For example, if you request a record from
 </pre></td>
 </tr></table>
 </div></div>
-<p>A response that contains multiple records may have an array in its
-<code>data</code> property.</p>
+<!--
+A response that contains multiple records may have an array in its
+`data` property.
+-->
+
+<p><code>data</code>プロパティに複数のレコードを含むレスポンスです。</p>
 <div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -230,12 +261,21 @@ should be dash-cased. For example, if you request a record from
 }
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_Sideloaded-Data" class="anchorable-toc">Sideloaded Data</h3>
-<p>Data that is not a part of the primary request but includes linked
-relationships should be placed in an array under the <code>included</code>
-key. For example, if you request <code>/articles/1</code> and the backend also
+</div></div>
+<!--
+### Sideloaded Data
+-->
+<h3 id="toc_サイドローディング" class="anchorable-toc">サイドローディング</h3>
+<!--
+Data that is not a part of the primary request but includes linked
+relationships should be placed in an array under the `included`
+key. For example, if you request `/articles/1` and the backend also
 returned any comments associated with that person the response
-should look like this:</p>
+should look like this:
+-->
+
+<p>要求に対するメインのリソースの一部ではなく、関連付けされたデータを含む場合は、<code>include</code>キーの配列に配置する必要があります。
+例えば、<code>/articles/1</code>を要求し、バックエンドがその記事に関連するコメントと投稿者を返す場合、レスポンスは次のようになります。</p>
 <div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -318,12 +358,23 @@ should look like this:</p>
 }
 </pre></td>
 </tr></table>
-</div></div><h2 id="toc_Customizing-Serializers" class="anchorable-toc">Customizing Serializers</h2>
-<p>Ember Data uses the <code>JSONAPISerializer</code> by default, but you can
+</div></div>
+<!--
+## Customizing Serializers
+-->
+<h2 id="toc_シリアライザのカスタマイズ" class="anchorable-toc">シリアライザのカスタマイズ</h2>
+<!--
+Ember Data uses the `JSONAPISerializer` by default, but you can
 override this default by defining a custom serializer. There are two
 ways to define a custom serializer. First, you can define a custom
-serializer for your entire application by defining an &quot;application&quot;
-serializer.</p>
+serializer for your entire application by defining an "application"
+serializer.
+-->
+
+<p>Ember Dataはデフォルトで<code>JSONAPISerializer</code>を使いますが、
+独自のシリアライザを定義してこのデフォルトをオーバーライドできます。
+独自のシリアライザを定義するには、2つの方法があります。
+まず、 &quot;application&quot;シリアライザを定義することによって、アプリケーション全体のシリアライザを定義できます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -341,8 +392,13 @@ serializer.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>You can also define a serializer for a specific model. For example, if
-you had a <code>post</code> model you could also define a <code>post</code> serializer:</p>
+<!--
+You can also define a serializer for a specific model. For example, if
+you had a `post` model you could also define a `post` serializer:
+-->
+
+<p>また、特定のモデルのシリアライザを定義することもできます。
+例えば、<code>post</code>モデルがある場合、<code>post</code>シリアライザを定義することもできます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -360,9 +416,14 @@ you had a <code>post</code> model you could also define a <code>post</code> seri
 </pre></td>
 </tr></table>
 </div></div>
-<p>To change the format of the data that is sent to the backend store, you can use
-the <a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/serialize?anchor=serialize"><code>serialize()</code></a>
-hook. Let&#39;s say that we have this JSON API response from Ember Data:</p>
+<!--
+To change the format of the data that is sent to the backend store, you can use
+the [`serialize()`](https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/serialize?anchor=serialize)
+hook. Let's say that we have this JSON API response from Ember Data:
+-->
+
+<p>バックエンドストアに送信されるデータの形式を変更するには、<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/serialize?anchor=serialize"><code>serialize()</code></a>フックを使用します。
+Ember Dataが以下のJSONを返すとしましょう。</p>
 <div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -390,7 +451,11 @@ hook. Let&#39;s say that we have this JSON API response from Ember Data:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>But our server expects data in this format:</p>
+<!--
+But our server expects data in this format:
+-->
+
+<p>ですが、サーバが期待しているフォーマットが以下だとすると、</p>
 <div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -422,7 +487,11 @@ hook. Let&#39;s say that we have this JSON API response from Ember Data:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Here&#39;s how you can change the data:</p>
+<!--
+Here's how you can change the data:
+-->
+
+<p>以下のようにして、データをフォーマットします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -468,11 +537,16 @@ hook. Let&#39;s say that we have this JSON API response from Ember Data:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Similarly, if your backend store provides data in a format other than JSON API,
+<!--
+Similarly, if your backend store provides data in a format other than JSON API,
 you can use the
-<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/serialize?anchor=normalizeResponse"><code>normalizeResponse()</code></a>
+[`normalizeResponse()`](https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/serialize?anchor=normalizeResponse)
 hook. Using the same example as above, if the server provides data that looks
-like:</p>
+like:
+-->
+
+<p>同様に、バックエンドストアがJSON API以外の形式でデータを提供する場合は、<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/serialize?anchor=normalizeResponse"><code>normalizeResponse()</code></a>フックを使用します。
+上記の例を使用して、サーバーが次のようなデータを提供している場合で、</p>
 <div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -504,7 +578,11 @@ like:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>And so we need to change it to look like:</p>
+<!--
+And so we need to change it to look like:
+-->
+
+<p>以下のように変更する必要がある場合、</p>
 <div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -532,7 +610,11 @@ like:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Here&#39;s how we could do it:</p>
+<!--
+Here's how we could do it:
+-->
+
+<p>このようにします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -568,19 +650,34 @@ like:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>To normalize only a single model, you can use the
-<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/serialize?anchor=normalize"><code>normalize()</code></a>
-hook similarly.</p>
+<!--
+To normalize only a single model, you can use the
+[`normalize()`](https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/serialize?anchor=normalize)
+hook similarly.
+-->
 
-<p>For more hooks to customize the serializer with, see the <a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer">Ember Data serializer
-API documentation</a>.</p>
+<p>単一のモデルのみを正規化するには、同様に<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/serialize?anchor=normalize"><code>normalize()</code></a>フックを使用します。</p>
+
+<!--
+For more hooks to customize the serializer with, see the [Ember Data serializer
+API documentation](https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer).
+-->
+
+<p>シリアライザをカスタマイズするフックの詳細については、<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer">Ember Data serializer
+API documentation</a>を参照してください。</p>
 <h3 id="toc_IDs" class="anchorable-toc">IDs</h3>
-<p>In order to keep track of unique records in the store Ember Data
-expects every record to have an <code>id</code> property in the payload. Ids
+<!--
+In order to keep track of unique records in the store Ember Data
+expects every record to have an `id` property in the payload. Ids
 should be unique for every unique record of a specific type. If your
-backend uses a key other than <code>id</code> you can use the
-serializer&#39;s <code>primaryKey</code> property to correctly transform the id
-property to <code>id</code> when serializing and deserializing data.</p>
+backend uses a key other than `id` you can use the
+serializer's `primaryKey` property to correctly transform the id
+property to `id` when serializing and deserializing data.
+-->
+
+<p>ストア内の一意のレコードを追跡するために、Ember Dataはすべてのレコードがペイロードに<code>id</code>プロパティを持つことを期待しています。
+IDは、特定のタイプのすべてのユニークレコードに対して一意でなければなりません。
+バックエンドで<code>id</code>以外のキーを使用する場合は、シリアライザの<code>primaryKey</code>プロパティを使用して、データをシリアライズおよびデシリアライズする時に<code>id</code>プロパティをidに正しく変換できます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -601,9 +698,18 @@ property to <code>id</code> when serializing and deserializing data.</p>
 });
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_Attribute-Names" class="anchorable-toc">Attribute Names</h3>
-<p>In Ember Data the convention is to camelize attribute names on a
-model. For example:</p>
+</div></div>
+<!--
+### Attribute Names
+-->
+<h3 id="toc_アトリビュート名" class="anchorable-toc">アトリビュート名</h3>
+<!--
+In Ember Data the convention is to camelize attribute names on a
+model. For example:
+-->
+
+<p>Ember Dataの規約では、モデルの属性名をキャメルケースにします。
+例:</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -629,8 +735,12 @@ model. For example:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>However, the <code>JSONAPISerializer</code> expects attributes to be dasherized
-in the document payload returned by your server:</p>
+<!--
+However, the `JSONAPISerializer` expects attributes to be dasherized
+in the document payload returned by your server:
+-->
+
+<p>ですが、<code>JSONAPISerializer</code>では、サーバーから返されるドキュメントのペイロードに、ケバブケースのアトリビュートが含まれている必要があります。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -658,13 +768,18 @@ in the document payload returned by your server:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>If the attributes returned by your server use a different convention
-you can use the serializer&#39;s
-<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/keyForAttribute?anchor=keyForAttribute"><code>keyForAttribute()</code></a>
+<!--
+If the attributes returned by your server use a different convention
+you can use the serializer's
+[`keyForAttribute()`](https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/keyForAttribute?anchor=keyForAttribute)
 method to convert an attribute name in your model to a key in your JSON
 payload. For example, if your backend returned attributes that are
-<code>under_scored</code> instead of <code>dash-cased</code> you could override the <code>keyForAttribute</code>
-method like this.</p>
+`under_scored` instead of `dash-cased` you could override the `keyForAttribute`
+method like this.
+-->
+
+<p>サーバーから返されるアトリビュートに別の規則を使用している場合は、シリアライザの<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/keyForAttribute?anchor=keyForAttribute"><code>keyForAttribute()</code></a>メソッドを使用して、モデル内の属性名をJSONペイロードのキーに変換します。
+例えば、バックエンドがケバブケースではなくスネークケースで返す場合、このように<code>keyForAttributeメソッド</code>をオーバーライドします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -692,15 +807,25 @@ method like this.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Irregular keys can be mapped with a custom serializer. The <code>attrs</code>
+<!--
+Irregular keys can be mapped with a custom serializer. The `attrs`
 object can be used to declare a simple mapping between property names
 on DS.Model records and payload keys in the serialized JSON object
 representing the record. An object with the property key can also be
-used to designate the attribute&#39;s key on the response payload.</p>
+used to designate the attribute's key on the response payload.
+-->
 
-<p>If the JSON for <code>person</code> has a key of <code>lastNameOfPerson</code>, and the
-desired attribute name is simply <code>lastName</code>, then create a custom
-Serializer for the model and override the <code>attrs</code> property.</p>
+<p>不規則なキー名はシリアライザでマップすることができます。
+<code>attrs</code>オブジェクトを使用して、DS.Modelレコードのプロパティ名とレコードを表すシリアライズされたJSONオブジェクトのペイロードキーとの間の単純なマッピングを宣言することができます。
+プロパティーキーを持つオブジェクトを使用して、レスポンスペイロード上のアトリビュートのキーを指定することもできます。</p>
+
+<!--
+If the JSON for `person` has a key of `lastNameOfPerson`, and the
+desired attribute name is simply `lastName`, then create a custom
+Serializer for the model and override the `attrs` property.
+-->
+
+<p><code>person</code>のJSONが<code>lastNameOfPerson</code>のキーを持ち、目的のアトリビュート名が単に<code>lastName</code>の場合は、モデルのシリアライザを作成し、<code>attrs</code>プロパティをオーバーライドします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -745,9 +870,18 @@ Serializer for the model and override the <code>attrs</code> property.</p>
 });
 </pre></td>
 </tr></table>
-</div></div><h3 id="toc_Relationships" class="anchorable-toc">Relationships</h3>
-<p>References to other records should be done by ID. For example, if you
-have a model with a <code>hasMany</code> relationship:</p>
+</div></div>
+<!--
+### Relationships
+-->
+<h3 id="toc_リレーションシップ" class="anchorable-toc">リレーションシップ</h3>
+<!--
+References to other records should be done by ID. For example, if you
+have a model with a `hasMany` relationship:
+-->
+
+<p>他のレコードへの参照はIDで行う必要があります。 
+例えば、<code>hasMany</code>を持つモデルがあるとします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -769,7 +903,11 @@ have a model with a <code>hasMany</code> relationship:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The JSON should encode the relationship as an array of IDs and types:</p>
+<!--
+The JSON should encode the relationship as an array of IDs and types:
+-->
+
+<p>JSONではIDと型の配列として関連を表す必要があります。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -805,13 +943,23 @@ have a model with a <code>hasMany</code> relationship:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p><code>Comments</code> for a <code>post</code> can be loaded by <code>post.get(&#39;comments&#39;)</code>. The
-JSON API adapter will send 3 <code>GET</code> requests to <code>/comments/1/</code>,
-<code>/comments/2/</code> and <code>/comments/3/</code>.</p>
+<!--
+`Comments` for a `post` can be loaded by `post.get('comments')`. The
+JSON API adapter will send 3 `GET` requests to `/comments/1/`,
+`/comments/2/` and `/comments/3/`.
+-->
 
-<p>Any <code>belongsTo</code> relationships in the JSON representation should be the
-dasherized version of the property&#39;s name. For example, if you have
-a model:</p>
+<p><code>post</code>の<code>comments</code>は、<code>post.get(&#39;comments&#39;)</code>によって読み込むことができます。
+JSON APIアダプターは、 <code>GET</code> requests to <code>/comments/1/</code>、<code>/comments/2/</code>、<code>/comments/3/</code>に3つのGETリクエストを送信します。</p>
+
+<!--
+Any `belongsTo` relationships in the JSON representation should be the
+dasherized version of the property's name. For example, if you have
+a model:
+-->
+
+<p>JSON表現の中の任意の<code>belongsTo</code>は、プロパティ名のケバブケースである必要があります。
+例えば、以下のようモデルがある場合、</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -833,7 +981,11 @@ a model:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The JSON should encode the relationship as an ID to another record:</p>
+<!--
+The JSON should encode the relationship as an ID to another record:
+-->
+
+<p>JSONでは関連を別のレコードのIDを表す必要があります。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -861,10 +1013,14 @@ a model:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>If needed these naming conventions can be overwritten by implementing
+<!--
+If needed these naming conventions can be overwritten by implementing
 the
-<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/keyForAttribute?anchor=keyForRelationship"><code>keyForRelationship()</code></a>
-method.</p>
+[`keyForRelationship()`](https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/keyForAttribute?anchor=keyForRelationship)
+method.
+-->
+
+<p>これらの命名規則は、必要に応じて<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONAPISerializer/methods/keyForAttribute?anchor=keyForRelationship"><code>keyForRelationship()</code></a>メソッドを実装することによって上書きできます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -889,13 +1045,26 @@ method.</p>
 });
 </pre></td>
 </tr></table>
-</div></div><h2 id="toc_Creating-Custom-Transformations" class="anchorable-toc">Creating Custom Transformations</h2>
-<p>In some circumstances, the built-in attribute types of <code>string</code>,
-<code>number</code>, <code>boolean</code>, and <code>date</code> may be inadequate. For example, a
-server may return a non-standard date format.</p>
+</div></div>
+<!--
+## Creating Custom Transformations
+-->
+<h2 id="toc_独自のトランスフォームの作成" class="anchorable-toc">独自のトランスフォームの作成</h2>
+<!--
+In some circumstances, the built-in attribute types of `string`,
+`number`, `boolean`, and `date` may be inadequate. For example, a
+server may return a non-standard date format.
+-->
 
-<p>Ember Data can have new JSON transforms
-registered for use as attributes:</p>
+<p>場合によっては、<code>string</code>、<code>number</code>、<code>boolean</code>、<code>date</code>の組み込みアトリビュートタイプでは不十分な場合があります。
+例えば、サーバーが日付を独自の形式で返すことがあるでしょう。</p>
+
+<!--
+Ember Data can have new JSON transforms
+registered for use as attributes:
+-->
+
+<p>Ember Dataでアトリビュートとして使用するには、独自のトランスフォームを登録します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -949,8 +1118,12 @@ registered for use as attributes:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>When <code>coordinatePoint</code> is received from the API, it is
-expected to be an array:</p>
+<!--
+When `coordinatePoint` is received from the API, it is
+expected to be an array:
+-->
+
+<p>APIが返す<code>coordinatePoint</code>は配列であることが期待されています。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -966,7 +1139,11 @@ expected to be an array:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>But once loaded on a model instance, it will behave as an object:</p>
+<!--
+But once loaded on a model instance, it will behave as an object:
+-->
+
+<p>しかし、モデルインスタンスにロードされると、オブジェクトとして動作します。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -978,19 +1155,33 @@ cursor.get(<span class="string"><span class="delimiter">'</span><span class="con
 </pre></td>
 </tr></table>
 </div></div>
-<p>If <code>position</code> is modified and saved, it will pass through the
-<code>serialize</code> function in the transform and again be presented as
-an array in JSON.</p>
+<!--
+If `position` is modified and saved, it will pass through the
+`serialize` function in the transform and again be presented as
+an array in JSON.
+-->
+
+<p><code>position</code>が変更されて保存する際は、トランスフォームの<code>serialize</code>関数を経由し、再びJSON内に配列として表現されます。</p>
 <h2 id="toc_JSONSerializer" class="anchorable-toc">JSONSerializer</h2>
-<p>Not all APIs follow the conventions that the <code>JSONAPISerializer</code> uses
+<!--
+Not all APIs follow the conventions that the `JSONAPISerializer` uses
 with a data namespace and sideloaded relationship records. Some
 legacy APIs may return a simple JSON payload that is just the requested
-resource or an array of serialized records. The <code>JSONSerializer</code> is a
+resource or an array of serialized records. The `JSONSerializer` is a
 serializer that ships with Ember Data that can be used alongside the
-<code>RESTAdapter</code> to serialize these simpler APIs.</p>
+`RESTAdapter` to serialize these simpler APIs.
+-->
 
-<p>To use it in your application you will need to define a
-<code>serializer:application</code> that extends the <code>JSONSerializer</code>.</p>
+<p>すべてのAPIが、<code>JSONAPISerializer</code>がデータ名前空間と関連レコードのサイドローディングで使用する規約に準拠しているわけではありません。
+レガシーなAPIは、要求されたリソースの単純なJSONペイロード、またはシリアライズされたレコードの配列を返すことがあります。
+<code>JSONSerializer</code>はEmber Dataに同梱されているシリアライザで、これらの単純なAPIをシリアライズするために<code>RESTAdapter</code>とともに使用できます。</p>
+
+<!--
+To use it in your application you will need to define a
+`serializer:application` that extends the `JSONSerializer`.
+-->
+
+<p>アプリケーションでそれを使用するには、<code>JSONSerializer</code>を拡張して<code>serializer:application</code>を定義する必要があります。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -1012,9 +1203,13 @@ serializer that ships with Ember Data that can be used alongside the
 </pre></td>
 </tr></table>
 </div></div>
-<p>For requests that are only expected to return 1 record
-(e.g. <code>store.findRecord(&#39;post&#39;, 1)</code>) the <code>JSONSerializer</code> expects the response
-to be a JSON object that looks similar to this:</p>
+<!--
+For requests that are only expected to return 1 record
+(e.g. `store.findRecord('post', 1)`) the `JSONSerializer` expects the response
+to be a JSON object that looks similar to this:
+-->
+
+<p><code>JSONSerializer</code>は、レスポンスが1件のレコードのみを返すと期待されるリクエスト(例:`store.findRecord(&#39;post&#39;, 1))の場合、レスポンスは次のようなJSONオブジェクトであると想定しています。</p>
 <div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -1032,10 +1227,14 @@ to be a JSON object that looks similar to this:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>For requests that are only expected to return 0 or more records
-(e.g. <code>store.findAll(&#39;post&#39;)</code> or <code>store.query(&#39;post&#39;, { filter: { status: &#39;draft&#39; } })</code>)
-the <code>JSONSerializer</code> expects the response to be a JSON array that
-looks similar to this:</p>
+<!--
+For requests that are only expected to return 0 or more records
+(e.g. `store.findAll('post')` or `store.query('post', { filter: { status: 'draft' } })`)
+the `JSONSerializer` expects the response to be a JSON array that
+looks similar to this:
+-->
+
+<p>0件を含む複数のレコード返すと予想されるリクエストの場合(例:<code>store.findAll(&#39;post&#39;)</code> or <code>store.query(&#39;post&#39;, { filter: { status: &#39;draft&#39; } })</code>)、<code>JSONSerializer</code>はレスポンスが次のようなJSON配列になることを期待しています。</p>
 <div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -1063,22 +1262,40 @@ looks similar to this:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The <code>JSONAPISerializer</code> is built on top of the <code>JSONSerializer</code> so they share
+<!--
+The `JSONAPISerializer` is built on top of the `JSONSerializer` so they share
 many of the same hooks for customizing the behavior of the
 serialization process. Be sure to check out the
-<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONSerializer">API docs</a>
-for a full list of methods and properties.</p>
+[API docs](https://www.emberjs.com/api/ember-data/release/classes/DS.JSONSerializer)
+for a full list of methods and properties.
+-->
+
+<p><code>JSONAPISerializer</code>は<code>JSONSerializer</code>の上に構築されているため、シリアライズ処理の動作をカスタマイズするために同じフックの多くを共有しています。
+メソッドとプロパティの完全なリストについては、<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.JSONSerializer">APIドキュメント</a>を確認してください。</p>
 <h2 id="toc_EmbeddedRecordMixin" class="anchorable-toc">EmbeddedRecordMixin</h2>
-<p>Although Ember Data encourages you to sideload your relationships,
+<!--
+Although Ember Data encourages you to sideload your relationships,
 sometimes when working with legacy APIs you may discover you need to
 deal with JSON that contains relationships embedded inside other
-records. The <code>EmbeddedRecordsMixin</code> is meant to help with this problem.</p>
+records. The `EmbeddedRecordsMixin` is meant to help with this problem.
+-->
 
-<p>To set up embedded records, include the mixin when extending a
-serializer then define and configure embedded relationships.</p>
+<p>Ember Dataは関連データをサイドローディングすることを推奨していますが、レガシーなAPIでは、他のレコードに埋め込まれたリレーションシップを含むJSONを処理する必要があることがあります。
+<code>EmbeddedRecordsMixin</code>は、この問題を解決するためのものです。</p>
 
-<p>For example, if your <code>post</code> model contained an embedded <code>author</code> record
-that looks similar to this:</p>
+<!--
+To set up embedded records, include the mixin when extending a
+serializer then define and configure embedded relationships.
+-->
+
+<p>埋め込まれたレコードを処理するには、シリアライザを拡張するときにmixinを組み込み、埋め込まれたリレーションシップの定義と設定をします。</p>
+
+<!--
+For example, if your `post` model contained an embedded `author` record
+that looks similar to this:
+-->
+
+<p>例えば、<code>post</code>モデルに<code>author</code>レコードが以下のように含まれているとします。</p>
 <div class="highlight json "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -1106,7 +1323,11 @@ that looks similar to this:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>You would define your relationship like this:</p>
+<!--
+You would define your relationship like this:
+-->
+
+<p>以下のようにリレーションシップを定義することになるでしょう。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -1138,9 +1359,15 @@ that looks similar to this:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>If you find yourself needing to both serialize and deserialize the
-embedded relationship you can use the shorthand option of <code>{ embedded:
-&#39;always&#39; }</code>. The example above could therefore be expressed as such:</p>
+<!--
+If you find yourself needing to both serialize and deserialize the
+embedded relationship you can use the shorthand option of `{ embedded:
+'always' }`. The example above could therefore be expressed as such:
+-->
+
+<p>埋め込まれたリレーションシップシリアライズやデシリアライズする必要がある場合は、<code>{ embedded:
+&#39;always&#39; }</code>という簡略記法でオプションを指定できます。
+したがって、上記の例は、次のように表すことができます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -1166,19 +1393,35 @@ embedded relationship you can use the shorthand option of <code>{ embedded:
 </pre></td>
 </tr></table>
 </div></div>
-<p>The <code>serialize</code> and <code>deserialize</code> keys support 3 values:</p>
+<!--
+The `serialize` and `deserialize` keys support 3 values:
+-->
+
+<p><code>serialize</code>と<code>deserialize</code>には以下の値を指定できます。</p>
+
+<!--
+* `records` is used to signal that the entire record is expected
+* `ids` is used to signal that only the id of the record is expected
+* `false` is used to signal that the record is not expected
+-->
 
 <ul>
-<li><code>records</code> is used to signal that the entire record is expected</li>
-<li><code>ids</code> is used to signal that only the id of the record is expected</li>
-<li><code>false</code> is used to signal that the record is not expected</li>
+<li><code>records</code>: レコード全体が期待されることを示す</li>
+<li><code>ids</code>: レコードのidだけが必要であること示す</li>
+<li><code>false</code>: レコードが期待されていないことを示す</li>
 </ul>
 
-<p>For example you may find that you want to read an embedded record when
-extracting a JSON payload but only include the relationship&#39;s id when
-serializing the record. This is possible by using the <code>serialize:
-&#39;ids&#39;</code> option. You can also opt out of serializing a relationship by
-setting <code>serialize: false</code>.</p>
+<!--
+For example you may find that you want to read an embedded record when
+extracting a JSON payload but only include the relationship's id when
+serializing the record. This is possible by using the `serialize:
+'ids'` option. You can also opt out of serializing a relationship by
+setting `serialize: false`.
+-->
+
+<p>JSONペイロードを抽出する時に埋め込まれたレコードを読み込み、レコードをシリアライズする時にはリレーションシップのIDのみを読み込みたい場合があります。
+これは、<code>serialize: &#39;ids&#39;</code>オプションを使用することで可能です。
+また、<code>serialize: false</code>を設定してリレーションシップをシリアライズしないようにすることもできます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -1218,71 +1461,132 @@ setting <code>serialize: false</code>.</p>
 </pre></td>
 </tr></table>
 </div></div><h3 id="toc_EmbeddedRecordsMixin-Defaults" class="anchorable-toc">EmbeddedRecordsMixin Defaults</h3>
-<p>If you do not overwrite <code>attrs</code> for a specific relationship, the
-<code>EmbeddedRecordsMixin</code> will behave in the following way:</p>
+<!--
+If you do not overwrite `attrs` for a specific relationship, the
+`EmbeddedRecordsMixin` will behave in the following way:
+-->
+
+<p><code>EmbeddedRecordsMixin</code>は、<code>attrs</code>で上書きされていないリレーションシップを以下のように扱います。</p>
 
 <p>BelongsTo: <code>{ serialize: &#39;id&#39;, deserialize: &#39;id&#39; }</code>
 HasMany:   <code>{ serialize: false, deserialize: &#39;ids&#39; }</code></p>
 
-<p>There is an option of not embedding JSON in the serialized payload by
-using serialize: &#39;ids&#39;. If you do not want the relationship sent at
-all, you can use <code>serialize: false</code>.</p>
-<h2 id="toc_Authoring-Serializers" class="anchorable-toc">Authoring Serializers</h2>
-<p>If you would like to create a custom serializer its recommend that you
-start with the <code>JSONAPISerializer</code> or <code>JSONSerializer</code> and extend one of
+<!--
+There is an option of not embedding JSON in the serialized payload by
+using serialize: 'ids'. If you do not want the relationship sent at
+all, you can use `serialize: false`.
+-->
+
+<p><code>serialize: &#39;ids&#39;</code>を使用して、 シリアライズされたペイロードにJSONを埋め込まないという選択肢があります。
+リレーションシッっぷを一切送信しないようにするには、<code>serialize: false</code>を使用します。</p>
+
+<!--
+## Authoring Serializers
+-->
+<h2 id="toc_独自のシリアライザの作成" class="anchorable-toc">独自のシリアライザの作成</h2>
+<!--
+If you would like to create a custom serializer its recommend that you
+start with the `JSONAPISerializer` or `JSONSerializer` and extend one of
 those to match your needs.
 However, if your payload is extremely different from one of these
-serializers you can create your own by extending the <code>DS.Serializer</code>
-base class.</p>
+serializers you can create your own by extending the `DS.Serializer`
+base class.
+-->
 
-<p>A serializer in Ember Data is responsible for normalizing a payload
+<p>独自のシリアライザを作成する場合は、必要に応じて<code>JSONAPISerializer</code>か<code>JSONSerializer</code>のどちらかを拡張することをお勧めします。
+ただし、ペイロードがこれらのシリアライザと大きく異なる場合は、<code>DS.Serializer</code>を拡張して独自のシリアライザを作成できます。</p>
+
+<!--
+A serializer in Ember Data is responsible for normalizing a payload
 from an adapter into the format that Ember Data understands.
 It is also responsible for transforming a snapshot of a record into
-the payload that an adapter will send to the backend.</p>
+the payload that an adapter will send to the backend.
+-->
 
-<p>A serializer has two main roles in Ember Data.
+<p>Ember Dataのシリアライザは、アダプターからペイロードをEmber Dataが理解できる形式に正規化する役割があります。
+また、アダプターがバックエンドに送信する際に、レコードのスナップショットをペイロードに変換する役割も果たします。</p>
+
+<!--
+A serializer has two main roles in Ember Data.
 First, it is responsible for taking a response from an adapter and
 serializing it into the normalized JSON format that Ember Data
 understands.
 Secondly, it transforms snapshots of records into a payload the
 adapter will send to the server when creating, updating, or deleting a
-record.</p>
-<h4 id="toc_Ember-Data&#39;s-Normalized-JSON-Format" class="anchorable-toc">Ember Data&#39;s Normalized JSON Format</h4>
-<p>The normalized JSON format that Ember Data expects is a
-<a href="http://jsonapi.org/">JSON API</a> document with a couple of additional
-restrictions.</p>
+record.
+-->
 
-<p>First, it is important to make sure that the <code>type</code> name of a record
+<p>シリアライザにはEmber Dataの主な役割が2つあります。
+まず、アダプタからレスポンスを取得し、Ember Dataが理解できる標準化されたJSON形式にシリアル化します。
+次に、レコードの作成、更新、または削除時に、レコードのスナップショットをアダプターがサーバーに送信するペイロードに変換します。</p>
+
+<!--
+#### Ember Data's Normalized JSON Format
+-->
+<h4 id="toc_Ember-Dataの正規化されたJSON形式" class="anchorable-toc">Ember Dataの正規化されたJSON形式</h4>
+<!--
+The normalized JSON format that Ember Data expects is a
+[JSON API](http://jsonapi.org/) document with a couple of additional
+restrictions.
+-->
+
+<p>Ember Dataが期待する正規化されたJSON形式は<a href="http://jsonapi.org/">JSON API</a>ドキュメントで、制約がいくつかあります。</p>
+
+<!--
+First, it is important to make sure that the `type` name of a record
 in the normalized JSON object exactly matches the filename of the
 model defined for this record type.
 By convention Model names are singular in Ember Data, however, the
 example type names shown in the
-<a href="http://jsonapi.org/format/">JSON API spec</a> are pluralized.
+[JSON API spec](http://jsonapi.org/format/) are pluralized.
 The JSON API spec itself is agnostic about inflection rules, however,
-Ember Data&#39;s own <code>JSONAPISerializer</code> assumes types are plural and it
-will automatically singularize the types.</p>
+Ember Data's own `JSONAPISerializer` assumes types are plural and it
+will automatically singularize the types.
+-->
+
+<p>まず、正規化されたJSONオブジェクト内のレコードの<code>type</code>名が、そのレコードのモデルを定義しているファイル名と正確に一致することを確実することが重要です。
+規約によりモデル名はEmber Dataでは単数形ですが、<a href="http://jsonapi.org/format/">JSON APIの仕様</a>に示されているサンプルは複数形になっています。
+JSON APIの仕様自体は語尾変化に決まりはありませんが、Ember Data独自の<code>JSONAPISerializer</code>はtypeが複数形であると仮定し、typeを自動的に単数形にします。</p>
 
 <p>Second, attribute and relationship names in the JSON API document
 should exactly match the name and casing of the <code>DS.attr()</code>,
 <code>DS.belongsTo()</code> and <code>DS.hasMany()</code>, properties defined on the
 Model.</p>
 
-<p>By convention these property names are camelCase in Ember Data models.
-As with the <code>type</code> names, this is different from the example attribute
+<p>次に、JSON APIドキュメントのアトリビュートとリレーションシップ名は、モデルに定義されている<code>DS.attr()</code>、<code>DS.belongsTo()</code>、<code>DS.hasMany()</code>の名前と大文字小文字含め完全に一致する必要があります。</p>
+
+<!--
+By convention these property names are camelCase in Ember Data models.
+As with the `type` names, this is different from the example attribute
 and relationship names shown in the
-<a href="http://jsonapi.org/format/">JSON API spec</a>.
+[JSON API spec](http://jsonapi.org/format/).
 The examples in the spec use dash-case for attribute and relationship
 names. However, the spec does not require attribute or relationship
 names to follow any specific casing convention.
-If you are using Ember Data&#39;s own <code>JSONAPISerializer</code> it will assume
+If you are using Ember Data's own `JSONAPISerializer` it will assume
 the attribute and relationship names from your API are dash-case and
 automatically transform them to camelCase when it creates the
-normalized JSON object.</p>
+normalized JSON object.
+-->
 
-<p>Other than these two restrictions, Ember Data&#39;s normalized JSON object
-follows the <a href="http://jsonapi.org/">JSON API</a> specification.</p>
+<p>規約により、Ember Dataのモデルでは、プロパティ名はのキャメルケースを使います。
+<code>type</code>名の場合と同様に、これは<a href="http://jsonapi.org/format/">JSON APIの仕様</a>にあるサンプルのアトリビュート名やリレーションシップ名とは異なります。
+サンプルでは、アトリビュート名とリレーションシップ名にケバブケースが使用されています。
+ただし、JSON仕様は、アトリビュート名とリレーションシップ名が特定のケース(ケバブケースやキャメルケースのこと)の規約に従うようには定めていません。
+Ember Dataの<code>JSONAPISerializer</code>を使用している場合、APIの属性とリレーションシップ名はケバブケースとみなされ、正規化されたJSONオブジェクトを作成するときに自動的にキャメルケースに変換されます。</p>
 
-<p>Example: given this <code>post</code> model.</p>
+<!--
+Other than these two restrictions, Ember Data's normalized JSON object
+follows the [JSON API](http://jsonapi.org/) specification.
+-->
+
+<p>この2つの制約を除いて、Ember Dataの正規化されたJSONオブジェクトは<a href="http://jsonapi.org/">JSON API</a>の仕様に準拠しています。</p>
+
+<!--
+Example: given this `post` model.
+-->
+
+<p>以下の<code>post</code>モデルの場合、</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -1310,8 +1614,12 @@ follows the <a href="http://jsonapi.org/">JSON API</a> specification.</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>The normalized JSON object that Ember Data expects a serializer to
-return looks like this:</p>
+<!--
+The normalized JSON object that Ember Data expects a serializer to
+return looks like this:
+-->
+
+<p>Ember Dataが想定しているシリアライザが返す正規化されたJSONオブジェクトは次のようになります。</p>
 <div class="highlight js "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -1357,41 +1665,82 @@ return looks like this:</p>
 </pre></td>
 </tr></table>
 </div></div>
-<p>Note that the type is <code>&quot;post&quot;</code> to match the post model and the
-<code>relatedPosts</code> relationship in the document matches the
-<code>relatedPosts: hasMany(&#39;post&#39;)</code> on the model.</p>
-<h4 id="toc_Normalizing-adapter-responses" class="anchorable-toc">Normalizing adapter responses</h4>
-<p>When creating a custom serializer you will need to define a
-<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Serializer/methods/normalizeResponse?anchor=normalizeResponse">normalizeResponse</a>
+<!--
+Note that the type is `"post"` to match the post model and the
+`relatedPosts` relationship in the document matches the
+`relatedPosts: hasMany('post')` on the model.
+-->
+
+<p>postモデルと一致するタイプは<code>&quot;post&quot;</code>であり、ドキュメント内の<code>relatedPosts</code>リレーションシップはモデルの<code>relatedPosts: hasMany(&#39;post&#39;)</code>と一致していることに注意してください。</p>
+
+<!--
+#### Normalizing adapter responses
+-->
+<h4 id="toc_レスポンスの正規化" class="anchorable-toc">レスポンスの正規化</h4>
+<!--
+When creating a custom serializer you will need to define a
+[normalizeResponse](https://www.emberjs.com/api/ember-data/release/classes/DS.Serializer/methods/normalizeResponse?anchor=normalizeResponse)
 method to transform the response from the adapter into the normalized
-JSON object described above.</p>
+JSON object described above.
+-->
 
-<p>This method receives the <code>store</code>, the Model class for the request, the
-payload, the id of the record request (or <code>null</code> if there is
+<p>シリアライザを作成する場合、アダプターからのレスポンスを上記の正規化されたJSONオブジェクトに変換するために、<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Serializer/methods/normalizeResponse?anchor=normalizeResponse">normalizeResponse</a>メソッドの定義が必要になることがあります。</p>
+
+<!--
+This method receives the `store`, the Model class for the request, the
+payload, the id of the record request (or `null` if there is
 no id associated with the request), and the request type (a string with
-the possible values of: <code>&#39;findRecord&#39;</code>, <code>&#39;queryRecord&#39;</code>, <code>&#39;findAll&#39;</code>,
-<code>&#39;findBelongsTo&#39;</code>, <code>&#39;findHasMany&#39;</code>, <code>&#39;findMany&#39;</code>, <code>&#39;query&#39;</code>,
-<code>&#39;createRecord&#39;</code>, <code>&#39;deleteRecord&#39;</code>, and <code>&#39;updateRecord&#39;</code>) as arguments.</p>
+the possible values of: `'findRecord'`, `'queryRecord'`, `'findAll'`,
+`'findBelongsTo'`, `'findHasMany'`, `'findMany'`, `'query'`,
+`'createRecord'`, `'deleteRecord'`, and `'updateRecord'`) as arguments.
+-->
 
-<p>A custom serializer will also need to define a
-<a href="http://emberjs.com/api/data/classes/DS.Serializer.html#method_normalize">normalize</a>
+<p>このメソッドは、<code>store</code>、リクエストのモデルクラス、ペイロード、レコード要求のID(またはリクエストに関連付けられているIDがない場合は<code>null</code>)、およびリクエストタイプ(<code>&#39;findRecord&#39;</code>, <code>&#39;queryRecord&#39;</code>, <code>&#39;findAll&#39;</code>,
+<code>&#39;findBelongsTo&#39;</code>, <code>&#39;findHasMany&#39;</code>, <code>&#39;findMany&#39;</code>, <code>&#39;query&#39;</code>,<code>&#39;createRecord&#39;</code>, <code>&#39;deleteRecord&#39;</code>,<code>&#39;updateRecord&#39;</code>)を引数として使用します。</p>
+
+<!--
+A custom serializer will also need to define a
+[normalize](http://emberjs.com/api/data/classes/DS.Serializer.html#method_normalize)
 method.
-This method is called by <code>store.normalize(type, payload)</code> and is often
+This method is called by `store.normalize(type, payload)` and is often
 used for normalizing requests made outside of Ember Data because they
-do not fall into the normal CRUD flow that the adapter provides.</p>
-<h4 id="toc_Serializing-records" class="anchorable-toc">Serializing records</h4>
-<p>Finally a serializer will need to implement a
-<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Serializer/methods/serialize?anchor=serialize">serialize</a>
+do not fall into the normal CRUD flow that the adapter provides.
+-->
+
+<p>シリアライザも<a href="http://emberjs.com/api/data/classes/DS.Serializer.html#method_normalize">normalize</a>メソッドを定義する必要があるでしょう
+このメソッドは<code>store.normalize(type, payload)</code>によって呼び出され、Ember Dataの外部で行われたリクエストを正規化するためによく使用されます。
+これは、アダプターが提供する通常のCRUDフローに該当しないためです。</p>
+
+<!--
+#### Serializing records
+-->
+<h4 id="toc_レコードのシリアライズ" class="anchorable-toc">レコードのシリアライズ</h4>
+<!--
+Finally a serializer will need to implement a
+[serialize](https://www.emberjs.com/api/ember-data/release/classes/DS.Serializer/methods/serialize?anchor=serialize)
 method.
 Ember Data will provide a record snapshot and an options hash and this
 method should return an object that the adapter will send to the
-server when creating, updating or deleting a record.</p>
-<h2 id="toc_Community-Serializers" class="anchorable-toc">Community Serializers</h2>
-<p>If none of the built-in Ember Data Serializers work for your backend,
+server when creating, updating or deleting a record.
+-->
+
+<p>最後に、シリアライザは<a href="https://www.emberjs.com/api/ember-data/release/classes/DS.Serializer/methods/serialize?anchor=serialize">serialize</a>メソッドを実装する必要があります。
+Ember Dataからレコードスナップショットとオプションハッシュが渡されるので、serializeメソッドは、レコードの作成、更新、削除時にアダプタがサーバーに送信するオブジェクトを返す必要があります。</p>
+
+<!--
+## Community Serializers
+-->
+<h2 id="toc_コミュニティによるシリアライザ" class="anchorable-toc">コミュニティによるシリアライザ</h2>
+<!--
+If none of the built-in Ember Data Serializers work for your backend,
 be sure to check out some of the community maintained Ember Data
 Adapters and Serializers.
 A good place to search for them is
-<a href="http://emberobserver.com/categories/data">Ember Observer</a>.</p>
+[Ember Observer](http://emberobserver.com/categories/data).
+-->
+
+<p>組み込みのEmber Dataシリアライザがバックエンドと合わない場合は、コミュニティで管理されているEmber Dataのアダプターとシリアライザで要件に合うものがないか確認しましょう。
+検索するには<a href="http://emberobserver.com/categories/data">Ember Observer</a>が適しています。</p>
 
 
 
