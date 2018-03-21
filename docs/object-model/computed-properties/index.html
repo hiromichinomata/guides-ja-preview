@@ -359,10 +359,14 @@ ironMan.get(<span class="string"><span class="delimiter">'</span><span class="co
 -->
 <h3 id="toc_同じオブジェクト上での複数依存" class="anchorable-toc">同じオブジェクト上での複数依存</h3>
 <!--
-In the previous example, the `fullName` computed property depends on two other properties:
+In the previous example, the `fullName` computed property depends on two other properties of the same object.  
+However, you may find that you have to observe properties a different object.
+For example, look at this computed property:
 -->
 
-<p>前の例では、<code>fullName</code>算出プロパティは、他の2つのプロパティに依存しています。</p>
+<p>上記の例の<code>fullName</code>算出プロパティは、同じオブジェクト内の他の2つのプロパティに依存しています。
+しかし、別のオブジェクトのプロパティの監視が必要になることもあるでしょう。
+例えば、以下の算出プロパティを見てみましょう。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -373,27 +377,25 @@ In the previous example, the `fullName` computed property depends on two other p
 7
 8
 9
-<strong>10</strong>
 </pre></td>
-  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>:
+  <td class="code"><pre><span class="reserved">import</span> EmberObject, { computed } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
 
-<span class="error">…</span>
-  fullName: computed(<span class="string"><span class="delimiter">'</span><span class="content">firstName</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">lastName</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
-    let firstName = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">firstName</span><span class="delimiter">'</span></span>);
-    let lastName = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">lastName</span><span class="delimiter">'</span></span>);
+let obj = EmberObject.extend({
+  <span class="key">baz</span>: { <span class="key">foo</span>: <span class="string"><span class="delimiter">'</span><span class="content">BLAMMO</span><span class="delimiter">'</span></span>, <span class="key">bar</span>: <span class="string"><span class="delimiter">'</span><span class="content">BLAZORZ</span><span class="delimiter">'</span></span> },
 
-    <span class="keyword">return</span> <span class="error">`</span><span class="predefined">$</span>{firstName} <span class="predefined">$</span>{lastName}<span class="error">`</span>;
+  <span class="key">something</span>: computed(<span class="string"><span class="delimiter">'</span><span class="content">baz.foo</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">baz.bar</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
+    <span class="keyword">return</span> <span class="error">`</span><span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.foo</span><span class="delimiter">'</span></span>)} <span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.bar</span><span class="delimiter">'</span></span>)}<span class="error">`</span>;
   })
-<span class="error">…</span>
+});
 </pre></td>
 </tr></table>
 </div></div>
 <!--
-We can also use a short-hand syntax called _brace expansion_ to declare the dependents.
+Since both `foo` and `bar` are properties on the `baz` object, we can use a short-hand syntax called _brace expansion_ to declare the dependents keys.
 You surround the dependent properties with braces (`{}`), and separate with commas, like so:
 -->
 
-<p>また、Brace Expansion(ブレース展開)と呼ばれる簡潔な構文を使用して、依存を宣言することもできます。
+<p><code>foo</code>と<code>bar</code>の両方が<code>baz</code>オブジェクトのプロパティであるため、ブレース展開(brace expansion)と呼ばれる簡潔な構文を使用して、依存キーを宣言することができます。
 依存しているプロパティを中括弧(<code>{}</code>)で囲み、カンマで区切ります。
 次のようにします。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
@@ -406,70 +408,11 @@ You surround the dependent properties with braces (`{}`), and separate with comm
 7
 8
 9
-<strong>10</strong>
-</pre></td>
-  <td class="code"><pre><span class="reserved">import</span> Ember from <span class="string"><span class="delimiter">'</span><span class="content">ember</span><span class="delimiter">'</span></span>:
-
-<span class="error">…</span>
-  fullName: computed(<span class="string"><span class="delimiter">'</span><span class="content">{firstName,lastName}</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
-    let firstName = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">firstName</span><span class="delimiter">'</span></span>);
-    let lastName = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">lastName</span><span class="delimiter">'</span></span>);
-
-    <span class="keyword">return</span> <span class="error">`</span><span class="predefined">$</span>{firstName} <span class="predefined">$</span>{lastName}<span class="error">`</span>;
-  })
-<span class="error">…</span>
-</pre></td>
-</tr></table>
-</div></div>
-<!--
-This is especially useful when you depend on properties of an object, since it allows you to replace:
--->
-
-<p>これは、オブジェクトのプロパティに依存する場合に特に便利です。
-以下の書き方を、</p>
-<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
-  <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> EmberObject, { computed } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
 
 let obj = EmberObject.extend({
-  <span class="key">baz</span>: {<span class="key">foo</span>: <span class="string"><span class="delimiter">'</span><span class="content">BLAMMO</span><span class="delimiter">'</span></span>, <span class="key">bar</span>: <span class="string"><span class="delimiter">'</span><span class="content">BLAZORZ</span><span class="delimiter">'</span></span>},
-
-  <span class="key">something</span>: computed(<span class="string"><span class="delimiter">'</span><span class="content">baz.foo</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">baz.bar</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
-    <span class="keyword">return</span> <span class="error">`</span><span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.foo</span><span class="delimiter">'</span></span>)} <span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.bar</span><span class="delimiter">'</span></span>)}<span class="error">`</span>;
-  })
-});
-</pre></td>
-</tr></table>
-</div></div>
-<!--
-With:
--->
-
-<p>次のように置き換えることができます。</p>
-<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
-  <td class="line-numbers"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td>
-  <td class="code"><pre><span class="reserved">import</span> EmberObject, { computed } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
-
-let obj = EmberObject.extend({
-  <span class="key">baz</span>: {<span class="key">foo</span>: <span class="string"><span class="delimiter">'</span><span class="content">BLAMMO</span><span class="delimiter">'</span></span>, <span class="key">bar</span>: <span class="string"><span class="delimiter">'</span><span class="content">BLAZORZ</span><span class="delimiter">'</span></span>},
+  <span class="key">baz</span>: { <span class="key">foo</span>: <span class="string"><span class="delimiter">'</span><span class="content">BLAMMO</span><span class="delimiter">'</span></span>, <span class="key">bar</span>: <span class="string"><span class="delimiter">'</span><span class="content">BLAZORZ</span><span class="delimiter">'</span></span> },
 
   <span class="key">something</span>: computed(<span class="string"><span class="delimiter">'</span><span class="content">baz.{foo,bar}</span><span class="delimiter">'</span></span>, <span class="keyword">function</span>() {
     <span class="keyword">return</span> <span class="error">`</span><span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.foo</span><span class="delimiter">'</span></span>)} <span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">baz.bar</span><span class="delimiter">'</span></span>)}<span class="error">`</span>;

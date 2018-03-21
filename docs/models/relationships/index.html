@@ -558,11 +558,15 @@ First, let's look at the model definitions:
 6
 7
 8
+9
+<strong>10</strong>
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> { computed } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;
 <span class="reserved">import</span> PaymentMethod from <span class="string"><span class="delimiter">'</span><span class="content">./payment-method</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">default</span> PaymentMethod.extend({
+  <span class="key">last4</span>: DS.attr(),
+
   <span class="key">obfuscatedIdentifier</span>: computed(<span class="string"><span class="delimiter">'</span><span class="content">last4</span><span class="delimiter">'</span></span>, <span class="keyword">function</span> () {
     <span class="keyword">return</span> <span class="error">`</span>**** **** **** <span class="predefined">$</span>{<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">last4</span><span class="delimiter">'</span></span>)}<span class="error">`</span>;
   })
