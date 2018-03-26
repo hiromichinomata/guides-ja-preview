@@ -143,12 +143,12 @@
         <!--
 In Ember.js, an enumerable is any object that contains a number of child
 objects, and which allows you to work with those children using the
-[Ember.Enumerable](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable) API. The most common
+[`MutableArray`](https://emberjs.com/api/ember/release/classes/MutableArray) API. The most common
 enumerable in the majority of apps is the native JavaScript array, which
 Ember.js extends to conform to the enumerable interface.
 -->
 
-<p>Ember.jsでは、列挙型(Enumerable)は、多数の子オブジェクトを含む任意のオブジェクトであり、<a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable">Ember.Enumerable</a>を使用して子オブジェクトを操作できます。
+<p>Ember.jsでは、列挙型(Enumerable)は、多数の子オブジェクトを含む任意のオブジェクトであり、<a href="https://emberjs.com/api/ember/release/classes/MutableArray"><code>MutableArray</code></a> APIを使用して子オブジェクトを操作できます。
 アプリケーションで最も一般的な列挙型は、Ember.jsがEnumerableのインターフェイスに準拠するように拡張しているネイティブJavaScriptの配列(Array)です。</p>
 
 <!--
@@ -175,13 +175,13 @@ where available.
 <h2 id="toc_オブザーバー用のメソッドとプロパティ" class="anchorable-toc">オブザーバー用のメソッドとプロパティ</h2>
 <!--
 In order for Ember to observe when you make a change to an enumerable, you need
-to use special methods that `Ember.Enumerable` provides. For example, if you add
+to use special methods that `MutableArray` provides. For example, if you add
 an element to an array using the standard JavaScript method `push()`, Ember will
 not be able to observe the change, but if you use the enumerable method
 `pushObject()`, the change will propagate throughout your application.
 -->
 
-<p>列挙型の変更をEmberが監視できるようにするには、<code>Ember.Enumerable</code>が提供する特別なメソッドを使用する必要があります。
+<p>列挙型の変更をEmberが監視できるようにするには、<code>MutableArray</code>が提供する特別なメソッドを使用する必要があります。
 たとえば、標準のJavaScriptメソッド<code>push()</code>を使用して配列に要素を追加すると、Emberは変更を監視できませんが、Enumerableの<code>pushObject()</code>メソッドを使用すると、アプリケーション全体に変更が反映されます。</p>
 
 <!--
@@ -233,23 +233,23 @@ in an observable fashion, you should use `myArray.get('firstObject')` and
 <h2 id="toc_APIの概要" class="anchorable-toc">APIの概要</h2>
 <!--
 In the rest of this guide, we'll explore some of the most common enumerable
-conveniences. For the full list, please see the [Ember.Enumerable API
-reference documentation.](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable)
+conveniences. For the full list, please see the [`MutableArray API
+reference documentation`](https://emberjs.com/api/ember/release/classes/MutableArray).
 -->
 
 <p>このガイドの残りの部分では、よく使う便利な機能をいくつか紹介します。
-全部の機能については、<a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable">Ember.Enumerable APIのリファレンスドキュメント</a>を参照してください。</p>
+全部の機能については、<a href="https://emberjs.com/api/ember/release/classes/MutableArray">MutableArray APIのリファレンスドキュメント</a>を参照してください。</p>
 
 <!--
 ### Iterating Over an Enumerable
 -->
 <h3 id="toc_Enumerableを繰り返し処理する" class="anchorable-toc">Enumerableを繰り返し処理する</h3>
 <!--
-To enumerate all the values of an enumerable object, use the [`forEach()`](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/forEach?anchor=forEach)
+To enumerate all the values of an enumerable object, use the [`forEach()`](https://emberjs.com/api/ember/release/classes/MutableArray/methods/forEach?anchor=forEach)
 method:
 -->
 
-<p>列挙型のオブジェクトのすべての値を列挙するには、<a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/forEach?anchor=forEach"><code>forEach()</code></a>メソッドを使用します。</p>
+<p>列挙型のオブジェクトのすべての値を列挙するには、<a href="https://emberjs.com/api/ember/release/classes/MutableArray/methods/forEach?anchor=forEach"><code>forEach()</code></a>メソッドを使用します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -278,11 +278,11 @@ food.forEach((item, index) =&gt; {
 -->
 <h3 id="toc_最初と最後のオブジェクト" class="anchorable-toc">最初と最後のオブジェクト</h3>
 <!--
-All enumerables expose [`firstObject`](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/properties/firstObject?anchor=firstObject) and [`lastObject`](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/properties/lastObject?anchor=lastObject) properties
+All enumerables expose [`firstObject`](https://emberjs.com/api/ember/release/classes/MutableArray/properties/firstObject?anchor=firstObject) and [`lastObject`](https://emberjs.com/api/ember/release/classes/MutableArray/properties/lastObject?anchor=lastObject) properties
 that you can bind to.
 -->
 
-<p>すべての列挙型は、バインドできる<a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/properties/firstObject?anchor=firstObject"><code>firstObject</code></a>および<a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/properties/lastObject?anchor=lastObject"><code>lastObject</code></a>プロパティを持っています。</p>
+<p>すべての列挙型は、バインドできる<a href="https://emberjs.com/api/ember/release/classes/MutableArray/properties/firstObject?anchor=firstObject"><code>firstObject</code></a>および<a href="https://emberjs.com/api/ember/release/classes/MutableArray/properties/lastObject?anchor=lastObject"><code>lastObject</code></a>プロパティを持っています。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -312,11 +312,11 @@ animals.get(<span class="string"><span class="delimiter">'</span><span class="co
 <h3 id="toc_マップ" class="anchorable-toc">マップ</h3>
 <!--
 You can easily transform each item in an enumerable using the
-[`map()`](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/map?anchor=map) method, which creates a new array with results of calling a
+[`map()`](https://emberjs.com/api/ember/release/classes/MutableArray/methods/map?anchor=map) method, which creates a new array with results of calling a
 function on each item in the enumerable.
 -->
 
-<p><a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/map?anchor=map"><code>map()</code></a>メソッドを使用して列挙型の各アイテムを簡単に変換することができます。これは、列挙型の各アイテムに関数を実行した結果の新しい配列を作成します。</p>
+<p><a href="https://emberjs.com/api/ember/release/classes/MutableArray/methods/map?anchor=map"><code>map()</code></a>メソッドを使用して列挙型の各アイテムを簡単に変換することができます。これは、列挙型の各アイテムに関数を実行した結果の新しい配列を作成します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -331,12 +331,12 @@ let emphaticWords = words.map(item =&gt; <span class="error">`</span><span class
 </tr></table>
 </div></div>
 <!--
-If your enumerable is composed of objects, there is a [`mapBy()`](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/mapBy?anchor=mapBy)
+If your enumerable is composed of objects, there is a [`mapBy()`](https://emberjs.com/api/ember/release/classes/MutableArray/methods/mapBy?anchor=mapBy)
 method that will extract the named property from each of those objects
 in turn and return a new array:
 -->
 
-<p>列挙型がオブジェクトで構成されている場合、<a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/mapBy?anchor=mapBy"><code>mapBy()</code></a>メソッドがあります
+<p>列挙型がオブジェクトで構成されている場合、<a href="https://emberjs.com/api/ember/release/classes/MutableArray/methods/mapBy?anchor=mapBy"><code>mapBy()</code></a>メソッドがあります
 このメソッドは、各オブジェクトから名前付きプロパティを順番に抽出し、新しい配列を返します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
@@ -384,12 +384,12 @@ some criteria.
 <p>ほかに列挙型に対してよく実行するタスクは、列挙型を入力として受け取り、いくつかの条件に基づいてフィルタリングした後に配列を返すことです。</p>
 
 <!--
-For arbitrary filtering, use the [`filter()`](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/filter?anchor=filter) method.  The filter method
+For arbitrary filtering, use the [`filter()`](https://emberjs.com/api/ember/release/classes/MutableArray/methods/filter?anchor=filter) method.  The filter method
 expects the callback to return `true` if Ember should include it in the
 final Array, and `false` or `undefined` if Ember should not.
 -->
 
-<p>任意のフィルタリングを行うには、<a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/filter?anchor=filter"><code>filter()</code></a>メソッドを使用します。
+<p>任意のフィルタリングを行うには、<a href="https://emberjs.com/api/ember/release/classes/MutableArray/methods/filter?anchor=filter"><code>filter()</code></a>メソッドを使用します。
 コールバックが<code>true</code>を返すと、配列に対象を含めます。<code>false</code>または<code>undefined</code>の場合は除外します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
@@ -408,11 +408,11 @@ arr.filter((item, index, self) =&gt; item &lt; <span class="integer">4</span>);
 </div></div>
 <!--
 
-When working with a collection of Ember objects, you will often want to filter a set of objects based upon the value of some property. The [`filterBy()`](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/filterBy?anchor=filterBy) method provides a shortcut.
+When working with a collection of Ember objects, you will often want to filter a set of objects based upon the value of some property. The [`filterBy()`](https://emberjs.com/api/ember/release/classes/MutableArray/methods/filterBy?anchor=filterBy) method provides a shortcut.
 -->
 
 <p>Emberオブジェクトの配列を扱う際、しばしば、プロパティの値に基づいてオブジェクトのセットをフィルタリングする場面が出てきます。
-<a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/filterBy?anchor=filterBy"><code>filterBy()</code></a>メソッドはショートカットを提供します。</p>
+<a href="https://emberjs.com/api/ember/release/classes/MutableArray/methods/filterBy?anchor=filterBy"><code>filterBy()</code></a>メソッドはショートカットを提供します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -450,11 +450,11 @@ todos.filterBy(<span class="string"><span class="delimiter">'</span><span class=
 </div></div>
 <!--
 If you only want to return the first matched value, rather than an Array
-containing all of the matched values, you can use [`find()`](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/find?anchor=find) and [`findBy()`](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/findBy?anchor=findBy),
+containing all of the matched values, you can use [`find()`](https://emberjs.com/api/ember/release/classes/MutableArray/methods/find?anchor=find) and [`findBy()`](https://emberjs.com/api/ember/release/classes/MutableArray/methods/findBy?anchor=findBy),
 which work like `filter()` and `filterBy()`, but return only one item.
 -->
 
-<p>一致したすべての値を含む配列ではなく、最初に一致した値のみを返す場合は、<code>filter()</code>および<code>filterBy()</code>のように機能する<a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/find?anchor=find"><code>find()</code></a>および<a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/findBy?anchor=findBy"><code>findBy()</code></a>を使用できます。</p>
+<p>一致したすべての値を含む配列ではなく、最初に一致した値のみを返す場合は、<code>filter()</code>および<code>filterBy()</code>のように機能する<a href="https://emberjs.com/api/ember/release/classes/MutableArray/methods/find?anchor=find"><code>find()</code></a>および<a href="https://emberjs.com/api/ember/release/classes/MutableArray/methods/findBy?anchor=findBy"><code>findBy()</code></a>を使用できます。</p>
 
 <!--
 ### Aggregate Information (Every or Any)
@@ -462,10 +462,10 @@ which work like `filter()` and `filterBy()`, but return only one item.
 <h3 id="toc_情報の集計(EveryとAny)" class="anchorable-toc">情報の集計(EveryとAny)</h3>
 <!--
 To find out whether every item in an enumerable matches some condition, you can
-use the [`every()`](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/every?anchor=every) method:
+use the [`every()`](https://emberjs.com/api/ember/release/classes/MutableArray/methods/every?anchor=every) method:
 -->
 
-<p>列挙型のすべての項目がある条件に一致するかどうかを調べるには、<a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/every?anchor=every"><code>every()</code></a>メソッドを使用します。</p>
+<p>列挙型のすべての項目がある条件に一致するかどうかを調べるには、<a href="https://emberjs.com/api/ember/release/classes/MutableArray/methods/every?anchor=every"><code>every()</code></a>メソッドを使用します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -503,10 +503,10 @@ people.every((person, index, self) =&gt; person.get(<span class="string"><span c
 </div></div>
 <!--
 To find out whether at least one item in an enumerable matches some condition,
-you can use the [`any()`](https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/any?anchor=any) method:
+you can use the [`any()`](https://emberjs.com/api/ember/release/classes/MutableArray/methods/any?anchor=any) method:
 -->
 
-<p>列挙型の中の少なくとも1つの項目がある条件と一致するかどうかを調べるには、<a href="https://emberjs.com/api/ember/2.15/classes/Ember.Enumerable/methods/any?anchor=any"><code>any()</code></a>メソッドを使用します。</p>
+<p>列挙型の中の少なくとも1つの項目がある条件と一致するかどうかを調べるには、<a href="https://emberjs.com/api/ember/release/classes/MutableArray/methods/any?anchor=any"><code>any()</code></a>メソッドを使用します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2

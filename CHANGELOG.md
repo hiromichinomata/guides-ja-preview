@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2018.03.26
+
+- Sync [#104](https://github.com/emberjs-japan/guides-ja/pull/104) 
+
 ## 2018.03.21
 
 Models section was done! 🎉

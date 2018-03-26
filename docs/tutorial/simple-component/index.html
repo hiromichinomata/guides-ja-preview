@@ -907,6 +907,29 @@ image要素はCSSセレクタ<code>.image</code>を使って検索している�
 </tr></table>
 </div></div>
 <!--
+Since we're using the new function "click", we need to import it.
+-->
+
+<p>clickという新しい関数を使っていますので、インポートする必要があります。</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><?xml version="1.0"?>
+<table class="CodeRay">
+  <thead>
+    <tr>
+      <td colspan="2">tests/integration/components/rental-listing-test.js</td>
+    </tr>
+  </thead>
+<tr>
+  <td class="line-numbers"><pre>1
+2
+<span class="highlight-line added">3</span>
+4</pre></td>
+  <td class="code"><pre><span class="reserved">import</span> { module, test } from <span class="string"><span class="delimiter">'</span><span class="content">qunit</span><span class="delimiter">'</span></span>;
+<span class="reserved">import</span> { setupRenderingTest } from <span class="string"><span class="delimiter">'</span><span class="content">ember-qunit</span><span class="delimiter">'</span></span>;
+<span class="highlight-line added"><span class="reserved">import</span> { render, click } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/test-helpers</span><span class="delimiter">'</span></span>;</span>
+<span class="reserved">import</span> hbs from <span class="string"><span class="delimiter">'</span><span class="content">htmlbars-inline-precompile</span><span class="delimiter">'</span></span>;</pre></td>
+</tr></table>
+</div></div>
+<!--
 The final test should look as follows:
 -->
 
