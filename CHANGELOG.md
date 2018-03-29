@@ -1,5 +1,11 @@
 # CHANGELOG
 
+# 2018.03.29
+
+- Fix typo [#105](https://github.com/emberjs-japan/guides-ja/pull/105) by [@hogesuke](https://github.com/hogesuke)
+- [x] Application Concerns - Application and Instances
+- Sync [#106](https://github.com/emberjs-japan/guides-ja/pull/106)
+
 ## 2018.03.26
 
 - Sync [#104](https://github.com/emberjs-japan/guides-ja/pull/104) 
