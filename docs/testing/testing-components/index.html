@@ -1171,7 +1171,7 @@ module(<span class="string"><span class="delimiter">'</span><span class="content
 
     await settled();
 
-    assert.equal(<span class="local-variable">this</span>.element.querySelector(<span class="string"><span class="delimiter">'</span><span class="content">.result</span><span class="delimiter">'</span></span>).length, <span class="integer">2</span>, <span class="string"><span class="delimiter">'</span><span class="content">two results rendered</span><span class="delimiter">'</span></span>);
+    assert.equal(<span class="local-variable">this</span>.element.querySelectorAll(<span class="string"><span class="delimiter">'</span><span class="content">.result</span><span class="delimiter">'</span></span>).length, <span class="integer">2</span>, <span class="string"><span class="delimiter">'</span><span class="content">two results rendered</span><span class="delimiter">'</span></span>);
   });
 });
 </pre></td>
