@@ -219,21 +219,24 @@ If `isAdministrator` is `false`, Handlebars will produce the following:
 </tr></table>
 </div></div>
 <!--
-### Adding Data Attributes
+### Adding Other Attributes (Including Data Attributes)
 -->
-<h3 id="toc_data属性を追加する" class="anchorable-toc">data属性を追加する</h3>
+<h3 id="toc_属性の追加(data属性を含む)" class="anchorable-toc">属性の追加(data属性を含む)</h3>
 <!--
-By default, helpers and components do not accept *data attributes*. For example
+By default, helpers and components only accept a limited number of HTML attributes.
+This means that some uncommon but perfectly valid attributes, such as `lang` or
+custom `data-*` attributes must be specifically enabled. For example, this template:
 -->
 
-<p>デフォルトでは、ヘルパーとコンポーネントのdata属性の指定は無視されます。
+<p>デフォルトでは、ヘルパーとコンポーネントが受け付けるHTML属性は制限されています。
+正当な属性でも<code>lang</code>や独自の<code>data-*</code>属性など稀なものは有効にする必要があります。
 例えば、</p>
 <div class="highlight handlebars "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
 3
 </pre></td>
-  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">link-to</span> <span class="error">&quot;</span><span class="attribute-name">photos</span><span class="error">&quot;</span> <span class="attribute-name">data-toggle</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown</span><span class="delimiter">&quot;</span></span><span class="inline-delimiter">}}</span></span>Photos<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">link-to</span><span class="inline-delimiter">}}</span></span>
+  <td class="code"><pre><span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">link-to</span> <span class="error">&quot;</span><span class="attribute-name">photos</span><span class="error">&quot;</span> <span class="attribute-name">data-toggle</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">lang</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">es</span><span class="delimiter">&quot;</span></span><span class="inline-delimiter">}}</span></span>Fotos<span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">link-to</span><span class="inline-delimiter">}}</span></span>
 
 <span class="inline"><span class="inline-delimiter">{{</span><span class="attribute-name">input</span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">text</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">data-toggle</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">tooltip</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">data-placement</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">bottom</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">title</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Name</span><span class="delimiter">&quot;</span></span><span class="inline-delimiter">}}</span></span>
 </pre></td>
@@ -250,7 +253,7 @@ renders the following HTML:
 3
 4
 </pre></td>
-  <td class="code"><pre><span class="tag">&lt;a</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ember239</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ember-view</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#/photos</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Photos<span class="tag">&lt;/a&gt;</span>
+  <td class="code"><pre><span class="tag">&lt;a</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ember239</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ember-view</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#/photos</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Fotos<span class="tag">&lt;/a&gt;</span>
 
 <span class="tag">&lt;input</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ember257</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ember-view ember-text-field</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">text</span><span class="delimiter">&quot;</span></span>
        <span class="attribute-name">title</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Name</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>
@@ -258,14 +261,14 @@ renders the following HTML:
 </tr></table>
 </div></div>
 <!--
-To enable support for data attributes an attribute binding must be
+To enable support for these attributes an attribute binding must be
 added to the component, e.g.
 [`Ember.LinkComponent`](https://www.emberjs.com/api/ember/release/classes/LinkComponent)
 or [`Ember.TextField`](https://www.emberjs.com/api/ember/release/classes/TextField)
 for the specific attribute:
 -->
 
-<p>data属性のサポートを有効にするには、<code>attributeBindings</code>をコンポーネントで設定する必要があります。
+<p>これらの属性のサポートを有効にするには、<code>attributeBindings</code>をコンポーネントで設定する必要があります。
 上記の例では、<a href="https://www.emberjs.com/api/ember/release/classes/LinkComponent"><code>Ember.LinkComponent</code></a>と<a href="https://www.emberjs.com/api/ember/release/classes/TextField"><code>Ember.TextField</code></a>を<code>reopen</code>して設定します。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
@@ -277,7 +280,7 @@ for the specific attribute:
 7
 </pre></td>
   <td class="code"><pre>Ember.LinkComponent.reopen({
-  <span class="key">attributeBindings</span>: [<span class="string"><span class="delimiter">'</span><span class="content">data-toggle</span><span class="delimiter">'</span></span>]
+  <span class="key">attributeBindings</span>: [<span class="string"><span class="delimiter">'</span><span class="content">data-toggle</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">lang</span><span class="delimiter">'</span></span>]
 });
 
 Ember.TextField.reopen({
@@ -297,7 +300,7 @@ Now the same template above renders the following HTML:
 3
 4
 </pre></td>
-  <td class="code"><pre><span class="tag">&lt;a</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ember240</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ember-view</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#/photos</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">data-toggle</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Photos<span class="tag">&lt;/a&gt;</span>
+  <td class="code"><pre><span class="tag">&lt;a</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ember240</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ember-view</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">#/photos</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">data-toggle</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">dropdown</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">lang</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">es</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>Fotos<span class="tag">&lt;/a&gt;</span>
 
 <span class="tag">&lt;input</span> <span class="attribute-name">id</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ember259</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">ember-view ember-text-field</span><span class="delimiter">&quot;</span></span>
        <span class="attribute-name">type</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">text</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">data-toggle</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">tooltip</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">data-placement</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">bottom</span><span class="delimiter">&quot;</span></span> <span class="attribute-name">title</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">Name</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>

@@ -403,8 +403,8 @@ otherwise we call a Google Maps utility to create one.
 <span class="highlight-line added">14</span>
 <span class="highlight-line added">15</span>
 <span class="highlight-line added">16</span>
-17
-<span class="highlight-line added">18</span>
+<span class="highlight-line added">17</span>
+18
 <span class="highlight-line added">19</span>
 <span class="highlight-line added"><strong>20</strong></span>
 <span class="highlight-line added">21</span>
@@ -414,14 +414,15 @@ otherwise we call a Google Maps utility to create one.
 <span class="highlight-line added">25</span>
 <span class="highlight-line added">26</span>
 <span class="highlight-line added">27</span>
-28
-<span class="highlight-line added">29</span>
+<span class="highlight-line added">28</span>
+29
 <span class="highlight-line added"><strong>30</strong></span>
 <span class="highlight-line added">31</span>
 <span class="highlight-line added">32</span>
 <span class="highlight-line added">33</span>
-34
-35</pre></td>
+<span class="highlight-line added">34</span>
+35
+36</pre></td>
   <td class="code"><pre><span class="reserved">import</span> Service from <span class="string"><span class="delimiter">'</span><span class="content">@ember/service</span><span class="delimiter">'</span></span>;
 <span class="highlight-line added"><span class="reserved">import</span> { camelize } from <span class="string"><span class="delimiter">'</span><span class="content">@ember/string</span><span class="delimiter">'</span></span>;</span>
 <span class="highlight-line added"><span class="reserved">import</span> EmberObject from <span class="string"><span class="delimiter">'</span><span class="content">@ember/object</span><span class="delimiter">'</span></span>;</span>
@@ -431,6 +432,7 @@ otherwise we call a Google Maps utility to create one.
 <span class="reserved">export</span> <span class="keyword">default</span> Service.extend({
 
 <span class="highlight-line added">  init() {</span>
+<span class="highlight-line added">    <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);</span>
 <span class="highlight-line added">    <span class="keyword">if</span> (!<span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">cachedMaps</span><span class="delimiter">'</span></span>)) {</span>
 <span class="highlight-line added">      <span class="local-variable">this</span>.set(<span class="string"><span class="delimiter">'</span><span class="content">cachedMaps</span><span class="delimiter">'</span></span>, EmberObject.create());</span>
 <span class="highlight-line added">    }</span>
