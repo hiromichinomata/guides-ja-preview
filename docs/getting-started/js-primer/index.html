@@ -444,9 +444,168 @@ Using `let` will avoid accidentally leaking and changing the `i` variable from o
 <p><code>let</code>を使うことで変数<code>i</code>を<code>for</code>ブロックの外にうっかり漏らしたり変更できる状態を避けることができます。</p>
 
 <!--
+## Promises
+-->
+<h2 id="toc_Promise" class="anchorable-toc">Promise</h2>
+<!--
+A `Promise` is an object that may produce a value some time in the future: either a resolved value, or a reason that it’s not resolved (e.g., a network error occurred). A `Promise` may be in one of 3 possible states: `fulfilled`, `rejected`, or `pending`. Promises were introduced in ES6 JavaScript.
+-->
+
+<p><code>Promise</code>は、非同期に後で値を生成するオブジェクトで、解決された値または解決されなかった理由(ネットワークエラーが発生したなど)が値になります。
+<code>Promise</code>は、<code>fulfilled</code>、<code>rejected</code>、または<code>pending</code>の3つの状態のうちのどれかになります。
+PromiseはES6 JavaScriptで導入されました。</p>
+
+<!--
+Why are Promises needed in Ember? JavaScript is single threaded, and some things like querying data from your backend server take time, thus blocking the thread. It is efficient to not block the thread while these computations or data fetches occur - Promises to the rescue! They provide a solution by returning a proxy object for a value not necessarily known when the `Promise` is created. While the `Promise` code is running, the rest of the code moves on.
+-->
+
+<p>なぜEmberでPromiseが必要なのでしょうか？
+JavaScriptはシングルスレッドで、バックエンドサーバーからデータ取得のような処理には時間がかかり、スレッドがブロックされます。
+これらの計算やデータ取得が発生している間にスレッドをブロックしない方が効率的です - Promiseで救いましょう！
+そこで、<code>Promise</code>作成された時に必ずしも分かっていない値の代理オブジェクトを返すと言う解決策が提供されました。
+<code>Promise</code>コードが実行されている間は、残りのコードが動きます。</p>
+
+<!--
+For example, we will declare a basic `Promise` named `myPromiseObject`.
+-->
+
+<p>では、<code>myPromiseObject</code>という名前の基本的な<code>Promise</code>を宣言してみましょう。</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td>
+  <td class="code"><pre>let myPromiseObject = <span class="keyword">new</span> Promise(<span class="keyword">function</span>(resolve, reject) {
+  <span class="comment">// on success</span>
+  resolve(value);
+
+  <span class="comment">// on failure</span>
+  reject(reason);
+});
+</pre></td>
+</tr></table>
+</div></div>
+<!--
+Promises come equipped with some methods, out of which `then()` and `catch()` are most commonly used. You can dive into details by checking out the reference links.
+`.then()` always returns a new `Promise`, so it’s possible to chain Promises with precise control over how and where errors are handled.
+-->
+
+<p>Promiseはいくつかのメソッドを備えており、<code>then()</code>と<code>catch()</code>が最も一般的に使われます。
+参照リンクをチェックすることで、詳細を知ることができます。
+<code>.then()</code>は常に新しい<code>Promise</code>を返すので、エラーの処理方法と場所を正確に制御してPromisesを連鎖させることができます。</p>
+
+<!--
+We will use `myPromiseObject` declared above to show you how `then()` is used:
+-->
+
+<p>上で宣言した<code>myPromiseObject</code>を使って<code>then()</code>の使い方を確認しましょう。</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+</pre></td>
+  <td class="code"><pre>myPromiseObject.then(<span class="keyword">function</span>(value) {
+  <span class="comment">// on fulfillment</span>
+}, <span class="keyword">function</span>(reason) {
+  <span class="comment">// on rejection</span>
+});
+</pre></td>
+</tr></table>
+</div></div>
+<!--
+Let's look at some code to see how they are used in Ember:
+-->
+
+<p>EmberではPromiseは以下のように使われています。</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td>
+  <td class="code"><pre>store.findRecord(<span class="string"><span class="delimiter">'</span><span class="content">person</span><span class="delimiter">'</span></span>, <span class="integer">1</span>).then(<span class="keyword">function</span>(person) {
+  <span class="comment">// Do something with person when promise is resolved.</span>
+  person.set(<span class="string"><span class="delimiter">'</span><span class="content">name</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">Tom Dale</span><span class="delimiter">'</span></span>);
+});
+</pre></td>
+</tr></table>
+</div></div>
+<!--
+In the above snippet, `store.findRecord('person', 1)` can make a network request if the data is not
+already present in the store. It returns a `Promise` object which can resolve almost instantly if the data is present in store, or it can take some time to resolve if the data is being fetched by a network request.
+-->
+
+<p>上記のスニペットでは、<code>store.findRecord(&#39;person&#39;, 1)</code>は、データがまだストアに存在しない場合にネットワークリクエストを行います。
+データがストアにある場合にほぼ即座に解決される<code>Promise</code>オブジェクトを返します。
+また、データがネットワークリクエストによって取得されている場合、解決に時間がかかることがあります。</p>
+
+<!--
+Now we can come to part where these promises are chained:
+-->
+
+<p>さて、Promiseの連結の準備が整いましたので、やってみましょう。</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+<strong>10</strong>
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td>
+  <td class="code"><pre>store.findRecord(<span class="string"><span class="delimiter">'</span><span class="content">person</span><span class="delimiter">'</span></span>, <span class="integer">1</span>).then(<span class="keyword">function</span>(person) {
+
+  <span class="keyword">return</span> person.get(<span class="string"><span class="delimiter">'</span><span class="content">post</span><span class="delimiter">'</span></span>); <span class="comment">//get all the posts linked with person.</span>
+
+}).then(<span class="keyword">function</span>(posts){
+
+  myFirstPost = posts.get(<span class="string"><span class="delimiter">'</span><span class="content">firstObject</span><span class="delimiter">'</span></span>); <span class="comment">//get the first post from collection.</span>
+  <span class="keyword">return</span> myFirstPost.get(<span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>); <span class="comment">//get all the comments linked with myFirstPost.</span>
+
+}).then(<span class="keyword">function</span>(comments){
+
+  <span class="comment">// do something with comments</span>
+  <span class="keyword">return</span> store.findRecord(<span class="string"><span class="delimiter">'</span><span class="content">book</span><span class="delimiter">'</span></span>, <span class="integer">1</span>); <span class="comment">//query for another record</span>
+
+}).<span class="keyword">catch</span>(<span class="keyword">function</span>(err){
+
+  <span class="comment">//handle errors</span>
+
+})
+</pre></td>
+</tr></table>
+</div></div>
+<!--
+In the above code snippet, we assume that a person has many posts, and a post has many comments. So, `person.get('post')` will return a `Promise` object. We chain the response with `then()` so that when it's resolved, we get the first object from the resolved collection. Then, we get comments from it with `myFirstPost.get('comment')` which will again return a `promise` object, thus continuing the chain.
+-->
+
+<p>上記のコードスニペットでは、personが多くの記事を持ち、記事には多くのコメントがあると仮定しています。
+したがって、<code>person.get(&#39;post&#39;)</code>は<code>Promise</code>オブジェクトを返します。
+レスポンスを<code>then()</code>で連鎖させることで、解決されたら解決されたコレクションから最初のオブジェクトを取得します。
+次に、<code>myFirstPost.get(&#39;comment&#39;）</code>でコメントを取得します。これは再び<code>promise</code>オブジェクトを返し、連鎖を続行します。</p>
+
+<!--
 ### Resources
 -->
-<h3 id="toc_参考" class="anchorable-toc">参考</h3>
+<h3 id="toc_参照リンク" class="anchorable-toc">参照リンク</h3>
 <!--
 For further reference you can consult Developer Network articles:
 -->
@@ -454,9 +613,10 @@ For further reference you can consult Developer Network articles:
 <p>詳しくはMDN web docsを参照してください。</p>
 
 <ul>
-<li><a href="https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Statements/var"><code>var</code></a></li>
-<li><a href="https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a></li>
-<li><a href="https://developer.mozilla.org/ja-JP/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a>.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var"><code>var</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a>.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>promise</code></a>.</li>
 </ul>
 
 
@@ -469,13 +629,13 @@ For further reference you can consult Developer Network articles:
       </article>
     </main>
 
-    <div class="footer">
+    <footer class="footer">
   <div class="container">
     <div class="footer-info">
       Copyright 2018
       <a href="http://tilde.io">Tilde Inc.</a>
       <br>
-      <a href="http://emberjs.com/team">コアチーム</a> |
+      <a href="http://emberjs.com/team">チーム</a> |
       <a href="http://emberjs.com/sponsors">スポンサー</a>
       <br>
       <a href="http://emberjs.com/security">セキュリティ</a> |
@@ -487,24 +647,36 @@ For further reference you can consult Developer Network articles:
 
     <div class="footer-statement">
       Ember.js is free, open source and always will be.
+      <div class="footer-social">
+        <a href="http://twitter.com/emberjs" title="Twitter" aria-label="Ember on Twitter">
+          <i class="icon-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/emberjs/ember.js" title="GitHub" aria-label="Github repository">
+          <i class="icon-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://plus.google.com/communities/106387049790387471205" title="Google+" aria-label="google plus profile">
+          <i class="icon-gplus" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
 
-    <div class="footer-social">
-      <a href="http://twitter.com/emberjs"
-        title="Twitter">
-        <i class="icon-twitter"></i>
-      </a>
-      <a href="https://github.com/emberjs/ember.js"
-        title="GitHub">
-        <i class="icon-github"></i>
-      </a>
-      <a href="https://plus.google.com/communities/106387049790387471205"
-        title="Google+">
-        <i class="icon-gplus"></i>
-      </a>
+    <div class="footer-contributions">
+      <div class="contributor">
+        <p>Hosted by:</p>
+        <a href="https://www.heroku.com/emberjs">
+          <img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/heroku-logo.svg" class="logo-heroku" alt="heroku">
+        </a>
+      </div>
+      <div class="contributor">
+        <p>CDN provided by:</p>
+          <a href="https://www.fastly.com">
+            <img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/fastly-logo.svg" class="logo-fastly" alt="fastly">
+          </a>
+      </div>
     </div>
+
   </div>
-</div>
+</footer>
 
 
     

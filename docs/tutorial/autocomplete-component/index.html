@@ -1308,7 +1308,7 @@ Open our existing application test, `tests/acceptance/list-rentals-test.js`, and
   await visit(<span class="string"><span class="delimiter">'</span><span class="content">/</span><span class="delimiter">'</span></span>);
   await fillIn(<span class="string"><span class="delimiter">'</span><span class="content">.list-filter input</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">seattle</span><span class="delimiter">'</span></span>);
   await triggerKeyEvent(<span class="string"><span class="delimiter">'</span><span class="content">.list-filter input</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">keyup</span><span class="delimiter">'</span></span>, <span class="integer">69</span>);
-  assert.ok(<span class="local-variable">this</span>.element.querySelector(<span class="string"><span class="delimiter">'</span><span class="content">.results .listing</span><span class="delimiter">'</span></span>), <span class="string"><span class="delimiter">'</span><span class="content">should display 1 listing</span><span class="delimiter">'</span></span>);
+  assert.equal(<span class="local-variable">this</span>.element.querySelectorAll(<span class="string"><span class="delimiter">'</span><span class="content">.results .listing</span><span class="delimiter">'</span></span>).length, <span class="integer">1</span>, <span class="string"><span class="delimiter">'</span><span class="content">should display 1 listing</span><span class="delimiter">'</span></span>);
   assert.ok(<span class="local-variable">this</span>.element.querySelector(<span class="string"><span class="delimiter">'</span><span class="content">.listing .location</span><span class="delimiter">'</span></span>).textContent.includes(<span class="string"><span class="delimiter">'</span><span class="content">Seattle</span><span class="delimiter">'</span></span>), <span class="string"><span class="delimiter">'</span><span class="content">should contain 1 listing with location Seattle</span><span class="delimiter">'</span></span>);
 });
 </pre></td>
@@ -1419,13 +1419,13 @@ You should be down to only 2 failing tests: One remaining application test failu
       </article>
     </main>
 
-    <div class="footer">
+    <footer class="footer">
   <div class="container">
     <div class="footer-info">
       Copyright 2018
       <a href="http://tilde.io">Tilde Inc.</a>
       <br>
-      <a href="http://emberjs.com/team">コアチーム</a> |
+      <a href="http://emberjs.com/team">チーム</a> |
       <a href="http://emberjs.com/sponsors">スポンサー</a>
       <br>
       <a href="http://emberjs.com/security">セキュリティ</a> |
@@ -1437,24 +1437,36 @@ You should be down to only 2 failing tests: One remaining application test failu
 
     <div class="footer-statement">
       Ember.js is free, open source and always will be.
+      <div class="footer-social">
+        <a href="http://twitter.com/emberjs" title="Twitter" aria-label="Ember on Twitter">
+          <i class="icon-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/emberjs/ember.js" title="GitHub" aria-label="Github repository">
+          <i class="icon-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://plus.google.com/communities/106387049790387471205" title="Google+" aria-label="google plus profile">
+          <i class="icon-gplus" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
 
-    <div class="footer-social">
-      <a href="http://twitter.com/emberjs"
-        title="Twitter">
-        <i class="icon-twitter"></i>
-      </a>
-      <a href="https://github.com/emberjs/ember.js"
-        title="GitHub">
-        <i class="icon-github"></i>
-      </a>
-      <a href="https://plus.google.com/communities/106387049790387471205"
-        title="Google+">
-        <i class="icon-gplus"></i>
-      </a>
+    <div class="footer-contributions">
+      <div class="contributor">
+        <p>Hosted by:</p>
+        <a href="https://www.heroku.com/emberjs">
+          <img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/heroku-logo.svg" class="logo-heroku" alt="heroku">
+        </a>
+      </div>
+      <div class="contributor">
+        <p>CDN provided by:</p>
+          <a href="https://www.fastly.com">
+            <img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/fastly-logo.svg" class="logo-fastly" alt="fastly">
+          </a>
+      </div>
     </div>
+
   </div>
-</div>
+</footer>
 
 
     

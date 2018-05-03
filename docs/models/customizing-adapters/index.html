@@ -565,10 +565,13 @@ Requests for `user-profile` would now target `/user_profile/1`.
 Some APIs require HTTP headers, e.g. to provide an API key. Arbitrary
 headers can be set as key/value pairs on the `JSONAPIAdapter`'s `headers`
 object and Ember Data will send them along with each ajax request.
+(Note that we set headers in `init()` because default property values
+should not be arrays or objects.)
 -->
 
 <p>一部のAPIでは、HTTPヘッダーが必要です。
-APIキーを提供する場合、<code>JSONAPIAdapter</code>の<code>headers</code>オブジェクトに任意のヘッダをキーと値のペアとして設定することができ、Ember Dataはajaxする際にそれらを送信することができます。</p>
+APIキーを提供する場合、<code>JSONAPIAdapter</code>の<code>headers</code>オブジェクトに任意のヘッダをキーと値のペアとして設定することができ、Ember Dataはajaxする際にそれらを送信することができます。
+(<code>init()</code>でヘッダーを設定していることに注意してください。プロパティのデフォルト値は配列かオブジェクトでないべきためです。)</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -584,13 +587,21 @@ APIキーを提供する場合、<code>JSONAPIAdapter</code>の<code>headers</co
 6
 7
 8
+9
+<strong>10</strong>
+11
+12
 </pre></td>
   <td class="code"><pre><span class="reserved">import</span> DS from <span class="string"><span class="delimiter">'</span><span class="content">ember-data</span><span class="delimiter">'</span></span>;
 
 <span class="reserved">export</span> <span class="keyword">default</span> DS.JSONAPIAdapter.extend({
-  <span class="key">headers</span>: {
-    <span class="key"><span class="delimiter">'</span><span class="content">API_KEY</span><span class="delimiter">'</span></span>: <span class="string"><span class="delimiter">'</span><span class="content">secret key</span><span class="delimiter">'</span></span>,
-    <span class="key"><span class="delimiter">'</span><span class="content">ANOTHER_HEADER</span><span class="delimiter">'</span></span>: <span class="string"><span class="delimiter">'</span><span class="content">Some header value</span><span class="delimiter">'</span></span>
+  init() {
+    <span class="local-variable">this</span>._super(...<span class="local-variable">arguments</span>);
+
+    <span class="local-variable">this</span>.set(<span class="string"><span class="delimiter">'</span><span class="content">headers</span><span class="delimiter">'</span></span>, {
+      <span class="key"><span class="delimiter">'</span><span class="content">API_KEY</span><span class="delimiter">'</span></span>: <span class="string"><span class="delimiter">'</span><span class="content">secret key</span><span class="delimiter">'</span></span>,
+      <span class="key"><span class="delimiter">'</span><span class="content">ANOTHER_HEADER</span><span class="delimiter">'</span></span>: <span class="string"><span class="delimiter">'</span><span class="content">Some header value</span><span class="delimiter">'</span></span>
+    });
   }
 });
 </pre></td>
@@ -758,13 +769,13 @@ Ember Dataのアダプターを探すには、次のような場所がありま�
       </article>
     </main>
 
-    <div class="footer">
+    <footer class="footer">
   <div class="container">
     <div class="footer-info">
       Copyright 2018
       <a href="http://tilde.io">Tilde Inc.</a>
       <br>
-      <a href="http://emberjs.com/team">コアチーム</a> |
+      <a href="http://emberjs.com/team">チーム</a> |
       <a href="http://emberjs.com/sponsors">スポンサー</a>
       <br>
       <a href="http://emberjs.com/security">セキュリティ</a> |
@@ -776,24 +787,36 @@ Ember Dataのアダプターを探すには、次のような場所がありま�
 
     <div class="footer-statement">
       Ember.js is free, open source and always will be.
+      <div class="footer-social">
+        <a href="http://twitter.com/emberjs" title="Twitter" aria-label="Ember on Twitter">
+          <i class="icon-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/emberjs/ember.js" title="GitHub" aria-label="Github repository">
+          <i class="icon-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://plus.google.com/communities/106387049790387471205" title="Google+" aria-label="google plus profile">
+          <i class="icon-gplus" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
 
-    <div class="footer-social">
-      <a href="http://twitter.com/emberjs"
-        title="Twitter">
-        <i class="icon-twitter"></i>
-      </a>
-      <a href="https://github.com/emberjs/ember.js"
-        title="GitHub">
-        <i class="icon-github"></i>
-      </a>
-      <a href="https://plus.google.com/communities/106387049790387471205"
-        title="Google+">
-        <i class="icon-gplus"></i>
-      </a>
+    <div class="footer-contributions">
+      <div class="contributor">
+        <p>Hosted by:</p>
+        <a href="https://www.heroku.com/emberjs">
+          <img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/heroku-logo.svg" class="logo-heroku" alt="heroku">
+        </a>
+      </div>
+      <div class="contributor">
+        <p>CDN provided by:</p>
+          <a href="https://www.fastly.com">
+            <img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/fastly-logo.svg" class="logo-fastly" alt="fastly">
+          </a>
+      </div>
     </div>
+
   </div>
-</div>
+</footer>
 
 
     

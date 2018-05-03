@@ -732,10 +732,10 @@ extraneous models.
 -->
 <h3 id="toc_レコードの作成" class="anchorable-toc">レコードの作成</h3>
 <!--
-Let's assume that we have a `blog-post` and a `comment` model, which are related to each other as follows:
+Let's assume that we have a `blog-post` and a `comment` model. A single blog post can have several comments linked to it. The correct relationship is shown below:
 -->
 
-<p><code>blog-post</code>と<code>comment</code>モデルがあり、次のように相互に関連しているとしましょう。</p>
+<p>例えば、<code>blog-post</code>と<code>comment</code>モデルがあり、1件の記事がコメントを複数持つ場合、正しいリレーションシップは以下のようになります。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay">
   <thead>
     <tr>
@@ -778,20 +778,32 @@ Let's assume that we have a `blog-post` and a `comment` model, which are related
 </tr></table>
 </div></div>
 <!--
-When a user comments on a blogPost, we need to create a relationship between the two records. We can simply set the `belongsTo` relationship in our new comment:
+Now, suppose we want to add comments to an existing blogPost. We can do this in two ways, but for both of them, we first need to look up a blog post that is already loaded in the store, using its id:
 -->
 
-<p>ユーザーがblogPostにコメントする時は、2つのレコードを関連付ける必要があります。
-新しいコメントの<code>belongsTo</code>関係を設定するだけでできます。</p>
+<p>では、既存の記事にコメントを追加してみましょう。
+これには2つのやり方があります。どちらの場合でも、まずIDを使用して、ストアに既に読み込まれている記事を検索する必要があります。</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+</pre></td>
+  <td class="code"><pre>let myBlogPost = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">store</span><span class="delimiter">'</span></span>).peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">blog-post</span><span class="delimiter">'</span></span>, <span class="integer">1</span>);
+</pre></td>
+</tr></table>
+</div></div>
+<!--
+Now we can either set the `belongsTo` relationship in our new comment, or, update the blogPost's `hasMany` relationship. As you might observe, we don't need to set both `hasMany` and `belongsTo` for a record. Ember Data will do that for us.
+-->
+
+<p>これで、新しいコメントに<code>belongsTo</code>リレーションシップを設定するか、記事の<code>hasMany</code>リレーションシップを更新することができます。
+気づいた人もいるかもしれませんが、<code>hasMany</code>と<code>belongsTo</code>をそれぞれ設定する必要はありません。
+Ember Dataがやってくれます。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
 3
 4
-5
 </pre></td>
-  <td class="code"><pre>let blogPost = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">store</span><span class="delimiter">'</span></span>).peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">blog-post</span><span class="delimiter">'</span></span>, <span class="integer">1</span>);
-let comment = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">store</span><span class="delimiter">'</span></span>).createRecord(<span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, {
+  <td class="code"><pre>let comment = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">store</span><span class="delimiter">'</span></span>).createRecord(<span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, {
   <span class="key">blogPost</span>: blogPost
 });
 comment.save();
@@ -799,17 +811,38 @@ comment.save();
 </tr></table>
 </div></div>
 <!--
-This will create a new `comment` record and save it to the server. Ember Data will also update the blogPost to include our newly created comment in its `comments` relationship.
+First, let's look at setting the `belongsTo` relationship in our new comment:
 -->
 
-<p>これにより、<code>comment</code>レコードが作成され、サーバーに保存されます。
-Ember Dataは、新たに作成されたコメントを<code>comments</code>関係に含めるためにblogPostも更新します。</p>
+<p>まず、コメントで<code>belongsTo</code>リレーションシップを設定する方法を見てみましょう。</p>
+<div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
+  <td class="line-numbers"><pre>1
+2
+3
+4
+</pre></td>
+  <td class="code"><pre>let comment = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">store</span><span class="delimiter">'</span></span>).createRecord(<span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, {
+  <span class="key">blogPost</span>: myBlogPost
+});
+comment.save();
+</pre></td>
+</tr></table>
+</div></div>
+<!--
+In the above snippet, we have referenced `myBlogPost` while creating the record. This will let Ember know that the newly created comment belongs to `myBlogPost`.
+This will create a new `comment` record and save it to the server. Ember Data will also update `myBlogPost` to include our newly created comment in its `comments` relationship.
+-->
+
+<p>上記のスニペットでは、レコードを作成する際に<code>myBlogPost</code>を参照しています。
+これにより、新しく作成されたコメントが<code>myBlogPost</code>に属することをEmberに知らせることができます。
+そして、新しい<code>comment</code>レコードが作成され、サーバーに保存されます。
+Ember Dataは新たに作成したコメントを<code>comments</code>関係に含めるよう、<code>myBlogPost</code>を更新します。</p>
 
 <!--
-We could have also linked the two records together by updating the blogPost's `hasMany` relationship:
+The second way of doing the same thing is to link the two records together by updating the blogPost's `hasMany` relationship as shown below:
 -->
 
-<p>blogPostの<code>hasMany</code>関係を更新することで、2つのレコードをリンクすることもできます。</p>
+<p>2つ目のやり方は、記事の<code>hasMany</code>を以下のように更新して、2つのレコードをリンクさせることです。</p>
 <div class="highlight javascript "><div class="ribbon"></div><div class="scroller"><table class="CodeRay"><tr>
   <td class="line-numbers"><pre>1
 2
@@ -817,23 +850,21 @@ We could have also linked the two records together by updating the blogPost's `h
 4
 5
 6
-7
 </pre></td>
-  <td class="code"><pre>let blogPost = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">store</span><span class="delimiter">'</span></span>).peekRecord(<span class="string"><span class="delimiter">'</span><span class="content">blog-post</span><span class="delimiter">'</span></span>, <span class="integer">1</span>);
-let comment = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">store</span><span class="delimiter">'</span></span>).createRecord(<span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, {
+  <td class="code"><pre>let comment = <span class="local-variable">this</span>.get(<span class="string"><span class="delimiter">'</span><span class="content">store</span><span class="delimiter">'</span></span>).createRecord(<span class="string"><span class="delimiter">'</span><span class="content">comment</span><span class="delimiter">'</span></span>, {
 });
-blogPost.get(<span class="string"><span class="delimiter">'</span><span class="content">comments</span><span class="delimiter">'</span></span>).pushObject(comment);
+myBlogPost.get(<span class="string"><span class="delimiter">'</span><span class="content">comments</span><span class="delimiter">'</span></span>).pushObject(comment);
 comment.save().then(<span class="keyword">function</span> () {
-  blogPost.save();
+  myBlogPost.save();
 });
 </pre></td>
 </tr></table>
 </div></div>
 <!--
-In this case the new comment's `belongsTo` relationship will be set to the parent blogPost.
+In this above case, the new comment's `belongsTo` relationship will be automatically set to the parent blogPost.
 -->
 
-<p>この場合、新しいコメントの<code>belongsTo</code>関係は親のblogPostに設定されます。</p>
+<p>上記の例では、新しいコメントの<code>belongsTo</code>は親のblogPostに自動的に設定されます。</p>
 
 <!--
 Although `createRecord` is fairly straightforward, the only thing to watch out for
@@ -1211,13 +1242,13 @@ Ember Data will query the server for the appropriate records and re-render the t
       </article>
     </main>
 
-    <div class="footer">
+    <footer class="footer">
   <div class="container">
     <div class="footer-info">
       Copyright 2018
       <a href="http://tilde.io">Tilde Inc.</a>
       <br>
-      <a href="http://emberjs.com/team">コアチーム</a> |
+      <a href="http://emberjs.com/team">チーム</a> |
       <a href="http://emberjs.com/sponsors">スポンサー</a>
       <br>
       <a href="http://emberjs.com/security">セキュリティ</a> |
@@ -1229,24 +1260,36 @@ Ember Data will query the server for the appropriate records and re-render the t
 
     <div class="footer-statement">
       Ember.js is free, open source and always will be.
+      <div class="footer-social">
+        <a href="http://twitter.com/emberjs" title="Twitter" aria-label="Ember on Twitter">
+          <i class="icon-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/emberjs/ember.js" title="GitHub" aria-label="Github repository">
+          <i class="icon-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://plus.google.com/communities/106387049790387471205" title="Google+" aria-label="google plus profile">
+          <i class="icon-gplus" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
 
-    <div class="footer-social">
-      <a href="http://twitter.com/emberjs"
-        title="Twitter">
-        <i class="icon-twitter"></i>
-      </a>
-      <a href="https://github.com/emberjs/ember.js"
-        title="GitHub">
-        <i class="icon-github"></i>
-      </a>
-      <a href="https://plus.google.com/communities/106387049790387471205"
-        title="Google+">
-        <i class="icon-gplus"></i>
-      </a>
+    <div class="footer-contributions">
+      <div class="contributor">
+        <p>Hosted by:</p>
+        <a href="https://www.heroku.com/emberjs">
+          <img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/heroku-logo.svg" class="logo-heroku" alt="heroku">
+        </a>
+      </div>
+      <div class="contributor">
+        <p>CDN provided by:</p>
+          <a href="https://www.fastly.com">
+            <img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/fastly-logo.svg" class="logo-fastly" alt="fastly">
+          </a>
+      </div>
     </div>
+
   </div>
-</div>
+</footer>
 
 
     

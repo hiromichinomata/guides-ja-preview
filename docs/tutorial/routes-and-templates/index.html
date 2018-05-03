@@ -382,15 +382,15 @@ In the route template `/app/templates/contact.hbs`, let's add our contact detail
   <span class="tag">&lt;h2&gt;</span>Contact Us<span class="tag">&lt;/h2&gt;</span>
   <span class="tag">&lt;p&gt;</span>Super Rentals Representatives would love to help you<span class="tag">&lt;br&gt;</span>choose a destination or answer
     any questions you may have.<span class="tag">&lt;/p&gt;</span>
-  <span class="tag">&lt;p&gt;</span>
+  <span class="tag">&lt;address&gt;</span>
     Super Rentals HQ
-    <span class="tag">&lt;address&gt;</span>
+    <span class="tag">&lt;p&gt;</span>
       1212 Test Address Avenue<span class="tag">&lt;br&gt;</span>
       Testington, OR 97233
-    <span class="tag">&lt;/address&gt;</span>
+    <span class="tag">&lt;/p&gt;</span>
     <span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">tel:503.555.1212</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>+1 (503) 555-1212<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;br&gt;</span>
     <span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">mailto:superrentalsrep@emberjs.com</span><span class="delimiter">&quot;</span></span><span class="tag">&gt;</span>superrentalsrep@emberjs.com<span class="tag">&lt;/a&gt;</span>
-  <span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/address&gt;</span>
 <span class="tag">&lt;/div&gt;</span>
 </pre></td>
 </tr></table>
@@ -502,15 +502,15 @@ Now, we'll add our corresponding link to the contact page so we can move back an
   <span class="tag">&lt;h2&gt;</span>Contact Us<span class="tag">&lt;/h2&gt;</span>
   <span class="tag">&lt;p&gt;</span>Super Rentals Representatives would love to help you<span class="tag">&lt;br&gt;</span>choose a destination or answer
     any questions you may have.<span class="tag">&lt;/p&gt;</span>
-  <span class="tag">&lt;p&gt;</span>
+  <span class="tag">&lt;address&gt;</span>
     Super Rentals HQ
-    <span class="tag">&lt;address&gt;</span>
+    <span class="tag">&lt;p&gt;</span>
       1212 Test Address Avenue<span class="tag">&lt;br&gt;</span>
       Testington, OR 97233
-    <span class="tag">&lt;/address&gt;</span>
+    <span class="tag">&lt;/p&gt;</span>
     <span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">tel:503.555.1212</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>+1 (503) 555-1212<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;br&gt;</span>
     <span class="tag">&lt;a</span> <span class="attribute-name">href</span>=<span class="string"><span class="delimiter">"</span><span class="content">mailto:superrentalsrep@emberjs.com</span><span class="delimiter">"</span></span><span class="tag">&gt;</span>superrentalsrep@emberjs.com<span class="tag">&lt;/a&gt;</span>
-  <span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/address&gt;</span>
 <span class="highlight-line added">  <span class="inline"><span class="inline-delimiter">{{#</span><span class="attribute-name">link-to</span> <span class="error">"</span><span class="attribute-name">about</span><span class="error">"</span> <span class="attribute-name">class</span>=<span class="string"><span class="delimiter">"</span><span class="content">button</span><span class="delimiter">"</span></span><span class="inline-delimiter">}}</span></span></span>
 <span class="highlight-line added">    About</span>
 <span class="highlight-line added">  <span class="inline"><span class="inline-delimiter">{{/</span><span class="attribute-name">link-to</span><span class="inline-delimiter">}}</span></span></span>
@@ -957,13 +957,13 @@ Now let's add code that simulates a visitor arriving on our homepage, clicking o
 <span class="highlight-line added">9</span>
 <span class="highlight-line added"><strong>10</strong></span>
 11</pre></td>
-  <td class="code"><pre>test(<span class="string"><span class="delimiter">'</span><span class="content">should link to about page</span><span class="delimiter">'</span></span>, async <span class="keyword">function</span>(assert) {
+  <td class="code"><pre>test(<span class="string"><span class="delimiter">'</span><span class="content">should link to information about the company</span><span class="delimiter">'</span></span>, async <span class="keyword">function</span>(assert) {
 <span class="highlight-line added">  await visit(<span class="string"><span class="delimiter">'</span><span class="content">/</span><span class="delimiter">'</span></span>);</span>
 <span class="highlight-line added">  await click(<span class="string"><span class="delimiter">"</span><span class="content">.menu-about</span><span class="delimiter">"</span></span>);</span>
 <span class="highlight-line added">  assert.equal(currentURL(), <span class="string"><span class="delimiter">'</span><span class="content">/about</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">should navigate to about</span><span class="delimiter">'</span></span>);</span>
 });
 
-test(<span class="string"><span class="delimiter">'</span><span class="content">should link to contacts page</span><span class="delimiter">'</span></span>, async <span class="keyword">function</span>(assert) {
+test(<span class="string"><span class="delimiter">'</span><span class="content">should link to contact information</span><span class="delimiter">'</span></span>, async <span class="keyword">function</span>(assert) {
 <span class="highlight-line added">  await visit(<span class="string"><span class="delimiter">'</span><span class="content">/</span><span class="delimiter">'</span></span>);</span>
 <span class="highlight-line added">  await click(<span class="string"><span class="delimiter">"</span><span class="content">.menu-contact</span><span class="delimiter">"</span></span>);</span>
 <span class="highlight-line added">  assert.equal(currentURL(), <span class="string"><span class="delimiter">'</span><span class="content">/contact</span><span class="delimiter">'</span></span>, <span class="string"><span class="delimiter">'</span><span class="content">should navigate to contact</span><span class="delimiter">'</span></span>);</span>
@@ -1018,13 +1018,13 @@ revealing the 3 tests we got passing.
       </article>
     </main>
 
-    <div class="footer">
+    <footer class="footer">
   <div class="container">
     <div class="footer-info">
       Copyright 2018
       <a href="http://tilde.io">Tilde Inc.</a>
       <br>
-      <a href="http://emberjs.com/team">コアチーム</a> |
+      <a href="http://emberjs.com/team">チーム</a> |
       <a href="http://emberjs.com/sponsors">スポンサー</a>
       <br>
       <a href="http://emberjs.com/security">セキュリティ</a> |
@@ -1036,24 +1036,36 @@ revealing the 3 tests we got passing.
 
     <div class="footer-statement">
       Ember.js is free, open source and always will be.
+      <div class="footer-social">
+        <a href="http://twitter.com/emberjs" title="Twitter" aria-label="Ember on Twitter">
+          <i class="icon-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/emberjs/ember.js" title="GitHub" aria-label="Github repository">
+          <i class="icon-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://plus.google.com/communities/106387049790387471205" title="Google+" aria-label="google plus profile">
+          <i class="icon-gplus" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
 
-    <div class="footer-social">
-      <a href="http://twitter.com/emberjs"
-        title="Twitter">
-        <i class="icon-twitter"></i>
-      </a>
-      <a href="https://github.com/emberjs/ember.js"
-        title="GitHub">
-        <i class="icon-github"></i>
-      </a>
-      <a href="https://plus.google.com/communities/106387049790387471205"
-        title="Google+">
-        <i class="icon-gplus"></i>
-      </a>
+    <div class="footer-contributions">
+      <div class="contributor">
+        <p>Hosted by:</p>
+        <a href="https://www.heroku.com/emberjs">
+          <img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/heroku-logo.svg" class="logo-heroku" alt="heroku">
+        </a>
+      </div>
+      <div class="contributor">
+        <p>CDN provided by:</p>
+          <a href="https://www.fastly.com">
+            <img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/fastly-logo.svg" class="logo-fastly" alt="fastly">
+          </a>
+      </div>
     </div>
+
   </div>
-</div>
+</footer>
 
 
     

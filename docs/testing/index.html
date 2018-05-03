@@ -432,12 +432,7 @@ or we can run those tests independently from the rest of the test suite.</p>
 <p>Run your tests with <code>ember test</code> on the command-line. You can re-run your tests on every file-change with <code>ember test --server</code>.</p>
 
 <p>Tests can also be executed when you are running a local development server (started by running <code>ember server</code>),
-at the <code>/tests</code> URI which renders the <code>tests/index.html</code> template.
-A word of caution using this approach:
-Tests run using <code>ember server</code> have the environment configuration <code>development</code>,
-whereas tests executed under <code>ember test --server</code> are run with the configuration <code>test</code>.
-This could cause differences in execution, such as which libraries are loaded and available.
-Therefore it&#39;s recommended that you use <code>ember test --server</code> for test execution.</p>
+at the <code>/tests</code> URI which renders the <code>tests/index.html</code> template.</p>
 
 <p>These commands run your tests using <a href="https://github.com/airportyh/testem">Testem</a> to make testing multiple browsers very easy.
 You can configure Testem using the <code>testem.js</code> file in your application root.</p>
@@ -459,13 +454,13 @@ run <code>ember test --module=&#39;Unit | Service | location&#39;</code>.</p>
       </article>
     </main>
 
-    <div class="footer">
+    <footer class="footer">
   <div class="container">
     <div class="footer-info">
       Copyright 2018
       <a href="http://tilde.io">Tilde Inc.</a>
       <br>
-      <a href="http://emberjs.com/team">コアチーム</a> |
+      <a href="http://emberjs.com/team">チーム</a> |
       <a href="http://emberjs.com/sponsors">スポンサー</a>
       <br>
       <a href="http://emberjs.com/security">セキュリティ</a> |
@@ -477,24 +472,36 @@ run <code>ember test --module=&#39;Unit | Service | location&#39;</code>.</p>
 
     <div class="footer-statement">
       Ember.js is free, open source and always will be.
+      <div class="footer-social">
+        <a href="http://twitter.com/emberjs" title="Twitter" aria-label="Ember on Twitter">
+          <i class="icon-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/emberjs/ember.js" title="GitHub" aria-label="Github repository">
+          <i class="icon-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://plus.google.com/communities/106387049790387471205" title="Google+" aria-label="google plus profile">
+          <i class="icon-gplus" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
 
-    <div class="footer-social">
-      <a href="http://twitter.com/emberjs"
-        title="Twitter">
-        <i class="icon-twitter"></i>
-      </a>
-      <a href="https://github.com/emberjs/ember.js"
-        title="GitHub">
-        <i class="icon-github"></i>
-      </a>
-      <a href="https://plus.google.com/communities/106387049790387471205"
-        title="Google+">
-        <i class="icon-gplus"></i>
-      </a>
+    <div class="footer-contributions">
+      <div class="contributor">
+        <p>Hosted by:</p>
+        <a href="https://www.heroku.com/emberjs">
+          <img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/heroku-logo.svg" class="logo-heroku" alt="heroku">
+        </a>
+      </div>
+      <div class="contributor">
+        <p>CDN provided by:</p>
+          <a href="https://www.fastly.com">
+            <img src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/images/fastly-logo.svg" class="logo-fastly" alt="fastly">
+          </a>
+      </div>
     </div>
+
   </div>
-</div>
+</footer>
 
 
     

@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 2018.05.03
+
+- Sync [#110](https://github.com/emberjs-japan/guides-ja/pull/110)
+
+## 2018.04.04
+
+- Sync [#109](https://github.com/emberjs-japan/guides-ja/pull/109)
+
 ## 2018.04.04
 
 - Sync [#108](https://github.com/emberjs-japan/guides-ja/pull/108)
